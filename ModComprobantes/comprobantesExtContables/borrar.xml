@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>0</Contable>
+    <Transferido>1</Transferido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>0801</AnoPeriodo>
+    <Tipo>1</Tipo>
+    <Numero>1</Numero>
+    <Fecha>20080105</Fecha>
+    <AnoPeriodoDesde>0801</AnoPeriodoDesde>
+    <AnoPeriodoHasta>0808</AnoPeriodoHasta>
+    <Descripcion>borrar</Descripcion>
+    <TipoExtDefecto />
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>15,00</MonedaLocalDebe>
+    <MonedaLocalHaber>11123,00</MonedaLocalHaber>
+    <NumeroApuntes>3</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>aaaaaaaaaaaaaaaaaaaaaaa</Descripcion>
+    <PRD0801>11111,00</PRD0801>
+    <PRD0802 />
+    <PRD0803>12</PRD0803>
+    <PRD0804 />
+    <PRD0805 />
+    <PRD0806 />
+    <PRD0807 />
+    <PRD0808 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>BA</TipoExt>
+    <Descripcion />
+    <PRD0801 />
+    <PRD0802 />
+    <PRD0803>15</PRD0803>
+    <PRD0804 />
+    <PRD0805 />
+    <PRD0806 />
+    <PRD0807 />
+    <PRD0808 />
+  </Detalle>
+  <Detalle />
+</Comprobante>

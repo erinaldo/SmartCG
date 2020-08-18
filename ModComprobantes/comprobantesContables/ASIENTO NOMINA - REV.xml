@@ -1,0 +1,169 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>1</Transferido>
+    <Extendido>1</Extendido>
+    <Compania>SA</Compania>
+    <AnoPeriodo>1903</AnoPeriodo>
+    <Tipo>47</Tipo>
+    <Numero />
+    <Fecha>20190301</Fecha>
+    <Clase>0</Clase>
+    <Tasa>0,0000000</Tasa>
+    <Descripcion>ASIENTO NOMINA - REV</Descripcion>
+    <Revertir>T</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>3285,36</MonedaLocalDebe>
+    <MonedaLocalHaber>-3285,36</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>0</Importe3Debe>
+    <Importe3Haber>-6570,72</Importe3Haber>
+    <NumeroApuntes>4</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>640000</Cuenta>
+    <Auxiliar1>SN02</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>3.285,36</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>475000</Cuenta>
+    <Auxiliar1>SN02</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1.741,24</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha>20190301</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000012</Documento2>
+    <Importe3>-3.285,36</Importe3>
+    <Iva>53</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>476000</Cuenta>
+    <Auxiliar1>SN02</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-632,23</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha>20190301</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000012</Documento2>
+    <Importe3>-3.285,36</Importe3>
+    <Iva>SS</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>465000</Cuenta>
+    <Auxiliar1>SN02</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-911,89</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+  <Detalle>
+    <Fecha />
+    <Vencimiento />
+    <FechaServIVA />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+</Comprobante>

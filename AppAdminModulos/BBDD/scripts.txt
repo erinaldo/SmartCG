@@ -1,0 +1,11 @@
+USE ModulosAdmin
+
+CREATE TABLE Modulos(
+	id int NOT NULL,
+	nombre varchar(50) NOT NULL,
+	nombreDll varchar(30) NOT NULL,
+	formulario varchar(30) NOT NULL,
+	imagen varchar(30) NULL,
+	basico numeric(1, 0) NULL,
+	activo numeric(1, 0) NULL,
+ CONSTRAINT PK_Modulos PRIMARY KEY (id))

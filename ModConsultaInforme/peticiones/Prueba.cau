@@ -1,0 +1,107 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MCICONAUX</Codigo>
+    <Descripcion>S2  SP01  SA   1601  1612</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>rbMostrarCtasTodas</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbMostrarCtasConDoc</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbMostrarCtasSinDoc</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbDocTodos</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbDocNoCancelados</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbDocCancelados</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>chkMonedaExt</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCtaMayor</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>chkSinDocumento</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtMaskAAPPHasta</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor>16-12</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtMaskAAPPDesde</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor>16-01</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelPlan</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelGrupo</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCompania</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>SA  -  CONTA, S.L.</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbIndiferente</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbAuxiliar3</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbAuxiliar2</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbAuxiliar1</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCtaAux</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>SP01  -  PROVEEDOR 01</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelTipoAux</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>S2  -  PROVEEDORES</Valor>
+  </Control>
+</Formulario>

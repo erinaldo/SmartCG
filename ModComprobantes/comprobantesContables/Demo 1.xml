@@ -1,0 +1,107 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>1</Transferido>
+    <Extendido>0</Extendido>
+    <Compania>XX</Compania>
+    <AnoPeriodo>1412</AnoPeriodo>
+    <Tipo>01</Tipo>
+    <Numero />
+    <Fecha>20141216</Fecha>
+    <Clase>0</Clase>
+    <Tasa />
+    <Descripcion>Demo</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>400,00</MonedaLocalDebe>
+    <MonedaLocalHaber>-400,00</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>0,00</Importe3Debe>
+    <Importe3Haber>50,00</Importe3Haber>
+    <NumeroApuntes>2</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>4000000</Cuenta>
+    <Auxiliar1>0005</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>400</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion />
+    <Documento>10-0000001</Documento>
+    <Fecha>20150120</Fecha>
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>6000000</Cuenta>
+    <Auxiliar1>1141</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-400</MonedaLocal>
+    <Documento />
+    <Vencimiento />
+    <Documento2>20-000010000</Documento2>
+    <Importe3>50</Importe3>
+    <Iva />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+  <Detalle>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+</Comprobante>

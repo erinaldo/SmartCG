@@ -1,0 +1,2 @@
+1XX060203000013190216 00000000,0000000           Descripción del Cmpte 1              
+1XX060203000023190216 00000000,0000000           Descripción del Cmpte 2              

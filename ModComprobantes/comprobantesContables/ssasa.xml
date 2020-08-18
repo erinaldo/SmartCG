@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>0</Contable>
+    <Transferido>0</Transferido>
+    <Compania>SA</Compania>
+    <AnoPeriodo>1910</AnoPeriodo>
+    <Tipo>06</Tipo>
+    <Numero />
+    <Fecha>20191001</Fecha>
+    <AnoPeriodoDesde>1910</AnoPeriodoDesde>
+    <AnoPeriodoHasta>1912</AnoPeriodoHasta>
+    <Descripcion>ssasa</Descripcion>
+    <TipoExtDefecto>AC</TipoExtDefecto>
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>6.000,25</MonedaLocalDebe>
+    <MonedaLocalHaber>6.000,00</MonedaLocalHaber>
+    <NumeroApuntes>6</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>143000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>AC</TipoExt>
+    <Descripcion>A1</Descripcion>
+    <PRD1910>1.000,25</PRD1910>
+    <PRD1911>2.000,00</PRD1911>
+    <PRD1912>3.000,00</PRD1912>
+  </Detalle>
+  <Detalle>
+    <Cuenta>143000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <TipoExt>AC</TipoExt>
+    <Descripcion>A2</Descripcion>
+    <PRD1910>1.000,00</PRD1910>
+    <PRD1911>2.000,00</PRD1911>
+    <PRD1912>3.000,00</PRD1912>
+  </Detalle>
+  <Detalle />
+</Comprobante>

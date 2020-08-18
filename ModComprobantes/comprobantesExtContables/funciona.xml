@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>0</Contable>
+    <Transferido>1</Transferido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>1201</AnoPeriodo>
+    <Tipo>01</Tipo>
+    <Numero />
+    <Fecha>20150227</Fecha>
+    <AnoPeriodoDesde>1201</AnoPeriodoDesde>
+    <AnoPeriodoHasta>1203</AnoPeriodoHasta>
+    <Descripcion>funciona</Descripcion>
+    <TipoExtDefecto>AC</TipoExtDefecto>
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>50,00</MonedaLocalDebe>
+    <MonedaLocalHaber>0,00</MonedaLocalHaber>
+    <NumeroApuntes>2</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>113</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH />
+    <TipoExt>AC</TipoExt>
+    <Descripcion />
+    <PRD1201>30</PRD1201>
+    <PRD1202>20</PRD1202>
+    <PRD1203 />
+  </Detalle>
+  <Detalle />
+</Comprobante>

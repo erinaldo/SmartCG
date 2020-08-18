@@ -1,0 +1,69 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>0</Contable>
+    <Transferido>0</Transferido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>0604</AnoPeriodo>
+    <Tipo>1</Tipo>
+    <Numero>1230</Numero>
+    <Fecha>20060201</Fecha>
+    <AnoPeriodoDesde>0601</AnoPeriodoDesde>
+    <AnoPeriodoHasta>0605</AnoPeriodoHasta>
+    <Descripcion>borrar3</Descripcion>
+	<TipoExtDefecto />
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>45,04</MonedaLocalDebe>
+    <MonedaLocalHaber>0,00</MonedaLocalHaber>
+    <NumeroApuntes>4</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>@PEPEPEPEPE</Descripcion>
+    <PRD0601>12,50</PRD0601>
+    <PRD0602 />
+    <PRD0603 />
+    <PRD0604 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>@PEPEPEPEPE</Descripcion>
+    <PRD0602>23,50</PRD0602>
+    <PRD0603 />
+    <PRD0604 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>@PEPEPEPEPE</Descripcion>
+    <PRD0603>6,52</PRD0603>
+    <PRD0604 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>@PEPEPEPEPE</Descripcion>
+    <PRD0604>2,52</PRD0604>
+  </Detalle>
+  <Detalle />
+</Comprobante>

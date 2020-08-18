@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TreeView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SpacingBetweenNodes="-1" BackColor="Transparent">
+  <Nodes Name="Comprobantes contables" Expanded="true" Text="Comprobantes contables" Font="(ninguno)">
+	<Nodes Name="Gestión" Expanded="true" Text="Gestión comprobantes contables" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmCompContLista</Tag>
+    </Nodes>
+    <Nodes Name="Gestión de lotes" Expanded="true" Text="Gestión de lotes" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmCompContGestionLotes</Tag>
+    </Nodes>
+	<Nodes Name="Modelos" Expanded="true" Text="Modelos" Font="(ninguno)">
+      <Tag xsi:type="xsd:string"></Tag>
+    </Nodes>
+	<Nodes Name="TransferirArchivoExterno" Expanded="true" Text="Transferir desde archivo externo" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmCompContTransferirArchivoLote</Tag>
+    </Nodes>
+	<Nodes Name="Importar de finanzas" Expanded="true" Text="Importar de finanzas" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmCompContImportarDeFinanzas</Tag>
+    </Nodes>
+	<Nodes Name="Lista de comprobantes" Expanded="true" Text="Lista de comprobantes" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmCompContListaGLB01</Tag>
+    </Nodes>
+	<Nodes Name="Recepción de Lotes" Expanded="true" Text="Recepción de Lotes" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmCompContRecepcionLotes</Tag>
+    </Nodes>
+	<Nodes Name="ConfiguracionCont" Expanded="true" Text="Configuración" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmConfig_Titulo=Comprobantes contables;ComprobanteTipoStr=CO</Tag>
+    </Nodes>
+  </Nodes>
+  <Nodes Name="Comprobantes extracontables" Expanded="true" Text="Comprobantes extracontables" Font="(ninguno)">
+    <Nodes Name="GestiónExt" Expanded="true" Text="Gestión comprobantes extracontables" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmCompExtContLista</Tag>
+    </Nodes>
+    <Nodes Name="Transferir a finanzas Ext" Expanded="true" Text="Transferir a finanzas" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmCompExtContTransferirFinanComprobantes</Tag>
+    </Nodes>
+	<Nodes Name="Importar de finanzas Ext" Expanded="true" Text="Importar de finanzas" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmCompExtContImportarDeFinanzas</Tag>
+    </Nodes>
+	<Nodes Name="ConfiguracionExtraCont" Expanded="true" Text="Configuración" Font="(ninguno)">
+      <Tag xsi:type="xsd:string">ModComprobantes_frmConfig_Titulo=Comprobantes extracontables;ComprobanteTipoStr=EX</Tag>
+    </Nodes>
+  </Nodes>
+  <Nodes Name="Mantenimientos" Expanded="true" Text="Mantenimientos" Font="(ninguno)">
+    <Nodes Name="Tablas maestras" Expanded="true" Text="Tablas maestras" Font="(ninguno)">
+      <Nodes Name="Compañías" Expanded="true" Text="Compañías" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmListaGenerica_Titulo=Mantenimiento de Compañías;Tabla=GLM01;AutClaseElemento=002;AutGrupo=01;AutOperConsulta=10;AutOperModifica=20</Tag>
+      </Nodes>
+      <Nodes Name="Grupos de compañías" Expanded="true" Text="Grupos de compañías" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmListaGenerica_Titulo=Mantenimiento de Grupos de Compañías;Tabla=GLM07;AutClaseElemento=001;AutGrupo=01;AutOperConsulta=10;AutOperModifica=20</Tag>
+      </Nodes>
+      <Nodes Name="Planes de cuentas" Expanded="true" Text="Planes de cuentas" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmListaGenerica_Titulo=Mantenimiento de Planes de Cuentas;Tabla=GLM02;AutClaseElemento=003;AutGrupo=01;AutOperConsulta=10;AutOperModifica=20</Tag>
+      </Nodes>
+      <Nodes Name="Cuentas de Mayor" Expanded="true" Text="Cuentas de mayor" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoGLM03Sel</Tag>
+      </Nodes>
+      <Nodes Name="Tipos de auxiliares" Expanded="true" Text="Tipos de auxiliar" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmListaGenerica_Titulo=Mantenimiento de Planes de Cuentas;Tabla=GLM04;AutClaseElemento=006;AutGrupo=01;AutOperConsulta=10;AutOperModifica=20</Tag>
+      </Nodes>
+	  <Nodes Name="Cuentas de Auxiliar" Expanded="true" Text="Cuentas de auxiliar" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoGLM05Sel</Tag>
+      </Nodes>
+	  <Nodes Name="Clase de zona" Expanded="true" Text="Clase de zona" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmListaGenerica_Titulo=Mantenimiento de Clase de Zona;Tabla=GLM10;AutClaseElemento=024;AutGrupo=01;AutOperConsulta=10;AutOperModifica=20</Tag>
+      </Nodes>
+	  <Nodes Name="Zonas" Expanded="true" Text="Zonas" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoGLM11Sel</Tag>
+      </Nodes>
+	  <Nodes Name="Compañías fiscales" Expanded="true" Text="Compañías fiscales" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoIVT03Sel_AutProceso=850</Tag>
+      </Nodes>
+	  <Nodes Name="Códigos de IVA" Expanded="true" Text="Códigos de IVA" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoIVT01Sel</Tag>
+      </Nodes>
+	  <Nodes Name="Maestro de CIF/DNI" Expanded="true" Text="Maestro de CIF/DNI" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmListaGenerica_AutProceso=854;Titulo=Mantenimiento de Maestro de CIF / DNI;Tabla=IVM05</Tag>
+      </Nodes>
+    </Nodes>
+    <Nodes Name="Tablas auxiliares" Expanded="true" Text="Tablas auxiliares" Font="(ninguno)">
+      <Nodes Name="Calendarios" Expanded="true" Text="Calendarios" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoGLT04Sel_AutProceso=825</Tag>
+      </Nodes>
+	  <Nodes Name="Tipos de comprobantes" Expanded="true" Text="Tipos de comprobantes" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoGLT06Sel</Tag>
+      </Nodes>
+	  <Nodes Name="Tipos de extracontables" Expanded="true" Text="Tipos de extracontables" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoPRT03Sel</Tag>
+      </Nodes>
+      <Nodes Name="Grupos de cuentas de mayor" Expanded="true" Text="Grupos cuentas mayor" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmListaGenerica_Titulo=Mantenimiento de Grupos de Cuentas de Mayor;Tabla=GLT22;AutClaseElemento=008;AutGrupo=01;AutOperConsulta=10;AutOperModifica=20</Tag>
+      </Nodes>
+	  <Nodes Name="Grupos de cuentas de auxiliar" Expanded="true" Text="Grupos cuentas auxiliar" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmListaGenerica_Titulo=Mantenimiento de Grupos de Cuentas de Auxiliar;Tabla=GLT08;AutClaseElemento=007;AutGrupo=01;AutOperConsulta=10;AutOperModifica=20</Tag>
+      </Nodes>
+	  <Nodes Name="Monedas extranjeras" Expanded="true" Text="Monedas extranjeras" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmListaGenerica_AutProceso=826;Titulo=Mantenimiento de Monedas Extranjeras;Tabla=GLT03;AutClaseElemento=826;AutGrupo=01;AutOperConsulta=10</Tag>
+      </Nodes>
+    </Nodes>
+    <Nodes Name="Autorizaciones" Expanded="true" Text="Autorizaciones" Font="(ninguno)">
+      <Nodes Name="Usuarios" Expanded="true" Text="Usuarios" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoATM05Sel_AutUsuario=1</Tag>
+      </Nodes>
+	  <Nodes Name="Clases y procesos" Expanded="true" Text="Clases y procesos" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoATM05Autorizaciones_AutUsuario=1;Nuevo=false;Codigo=-1</Tag>
+      </Nodes>
+	  <Nodes Name="Crear elementos" Expanded="true" Text="Crear elementos" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoAutClaseUsuarios_AutUsuario=1</Tag>
+      </Nodes>
+          <Nodes Name="Cambio de propietario" Expanded="true" Text="Cambio de propietario" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoAutCambioPropietario_AutUsuario=1</Tag>
+      </Nodes>
+	  <Nodes Name="Sobre elementos" Expanded="true" Text="Sobre elementos" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoAutElementos_CodigoUsuario=-1</Tag>
+      </Nodes>
+	  <Nodes Name="Sobre procesos" Expanded="true" Text="Sobre procesos" Font="(ninguno)">
+        <Tag xsi:type="xsd:string">ModMantenimientos_frmMtoAutProcesoUsuarios_AutUsuario=1</Tag>
+      </Nodes>
+	</Nodes>
+  </Nodes>
+  <Nodes Name="." Expanded="true" Text="Informes" Font="(ninguno)">
+	<Nodes Name="Diario" Expanded="true" Text="Diario" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmInfoDiarioAltaEdita</Tag>
+	</Nodes>
+	<Nodes Name="Balance Sumas y Saldos" Expanded="true" Text="Balance sumas y saldos" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmInfoBalanceSumSaldosAltaEdita</Tag>
+	</Nodes>
+	<Nodes Name="Mayor de Contabilidad" Expanded="true" Text="Mayor de contabilidad" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmInfoMayorContabAltaEdita</Tag>
+	</Nodes>
+	<Nodes Name="Movimientos de Auxiliar" Expanded="true" Text="Movimientos de auxiliar" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmInfoMovAuxiliarAltaEdita</Tag>
+	</Nodes>
+	<Nodes Name="Movimientos de IVA" Expanded="true" Text="Movimientos de IVA" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmInfoMovIVAAltaEdita</Tag>
+	</Nodes>
+	<Nodes Name="Grupos de Informes" Expanded="true" Text="Grupos de informes" Font="(ninguno)">
+		<Nodes Name="Solicitud de Informes" Expanded="true" Text="Solicitud de informes" Font="(ninguno)">
+			<Tag xsi:type="xsd:string">ModConsultaInforme_frmInfoSolicitudInforme</Tag>
+		</Nodes>
+		<Nodes Name="Informes generados" Expanded="true" Text="Informes generados" Font="(ninguno)">
+			<Tag xsi:type="xsd:string">ModConsultaInforme_frmInfoListaInformesGenerados</Tag>
+		</Nodes>
+	</Nodes>
+	<Nodes Name="Listar Informes Generados Visualizar" Expanded="true" Text="Listar informes visualizar" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmInfoConsFicheroGeneradoView_FicherosGeneradosViewTipoStr=I</Tag>
+	</Nodes>
+	<Nodes Name="Informes_Config>" Expanded="true" Text="Configuración" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmConfig_ConfigTipoStr=IN</Tag>
+	</Nodes>
+  </Nodes>
+  <Nodes Name="Consultas" Expanded="true" Text="Consultas" Font="(ninguno)">
+	<Nodes Name="Consulta de Auxiliar" Expanded="true" Text="Consulta de Auxiliar" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmConsAuxiliar</Tag>
+	</Nodes>
+	<Nodes Name="Transacciones de IVA por NIT" Expanded="true" Text="Transacciones de IVA por NIT" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmConsTransaccionesIVA</Tag>
+	</Nodes>
+	<Nodes Name="Listar Consultas Generadas Visualizar" Expanded="true" Text="Listar consultas visualizar" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmInfoConsFicheroGeneradoView_FicherosGeneradosViewTipoStr=C</Tag>
+	</Nodes>
+	<Nodes Name="Consulta_Config>" Expanded="true" Text="Configuración" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModConsultaInforme_frmConfig_ConfigTipoStr=CO</Tag>
+	</Nodes>
+  </Nodes>
+  <Nodes Name="SII" Expanded="true" Text="SII" Font="(ninguno)">
+	<Nodes Name="Enviar información al SII" Expanded="true" Text="Enviar información al SII" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModSII_frmSiiSuministroInfo</Tag>
+	</Nodes>
+	<Nodes Name="Consultar Datos en Local>" Expanded="true" Text="Consultar datos en local" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModSII_frmSiiDatosLocal</Tag>
+	</Nodes>
+	<Nodes Name="Consultar Datos en el SII>" Expanded="true" Text="Consultar datos en el SII" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModSII_frmSiiConsultaInfo</Tag>
+	</Nodes>
+	<Nodes Name="Consultas por Cliente" Expanded="true" Text="Consultar facturas por cliente" Font="(ninguno)">
+		<Nodes Name="Facturas Informadas Cliente>" Expanded="true" Text="Informadas en el SII" Font="(ninguno)">
+			<Tag xsi:type="xsd:string">ModSII_frmSiiConsultaCliente</Tag>
+		</Nodes>
+		<Nodes Name="Facturas Agrupadas Cliente>" Expanded="true" Text="Agrupadas en el SII" Font="(ninguno)">
+			<Tag xsi:type="xsd:string">ModSII_frmSiiConsultaAgrupadaCliente</Tag>
+		</Nodes>
+	</Nodes>
+	<Nodes Name="Consultas por Proveedor" Expanded="true" Text="Consultar facturas por proveedor" Font="(ninguno)">
+		<Nodes Name="Facturas Informadas Proveedor>" Expanded="true" Text="Informadas en el SII" Font="(ninguno)">
+			<Tag xsi:type="xsd:string">ModSII_frmSiiConsultaProveedor</Tag>
+		</Nodes>
+		<Nodes Name="Facturas Agrupadas Proveedor>" Expanded="true" Text="Agrupadas en el SII" Font="(ninguno)">
+			<Tag xsi:type="xsd:string">ModSII_frmSiiConsultaAgrupadaProveedor</Tag>
+		</Nodes>
+	</Nodes>
+	<Nodes Name="Consultar Envíos al SII>" Expanded="true" Text="Consultar envíos al SII" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModSII_frmSiiEnviosConsulta</Tag>
+	</Nodes>
+	<Nodes Name="Comprobar Datos Presentados y Datos Local>" Expanded="true" Text="Datos presentados y datos local" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModSII_frmSiiLocalDescuadre</Tag>
+	</Nodes>
+	<Nodes Name="Situación General SII>" Expanded="true" Text="Situación general SII" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModSII_frmSiiSituacionGral</Tag>
+	</Nodes>
+	<Nodes Name="Alertas de envíos>" Expanded="true" Text="Alertas de envíos" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModSII_frmSiiAlerta</Tag>
+	</Nodes>
+  </Nodes>
+  <Nodes Name="Power BI" Expanded="true" Text="Power BI" Font="(ninguno)">
+    <Nodes Name="Mapa" Expanded="true" Text="Mapa" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModBI_frmWebBrowser_Titulo=Mapa;Codigo=Mapa</Tag>
+	</Nodes>
+	<Nodes Name="Detalle ingresos" Expanded="true" Text="Detalle ingresos" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModBI_frmWebBrowser_Titulo=Detalle ingresos;Codigo=DetIngresos</Tag>
+	</Nodes>
+	<Nodes Name="Detalle gastos" Expanded="true" Text="Detalle gastos" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModBI_frmWebBrowser_Titulo=Detalle Gastos;Codigo=DetGastos</Tag>
+	</Nodes>
+	<Nodes Name="Comparativa gastos ingresos" Expanded="true" Text="Comparativa gastos ingresos" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModBI_frmWebBrowser_Titulo=Comparativa gastos ingresos;Codigo=CompGastosIngresos</Tag>
+	</Nodes>
+  </Nodes>
+  <Nodes Name="Finanzas" Expanded="true" Text="Finanzas" Font="(ninguno)">
+    <Nodes Name="Finanzas Lanzadera anterior" Expanded="true" Text="Uniclass Finanzas" Font="(ninguno)">
+		<Tag xsi:type="xsd:string">ModFinanzas_frmPrincipal</Tag>
+	</Nodes>
+  </Nodes>
+</TreeView>

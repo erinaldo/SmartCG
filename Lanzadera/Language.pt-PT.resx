@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Globales Inicio -->
+  <data name="lblAceptar" xml:space="preserve">
+    <value>Aceitar</value>
+  </data>
+  <data name="lblCancelar" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="lblUsuario" xml:space="preserve">
+    <value>Usuário</value>
+  </data>
+  <data name="errValTitulo" xml:space="preserve">
+    <value>Erro</value>
+  </data>  
+  <data name="errGenActualizandoValores" xml:space="preserve">
+    <value>Houve um erro ao atualizar os valores</value>
+  </data> 
+  <!-- Globales Fin -->
+  
+  <!-- frmPrincipal Inicio -->
+  <data name="lblfrmPrincipalTitulo" xml:space="preserve">
+    <value>Uniclass</value>
+  </data>
+  <data name="menuItemOpciones" xml:space="preserve">
+    <value>Opções</value>
+  </data>
+  <data name="menuItemModulos" xml:space="preserve">
+    <value>Módulos</value>
+  </data>
+  <data name="menuItemUtilidades" xml:space="preserve">
+    <value>Utilitários</value>
+  </data>  
+  <data name="menuItemParametrizacion" xml:space="preserve">
+    <value>Configuração</value>
+  </data>
+  <data name="menuItemAccesoDirecto" xml:space="preserve">
+    <value>Atalhos</value>
+  </data>  
+  <data name="menuItemAbout" xml:space="preserve">
+    <value>Sobre</value>
+  </data>  
+  <data name="menuItemSalir" xml:space="preserve">
+    <value>Deixar</value>
+  </data>
+  <data name="subMenuItemConectar" xml:space="preserve">
+    <value>Conectar ao servidor</value>
+  </data>
+  <data name="subMenuItemLoginCG" xml:space="preserve">
+    <value>Login em CG</value>
+  </data>
+  <data name="subMenuItemLoginUniclass" xml:space="preserve">
+    <value>Conecte-se à aplicação</value>
+  </data>  
+  <data name="subMenuItemIdiomaCambiar" xml:space="preserve">
+    <value>Mudança Idioma</value>
+  </data>
+  <data name="subMenuItemEntornoCargar" xml:space="preserve">
+    <value>Ambiente de Carga</value>
+  </data>
+  <data name="subMenuItemIdioma" xml:space="preserve">
+    <value>Mudar o idioma</value>
+  </data>
+  <data name="subMenuItemEntrarClave" xml:space="preserve">
+    <value>Enter chave</value>
+  </data>  
+  <data name="subMenuItemGestionModulos" xml:space="preserve">
+    <value>Gerenciar Módulos</value>
+  </data>
+  <data name="subMenuItemEntornosGestionar" xml:space="preserve">
+    <value>Gerenciar Ambientes</value>
+  </data>
+  <data name="subMenuItemIdiomasGestionar" xml:space="preserve">
+    <value>Gerir Idiomas</value>
+  </data>
+  <data name="subMenuItemEntornos" xml:space="preserve">
+    <value>Gerenciar ambientes</value>
+  </data>
+  <data name="subMenuItemTransferirArchivoPC" xml:space="preserve">
+    <value>Transferência de arquivos para o PC</value>
+  </data>
+  <data name="subMenuItemCrearAccesoDirecto" xml:space="preserve">
+    <value>Criar atalho</value>
+  </data>
+  <data name="subMenuItemEliminarAccesoDirecto" xml:space="preserve">
+    <value>Remover atalho</value>
+  </data>  
+  <data name="lblPrincipalUsuarioBBDD" xml:space="preserve">
+    <value>Usuário BBDD</value>
+  </data>
+  <data name="lblPrincipalUsuarioCG" xml:space="preserve">
+    <value>Usuário</value>
+  </data>
+  <data name="lblPrincipalUsuarioUniclass" xml:space="preserve">
+    <value>Usuário</value>
+  </data>  
+  <data name="ModComprobantes" xml:space="preserve">
+    <value>Módulo comprovantes </value>
+  </data>
+  <data name="ModFinanzas" xml:space="preserve">
+    <value>Módulo finanças</value>
+  </data>  
+  <data name="ModPagoProv" xml:space="preserve">
+    <value>Módulo de pagamento provider</value>
+  </data>    
+  <data name="ModImpuestos" xml:space="preserve">
+    <value>Módulo fiscal</value>
+  </data>
+  <data name="ModConsultaInforme" xml:space="preserve">
+    <value>Consultando e relatórios módulo</value>
+  </data>
+  <data name="ModMantenimientos" xml:space="preserve">
+    <value>Manutenção Módulo</value>
+  </data>
+  <data name="errFicheroModulosNoExiste" xml:space="preserve">
+    <value>Módulos de usuário arquivo não encontrado</value>
+  </data>
+  <data name="errCargarModulosActivos" xml:space="preserve">
+    <value>Erro de carregar os módulos activos</value>
+  </data>    
+  <data name="errLlamarModulos" xml:space="preserve">
+    <value>Erro de carregamento do módulo</value>
+  </data>
+  <data name="errAccesoDirectoNuevo" xml:space="preserve">
+    <value>Erro ao criar atalho</value>
+  </data>
+  <data name="errAccesoDirectoEliminar" xml:space="preserve">
+    <value>Falha ao excluir o atalho</value>
+  </data>  
+  <!-- frmPrincipal Fin -->
+  
+  <!-- frmLogin Inicio -->
+  <data name="lblfrmLoginTitulo" xml:space="preserve">
+    <value>Conectar ao servidor</value>
+  </data>
+  <data name="lblDSN" xml:space="preserve">
+    <value>DSN</value>
+  </data>
+  <data name="lblPwd" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="errValUsuarioPwd" xml:space="preserve">
+    <value>Você deve digitar um nome de usuário e senha</value>
+  </data>
+  <data name="errValUsuario" xml:space="preserve">
+    <value>Um usuário deve digitar</value>
+  </data>
+  <data name="errValPwd" xml:space="preserve">
+    <value>Você deve digitar uma senha</value>
+  </data>
+  <data name="errValCredenciales" xml:space="preserve">
+    <value>As credenciais não são válidas</value>
+  </data>
+  <data name="errValCredExcepcion" xml:space="preserve">
+    <value>Houve um erro ao validar as credenciais</value>
+  </data>
+  <data name="lblfrmLoginAppTituloCG" xml:space="preserve">
+    <value>Login CG</value>
+  </data>
+  <data name="lblfrmLoginAppTituloUniclass" xml:space="preserve">
+    <value>Conecte-se à aplicação</value>
+  </data>  
+  <!-- frmLogin Fin -->
+  
+  <!-- frmIdioma Inicio -->
+  <data name="lblfrmIdiomaTitulo" xml:space="preserve">
+    <value>Mudar o idioma</value>
+  </data>
+  <data name="lblIdioma" xml:space="preserve">
+    <value>Linguagem</value>
+  </data>
+  <data name="lblIdiomaes-ES" xml:space="preserve">
+    <value>Espanhol</value>
+  </data>
+  <data name="lblIdiomaca" xml:space="preserve">
+    <value>Catalão</value>
+  </data>
+  <data name="lblIdiomaen-US" xml:space="preserve">
+    <value>Inglês</value>
+  </data>
+  <data name="lblIdiomafr-FR" xml:space="preserve">
+    <value>Francês</value>
+  </data>
+  <data name="lblIdiomapt-PT" xml:space="preserve">
+    <value>Português</value>
+  </data>
+  <!-- frmIdioma Fin -->
+  
+  <!-- frmIdiomaListaTitulo Inicio -->	
+  <data name="lblfrmIdiomaListaTitulo" xml:space="preserve">
+    <value>Lista de idiomas</value>
+  </data> 
+  <data name="lblSalir" xml:space="preserve">
+    <value>Deixar</value>
+  </data>  
+  <data name="tabBBDD" xml:space="preserve">
+    <value>Banco de Dados</value>
+  </data>  
+  <data name="tabIdiomas" xml:space="preserve">
+    <value>Idiomas</value>
+  </data>
+  <data name="groupBoxGeneralBbdd" xml:space="preserve">
+    <value>Comptabilitat Banco de Dados</value>
+  </data>
+  <data name="lblGeneralAceptar" xml:space="preserve">
+    <value>Aceitar</value>
+  </data>
+  <data name="lblGeneralTipo" xml:space="preserve">
+    <value>Tipo</value>
+  </data>  
+  <data name="lblGeneralTipoAcceso" xml:space="preserve">
+    <value>Tipo de acesso</value>
+  </data>
+  <data name="lblGeneralIPNombreServidor" xml:space="preserve">
+    <value>Nome do servidor ou IP</value>
+  </data>
+  <data name="lblGeneralNombreBbdd" xml:space="preserve">
+    <value>Nome do banco de dados</value>
+  </data>
+  <data name="lblGeneralPrefijoTablas" xml:space="preserve">
+    <value>Tabelas do banco de prefixo</value>
+  </data>
+  <data name="groupBoxCadenaConexion" xml:space="preserve">
+    <value>Cadena Conexión Bbdd Contabilidad</value>
+  </data>  
+  <data name="errValIpServidorNombreBbdd" xml:space="preserve">
+    <value>Você deve especificar o endereço IP ou nome do servidor de banco de dados eo nome do banco de dados</value>
+  </data>
+  <data name="errValIpServidor" xml:space="preserve">
+    <value>Você deve especificar o endereço IP ou nome do servidor de banco de dados</value>
+  </data> 
+  <data name="errValNombreBbdd" xml:space="preserve">
+    <value>Por favor, indique o nome do banco de dados</value>
+  </data>    
+  <data name="errValCadenaConexion" xml:space="preserve">
+    <value>Por favor, especifique a seqüência de conexão</value>
+  </data>  
+  <data name="btnAceptarCadenaConexion" xml:space="preserve">
+    <value>Aceitar</value>
+  </data>
+  <data name="lblIdiomaGridHeaderIdioma" xml:space="preserve">
+    <value>Linguagem</value>
+  </data>  
+	  <data name="lblIdiomaGridHeaderActivo" xml:space="preserve">
+    <value>Ativo</value>
+  </data>    
+  <data name="lblIdiomaGridHeaderDefecto" xml:space="preserve">
+    <value>Omissão</value>
+  </data>  
+  <data name="lblIdiomaNoDefinidos" xml:space="preserve">
+    <value>As línguas não foram definidos. Ele vai trabalhar com a linguagem padrão (em Espanhol)</value>
+  </data>  
+  <data name="btnAceptarIdiomas" xml:space="preserve">
+    <value>Aceitar</value>
+  </data>
+  <data name="errValIdiomasActivos" xml:space="preserve">
+    <value>Você deve digitar pelo menos uma língua ativa</value>
+  </data>
+  <data name="errValIdiomaDefecto" xml:space="preserve">
+    <value>Por favor, especifique o idioma padrão</value>
+  </data>    
+  <data name="errValFormularioIdioma" xml:space="preserve">
+    <value>Houve um erro ao validar o formulário</value>
+  </data>      
+  <!-- frmIdiomaListaTitulo Fin -->
+
+  <!-- frmAccesoDirectoAlta Inicio -->
+  <data name="frmAccesoDirectoAltaTitulo" xml:space="preserve">
+    <value>Criar Atalho</value>
+  </data> 
+  <data name="lblNombreAD" xml:space="preserve">
+    <value>Nome</value>
+  </data> 
+  <data name="lblProgramaAD" xml:space="preserve">
+    <value>Programa</value>
+  </data>
+  <data name="errValADNomProg" xml:space="preserve">
+    <value>Você deve digitar um nome e um programa</value>
+  </data>
+  <data name="errValADNombre" xml:space="preserve">
+    <value>Você deve digitar um nome</value>
+  </data>
+  <data name="errValADPrograma" xml:space="preserve">
+    <value>Você deve digitar um programa</value>
+  </data>
+  <data name="lblSelArchivosAD" xml:space="preserve">
+    <value>Selecionar arquivos</value>
+  </data>
+  <data name="lblTipoArchivosExeAD" xml:space="preserve">
+    <value>Arquivos executáveis</value>
+  </data>
+  <data name="lblTipoArchivosBatAD" xml:space="preserve">
+    <value>Arquivos em lote</value>
+  </data>
+  <!-- frmAccesoDirectoAlta Fin -->  
+  
+  <!-- frmAccesoDirectoEliminar Inicio -->
+  <data name="frmAccesoDirectoEliminarTitulo" xml:space="preserve">
+    <value>Remover atalho</value>
+  </data> 
+  <data name="lblNombreEliminarAD" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="lblConfirmacion" xml:space="preserve">
+    <value>Confirmación</value>
+  </data>
+  <data name="lblConfirEliminarAD" xml:space="preserve">
+    <value>Quer apagar o atalho</value>
+  </data>
+  <!-- frmAccesoDirectoEliminar Fin -->
+</root>

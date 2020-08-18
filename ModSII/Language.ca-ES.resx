@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	
+	<!-- Globales Inicio -->
+    <data name="toolStripButtonGrabarPeticion" xml:space="preserve">
+		<value>Gravar Petició</value>
+    </data>
+	<data name="toolStripButtonCargarPeticion" xml:space="preserve">
+		<value>Carregar Petició</value>
+    </data>
+	<data name="toolStripButtonSalir" xml:space="preserve">
+		<value>Sortir</value>
+    </data>
+	<data name="lblBuscador" xml:space="preserve">
+		<value>Cercador</value>
+    </data>
+	<data name="lblListaCiaFiscales" xml:space="preserve">
+		<value>Llista de Companyies Fiscals</value>
+    </data>
+	<data name="lblAdd" xml:space="preserve">
+		<value>Afegir</value>
+    </data>
+	<data name="lblDel" xml:space="preserve">
+		<value>Treure</value>
+    </data>
+	<data name="lblTodasCiasFiscales" xml:space="preserve">
+		<value>Totes les Companyies Fiscals</value>
+    </data>
+	<data name="lblEjercicio" xml:space="preserve">
+		<value>Exercici</value>
+    </data>
+	<data name="lblPeriodo" xml:space="preserve">
+		<value>Període</value>
+    </data>
+	<data name="lblNoFactura" xml:space="preserve">
+		<value>No. Factura</value>
+    </data>
+	<data name="lblFechaExpDesde" xml:space="preserve">
+		<value>Data Exp. Des</value>
+    </data>
+	<data name="lblFechaExpHasta" xml:space="preserve">
+		<value>Data Exp. Fins</value>
+    </data>
+	<data name="lblLibro" xml:space="preserve">
+		<value>Llibre</value>
+    </data>
+	<data name="lblOperacion" xml:space="preserve">
+		<value>Operació</value>
+    </data>
+	<data name="lblBuscar" xml:space="preserve">
+		<value>Cercar</value>
+    </data>
+	<data name="lblTodos" xml:space="preserve">
+		<value>Tots</value>
+    </data>
+	<data name="lblListaCampoCodigo" xml:space="preserve">
+		<value>Codi</value>
+    </data>
+	<data name="lblListaCampoDescripcion" xml:space="preserve">
+		<value>Descripció</value>
+    </data>
+	<data name="lblListaCampoNIF" xml:space="preserve">
+		<value>NIF</value>
+    </data>
+	<data name="lblLibroFactEmitidas" xml:space="preserve">
+		<value>Factures Emeses</value>
+    </data>
+	<data name="lblLibroFacturasRecibidas" xml:space="preserve">
+		<value>Facturas Rebudes</value>
+    </data>
+	<data name="lblLibroBienesInversion" xml:space="preserve">
+		<value>Béns d'Inversió</value>
+    </data>
+	<data name="lblLibroDetOperaIntra" xml:space="preserve">
+		<value>Det. Operacions intracomunitàries</value>
+    </data>
+	<data name="lblLibroPagos" xml:space="preserve">
+		<value>Pagaments Rebudes RECC</value>
+    </data>
+	<data name="lblLibroCobrosMetálico" xml:space="preserve">
+		<value>Cobraments en Metàl·lic</value>
+    </data>
+	<data name="lblLibroOperacionesSeguros" xml:space="preserve">
+		<value>Operacions d'assegurances</value>
+    </data>
+	<data name="lblLibroAgenciasViajes" xml:space="preserve">
+		<value>Agències de viatges</value>
+    </data>
+	<data name="lblOperacionTodas" xml:space="preserve">
+		<value>Totes</value>
+    </data>
+	<data name="lblOperacionAlta" xml:space="preserve">
+		<value>Alta</value>
+    </data>
+	<data name="lblOperacionModificar" xml:space="preserve">
+		<value>Modificar</value>
+    </data>
+	<data name="lblOperacionAnular" xml:space="preserve">
+		<value>Anul·lar</value>
+    </data>
+	<data name="lblOperacionModificarRegViajeros" xml:space="preserve">
+		<value>Modificar Reg. Viatgers</value>
+    </data>
+	<data name="dgHeaderCia" xml:space="preserve">
+		<value>Companyia</value>
+    </data>
+	<data name="dgHeaderCantidad" xml:space="preserve">
+		<value>Total Registres</value>
+    </data>
+	<data name="lblError" xml:space="preserve">
+		<value>Error</value>
+    </data>
+	<data name="errEjercicioFormato" xml:space="preserve">
+		<value>L'exercici no té un format vàlid (aa o aaaa)</value>
+    </data>
+	<data name="errEjercicioMayorAnno" xml:space="preserve">
+		<value>L'exercici no pot ser més gran que l'any en curs</value>
+    </data>
+	<data name="errFechaDocDesde" xml:space="preserve">
+		<value>La data del document des de no és vàlida</value>
+    </data>
+	<data name="errFechaDocHasta" xml:space="preserve">
+		<value>La data del document fins a no és vàlida</value>
+    </data>
+	<data name="errFechaDocDesdeHasta" xml:space="preserve">
+		<value>La data del document des no pot ser posterior a la data del document fins</value>
+    </data>
+	<data name="errPeriodoValido" xml:space="preserve">
+		<value>Si us plau, entre un període vàlid</value>
+    </data>
+	<data name="errNoPeticionesGuardadas" xml:space="preserve">
+		<value>No hi ha peticions guardades</value>
+    </data>
+	<data name="lblListaCampoNombreRazonSocial" xml:space="preserve">
+		<value>Nom o raó social</value>
+    </data>
+	<data name="lblListaCampoNIF" xml:space="preserve">
+		<value>NIF</value>
+    </data>
+	<data name="lblCompaniaFiscal" xml:space="preserve">
+		<value>Companyia Fiscal</value>
+    </data>
+	<data name="lblTipoIdentif" xml:space="preserve">
+		<value>Tipus d'identificació</value>
+    </data>
+	<data name="lblListaCampoOtro" xml:space="preserve">
+		<value>Un altre</value>
+    </data>
+	<data name="lblNIFDest" xml:space="preserve">
+		<value>NIF Destinatari</value>
+    </data>
+	<data name="lblCodPaisDest" xml:space="preserve">
+		<value>Cod. País Destinatari</value>
+    </data>
+	<data name="lblTipoIdentifDest" xml:space="preserve">
+		<value>Tipus Identif. Dest.</value>
+    </data>
+	<data name="lblNombreRazonDest" xml:space="preserve">
+		<value>Nom o Raó Social Dest.</value>
+    </data>
+	<data name="lblNumSerieFact" xml:space="preserve">
+		<value>Nombre Sèrie Factura</value>
+    </data>
+	<data name="lblFechaExpedicion" xml:space="preserve">
+		<value>Data Expedició</value>
+    </data>
+	<data name="lblFactModifica" xml:space="preserve">
+		<value>Factura Modificada</value>
+    </data>
+	<data name="lblFechaPresentacionDesde" xml:space="preserve">
+		<value>Data Presentació Des</value>
+    </data>
+	<data name="lblFechaPresentacionHasta" xml:space="preserve">
+		<value>Data Presentació Fins</value>
+    </data>
+	<data name="lblEstadoCuadre" xml:space="preserve">
+		<value>Estat Quadre</value>
+    </data>
+	<data name="lblEstadoFactura" xml:space="preserve">
+		<value>Estat Factures</value>
+    </data>
+	<data name="lblEstadoCorrecta" xml:space="preserve">
+		<value>Correcta</value>
+    </data>
+	<data name="lblEstadoAceptadaConErrores" xml:space="preserve">
+		<value>Aceptada amb errors</value>
+    </data>
+	<data name="lblEstadoAnulada" xml:space="preserve">
+		<value>Anul·lada</value>
+    </data>
+	<data name="lblIdentBien" xml:space="preserve">
+		<value>Identificació Bé</value>
+    </data>
+	<data name="lblClaveOperacion" xml:space="preserve">
+		<value>Clau Operació</value>
+    </data>
+	<data name="gbResultado" xml:space="preserve">
+		<value>Resultat</value>
+    </data>
+	<data name="lblNoExistenFacturas" xml:space="preserve">
+		<value>No hi ha factures que compleixin el criteri seleccionat</value>
+    </data>
+	<!-- Globales Fin -->
+	
+	<!-- frmPrincipal Inicio -->
+	<data name="lblfrmPrincipalTitulo" xml:space="preserve">
+		<value>Mòdul SII (Subministrament Immediat de la Informació)</value>
+	</data>	
+	<data name="subMenuItemSIIGestion" xml:space="preserve">
+		<value>SII Gestió</value>
+	</data>	
+	<data name="subMenuItemEnviarInfoSII" xml:space="preserve">
+		<value>Enviar Informació al SII</value>
+	</data>	
+	<data name="subMenuItemConsultarInfoSII" xml:space="preserve">
+		<value>Consultar Dades en el SII</value>
+	</data>	
+	<data name="subMenuItemHcoEnviosSII1raparte" xml:space="preserve">
+		<value>Consultar Dades en</value>
+	</data>	
+	<data name="subMenuItemHcoEnviosSII2daparte" xml:space="preserve">
+		<value>Local</value>
+	</data>
+	<data name="subMenuItemConsultarEnviosSII1raparte" xml:space="preserve">
+		<value>Consultar</value>
+	</data>	
+	<data name="subMenuItemConsultarEnviosSII2daparte" xml:space="preserve">
+		<value>Enviaments al SII</value>
+	</data>
+	<data name="subMenuComprobarCuadre1raparte" xml:space="preserve">
+		<value>Comprovar Dades</value>
+	</data>	
+	<data name="subMenuComprobarCuadre2daparte" xml:space="preserve">
+		<value>Presentats i Dades Local</value>
+	</data>	
+	<data name="subMenuItemSituacionGralSII" xml:space="preserve">
+		<value>Situació General SII</value>
+	</data>	
+	<data name="menuItemConfig" xml:space="preserve">
+		<value>Configuración</value>
+	</data>	
+	<data name="menuItemAbout" xml:space="preserve">
+		<value>Sobre</value>
+	</data>	
+	<!-- frmPrincipal Fin -->
+	
+	<!-- frmSiiSuministroInfo Inicio -->
+	<data name="lblfrmSiiSumInfoPdteEnviar" xml:space="preserve">
+		<value>Pendent d'enviar</value>
+    </data>
+	<data name="lblfrmSiiSumInfoResult" xml:space="preserve">
+		<value>No hi ha moviments per al criteri de selecció indicat</value>
+    </data>
+	<data name="dgHeaderVer" xml:space="preserve">
+		<value>Veure</value>
+    </data>
+	<data name="dgHeaderListar" xml:space="preserve">
+		<value>Llistar</value>
+    </data>	
+	<data name="errNoExisteInfoPdteEnvio" xml:space="preserve">
+		<value>No hi ha informació pendent d'enviament per al criteri de selecció indicat</value>
+    </data>
+	<data name="dgHeaderListaCiaFiscales" xml:space="preserve">
+		<value>Llista Companyies Fiscals</value>
+    </data>
+	<!-- frmSiiSuministroInfo Fin -->
+</root>

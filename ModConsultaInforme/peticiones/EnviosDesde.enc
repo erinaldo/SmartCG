@@ -1,0 +1,72 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MISIIENCO</Codigo>
+    <Descripcion>peticion con fecha desde</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>cmbOperacion</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtMaskFechaPresentacionHasta</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtMaskFechaPresentacionDesde</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor>22-03-2018</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbEstadoIncorrecto</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbEstadoAceptadoErrores</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbEstadoCorrecto</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbEstadoTodos</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCiaFiscal</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>SP - CIA. SOPORTE - B65245755</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtElemento</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>SP - CIA. SOPORTE - B65245755</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbLibro</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>07</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Cobros en Metálico</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtOperacionDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Cobros en Metálico</Valor>
+  </Control>
+</Formulario>

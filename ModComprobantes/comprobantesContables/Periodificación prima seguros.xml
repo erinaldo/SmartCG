@@ -1,0 +1,144 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>1</Transferido>
+    <Extendido>1</Extendido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>9302</AnoPeriodo>
+    <Tipo>21</Tipo>
+    <Numero>6</Numero>
+    <Fecha>19930205</Fecha>
+    <Clase>0</Clase>
+    <Tasa />
+    <Descripcion>Periodificación prima seguros</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>300000,00</MonedaLocalDebe>
+    <MonedaLocalHaber>-300000,00</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>0,00</Importe3Debe>
+    <Importe3Haber>0,00</Importe3Haber>
+    <NumeroApuntes>3</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>64000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>115000,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>periodifcación prima seguros mensual</Descripcion>
+    <Documento />
+    <Fecha>05/02/1993</Fecha>
+    <Vencimiento />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>64000</Cuenta>
+    <Auxiliar1>006</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>185000,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>periodificación prima seguros mensua</Descripcion>
+    <Documento />
+    <Fecha>05/02/1993</Fecha>
+    <Vencimiento />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>48100</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-300000,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>periodificación prima seguro mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+  <Detalle>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+</Comprobante>

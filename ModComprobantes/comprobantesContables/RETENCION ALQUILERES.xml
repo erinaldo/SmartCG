@@ -1,0 +1,246 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>1</Transferido>
+    <Extendido>0</Extendido>
+    <Compania>SA</Compania>
+    <AnoPeriodo>1412</AnoPeriodo>
+    <Tipo>47</Tipo>
+    <Numero>6</Numero>
+    <Fecha>20141201</Fecha>
+    <Clase>0</Clase>
+    <Tasa>0,0000000</Tasa>
+    <Descripcion>RETENCION ALQUILERES</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>53086,09</MonedaLocalDebe>
+    <MonedaLocalHaber>-53086,09</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>43872,80</Importe3Debe>
+    <Importe3Haber>-43872,80</Importe3Haber>
+    <NumeroApuntes>12</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>621000</Cuenta>
+    <Auxiliar1>SP05</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>6387,44</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento>14-0000039</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1341,36</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>*-000000000</Documento2>
+    <Importe3>6387,44</Importe3>
+    <Iva>SC</Iva>
+    <CifDni>37286206D</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>475004</Cuenta>
+    <Auxiliar1>SP05</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1341,36</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>*-000000000</Documento2>
+    <Importe3>-6387,44</Importe3>
+    <Iva>LL</Iva>
+    <CifDni>37286206D</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>400000</Cuenta>
+    <Auxiliar1>SP05</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-6387,44</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento>14-0000039</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento>20141201</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>621000</Cuenta>
+    <Auxiliar1>S33</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>12485,36</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento>14-0000049</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>2621,93</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>*-000000000</Documento2>
+    <Importe3>12485,36</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>35050021E</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>475004</Cuenta>
+    <Auxiliar1>S33</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-2621,93</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>*-000000000</Documento2>
+    <Importe3>-12485,36</Importe3>
+    <Iva>LG</Iva>
+    <CifDni>35050021E</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>400000</Cuenta>
+    <Auxiliar1>S33</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-12485,36</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento>14-0000049</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento>20141201</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>621000</Cuenta>
+    <Auxiliar1>S33</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>25000,00</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento>14-0000059</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>5250,00</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>*-000000000</Documento2>
+    <Importe3>25000,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>35050021E</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>475004</Cuenta>
+    <Auxiliar1>S33</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-5250,00</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>*-000000000</Documento2>
+    <Importe3>-25000,00</Importe3>
+    <Iva>LG</Iva>
+    <CifDni>35050021E</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>400000</Cuenta>
+    <Auxiliar1>S33</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-25000,00</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>ALQUILER ST JUST</Descripcion>
+    <Documento>14-0000059</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento>20141201</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Fecha />
+    <Vencimiento />
+  </Detalle>
+</Comprobante>

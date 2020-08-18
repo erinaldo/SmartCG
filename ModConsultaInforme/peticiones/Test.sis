@@ -1,0 +1,82 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MISIISINF</Codigo>
+    <Descripcion>Varias compañias</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>txtMaskFechaDocHasta</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtMaskFechaDocDesde</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtEjercicio</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>cmbEjercicio</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>cmbPeriodo</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>cmbOperacion</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbLibro</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>chkCiasFiscalesTodas</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>lbCiasFiscales</Nombre>
+    <Tipo>ListBox</Tipo>
+    <Valor>SP|W1</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCiaFiscal</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtElemento</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtFactura</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Todos</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtOperacionDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Todos</Valor>
+  </Control>
+</Formulario>

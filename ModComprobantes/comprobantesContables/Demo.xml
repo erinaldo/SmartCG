@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>1</Transferido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>0110</AnoPeriodo>
+    <Tipo>05</Tipo>
+    <Numero />
+    <Fecha>20011016</Fecha>
+    <AnoPeriodoDesde>0101</AnoPeriodoDesde>
+    <AnoPeriodoHasta>0105</AnoPeriodoHasta>
+    <Descripcion>demo</Descripcion>
+    <TipoExtDefecto />
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>50,00</MonedaLocalDebe>
+    <MonedaLocalHaber>-30,00</MonedaLocalHaber>
+    <NumeroApuntes>2</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>40101</Cuenta>
+    <Auxiliar1>101</Auxiliar1>
+    <Auxiliar2>32</Auxiliar2>
+    <Auxiliar3 />
+    <TipoExt>PR</TipoExt>
+    <DH />
+    <Descripcion>prueba ok</Descripcion>
+    <PRD0101>50</PRD0101>
+    <PRD0102>-30</PRD0102>
+    <PRD0103 />
+    <PRD0104 />
+    <PRD0105 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>40101</Cuenta>
+    <Auxiliar1>150</Auxiliar1>
+    <Auxiliar2>99999999</Auxiliar2>
+    <Auxiliar3 />
+    <TipoExt>AC</TipoExt>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40101</Cuenta>
+    <Auxiliar3 />
+    <TipoExt>ZZ</TipoExt>
+  </Detalle>
+  <Detalle />
+</Comprobante>

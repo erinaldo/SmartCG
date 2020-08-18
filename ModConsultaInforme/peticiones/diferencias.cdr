@@ -1,0 +1,77 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MISIICUAD</Codigo>
+    <Descripcion>diferencias recibids SM 17 07</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>txtMaskFechaExpedicion</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtNumSerieFactura</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>chkSoloDescuadre</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbTipoIdentif</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtCodPais</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtNIF</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>rbOtro</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbNIF</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtEjercicio</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>2017</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCiaFiscal</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>SM - SOCIEDAD DE MéRITOS PERSONALES É%À - B65245755</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtElemento</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>SM - SOCIEDAD DE MéRITOS PERSONALES É%À - B65245755</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbPeriodo</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>07</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbLibro</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>03</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Facturas Recibidas</Valor>
+  </Control>
+</Formulario>

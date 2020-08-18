@@ -1,0 +1,86 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>1</Transferido>
+    <Extendido>1</Extendido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>1905</AnoPeriodo>
+    <Tipo>01</Tipo>
+    <Numero />
+    <Fecha>20190506</Fecha>
+    <Clase>0</Clase>
+    <Tasa />
+    <Descripcion>Test Extendido SMR</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>253365,25</MonedaLocalDebe>
+    <MonedaLocalHaber>-253365,25</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>0</Importe3Debe>
+    <Importe3Haber>100,06</Importe3Haber>
+    <NumeroApuntes>2</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>020</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>253365,25</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Desc 1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni>52213226Y</CifDni>
+    <PrefijoDoc>PFD1</PrefijoDoc>
+    <NumFactAmp>1</NumFactAmp>
+    <NumFactRectif>2</NumFactRectif>
+    <FechaServIVA>20190506</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5>DESC1</CampoUserAlfa5>
+    <CampoUserAlfa6>DESC2</CampoUserAlfa6>
+    <CampoUserAlfa7>3</CampoUserAlfa7>
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1>20190506</CampoUserFecha1>
+    <CampoUserFecha2>20190506</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>101</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-253365,25</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <Descripcion>Desc 2</Descripcion>
+    <Documento>01-1111111</Documento>
+    <Fecha>190506</Fecha>
+    <Vencimiento>20190506</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>100,06</Importe3>
+    <Iva />
+    <CifDni>52213226Y</CifDni>
+    <PrefijoDoc>PFD1</PrefijoDoc>
+    <NumFactAmp>1</NumFactAmp>
+    <NumFactRectif>2</NumFactRectif>
+    <FechaServIVA>20190506</FechaServIVA>
+    <CampoUserAlfa5>DESC1</CampoUserAlfa5>
+    <CampoUserAlfa6>DESC2</CampoUserAlfa6>
+    <CampoUserAlfa7>3</CampoUserAlfa7>
+    <CampoUserFecha1>20190507</CampoUserFecha1>
+    <CampoUserFecha2>20190508</CampoUserFecha2>
+  </Detalle>
+</Comprobante>

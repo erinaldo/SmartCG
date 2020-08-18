@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>0</Contable>
+    <Transferido>1</Transferido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>1401</AnoPeriodo>
+    <Tipo>01</Tipo>
+    <Numero />
+    <Fecha>20140125</Fecha>
+    <AnoPeriodoDesde>1401</AnoPeriodoDesde>
+    <AnoPeriodoHasta>1412</AnoPeriodoHasta>
+    <Descripcion>Prueba</Descripcion>
+    <TipoExtDefecto />
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>780,00</MonedaLocalDebe>
+    <MonedaLocalHaber>0,00</MonedaLocalHaber>
+    <NumeroApuntes>1</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>10000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>AM</TipoExt>
+    <Descripcion>Esto es una prueba</Descripcion>
+    <PRD1401>10</PRD1401>
+    <PRD1402>20</PRD1402>
+    <PRD1403>30</PRD1403>
+    <PRD1404>40</PRD1404>
+    <PRD1405>50</PRD1405>
+    <PRD1406>60</PRD1406>
+    <PRD1407>70</PRD1407>
+    <PRD1408>80</PRD1408>
+    <PRD1409>90</PRD1409>
+    <PRD1410>100</PRD1410>
+    <PRD1411>110</PRD1411>
+    <PRD1412>120</PRD1412>
+  </Detalle>
+  <Detalle />
+</Comprobante>

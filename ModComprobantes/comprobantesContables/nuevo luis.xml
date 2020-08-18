@@ -1,0 +1,62 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>0</Transferido>
+    <Extendido>1</Extendido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>1412</AnoPeriodo>
+    <Tipo>8</Tipo>
+    <Numero>2</Numero>
+    <Fecha>20141222</Fecha>
+    <Clase>0</Clase>
+    <Tasa />
+    <Descripcion />
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>2350,00</MonedaLocalDebe>
+    <MonedaLocalHaber>-2350,00</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>0,00</Importe3Debe>
+    <Importe3Haber>0,00</Importe3Haber>
+    <NumeroApuntes>2</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>2350,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>PAGARE         BC01       RD-0040001</Descripcion>
+    <Documento>14-236</Documento>
+    <Fecha>20141222</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>57204</Cuenta>
+    <Auxiliar1>01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-2350,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>PAGARE         PV001      RD-0040001</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle />
+</Comprobante>

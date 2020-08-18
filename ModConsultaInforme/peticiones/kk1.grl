@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MISIISIGRL</Codigo>
+    <Descripcion>emitidas 2017 05 SP</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>txtEjercicio</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>2017</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbPeriodo</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>05</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbLibro</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>01</Valor>
+  </Control>
+  <Control>
+    <Nombre>chkCiasFiscalesTodas</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>lbCiasFiscales</Nombre>
+    <Tipo>ListBox</Tipo>
+    <Valor>SP</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCiaFiscal</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtElemento</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Todos</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Facturas Emitidas</Valor>
+  </Control>
+</Formulario>

@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MCIDIARIOD</Codigo>
+    <Descripcion>prueba diario detallado por periodo</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>tgTexBoxSelPlan</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>Z  -  PLAN DE CUENTAS DEMOSTRACION</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelGrupo</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>GC  -  GRUPO CONSOLIDADO W1 + W9</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCompania</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtHastaPeriodos</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtDesdePeriodos</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txttitulo</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Diario Detallado</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtNoPrimerComp</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>chkImportarTotales</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbPeriodos</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbFecha</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+</Formulario>

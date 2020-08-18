@@ -1,0 +1,173 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>1</Transferido>
+    <Extendido>0</Extendido>
+    <Compania>BA</Compania>
+    <AnoPeriodo>0001</AnoPeriodo>
+    <Tipo>21</Tipo>
+    <Numero>4</Numero>
+    <Fecha>20000131</Fecha>
+    <Clase>0</Clase>
+    <Tasa />
+    <Descripcion>Gastos Enero</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>1004229,00</MonedaLocalDebe>
+    <MonedaLocalHaber>-1004229,00</MonedaLocalHaber>
+    <MonedaExtDebe>39590,53</MonedaExtDebe>
+    <MonedaExtHaber>-39590,53</MonedaExtHaber>
+    <Importe3Debe>0,00</Importe3Debe>
+    <Importe3Haber>0,00</Importe3Haber>
+    <NumeroApuntes>8</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>621100</Cuenta>
+    <Auxiliar1>OF01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>282371,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>Despeses Gener</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>625100</Cuenta>
+    <Auxiliar1>OF01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>14335,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>Despeses Gener</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>627100</Cuenta>
+    <Auxiliar1>OF01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>21903,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>Despeses Gener</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>628001</Cuenta>
+    <Auxiliar1>OF01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>18220,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>Despeses Gener</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>629101</Cuenta>
+    <Auxiliar1>OF01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>30442,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>Despeses Gener</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>629301</Cuenta>
+    <Auxiliar1>OF01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>90334,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>Despeses Gener</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>640100</Cuenta>
+    <Auxiliar1>OF01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>546624,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>Despeses Gener</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>570100</Cuenta>
+    <Auxiliar1>OF01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1004229,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>Despeses Gener</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <MonedaExt />
+  </Detalle>
+</Comprobante>

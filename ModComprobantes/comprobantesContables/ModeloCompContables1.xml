@@ -1,0 +1,13 @@
+﻿<ModeloComprobante>
+
+  <Cabecera>
+    <ModeloContable>1</ModeloContable>
+    <Descripcion>Modelo de Comprobante 1</Descripcion>
+    <Plan>Z</Plan>
+    <Referencia>Ref. Modelo de Comprobante 1</Referencia>
+  </Cabecera>
+
+  <Detalle>
+  </Detalle>
+
+</ModeloComprobante>

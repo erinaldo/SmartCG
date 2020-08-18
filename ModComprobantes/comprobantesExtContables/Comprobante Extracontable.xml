@@ -1,0 +1,248 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>0</Contable>
+    <Transferido>0</Transferido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>0102</AnoPeriodo>
+    <Tipo>1</Tipo>
+    <Numero>6</Numero>
+    <Fecha>20010220</Fecha>
+    <AnoPeriodoDesde>0101</AnoPeriodoDesde>
+    <AnoPeriodoHasta>8012</AnoPeriodoHasta>
+    <Descripcion>Comprobante Extracontable</Descripcion>
+	<TipoExtDefecto />
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>7099000000,00</MonedaLocalDebe>
+    <MonedaLocalHaber>0,00</MonedaLocalHaber>
+    <NumeroApuntes>108</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>60001</Cuenta>
+    <Auxiliar1>A01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>Ejemplo desde PC</Descripcion>
+    <PRD0101>100000000,00</PRD0101>
+    <PRD0102>95000000,00</PRD0102>
+    <PRD0103>85000000,00</PRD0103>
+    <PRD0104>95000000,00</PRD0104>
+    <PRD0105>95000000,00</PRD0105>
+    <PRD0106>105000000,00</PRD0106>
+    <PRD0107>101000000,00</PRD0107>
+    <PRD0108>102000000,00</PRD0108>
+    <PRD0109>101000000,00</PRD0109>
+    <PRD0110>95000000,00</PRD0110>
+    <PRD0111>95000000,00</PRD0111>
+    <PRD0112>95000000,00</PRD0112>
+    <PRD8001 />
+    <PRD8002 />
+    <PRD8003 />
+    <PRD8004 />
+    <PRD8005 />
+    <PRD8006 />
+    <PRD8007 />
+    <PRD8008 />
+    <PRD8009 />
+    <PRD8010 />
+    <PRD8011 />
+    <PRD8012 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>60001</Cuenta>
+    <Auxiliar1>A02</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>Ejemplo desde PC</Descripcion>
+    <PRD0101>25000000,00</PRD0101>
+    <PRD0102>28000000,00</PRD0102>
+    <PRD0103>30000000,00</PRD0103>
+    <PRD0104>35000000,00</PRD0104>
+    <PRD0105>35000000,00</PRD0105>
+    <PRD0106>35000000,00</PRD0106>
+    <PRD0107>35000000,00</PRD0107>
+    <PRD0108>35000000,00</PRD0108>
+    <PRD0109>35000000,00</PRD0109>
+    <PRD0110>35000000,00</PRD0110>
+    <PRD0111>35000000,00</PRD0111>
+    <PRD0112>35000000,00</PRD0112>
+    <PRD8001 />
+    <PRD8002 />
+    <PRD8003 />
+    <PRD8004 />
+    <PRD8005 />
+    <PRD8006 />
+    <PRD8007 />
+    <PRD8008 />
+    <PRD8009 />
+    <PRD8010 />
+    <PRD8011 />
+    <PRD8012 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>60001</Cuenta>
+    <Auxiliar1>A03</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>Ejemplo desde PC</Descripcion>
+    <PRD0101>25000000,00</PRD0101>
+    <PRD0102>28000000,00</PRD0102>
+    <PRD0103>30000000,00</PRD0103>
+    <PRD0104>35000000,00</PRD0104>
+    <PRD0105>100000000,00</PRD0105>
+    <PRD0106>95000000,00</PRD0106>
+    <PRD0107>85000000,00</PRD0107>
+    <PRD0108>95000000,00</PRD0108>
+    <PRD0109>95000000,00</PRD0109>
+    <PRD0110>85000000,00</PRD0110>
+    <PRD0111>95000000,00</PRD0111>
+    <PRD0112>102000000,00</PRD0112>
+    <PRD8001 />
+    <PRD8002 />
+    <PRD8003 />
+    <PRD8004 />
+    <PRD8005 />
+    <PRD8006 />
+    <PRD8007 />
+    <PRD8008 />
+    <PRD8009 />
+    <PRD8010 />
+    <PRD8011 />
+    <PRD8012 />
+  </Detalle>
+  <Detalle>
+    <Cuenta>60002</Cuenta>
+    <Auxiliar1>A01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>Ejemplo desde PC</Descripcion>
+    <PRD8001>30000000,00</PRD8001>
+    <PRD8002>35000000,00</PRD8002>
+    <PRD8003>35000000,00</PRD8003>
+    <PRD8004>25000000,00</PRD8004>
+    <PRD8005>28000000,00</PRD8005>
+    <PRD8006>30000000,00</PRD8006>
+    <PRD8007>35000000,00</PRD8007>
+    <PRD8008>102000000,00</PRD8008>
+    <PRD8009>102000000,00</PRD8009>
+    <PRD8010>102000000,00</PRD8010>
+    <PRD8011>102000000,00</PRD8011>
+    <PRD8012>102000000,00</PRD8012>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60002</Cuenta>
+    <Auxiliar1>A02</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>Ejemplo desde PC</Descripcion>
+    <PRD8001>30000000,00</PRD8001>
+    <PRD8002>35000000,00</PRD8002>
+    <PRD8003>35000000,00</PRD8003>
+    <PRD8004>25000000,00</PRD8004>
+    <PRD8005>30000000,00</PRD8005>
+    <PRD8006>35000000,00</PRD8006>
+    <PRD8007>35000000,00</PRD8007>
+    <PRD8008>35000000,00</PRD8008>
+    <PRD8009>35000000,00</PRD8009>
+    <PRD8010>35000000,00</PRD8010>
+    <PRD8011>35000000,00</PRD8011>
+    <PRD8012>35000000,00</PRD8012>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60002</Cuenta>
+    <Auxiliar1>A03</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>Ejemplo desde PC</Descripcion>
+    <PRD8001>100000000,00</PRD8001>
+    <PRD8002>95000000,00</PRD8002>
+    <PRD8003>85000000,00</PRD8003>
+    <PRD8004>95000000,00</PRD8004>
+    <PRD8005>95000000,00</PRD8005>
+    <PRD8006>105000000,00</PRD8006>
+    <PRD8007>101000000,00</PRD8007>
+    <PRD8008>102000000,00</PRD8008>
+    <PRD8009>101000000,00</PRD8009>
+    <PRD8010>95000000,00</PRD8010>
+    <PRD8011>95000000,00</PRD8011>
+    <PRD8012>95000000,00</PRD8012>
+  </Detalle>
+  <Detalle>
+    <Cuenta>61000</Cuenta>
+    <Auxiliar1>A01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>Ejemplo desde PC</Descripcion>
+    <PRD0101>25000000,00</PRD0101>
+    <PRD0102>28000000,00</PRD0102>
+    <PRD0103>30000000,00</PRD0103>
+    <PRD0104>35000000,00</PRD0104>
+    <PRD0105>25000000,00</PRD0105>
+    <PRD0106>28000000,00</PRD0106>
+    <PRD0107>30000000,00</PRD0107>
+    <PRD0108>35000000,00</PRD0108>
+    <PRD0109>28000000,00</PRD0109>
+    <PRD0110>30000000,00</PRD0110>
+    <PRD0111>35000000,00</PRD0111>
+    <PRD0112>35000000,00</PRD0112>
+  </Detalle>
+  <Detalle>
+    <Cuenta>61000</Cuenta>
+    <Auxiliar1>A02</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>Ejemplo desde PC</Descripcion>
+    <PRD0101>100000000,00</PRD0101>
+    <PRD0102>95000000,00</PRD0102>
+    <PRD0103>85000000,00</PRD0103>
+    <PRD0104>95000000,00</PRD0104>
+    <PRD0105>95000000,00</PRD0105>
+    <PRD0106>105000000,00</PRD0106>
+    <PRD0107>101000000,00</PRD0107>
+    <PRD0108>102000000,00</PRD0108>
+    <PRD0109>102000000,00</PRD0109>
+    <PRD0110>102000000,00</PRD0110>
+    <PRD0111>102000000,00</PRD0111>
+    <PRD0112>102000000,00</PRD0112>
+  </Detalle>
+  <Detalle>
+    <Cuenta>61000</Cuenta>
+    <Auxiliar1>A03</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion>Ejemplo desde PC</Descripcion>
+    <PRD0101>85000000,00</PRD0101>
+    <PRD0102>95000000,00</PRD0102>
+    <PRD0103>95000000,00</PRD0103>
+    <PRD0104>100000000,00</PRD0104>
+    <PRD0105>95000000,00</PRD0105>
+    <PRD0106>85000000,00</PRD0106>
+    <PRD0107>95000000,00</PRD0107>
+    <PRD0108>35000000,00</PRD0108>
+    <PRD0109>35000000,00</PRD0109>
+    <PRD0110>35000000,00</PRD0110>
+    <PRD0111>35000000,00</PRD0111>
+    <PRD0112>35000000,00</PRD0112>
+  </Detalle>
+  <Detalle />
+</Comprobante>

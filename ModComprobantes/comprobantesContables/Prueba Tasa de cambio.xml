@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>0</Transferido>
+    <Extendido>0</Extendido>
+    <Compania>MX</Compania>
+    <AnoPeriodo>0603</AnoPeriodo>
+    <Tipo>3</Tipo>
+    <Numero>3</Numero>
+    <Fecha>20060329</Fecha>
+    <Clase>2</Clase>
+    <Tasa>10,6500000</Tasa>
+    <Descripcion />
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>106,50</MonedaLocalDebe>
+    <MonedaLocalHaber>-106,50</MonedaLocalHaber>
+    <MonedaExtDebe>10,00</MonedaExtDebe>
+    <MonedaExtHaber>-10,00</MonedaExtHaber>
+    <Importe3Debe>0,00</Importe3Debe>
+    <Importe3Haber>0,00</Importe3Haber>
+    <NumeroApuntes>2</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>100000</Cuenta>
+    <Auxiliar1>102</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal />
+    <MonedaExt />
+    <RU />
+    <Descripcion>COBRANZA DEL DIA</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>101000</Cuenta>
+    <Auxiliar1>OO1</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal />
+    <MonedaExt />
+    <RU />
+    <Descripcion>COBRANZA DEL DIA</Descripcion>
+    <Documento>06-1</Documento>
+    <Fecha>20060329</Fecha>
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <MonedaLocal />
+    <MonedaExt />
+  </Detalle>
+</Comprobante>

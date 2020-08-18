@@ -1,0 +1,62 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>0</Contable>
+    <Transferido>0</Transferido>
+    <Compania>AM</Compania>
+    <AnoPeriodo>9504</AnoPeriodo>
+    <Tipo>21</Tipo>
+    <Numero>2</Numero>
+    <Fecha>19950422</Fecha>
+    <Descripcion>Compras Abril 2014</Descripcion>
+    <AnoPeriodoDesde>0801</AnoPeriodoDesde>
+    <AnoPeriodoHasta>0801</AnoPeriodoHasta>
+    <TipoExtDefecto />
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>28,00</MonedaLocalDebe>
+    <MonedaLocalHaber>0,00</MonedaLocalHaber>
+    <NumeroApuntes>5</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>600000</Cuenta>
+    <Auxiliar1>1121</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <TipoExt>e1</TipoExt>
+    <DH>D</DH>
+    <PRD0801>1,00</PRD0801>
+    <PRD0802>10,00</PRD0802>
+    <PRD0803 />
+    <PRD0804 />
+    <Descripcion>extr1</Descripcion>
+  </Detalle>
+  <Detalle>
+    <Cuenta>100000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <TipoExt>e1</TipoExt>
+    <DH>D</DH>
+    <PRD0801 />
+    <PRD0802>2,00</PRD0802>
+    <PRD0803>12,00</PRD0803>
+    <PRD0804 />
+    <Descripcion>extr2</Descripcion>
+  </Detalle>
+  <Detalle>
+    <Cuenta>100000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <TipoExt>e1</TipoExt>
+    <DH>D</DH>
+    <PRD0801 />
+    <PRD0802 />
+    <PRD0803>3,00</PRD0803>
+    <PRD0804 />
+    <Descripcion>extr3</Descripcion>
+  </Detalle>
+  <Detalle />
+</Comprobante>

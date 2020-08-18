@@ -1,0 +1,82 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MCIMOVIVA</Codigo>
+    <Descripcion>prueba</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>txtHastaMes</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>03</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtHastaAno</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>15</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtDesdeMes</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>03</Valor>
+  </Control>
+  <Control>
+    <Nombre>lbSerie</Nombre>
+    <Tipo>ListBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtSerie</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtLibro</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>rbTipoTrans</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbLibroSerie</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCompaniaFiscal</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>lbCompFiscal</Nombre>
+    <Tipo>ListBox</Tipo>
+    <Valor>SA</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbRepercutido</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbSoportado</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>txttitulo</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Movimientos de IVA</Valor>
+  </Control>
+  <Control>
+    <Nombre>chkTotalSerie</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtDesdeAno</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>15</Valor>
+  </Control>
+</Formulario>

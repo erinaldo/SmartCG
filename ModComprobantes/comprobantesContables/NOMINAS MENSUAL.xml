@@ -1,0 +1,456 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>0</Transferido>
+    <Extendido>0</Extendido>
+    <Compania>SA</Compania>
+    <AnoPeriodo>1412</AnoPeriodo>
+    <Tipo>47</Tipo>
+    <Numero>4</Numero>
+    <Fecha>20141225</Fecha>
+    <Clase>0</Clase>
+    <Tasa>0,0000000</Tasa>
+    <Descripcion>NOMINAS MENSUAL</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>21344,22</MonedaLocalDebe>
+    <MonedaLocalHaber>-21344,22</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>0,00</Importe3Debe>
+    <Importe3Haber>-21344,22</Importe3Haber>
+    <NumeroApuntes>24</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>640000</Cuenta>
+    <Auxiliar1>SN02</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>3285,36</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>475000</Cuenta>
+    <Auxiliar1>SN02</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1741,24</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000012</Documento2>
+    <Importe3>-3285,36</Importe3>
+    <Iva>53</Iva>
+    <CifDni>37286206D</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>476000</Cuenta>
+    <Auxiliar1>SN02</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-632,23</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0,00</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>465000</Cuenta>
+    <Auxiliar1>SN02</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-911,89</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>640000</Cuenta>
+    <Auxiliar1>SN03</Auxiliar1>
+    <Auxiliar2>SX03</Auxiliar2>
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>2366,20</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>475000</Cuenta>
+    <Auxiliar1>SN03</Auxiliar1>
+    <Auxiliar2>SX03</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1135,78</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000012</Documento2>
+    <Importe3>-2366,20</Importe3>
+    <Iva>48</Iva>
+    <CifDni>35050021E</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>476000</Cuenta>
+    <Auxiliar1>SN03</Auxiliar1>
+    <Auxiliar2>SX03</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-425,66</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0,00</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>465000</Cuenta>
+    <Auxiliar1>SN03</Auxiliar1>
+    <Auxiliar2>SX03</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-804,76</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>640000</Cuenta>
+    <Auxiliar1>SN04</Auxiliar1>
+    <Auxiliar2>SX02</Auxiliar2>
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>7456,33</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>475000</Cuenta>
+    <Auxiliar1>SN04</Auxiliar1>
+    <Auxiliar2>SX02</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1864,08</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000012</Documento2>
+    <Importe3>-7456,33</Importe3>
+    <Iva>25</Iva>
+    <CifDni>46356477T</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>476000</Cuenta>
+    <Auxiliar1>SN04</Auxiliar1>
+    <Auxiliar2>SX02</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1136,63</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0,00</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>465000</Cuenta>
+    <Auxiliar1>SN04</Auxiliar1>
+    <Auxiliar2>SX02</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-4455,62</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>640000</Cuenta>
+    <Auxiliar1>SN05</Auxiliar1>
+    <Auxiliar2>SX02</Auxiliar2>
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>2500,00</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>475000</Cuenta>
+    <Auxiliar1>SN05</Auxiliar1>
+    <Auxiliar2>SX02</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-775,00</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000012</Documento2>
+    <Importe3>-2500,00</Importe3>
+    <Iva>31</Iva>
+    <CifDni>33456887Y</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>476000</Cuenta>
+    <Auxiliar1>SN05</Auxiliar1>
+    <Auxiliar2>SX02</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-365,20</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0,00</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>465000</Cuenta>
+    <Auxiliar1>SN05</Auxiliar1>
+    <Auxiliar2>SX02</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1359,80</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>640000</Cuenta>
+    <Auxiliar1>SN06</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>2836,33</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>475000</Cuenta>
+    <Auxiliar1>SN06</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-226,91</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000012</Documento2>
+    <Importe3>-2836,33</Importe3>
+    <Iva>08</Iva>
+    <CifDni>45872554C</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>476000</Cuenta>
+    <Auxiliar1>SN06</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-125,69</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0,00</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>465000</Cuenta>
+    <Auxiliar1>SN06</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-2483,73</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>640000</Cuenta>
+    <Auxiliar1>SN07</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>2900,00</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>475000</Cuenta>
+    <Auxiliar1>SN07</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-986,00</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000012</Documento2>
+    <Importe3>-2900,00</Importe3>
+    <Iva>34</Iva>
+    <CifDni>32221423X</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>476000</Cuenta>
+    <Auxiliar1>SN07</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-365,20</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0,00</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>465000</Cuenta>
+    <Auxiliar1>SN07</Auxiliar1>
+    <Auxiliar2>SX01</Auxiliar2>
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1548,80</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Nomina mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Fecha />
+    <Vencimiento />
+  </Detalle>
+</Comprobante>

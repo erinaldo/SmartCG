@@ -1,0 +1,310 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>0</Transferido>
+    <Extendido>0</Extendido>
+    <Compania>SA</Compania>
+    <AnoPeriodo>1501</AnoPeriodo>
+    <Tipo>01</Tipo>
+    <Numero>1</Numero>
+    <Fecha>20150102</Fecha>
+    <Clase>0</Clase>
+    <Tasa>0</Tasa>
+    <Descripcion>AUTOREPERCUTIDO SA                  </Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>2747703,09</MonedaLocalDebe>
+    <MonedaLocalHaber>-2747703,09</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>2270829,00</Importe3Debe>
+    <Importe3Haber>-2270829,00</Importe3Haber>
+    <NumeroApuntes>16</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>4007</Cuenta>
+    <Auxiliar1>SP02</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-429905,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <RowNumber>95</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>472020</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>90280,05</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha>10101</Fecha>
+    <Vencimiento />
+    <Documento2>15-000000001</Documento2>
+    <Importe3>429905,00</Importe3>
+    <Iva>AS</Iva>
+    <CifDni>08243190J</CifDni>
+    <RowNumber>96</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-90280,05</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha>10101</Fecha>
+    <Vencimiento />
+    <Documento2>15-000000001</Documento2>
+    <Importe3>-429905,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>08243190J</CifDni>
+    <RowNumber>97</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>601101</Cuenta>
+    <Auxiliar1>SG01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>429905,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <RowNumber>98</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>4007</Cuenta>
+    <Auxiliar1>SP01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-825000,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <RowNumber>99</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>472020</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>173250,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha>10101</Fecha>
+    <Vencimiento />
+    <Documento2>15-000000002</Documento2>
+    <Importe3>825000,00</Importe3>
+    <Iva>AS</Iva>
+    <CifDni>08243190J</CifDni>
+    <RowNumber>100</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-173250,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha>10101</Fecha>
+    <Vencimiento />
+    <Documento2>15-000000002</Documento2>
+    <Importe3>-825000,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>08243190J</CifDni>
+    <RowNumber>101</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>601101</Cuenta>
+    <Auxiliar1>SG01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>825000,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <RowNumber>102</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>4007</Cuenta>
+    <Auxiliar1>SP03</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-672000,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <RowNumber>103</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>472020</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>141120,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha>10101</Fecha>
+    <Vencimiento />
+    <Documento2>15-000000003</Documento2>
+    <Importe3>672000,00</Importe3>
+    <Iva>AS</Iva>
+    <CifDni>08243190J</CifDni>
+    <RowNumber>104</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-141120,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha>10101</Fecha>
+    <Vencimiento />
+    <Documento2>15-000000003</Documento2>
+    <Importe3>-672000,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>08243190J</CifDni>
+    <RowNumber>105</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>601101</Cuenta>
+    <Auxiliar1>SG01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>672000,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <RowNumber>106</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>4007</Cuenta>
+    <Auxiliar1>SP01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-343924,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <RowNumber>107</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>472020</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>72224,04</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha>10101</Fecha>
+    <Vencimiento />
+    <Documento2>15-000000004</Documento2>
+    <Importe3>343924,00</Importe3>
+    <Iva>AS</Iva>
+    <CifDni>08243190J</CifDni>
+    <RowNumber>108</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-72224,04</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha>10101</Fecha>
+    <Vencimiento />
+    <Documento2>15-000000004</Documento2>
+    <Importe3>-343924,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>08243190J</CifDni>
+    <RowNumber>109</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Cuenta>601101</Cuenta>
+    <Auxiliar1>SG01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>343924,00</MonedaLocal>
+    <MonedaExt>0</MonedaExt>
+    <RU />
+    <Descripcion>COMPRAS</Descripcion>
+    <Fecha />
+    <Vencimiento />
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <RowNumber>110</RowNumber>
+  </Detalle>
+  <Detalle>
+    <Fecha />
+    <Vencimiento />
+  </Detalle>
+</Comprobante>

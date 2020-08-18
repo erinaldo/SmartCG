@@ -1,0 +1,60 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>0</Transferido>
+    <Extendido>1</Extendido>
+    <Compania>W1</Compania>
+    <AnoPeriodo />
+    <Tipo />
+    <Numero />
+    <Fecha />
+    <Clase />
+    <Tasa />
+    <Descripcion />
+    <Revertir />
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>0</MonedaLocalDebe>
+    <MonedaLocalHaber>0</MonedaLocalHaber>
+    <MonedaExtDebe>0</MonedaExtDebe>
+    <MonedaExtHaber>0</MonedaExtHaber>
+    <Importe3Debe>0</Importe3Debe>
+    <Importe3Haber>0</Importe3Haber>
+    <NumeroApuntes>0</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta />
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH />
+    <MonedaLocal />
+    <MonedaExt />
+    <RU />
+    <Descripcion />
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA />
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1 />
+    <CampoUserNum2 />
+    <CampoUserFecha1 />
+    <CampoUserFecha2 />
+  </Detalle>
+</Comprobante>

@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Globales Inicio -->
+  <data name="lblAceptar" xml:space="preserve">
+    <value>&amp;Acceptar</value>
+  </data>
+  <data name="lblCancelar" xml:space="preserve">
+    <value>&amp;Cancel.lar</value>
+  </data>  
+  <data name="errValTitulo" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="lblSeleccionar" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="toolStripNuevo" xml:space="preserve">
+    <value>&amp;Nou</value>
+  </data>
+  <data name="toolStripEditar" xml:space="preserve">
+    <value>&amp;Edita</value>
+  </data>
+  <data name="toolStripEliminar" xml:space="preserve">
+    <value>E&amp;liminar</value>
+  </data>
+  <data name="toolStripImprimir" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="toolStripSalir" xml:space="preserve">
+    <value>&amp;Sortir</value>
+  </data>
+  <data name="toolStripGrabar" xml:space="preserve">
+    <value>&amp;Gravar</value>
+  </data>
+  <data name="toolStripActivarDesactivar" xml:space="preserve">
+    <value>&amp;Activar/Desactivar</value>
+  </data>
+  <data name="lblEtiquetaTodasColumnas" xml:space="preserve">
+    <value>Totes</value>
+  </data>
+  <data name="lblEstadoActiva" xml:space="preserve">
+    <value>Activa</value>
+  </data>
+  <data name="lblEstadoInactiva" xml:space="preserve">
+    <value>Inactiva</value>
+  </data>
+  <data name="lblEstadoActivo" xml:space="preserve">
+    <value>Actiu</value>
+  </data>
+  <data name="lblEstadoInactiva" xml:space="preserve">
+    <value>Inactiu</value>
+  </data>
+  <data name="menuItemAbout" xml:space="preserve">
+    <value>&amp;Acerca de</value>
+  </data>
+  <data name="menuItemSalir" xml:space="preserve">
+    <value>&amp;Salir</value>
+  </data>
+  <data name="confDeseaCont" xml:space="preserve">
+    <value>Voleu continuar?</value>
+  </data>
+  <!-- Globales Fin -->  
+  
+  <!-- frmPrincipal Inicio -->
+  <data name="lblfrmPrincipalTitulo" xml:space="preserve">
+    <value>Mòdul Manteniments</value>
+  </data>
+  <data name="menuItemTablasMaestras" xml:space="preserve">
+    <value>Taules Mestres</value>
+  </data>
+  <data name="menuItemTablasAux" xml:space="preserve">
+    <value>Taules Auxiliars</value>
+  </data>
+  <data name="submenuItemCompanias" xml:space="preserve">
+    <value>Companyies</value>
+  </data>
+  <data name="submenuItemGruposCompanias" xml:space="preserve">
+    <value>Grups de companyies</value>
+  </data>
+  <data name="submenuItemPlanesCtas" xml:space="preserve">
+    <value>Plans de comptes</value>
+  </data>
+  <data name="submenuItemTiposAux" xml:space="preserve">
+    <value>Tipus d'auxiliars</value>
+  </data>
+  <data name="submenuItemClaseZona" xml:space="preserve">
+    <value>Classe de zona</value>
+  </data>
+  <data name="submenuItemZona" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="submenuItemCtasAux" xml:space="preserve">
+    <value>Comptes d'auxiliar</value>
+  </data>
+  <data name="submenuItemCtasMayor" xml:space="preserve">
+    <value>Comptes de major</value>
+  </data>
+  <data name="submenuItemMaestroCIF_DNI" xml:space="preserve">
+    <value>Mestres de CIF / DNI</value>
+  </data>
+  <data name="submenuItemCompaniasFiscales" xml:space="preserve">
+    <value>Compañías fiscales</value>
+  </data>
+  <data name="submenuItemTablaMonedaExt" xml:space="preserve">
+    <value>Taula de monedes estrangeres</value>
+  </data>
+  <data name="submenuItemTablaCalendars" xml:space="preserve">
+    <value>Taula de calendaris</value>
+  </data>
+  <data name="submenuItemGrupoCtasAux" xml:space="preserve">
+    <value>Grups de comptes d'auxiliar</value>
+  </data>
+  <data name="submenuItemGrupoCtaMayor" xml:space="preserve">
+    <value>Grups de comptes de major</value>
+  </data>
+  <data name="submenuItemTiposExt" xml:space="preserve">
+    <value>Tipus de extracomptables</value>
+  </data>
+  <data name="submenuItemTiposComprobantes" xml:space="preserve">
+    <value>Tipus de comprovants</value>
+  </data>
+  
+  <data name="lblTituloMtoCompanias" xml:space="preserve">
+    <value>Manteniment de Companyies</value>
+  </data>
+  <data name="lblTituloMtoGruposCompanias" xml:space="preserve">
+    <value>Manteniment de Grups de Companyies</value>
+  </data>
+  <data name="lblTituloMtoPlanesCtas" xml:space="preserve">
+    <value>Manteniment de Plans de Comptes</value>
+  </data>
+  <data name="lblTituloMtoTiposAuxiliares" xml:space="preserve">
+    <value>Manteniment de Tipus d'Auxiliars</value>
+  </data>
+  <data name="lblTituloMtoTablasMonedasExt" xml:space="preserve">
+    <value>Manteniment de Taules de Monedes Estrangeres</value>
+  </data>
+  <data name="lblTituloMtoMaestroCIF_DNI" xml:space="preserve">
+    <value>Manteniment de Mestre de CIF / DNI</value>
+  </data>
+  <data name="lblTituloMtoClaseZona" xml:space="preserve">
+    <value>Manteniment de Classe de la zona</value>
+  </data>
+  <data name="lblTituloMtoGrupoCuentasAux" xml:space="preserve">
+    <value>Manteniment de Grups de Comptes d'Auxiliar</value>
+  </data>
+  <data name="lblTituloMtoGrupoCuentasMayor" xml:space="preserve">
+    <value>Manteniment de Grups de Comptes de Major</value>
+  </data>
+  <!-- frmPrincipal Fin -->
+  
+  <!-- frmMtoGLM01 Inicio -->
+  <data name="lblfrmMtoGLM01TituloALta" xml:space="preserve">
+    <value>Manteniment de Companyies - Alta</value>
+  </data>
+  <data name="lblfrmMtoGLM01TituloEdit" xml:space="preserve">
+    <value>Manteniment de Companyies - Edició</value>
+  </data>
+  <data name="lblCompania" xml:space="preserve">
+    <value>Companyia</value>
+  </data>
+  <data name="lblNumIdTrib" xml:space="preserve">
+    <value>Número Id. Tributaria</value>
+  </data>
+  <data name="lblImportesDec" xml:space="preserve">
+    <value>Importes con decimales</value>
+  </data>
+  <!-- frmMtoGLM01 Fin -->
+  
+  <!-- frmMtoGLM02 Inicio -->
+  <data name="lblfrmMtoGLM02TituloALta" xml:space="preserve">
+    <value>Mantenimiento de Planes de Cuentas - Alta</value>
+  </data>
+  <data name="lblfrmMtoGLM02TituloEdit" xml:space="preserve">
+    <value>Mantenimiento de Planes de Cuentas - Edició</value>
+  </data>
+  <data name="toolStripCamposExt" xml:space="preserve">
+    <value>Camps Estesos</value>
+  </data>
+  <!-- frmMtoGLM02 Fin -->
+  
+  <!-- frmMtoGLM03Sel Inicio -->
+  <data name="lblfrmMtoGLM03Titulo" xml:space="preserve">
+    <value>Mantenimiento de Cuentas de Mayor</value>
+  </data>
+  <data name="toolStripCopiarCuenta" xml:space="preserve">
+    <value>&amp;Copiar Compte</value>
+  </data>
+  <data name="toolStripCambiarTipo" xml:space="preserve">
+    <value>Canviar &amp;Tipus Compte</value>
+  </data>
+  <!-- frmMtoGLM03Sel Fin -->
+  
+  <!-- frmMtoGLM03Titulo Inicio -->
+  <data name="lblVerNivelesCta" xml:space="preserve">
+    <value>&amp;Veure nivells del compte</value>
+  </data>
+  <!-- frmMtoGLM03Titulo Fin -->
+  
+  <!-- frmMtoGLM03Detalle Inicio -->
+  <data name="lblCrearGruposCtas" xml:space="preserve">
+    <value>&amp;Crear Grups de Comptes</value>
+  </data>
+  <!-- frmMtoGLM03Detalle Fin -->
+  
+  <!-- frmMtoGLM07 Inicio -->
+  <data name="lblfrmMtoGLM07TituloALta" xml:space="preserve">
+    <value>Manteniment de Grups de Companyies - Alta</value>
+  </data>
+  <data name="lblfrmMtoGLM07TituloEdit" xml:space="preserve">
+    <value>Manteniment de Grups de Companyies - Edició</value>
+  </data>
+  <data name="lblfrmMtoGLM07AddCompania" xml:space="preserve">
+    <value>&amp;Addicionar Companyia</value>
+  </data>
+  <data name="lblfrmMtoGLM07AddGrupos" xml:space="preserve">
+    <value>Addicionar &amp;Grups</value>
+  </data>
+  <!-- frmMtoGLM07 Fin -->
+  
+  <!-- frmMtoGLM10 Inicio -->
+  <data name="lblfrmMtoGLM10TituloALta" xml:space="preserve">
+    <value>Manteniment de Classe de Zona - Alta</value>
+  </data>
+  <data name="lblfrmMtoGLM10TituloEdit" xml:space="preserve">
+    <value>Manteniment de Classe de Zona - Edició</value>
+  </data>
+  <data name="toolStripTiposAux" xml:space="preserve">
+    <value>&amp;Tipus d'Auxiliar</value>
+  </data>
+  <!-- frmMtoGLM10 Fin -->
+  
+  <!-- frmMtoGLT04 Inicio -->
+  <data name="lblfrmMtoGLT04TituloALta" xml:space="preserve">
+    <value>Manteniment de Calendaris Comptables - Alta</value>
+  </data>
+  <data name="lblfrmMtoGLT04TituloEdit" xml:space="preserve">
+    <value>Manteniment de Calendaris Comptables - Edició</value>
+  </data>
+  <data name="toolStripFechaFinalUltPrd" xml:space="preserve">
+    <value>&amp;Data Final Darrer Prd.</value>
+  </data>
+  <data name="toolStripAdicionarPrd" xml:space="preserve">
+    <value>&amp;Addicionar Període</value>
+  </data>
+  <data name="toolStripCopiarPrd" xml:space="preserve">
+    <value>&amp;Copia Períodes</value>
+  </data>
+  <data name="toolStripEliminarPrd" xml:space="preserve">
+    <value>&amp;Eliminar Períodes</value>
+  </data>
+  <!-- frmMtoGLT04 Fin -->
+  
+  <!-- frmMtoIVT01 Inicio -->
+  <data name="lblfrmMtoIVT01TituloAlta" xml:space="preserve">
+    <value>Manteniment de Codis d'IVA - Alta</value>
+  </data>
+  <data name="lblfrmMtoIVT01TituloEdit" xml:space="preserve">
+    <value>Manteniment de Codis d'IVA - Edició</value>
+  </data>
+  <data name="lblIVT01Plan" xml:space="preserve">
+    <value>Plan de cuentas</value>
+  </data>
+  <data name="lblIVT01CodIVA" xml:space="preserve">
+    <value>Código de IVA</value>
+  </data>
+  <data name="lblIVT01General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="lblIVT01ReperSopor" xml:space="preserve">
+    <value>Repercutido/soportado</value>
+  </data>
+  <data name="lblIVT01ReperSopor" xml:space="preserve">
+    <value>Repercutido/soportado</value>
+  </data>
+  <data name="lblIVT01Repercutido" xml:space="preserve">
+    <value>repercutido</value>
+  </data>
+  <data name="lblIVT01Soportado" xml:space="preserve">
+    <value>soportado</value>
+  </data>
+  <data name="lblIVT01DeducNoDeduc" xml:space="preserve">
+    <value>Deducible/no deducible</value>
+  </data>
+  <data name="lblIVT01Deduc" xml:space="preserve">
+    <value>repercutido</value>
+  </data>
+  <data name="lblIVT01NoDeduc" xml:space="preserve">
+    <value>soportado</value>
+  </data>
+  <data name="lblIVT01SI" xml:space="preserve">
+    <value>sí</value>
+  </data>
+  <data name="lblIVT01NO" xml:space="preserve">
+    <value>no</value>
+  </data>
+  <data name="lblIVT01CuadreCuotas" xml:space="preserve">
+    <value>Máximo descuadre cuotas</value>
+  </data>
+  <data name="lblIVT01Contrapartida" xml:space="preserve">
+    <value>Contrapartida</value>
+  </data>
+  <data name="lblIVT01CtaMayor" xml:space="preserve">
+    <value>Cuenta de Mayor</value>
+  </data>
+  <data name="lblIVT01CodIVA" xml:space="preserve">
+    <value>Código IVA</value>
+  </data>
+  <data name="lblIVT01CodIVAAsoc" xml:space="preserve">
+    <value>Código IVA asociado</value>
+  </data>
+  <data name="lblIVT01TipoIVA" xml:space="preserve">
+    <value>Tipo de IVA</value>
+  </data>
+  <data name="lblIVT01Mod303GrupoOperac" xml:space="preserve">
+    <value>Modelo 303   Grupo de operaciones</value>
+  </data>
+  <data name="lblIVT01Mod390GrupoOperac" xml:space="preserve">
+    <value>Modelo 390   Grupo de operaciones</value>
+  </data>
+  <data name="lblIVT01Mod340LibroReg" xml:space="preserve">
+    <value>Modelo 340   Libro registro</value>
+  </data>
+  <data name="lblIVT01Mod340ClaveOperac" xml:space="preserve">
+    <value>Modelo 340   Clave operaciones</value>
+  </data>           
+  <data name="lblIVT01Mod340TipoOperac" xml:space="preserve">
+    <value>Modelo 340   Tipo operación</value>
+  </data>
+  <data name="lblIVT01Mod180ModalidadPercep" xml:space="preserve">
+    <value>Modelo 180   Modalidad de percepción</value>
+  </data>
+  <data name="lblIVT01Dinerario" xml:space="preserve">
+    <value>Dinerario</value>
+  </data>
+  <data name="lblIVT01Especie" xml:space="preserve">
+    <value>Especie</value>
+  </data>
+  <data name="lblIVT01Mod190ClavePercep" xml:space="preserve">
+    <value>Modelo 190   Clave percepción</value>
+  </data>
+  <data name="lblIVT01Mod190SubclavePercep" xml:space="preserve">
+    <value>Modelo 190   Subclave percepción</value>
+  </data>
+  <data name="lblIVT01Mod111ClavePercep" xml:space="preserve">
+    <value>Modelo 111   Clave percepción</value>
+  </data>  
+  <!-- frmMtoIVT01 Fin -->
+</root>

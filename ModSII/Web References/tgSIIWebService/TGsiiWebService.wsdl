@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetApplicationVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetApplicationVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApplicationVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRFacturasEmitidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRFacturasEmitidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuministroLRFacturasEmitidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFacturasEmitidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nif_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaExpedicion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facturaModifica" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estadoCuadre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFacturasEmitidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRFacturasEmitidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRFacturasEmitidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRFacturasEmitidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnulacionLRFacturasEmitidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFactInformadasCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nifCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazonSocialCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estadoCuadre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaExpedicionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaExpedicionHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaOperacionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaOperacionHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFactInformadasClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRFactInformadasClienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFactInformadasAgrupadasCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nifCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazonSocialCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estadoCuadre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFactInformadasAgrupadasClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRFactInformadasAgrupadasClienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRFacturasRecibidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRFacturasRecibidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuministroLRFacturasRecibidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFacturasRecibidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nif_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaExpedicion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facturaModifica" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estadoCuadre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFacturasRecibidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRFacturasRecibidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRFacturasRecibidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRFacturasRecibidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnulacionLRFacturasRecibidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFactInformadasProveedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nifProveedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazonSocialProveedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estadoCuadre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaExpedicionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaExpedicionHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaOperacionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaOperacionHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFactInformadasProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRFactInformadasProveedorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFactInformadasAgrupadasProveedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nifProveedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazonSocialProveedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estadoCuadre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRFactInformadasAgrupadasProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRFactInformadasAgrupadasProveedorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRDetOperacionIntracomunitaria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRDetOperacionIntracomunitariaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuministroLRDetOperacionIntracomunitariaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRDetOperIntracomunitarias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nif_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaExpedicion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facturaModifica" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRDetOperIntracomunitariasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRDetOperIntracomunitariasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRDetOperacionIntracomunitaria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRDetOperacionIntracomunitariaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnulacionLRDetOperacionIntracomunitariaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRBienesInversion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRBienesInversionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuministroLRBienesInversionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRBienesInversion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nif_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaExpedicion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facturaModifica" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificacionBien" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRBienesInversionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRBienesInversionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRBienesInversion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRBienesInversionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnulacionLRBienesInversionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRPagosRecibidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejericio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaDocCGHasta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRPagosRecibidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuministroLRPagosRecibidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRPagosRecibidas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nif_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaExpedicion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRPagosRecibidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRPagosRecibidasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRCobrosMetalico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRCobrosMetalicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuministroLRCobrosMetalicoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRCobrosMetalico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nif_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cobroModificado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRCobrosMetalicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRCobrosMetalicoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRCobrosMetalico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRCobrosMetalicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnulacionLRCobrosMetalicoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLROperacionesSeguros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLROperacionesSegurosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuministroLROperacionesSegurosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLROperacionesSeguros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nif_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="claveOperacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacionModificada" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLROperacionesSegurosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLROperacionesSegurosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLROperacionesSeguros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLROperacionesSegurosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnulacionLROperacionesSegurosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRAgenciasViajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuministroLRAgenciasViajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuministroLRAgenciasViajesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRAgenciasViajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nif_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionDesde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaPresentacionHasta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="registroModificado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLRAgenciasViajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLRAgenciasViajesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRAgenciasViajes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSerieFactura" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulacionLRAgenciasViajesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnulacionLRAgenciasViajesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarTodo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compania" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="libro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ejercicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarTodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarTodoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetApplicationVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicationVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicationVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRFacturasEmitidasSoapIn">
+    <wsdl:part name="parameters" element="tns:SuministroLRFacturasEmitidas" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRFacturasEmitidasSoapOut">
+    <wsdl:part name="parameters" element="tns:SuministroLRFacturasEmitidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFacturasEmitidasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFacturasEmitidas" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFacturasEmitidasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFacturasEmitidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRFacturasEmitidasSoapIn">
+    <wsdl:part name="parameters" element="tns:AnulacionLRFacturasEmitidas" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRFacturasEmitidasSoapOut">
+    <wsdl:part name="parameters" element="tns:AnulacionLRFacturasEmitidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFactInformadasClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFactInformadasCliente" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFactInformadasClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFactInformadasClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFactInformadasAgrupadasClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFactInformadasAgrupadasCliente" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFactInformadasAgrupadasClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFactInformadasAgrupadasClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRFacturasRecibidasSoapIn">
+    <wsdl:part name="parameters" element="tns:SuministroLRFacturasRecibidas" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRFacturasRecibidasSoapOut">
+    <wsdl:part name="parameters" element="tns:SuministroLRFacturasRecibidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFacturasRecibidasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFacturasRecibidas" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFacturasRecibidasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFacturasRecibidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRFacturasRecibidasSoapIn">
+    <wsdl:part name="parameters" element="tns:AnulacionLRFacturasRecibidas" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRFacturasRecibidasSoapOut">
+    <wsdl:part name="parameters" element="tns:AnulacionLRFacturasRecibidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFactInformadasProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFactInformadasProveedor" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFactInformadasProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFactInformadasProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFactInformadasAgrupadasProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFactInformadasAgrupadasProveedor" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRFactInformadasAgrupadasProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRFactInformadasAgrupadasProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRDetOperacionIntracomunitariaSoapIn">
+    <wsdl:part name="parameters" element="tns:SuministroLRDetOperacionIntracomunitaria" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRDetOperacionIntracomunitariaSoapOut">
+    <wsdl:part name="parameters" element="tns:SuministroLRDetOperacionIntracomunitariaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRDetOperIntracomunitariasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRDetOperIntracomunitarias" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRDetOperIntracomunitariasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRDetOperIntracomunitariasResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRDetOperacionIntracomunitariaSoapIn">
+    <wsdl:part name="parameters" element="tns:AnulacionLRDetOperacionIntracomunitaria" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRDetOperacionIntracomunitariaSoapOut">
+    <wsdl:part name="parameters" element="tns:AnulacionLRDetOperacionIntracomunitariaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRBienesInversionSoapIn">
+    <wsdl:part name="parameters" element="tns:SuministroLRBienesInversion" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRBienesInversionSoapOut">
+    <wsdl:part name="parameters" element="tns:SuministroLRBienesInversionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRBienesInversionSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRBienesInversion" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRBienesInversionSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRBienesInversionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRBienesInversionSoapIn">
+    <wsdl:part name="parameters" element="tns:AnulacionLRBienesInversion" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRBienesInversionSoapOut">
+    <wsdl:part name="parameters" element="tns:AnulacionLRBienesInversionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRPagosRecibidasSoapIn">
+    <wsdl:part name="parameters" element="tns:SuministroLRPagosRecibidas" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRPagosRecibidasSoapOut">
+    <wsdl:part name="parameters" element="tns:SuministroLRPagosRecibidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRPagosRecibidasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRPagosRecibidas" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRPagosRecibidasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRPagosRecibidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRCobrosMetalicoSoapIn">
+    <wsdl:part name="parameters" element="tns:SuministroLRCobrosMetalico" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRCobrosMetalicoSoapOut">
+    <wsdl:part name="parameters" element="tns:SuministroLRCobrosMetalicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRCobrosMetalicoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRCobrosMetalico" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRCobrosMetalicoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRCobrosMetalicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRCobrosMetalicoSoapIn">
+    <wsdl:part name="parameters" element="tns:AnulacionLRCobrosMetalico" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRCobrosMetalicoSoapOut">
+    <wsdl:part name="parameters" element="tns:AnulacionLRCobrosMetalicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLROperacionesSegurosSoapIn">
+    <wsdl:part name="parameters" element="tns:SuministroLROperacionesSeguros" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLROperacionesSegurosSoapOut">
+    <wsdl:part name="parameters" element="tns:SuministroLROperacionesSegurosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLROperacionesSegurosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLROperacionesSeguros" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLROperacionesSegurosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLROperacionesSegurosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLROperacionesSegurosSoapIn">
+    <wsdl:part name="parameters" element="tns:AnulacionLROperacionesSeguros" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLROperacionesSegurosSoapOut">
+    <wsdl:part name="parameters" element="tns:AnulacionLROperacionesSegurosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRAgenciasViajesSoapIn">
+    <wsdl:part name="parameters" element="tns:SuministroLRAgenciasViajes" />
+  </wsdl:message>
+  <wsdl:message name="SuministroLRAgenciasViajesSoapOut">
+    <wsdl:part name="parameters" element="tns:SuministroLRAgenciasViajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRAgenciasViajesSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLRAgenciasViajes" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLRAgenciasViajesSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLRAgenciasViajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRAgenciasViajesSoapIn">
+    <wsdl:part name="parameters" element="tns:AnulacionLRAgenciasViajes" />
+  </wsdl:message>
+  <wsdl:message name="AnulacionLRAgenciasViajesSoapOut">
+    <wsdl:part name="parameters" element="tns:AnulacionLRAgenciasViajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarTodoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarTodo" />
+  </wsdl:message>
+  <wsdl:message name="EnviarTodoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarTodoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TGsiiServiceSoap">
+    <wsdl:operation name="GetApplicationVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la versión del Servicio Web</wsdl:documentation>
+      <wsdl:input message="tns:GetApplicationVersionSoapIn" />
+      <wsdl:output message="tns:GetApplicationVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRFacturasEmitidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Emitidas Alta/Modificar</wsdl:documentation>
+      <wsdl:input message="tns:SuministroLRFacturasEmitidasSoapIn" />
+      <wsdl:output message="tns:SuministroLRFacturasEmitidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFacturasEmitidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Emitidas Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRFacturasEmitidasSoapIn" />
+      <wsdl:output message="tns:ConsultaLRFacturasEmitidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRFacturasEmitidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Emitidas Baja</wsdl:documentation>
+      <wsdl:input message="tns:AnulacionLRFacturasEmitidasSoapIn" />
+      <wsdl:output message="tns:AnulacionLRFacturasEmitidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasCliente">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Informadas Cliente Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRFactInformadasClienteSoapIn" />
+      <wsdl:output message="tns:ConsultaLRFactInformadasClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasAgrupadasCliente">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Informadas Agrupadas Cliente Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRFactInformadasAgrupadasClienteSoapIn" />
+      <wsdl:output message="tns:ConsultaLRFactInformadasAgrupadasClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRFacturasRecibidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Recibidas Alta/Modificar</wsdl:documentation>
+      <wsdl:input message="tns:SuministroLRFacturasRecibidasSoapIn" />
+      <wsdl:output message="tns:SuministroLRFacturasRecibidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFacturasRecibidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Recibidas Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRFacturasRecibidasSoapIn" />
+      <wsdl:output message="tns:ConsultaLRFacturasRecibidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRFacturasRecibidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Recibidas Baja</wsdl:documentation>
+      <wsdl:input message="tns:AnulacionLRFacturasRecibidasSoapIn" />
+      <wsdl:output message="tns:AnulacionLRFacturasRecibidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasProveedor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Informadas Proveedor Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRFactInformadasProveedorSoapIn" />
+      <wsdl:output message="tns:ConsultaLRFactInformadasProveedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasAgrupadasProveedor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Facturas Informadas Agrupadas Proveedor Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRFactInformadasAgrupadasProveedorSoapIn" />
+      <wsdl:output message="tns:ConsultaLRFactInformadasAgrupadasProveedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRDetOperacionIntracomunitaria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Operaciones Intracomunitarias Alta/Modificar</wsdl:documentation>
+      <wsdl:input message="tns:SuministroLRDetOperacionIntracomunitariaSoapIn" />
+      <wsdl:output message="tns:SuministroLRDetOperacionIntracomunitariaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRDetOperIntracomunitarias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Operaciones Intracomunitarias Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRDetOperIntracomunitariasSoapIn" />
+      <wsdl:output message="tns:ConsultaLRDetOperIntracomunitariasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRDetOperacionIntracomunitaria">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Operaciones Intracomunitarias Baja</wsdl:documentation>
+      <wsdl:input message="tns:AnulacionLRDetOperacionIntracomunitariaSoapIn" />
+      <wsdl:output message="tns:AnulacionLRDetOperacionIntracomunitariaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRBienesInversion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Bienes de Inversión Alta/Modificar</wsdl:documentation>
+      <wsdl:input message="tns:SuministroLRBienesInversionSoapIn" />
+      <wsdl:output message="tns:SuministroLRBienesInversionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRBienesInversion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Bienes de Inversión Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRBienesInversionSoapIn" />
+      <wsdl:output message="tns:ConsultaLRBienesInversionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRBienesInversion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Bienes de Inversión Baja</wsdl:documentation>
+      <wsdl:input message="tns:AnulacionLRBienesInversionSoapIn" />
+      <wsdl:output message="tns:AnulacionLRBienesInversionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRPagosRecibidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pagos de Facturas Recibidas Alta/Modificar</wsdl:documentation>
+      <wsdl:input message="tns:SuministroLRPagosRecibidasSoapIn" />
+      <wsdl:output message="tns:SuministroLRPagosRecibidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRPagosRecibidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pagos de Facturas Recibidas Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRPagosRecibidasSoapIn" />
+      <wsdl:output message="tns:ConsultaLRPagosRecibidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRCobrosMetalico">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cobros en Metálico Alta/Modificar</wsdl:documentation>
+      <wsdl:input message="tns:SuministroLRCobrosMetalicoSoapIn" />
+      <wsdl:output message="tns:SuministroLRCobrosMetalicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRCobrosMetalico">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cobros en Metálico Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRCobrosMetalicoSoapIn" />
+      <wsdl:output message="tns:ConsultaLRCobrosMetalicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRCobrosMetalico">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cobros en Metálico Baja</wsdl:documentation>
+      <wsdl:input message="tns:AnulacionLRCobrosMetalicoSoapIn" />
+      <wsdl:output message="tns:AnulacionLRCobrosMetalicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLROperacionesSeguros">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Operaciones de Seguros Alta/Modificar</wsdl:documentation>
+      <wsdl:input message="tns:SuministroLROperacionesSegurosSoapIn" />
+      <wsdl:output message="tns:SuministroLROperacionesSegurosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLROperacionesSeguros">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Operaciones de Seguros Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLROperacionesSegurosSoapIn" />
+      <wsdl:output message="tns:ConsultaLROperacionesSegurosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLROperacionesSeguros">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Operaciones de Seguros Baja</wsdl:documentation>
+      <wsdl:input message="tns:AnulacionLROperacionesSegurosSoapIn" />
+      <wsdl:output message="tns:AnulacionLROperacionesSegurosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRAgenciasViajes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agencias de Viajes Alta/Modificar</wsdl:documentation>
+      <wsdl:input message="tns:SuministroLRAgenciasViajesSoapIn" />
+      <wsdl:output message="tns:SuministroLRAgenciasViajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRAgenciasViajes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agencias de Viajes Consultar</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaLRAgenciasViajesSoapIn" />
+      <wsdl:output message="tns:ConsultaLRAgenciasViajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRAgenciasViajes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agencias de Viajes Baja</wsdl:documentation>
+      <wsdl:input message="tns:AnulacionLRAgenciasViajesSoapIn" />
+      <wsdl:output message="tns:AnulacionLRAgenciasViajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarTodo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Envia todas las facturas pendientes a la AEAT</wsdl:documentation>
+      <wsdl:input message="tns:EnviarTodoSoapIn" />
+      <wsdl:output message="tns:EnviarTodoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TGsiiServiceSoap" type="tns:TGsiiServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetApplicationVersion">
+      <soap:operation soapAction="http://tempuri.org/GetApplicationVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRFacturasEmitidas">
+      <soap:operation soapAction="http://tempuri.org/SuministroLRFacturasEmitidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFacturasEmitidas">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRFacturasEmitidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRFacturasEmitidas">
+      <soap:operation soapAction="http://tempuri.org/AnulacionLRFacturasEmitidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasCliente">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRFactInformadasCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasAgrupadasCliente">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRFactInformadasAgrupadasCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRFacturasRecibidas">
+      <soap:operation soapAction="http://tempuri.org/SuministroLRFacturasRecibidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFacturasRecibidas">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRFacturasRecibidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRFacturasRecibidas">
+      <soap:operation soapAction="http://tempuri.org/AnulacionLRFacturasRecibidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasProveedor">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRFactInformadasProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasAgrupadasProveedor">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRFactInformadasAgrupadasProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRDetOperacionIntracomunitaria">
+      <soap:operation soapAction="http://tempuri.org/SuministroLRDetOperacionIntracomunitaria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRDetOperIntracomunitarias">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRDetOperIntracomunitarias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRDetOperacionIntracomunitaria">
+      <soap:operation soapAction="http://tempuri.org/AnulacionLRDetOperacionIntracomunitaria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRBienesInversion">
+      <soap:operation soapAction="http://tempuri.org/SuministroLRBienesInversion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRBienesInversion">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRBienesInversion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRBienesInversion">
+      <soap:operation soapAction="http://tempuri.org/AnulacionLRBienesInversion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRPagosRecibidas">
+      <soap:operation soapAction="http://tempuri.org/SuministroLRPagosRecibidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRPagosRecibidas">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRPagosRecibidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRCobrosMetalico">
+      <soap:operation soapAction="http://tempuri.org/SuministroLRCobrosMetalico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRCobrosMetalico">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRCobrosMetalico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRCobrosMetalico">
+      <soap:operation soapAction="http://tempuri.org/AnulacionLRCobrosMetalico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLROperacionesSeguros">
+      <soap:operation soapAction="http://tempuri.org/SuministroLROperacionesSeguros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLROperacionesSeguros">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLROperacionesSeguros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLROperacionesSeguros">
+      <soap:operation soapAction="http://tempuri.org/AnulacionLROperacionesSeguros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRAgenciasViajes">
+      <soap:operation soapAction="http://tempuri.org/SuministroLRAgenciasViajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRAgenciasViajes">
+      <soap:operation soapAction="http://tempuri.org/ConsultaLRAgenciasViajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRAgenciasViajes">
+      <soap:operation soapAction="http://tempuri.org/AnulacionLRAgenciasViajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarTodo">
+      <soap:operation soapAction="http://tempuri.org/EnviarTodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TGsiiServiceSoap12" type="tns:TGsiiServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetApplicationVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetApplicationVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRFacturasEmitidas">
+      <soap12:operation soapAction="http://tempuri.org/SuministroLRFacturasEmitidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFacturasEmitidas">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRFacturasEmitidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRFacturasEmitidas">
+      <soap12:operation soapAction="http://tempuri.org/AnulacionLRFacturasEmitidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasCliente">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRFactInformadasCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasAgrupadasCliente">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRFactInformadasAgrupadasCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRFacturasRecibidas">
+      <soap12:operation soapAction="http://tempuri.org/SuministroLRFacturasRecibidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFacturasRecibidas">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRFacturasRecibidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRFacturasRecibidas">
+      <soap12:operation soapAction="http://tempuri.org/AnulacionLRFacturasRecibidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasProveedor">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRFactInformadasProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRFactInformadasAgrupadasProveedor">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRFactInformadasAgrupadasProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRDetOperacionIntracomunitaria">
+      <soap12:operation soapAction="http://tempuri.org/SuministroLRDetOperacionIntracomunitaria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRDetOperIntracomunitarias">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRDetOperIntracomunitarias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRDetOperacionIntracomunitaria">
+      <soap12:operation soapAction="http://tempuri.org/AnulacionLRDetOperacionIntracomunitaria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRBienesInversion">
+      <soap12:operation soapAction="http://tempuri.org/SuministroLRBienesInversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRBienesInversion">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRBienesInversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRBienesInversion">
+      <soap12:operation soapAction="http://tempuri.org/AnulacionLRBienesInversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRPagosRecibidas">
+      <soap12:operation soapAction="http://tempuri.org/SuministroLRPagosRecibidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRPagosRecibidas">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRPagosRecibidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRCobrosMetalico">
+      <soap12:operation soapAction="http://tempuri.org/SuministroLRCobrosMetalico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRCobrosMetalico">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRCobrosMetalico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRCobrosMetalico">
+      <soap12:operation soapAction="http://tempuri.org/AnulacionLRCobrosMetalico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLROperacionesSeguros">
+      <soap12:operation soapAction="http://tempuri.org/SuministroLROperacionesSeguros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLROperacionesSeguros">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLROperacionesSeguros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLROperacionesSeguros">
+      <soap12:operation soapAction="http://tempuri.org/AnulacionLROperacionesSeguros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuministroLRAgenciasViajes">
+      <soap12:operation soapAction="http://tempuri.org/SuministroLRAgenciasViajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLRAgenciasViajes">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaLRAgenciasViajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulacionLRAgenciasViajes">
+      <soap12:operation soapAction="http://tempuri.org/AnulacionLRAgenciasViajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarTodo">
+      <soap12:operation soapAction="http://tempuri.org/EnviarTodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TGsiiService">
+    <wsdl:port name="TGsiiServiceSoap" binding="tns:TGsiiServiceSoap">
+      <soap:address location="http://localhost/TGsiiWebService/TGsiiWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TGsiiServiceSoap12" binding="tns:TGsiiServiceSoap12">
+      <soap12:address location="http://localhost/TGsiiWebService/TGsiiWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

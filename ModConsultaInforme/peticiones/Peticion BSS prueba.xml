@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MCIBASUMSA</Codigo>
+    <Descripcion>probando</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>tgTexBoxSelPlan</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>Z  -  PLAN DE CUENTAS DEMOSTRACION</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelGrupo</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>GC  -  GRUPO CONSOLIDADO W1 + W9</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCompania</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>cmbNivel</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>4</Valor>
+  </Control>
+  <Control>
+    <Nombre>lbCuentasMayor</Nombre>
+    <Tipo>ListBox</Tipo>
+    <Valor>40000|40001|40003|40010</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCuentasMayor</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>chkConsolidado</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>chkSubtotales</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>txttitulo</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Balance Sumas y Saldos</Valor>
+  </Control>
+  <Control>
+    <Nombre>chkMonedaLocal</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtHastaPeriodos</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>1507</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtDesdePeriodos</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>1507</Valor>
+  </Control>
+</Formulario>

@@ -1,0 +1,78 @@
+﻿<Tabla>
+  <nombre>GLM01</nombre>
+  <lista>STATMG,CCIAMG,NCIAMG,NNITMG,TIPLMG,TITAMG,ULACMGAAAA-PP</lista>
+  <orden>CCIAMG</orden>
+  <codigo>CCIAMG</codigo>
+  <estado>STATMG</estado>
+  <estadoValor>estadoActiva</estadoValor>
+  <Campo>
+    <nombre>STATMG</nombre>
+    <tipo>S</tipo>
+    <longitud>1</longitud>
+	<desc_es-ES>Estado</desc_es-ES>
+	<desc_ca-ES>Estat</desc_ca-ES>
+	<desc_en-US>Status</desc_en-US>
+	<desc_fr-FR>Estado</desc_fr-FR>
+	<desc_pt-PT>Estado</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>CCIAMG</nombre>
+    <tipo>S</tipo>
+    <longitud>2</longitud>
+	<desc_es-ES>Compañía</desc_es-ES>
+	<desc_ca-ES>Compañía</desc_ca-ES>
+	<desc_en-US>Company</desc_en-US>
+	<desc_fr-FR>Company</desc_fr-FR>
+	<desc_pt-PT>Compañía</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>NCIAMG</nombre>
+    <tipo>S</tipo>
+    <longitud>40</longitud>
+	<desc_es-ES>Nombre</desc_es-ES>
+	<desc_ca-ES>Nom</desc_ca-ES>
+	<desc_en-US>Name</desc_en-US>
+	<desc_fr-FR>Nombre</desc_fr-FR>
+	<desc_pt-PT>Nombre</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>NNITMG</nombre>
+    <tipo>S</tipo>
+    <longitud>13</longitud>
+	<desc_es-ES>Número Id. Tributaria</desc_es-ES>
+	<desc_ca-ES>Número Id. Tributaria</desc_ca-ES>
+	<desc_en-US>Número Id. Tributaria</desc_en-US>
+	<desc_fr-FR>Número Id. Tributaria</desc_fr-FR>
+	<desc_pt-PT>Número Id. Tributaria</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>TIPLMG</nombre>
+    <tipo>S</tipo>
+    <longitud>1</longitud>
+	<desc_es-ES>Plan de Cuentas</desc_es-ES>
+	<desc_ca-ES>Plan de Cuentas</desc_ca-ES>
+	<desc_en-US>Plan de Cuentas</desc_en-US>
+	<desc_fr-FR>Plan de Cuentas</desc_fr-FR>
+	<desc_pt-PT>Plan de Cuentas</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>TITAMG</nombre>
+    <tipo>S</tipo>
+    <longitud>1</longitud>
+	<desc_es-ES>Calendario</desc_es-ES>
+	<desc_ca-ES>Calendario</desc_ca-ES>
+	<desc_en-US>Calendario</desc_en-US>
+	<desc_fr-FR>Calendario</desc_fr-FR>
+	<desc_pt-PT>Calendario</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>ULACMG</nombre>
+    <tipo>S</tipo>
+    <longitud>6</longitud>
+    <desc_es-ES>Ult. Periodo Cerrado</desc_es-ES>
+    <desc_ca-ES>Ult. Periodo Cerrado</desc_ca-ES>
+    <desc_en-US>Ult. Periodo Cerrado</desc_en-US>
+    <desc_fr-FR>Ult. Periodo Cerrado</desc_fr-FR>
+    <desc_pt-PT>Ult. Periodo Cerrado</desc_pt-PT>
+  </Campo>
+</Tabla>

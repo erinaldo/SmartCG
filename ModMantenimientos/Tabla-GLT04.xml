@@ -1,0 +1,38 @@
+﻿<Tabla>
+  <nombre>GLT03</nombre>
+  <lista>TIMOME,CINTME,DESCME</lista>
+  <orden>TIMOME</orden>
+  <codigo>TIMOME</codigo>
+  <estado />
+  <estadoValor />
+  <Campo>
+    <nombre>TIMOME</nombre>
+    <tipo>S</tipo>
+    <longitud>2</longitud>
+	<desc_es-ES>Moneda</desc_es-ES>
+	<desc_ca-ES>Moneda</desc_ca-ES>
+	<desc_en-US>Moneda</desc_en-US>
+	<desc_fr-FR>Moneda</desc_fr-FR>
+	<desc_pt-PT>Moneda</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>CINTME</nombre>
+    <tipo>S</tipo>
+    <longitud>3</longitud>
+	<desc_es-ES>Int.</desc_es-ES>
+	<desc_ca-ES>Int.</desc_ca-ES>
+	<desc_en-US>Int.</desc_en-US>
+	<desc_fr-FR>Int.</desc_fr-FR>
+	<desc_pt-PT>Int.</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>DESCME</nombre>
+    <tipo>S</tipo>
+    <longitud>36</longitud>
+	<desc_es-ES>Nombre</desc_es-ES>
+	<desc_ca-ES>Nom</desc_ca-ES>
+	<desc_en-US>Name</desc_en-US>
+	<desc_fr-FR>Nombre</desc_fr-FR>
+	<desc_pt-PT>Nombre</desc_pt-PT>
+  </Campo>
+</Tabla>

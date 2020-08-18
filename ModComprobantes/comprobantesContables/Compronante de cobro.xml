@@ -1,0 +1,694 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>0</Transferido>
+    <Extendido>1</Extendido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>1001</AnoPeriodo>
+    <Tipo>1</Tipo>
+    <Numero>1</Numero>
+    <Fecha>20100101</Fecha>
+    <Clase>0</Clase>
+    <Tasa />
+    <Descripcion>Compronante de cobro</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>605985,64</MonedaLocalDebe>
+    <MonedaLocalHaber>-605985,64</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>0,00</Importe3Debe>
+    <Importe3Haber>0,00</Importe3Haber>
+    <NumeroApuntes>40</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>71514,85</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PRIORIDADE PAGARE 8952535-6</Descripcion>
+    <Fecha>20100101</Fecha>
+	<Vencimiento />
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-71514,85</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PRIORIDADE PAGARE 8952535-6</Descripcion>
+    <Documento>09-8952535</Documento>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100120</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>12180,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>MBM-MERALURGICA PAGARE-8952536-0</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-12180,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>MBM-MERALURGICA PAGARE-8952536-0</Descripcion>
+    <Documento>09-8952536</Documento>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100120</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>49010,35</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CONSTRUCOES MOTA-PAGARE-8952534</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-49010,35</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CONSTRUCOES MOTA-PAGARE-8952534</Descripcion>
+    <Documento>09-8952534</Documento>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100120</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>25781,73</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>TERRAPLANAGENS PAGARE-8952537</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-25781,73</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>TERRAPLANAGENS PAGARE-8952537</Descripcion>
+    <Documento>09-8952537</Documento>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100120</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>15870,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.NUNO ROQUE 8.952.551</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-15870,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.NUNO ROQUE 8.952.551</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100125</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>14323,66</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.BRASTEC CONST. 8.952.553</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-14323,66</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.BRASTEC CONST. 8.952.553</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100125</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>17430,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.NUNO ROQUE 8.952.543</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-17430,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.NUNO ROQUE 8.952.543</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100220</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>41010,52</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.BRASTEC CONST.8.952.549</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-41010,52</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.BRASTEC CONST.8.952.549</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100220</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>25383,62</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.TERRAPLANAGENS 8.952.548</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-25383,62</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.TERRAPLANAGENS 8.952.548</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100220</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>24968,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.CONST.PAIVANORTE 8.952.548</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-24968,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.CONST.PAIVANORTE 8.952.548</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100220</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>29241,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.PAIVANORTE 8.952.552</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-29241,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.PAIVANORTE 8.952.552</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>33310,98</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.TERRAPLANAGENS 8.952.550</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-33310,98</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.TERRAPLANAGENS 8.952.550</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>15723,10</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.BRASTEC CONST. 8.952.564</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-15723,10</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.BRASTEC CONST. 8.952.564</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>40719,37</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.INSTALCONTROL 8952562</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-40719,37</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.INSTALCONTROL 8952562</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>19240,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.NUNO ROQUE 8.952.556</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-19240,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.NUNO ROQUE 8.952.556</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>11520,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.TERRAPLANAGENS 8.952.554</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-11520,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.TERRAPLANAGENS 8.952.554</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>50839,01</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.CONST.MOTA Y BRANDAO 8.952.557</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-50839,01</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.CONST.MOTA Y BRANDAO 8.952.557</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>26040,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.CONST.PAIVANORTE 8.952.563</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-26040,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.CONST.PAIVANORTE 8.952.563</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>46937,44</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.INDUSTRA-COMERCIO 8.952.545</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-46937,44</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.INDUSTRA-COMERCIO 8.952.545</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100320</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>552301</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>34942,01</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.HUMBERTO POÇAS 8.952.544</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>401003</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-34942,01</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>PAG.HUMBERTO POÇAS 8.952.544</Descripcion>
+    <Fecha>20100101</Fecha>
+    <Vencimiento>20100320</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <MonedaExt />
+  </Detalle>
+</Comprobante>

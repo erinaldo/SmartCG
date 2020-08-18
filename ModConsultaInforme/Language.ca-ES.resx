@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Globales Inicio -->
+  <data name="lblAceptar" xml:space="preserve">
+    <value>Acceptar</value>
+  </data>
+  <data name="lblCancelar" xml:space="preserve">
+    <value>Cancel.lar</value>
+  </data>  
+  <data name="errValTitulo" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="lblSeleccionar" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="toolStripNuevo" xml:space="preserve">
+    <value>Nou</value>
+  </data>
+  <data name="toolStripEditar" xml:space="preserve">
+    <value>Edita</value>
+  </data>
+  <data name="toolStripSuprimir" xml:space="preserve">
+    <value>Suprimir</value>
+  </data>
+  <data name="toolStripImprimir" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="toolStripSalir" xml:space="preserve">
+    <value>Sortir</value>
+  </data>  
+  <data name="lblCabecera" xml:space="preserve">
+    <value>Capçalera</value>
+  </data> 
+  <data name="lblCompania" xml:space="preserve">
+    <value>Companyia</value>
+  </data> 
+  <data name="lblAnoPeriodo" xml:space="preserve">
+    <value>Any-Període</value>
+  </data> 
+  <data name="lblTipo" xml:space="preserve">
+    <value>Tipus</value>
+  </data>   
+  <data name="lblNoComprobante" xml:space="preserve">
+    <value>Nº Comprovant</value>
+  </data>
+  <data name="lblListaCampoCodigo" xml:space="preserve">
+    <value>Codi</value>
+  </data>
+  <data name="lblListaCampoDescripcion" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="errNoRegistros" xml:space="preserve">
+    <value>No hi ha dades per a l'informe sol·licitat</value>
+  </data>
+  <!-- Globales Fin -->  
+  
+  <!-- frmPrincipal Inicio -->
+  <data name="lblfrmPrincipalTitulo" xml:space="preserve">
+    <value>Mòdul de Consultes i Informes</value>
+  </data>
+  <data name="menuItemInformes" xml:space="preserve">
+    <value>Informes</value>
+  </data>
+  <data name="menuItemConsultas" xml:space="preserve">
+    <value>Consultes</value>
+  </data>
+  <data name="menuItemConfig" xml:space="preserve">
+    <value>Configuració</value>
+  </data>
+  <data name="menuItemAbout" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="menuItemSalir" xml:space="preserve">
+    <value>Sortir</value>
+  </data>
+  <data name="subMenuItemDiarioDetallado" xml:space="preserve">
+    <value>Diari Detallat</value>
+  </data>
+  <data name="subMenuItemDiarioResFecha" xml:space="preserve">
+    <value>Diari Resumit Data</value>
+  </data>
+  <data name="subMenuItemDiarioResPeriodo" xml:space="preserve">
+    <value>Diari Resumit Període</value>
+  </data>
+  <data name="subMenuItemBalanceSumSaldos" xml:space="preserve">
+    <value>Balanç Sumes i Saldos</value>
+  </data>
+  <data name="subMenuItemMayorContab" xml:space="preserve">
+    <value>Major de Comptabilitat</value>
+  </data>
+  <data name="subMenuItemMovimientosAux" xml:space="preserve">
+    <value>Moviments d'Auxiliar</value>
+  </data>
+  <data name="subMenuItemMovIVA" xml:space="preserve">
+    <value>Moviments d'IVA</value>
+  </data>
+  <!-- frmPrincipal Fin -->
+  
+  <!-- Globales Informes Inicio -->
+  <data name="lblGrupo" xml:space="preserve">
+    <value>Grup</value>
+  </data>
+  <data name="lblPlan" xml:space="preserve">
+    <value>Pla</value>
+  </data>
+  <data name="lblPorFecha" xml:space="preserve">
+    <value>Per Data</value>
+  </data>
+  <data name="lblPorPeriodos" xml:space="preserve">
+    <value>Per Períodes</value>
+  </data>
+  <data name="lblDesde" xml:space="preserve">
+    <value>Des</value>
+  </data>
+  <data name="lblHasta" xml:space="preserve">
+    <value>Fins</value>
+  </data>
+  <data name="lblImportarTotales" xml:space="preserve">
+    <value>Importar Totals</value>
+  </data>
+  <data name="lblNoPrimerComp" xml:space="preserve">
+    <value>Nom. Primer Comp.</value>
+  </data>
+  <data name="lblTitulo" xml:space="preserve">
+    <value>Títol</value>
+  </data>
+  <data name="lblProcesandoInfo" xml:space="preserve">
+    <value>Processant informe</value>
+  </data>  
+  <data name="errGetCompanias" xml:space="preserve">
+    <value>Error obtenint les companyies</value>
+  </data>
+  <data name="errGetGrupos" xml:space="preserve">
+    <value>Error obtenint els grups</value>
+  </data>
+  <data name="errGetPlanes" xml:space="preserve">
+    <value>Error obtenint els plans</value>
+  </data>
+  <data name="errCompaniaGrupoObl" xml:space="preserve">
+    <value>És obligatori informar la companyia o el grup de companyies</value>
+  </data>
+  <data name="errPlanObl" xml:space="preserve">
+    <value>És obligatori informar el pla de comptes</value>
+  </data>
+  <data name="errTipoauxObl" xml:space="preserve">
+    <value>És obligatori informar el tipus d'auxiliar</value>
+  </data>  
+  <data name="errFechaDesdeObl" xml:space="preserve">
+    <value>És obligatori informar la data Des de</value>
+  </data>
+  <data name="errFechaHastaObl" xml:space="preserve">
+    <value>És obligatori informar la data Fins</value>
+  </data>
+  <data name="errPeriodoDesdeObl" xml:space="preserve">
+    <value>És obligatori informar el període Des</value>
+  </data>  
+  <data name="errPeriodoHastaObl" xml:space="preserve">
+    <value>És obligatori informar el període Fins</value>
+  </data>
+  <!-- Globales Informes Fin -->
+  
+  <!-- frmInfoDiarioAltaEdita Inicio -->
+  <data name="lblCabCodigoCuenta" xml:space="preserve">
+    <value>Codi del compte</value>
+  </data>
+  <data name="lblCabNombreCuenta" xml:space="preserve">
+    <value>Nom del compte</value>
+  </data> 
+  <data name="lblCabDesc" xml:space="preserve">
+    <value>Concepte</value>
+  </data> 
+  <data name="lblCabDebe" xml:space="preserve">
+    <value>HA</value>
+  </data> 
+  <data name="lblCabHaber" xml:space="preserve">
+    <value>HAVER</value>
+  </data>
+  <data name="lblCabFecha" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="lblCabNumero" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="lblCabCuenta" xml:space="preserve">
+    <value>Compte</value>
+  </data>
+  <data name="lblCabIdInterno" xml:space="preserve">
+    <value>Id intern</value>
+  </data>  
+  <data name="lblCabTotal" xml:space="preserve">
+    <value>TOTAL</value>
+  </data> 
+  <data name="lblCabTotalFinal" xml:space="preserve">
+    <value>Total final</value>
+  </data>
+  <data name="lblCabTotalDia" xml:space="preserve">
+    <value>Total día</value>
+  </data>
+  <data name="lblCabTotalPeriodo" xml:space="preserve">
+    <value>TOTAL PERIODE</value>
+  </data>
+  <data name="lblCabTotalCuenta" xml:space="preserve">
+    <value>TOTAL COMPTE</value>
+  </data>
+  <data name="errGetInforme" xml:space="preserve">
+    <value>Error obtenint l'informe</value>
+  </data>
+  <data name="lblCabTituloInfo" xml:space="preserve">
+    <value>Diari de comprovants</value>
+  </data>
+  <data name="lblCabTituloInfoPorFecha" xml:space="preserve">
+    <value>per data</value>
+  </data>
+  <data name="lblCabTituloInfoPorPer" xml:space="preserve">
+    <value>per període</value>
+  </data>
+  <data name="lblCabTituloInfoDePer" xml:space="preserve">
+    <value>de període</value>
+  </data>
+  <data name="lblCabTituloInfoDeFecha" xml:space="preserve">
+    <value>de data</value>
+  </data>  
+  <data name="lblResumenMovDia" xml:space="preserve">
+    <value>Resum moviments del dia</value>
+  </data>  
+  <data name="lblResumenMovPeriodo" xml:space="preserve">
+    <value>Resum moviments del període</value>
+  </data>  
+  <!-- frmInfoDiarioAltaEdita Fin -->
+  
+  <!-- frmInfoBalanceSumSaldosAltaEdita Inicio -->
+  <data name="lblCabTituloInfoBalanceSumSaldo" xml:space="preserve">
+    <value>Balanç de comprovació del període</value>
+  </data>
+  <data name="lblCabSaldoAnterior" xml:space="preserve">
+    <value>Saldo Anterior</value>
+  </data>
+  <data name="lblCabSaldoActual" xml:space="preserve">
+    <value>Saldo Actual</value>
+  </data>
+  <data name="lblPeriodoDesde" xml:space="preserve">
+    <value>Período Desde</value>
+  </data>
+  <data name="lblPeriodoHasta" xml:space="preserve">
+    <value>Período Hasta</value>
+  </data>
+  <data name="lblPeriodoHasta" xml:space="preserve">
+    <value>Período Hasta</value>
+  </data> 
+  <data name="lblMonedaLocal" xml:space="preserve">
+    <value>Moneda Local</value>
+  </data>
+  <data name="lblSubtJerarq" xml:space="preserve">
+    <value>Subtotales Jerárquicos</value>
+  </data>
+  <data name="lblNivel" xml:space="preserve">
+    <value>Nivel</value>
+  </data>
+  <data name="lblConsolidado" xml:space="preserve">
+    <value>Consolidado</value>
+  </data>
+  <data name="lblCuentasMayor" xml:space="preserve">
+    <value>Lista de Cuentas de Mayor</value>
+  </data>
+  <data name="lblAnadir" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="lblQuitar" xml:space="preserve">
+    <value>Quitar</value>
+  </data>
+  <data name="errCuentaMayorExiste" xml:space="preserve">
+    <value>La cuenta de mayor ya está en la lista</value>
+  </data>
+  <data name="lblTitConsolidadoCias" xml:space="preserve">
+    <value>CONSOLIDAT COMPANYIES</value>
+  </data>  
+  <!-- frmInfoBalanceSumSaldosAltaEdita Fin -->
+  
+  <!-- frmInfoMayorContabAltaEdita Inicio -->
+  <data name="lblCabTituloInfoMayorCont" xml:space="preserve">
+    <value>Major detallat</value>
+  </data>
+  <data name="lblDelPeriodoMin" xml:space="preserve">
+    <value>del període</value>
+  </data>
+  <data name="lblDeFecha" xml:space="preserve">
+    <value>de data</value>
+  </data>
+  <data name="lblAFecha" xml:space="preserve">
+    <value>a data</value>
+  </data>
+  <data name="lblfechaMin" xml:space="preserve">
+    <value>data</value>
+  </data>
+  <data name="lblMoneda" xml:space="preserve">
+    <value>Moneda</value>
+  </data>
+  <data name="lblOrdenComp" xml:space="preserve">
+    <value>Orden comprobantes</value>
+  </data>
+  <data name="lblTotalCuenta" xml:space="preserve">
+    <value>Total por cuenta</value>
+  </data>
+  <data name="lblTipoMonedaLocal" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="lblTipoMonedaExt" xml:space="preserve">
+    <value>Extrangera</value>
+  </data>
+  <data name="lblTipoMonedaTercerImporte" xml:space="preserve">
+    <value>Tercer import</value>
+  </data>
+  <data name="lblOrdenCompTipoNum" xml:space="preserve">
+    <value>Tipus-Nombre</value>
+  </data>
+  <data name="lblOrdenCompFecha" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="lblCabNumeroComp" xml:space="preserve">
+    <value>Nombre de comprovant</value>
+  </data>
+  <data name="lblCabNumeroCompAbrev" xml:space="preserve">
+    <value>No. Comp.</value>
+  </data>
+  <data name="lblCabCuentaAux" xml:space="preserve">
+    <value>Auxiliar</value>
+  </data>
+  <data name="lblCabDocumento" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="lblCabSaldoIni" xml:space="preserve">
+    <value>Saldo inicial</value>
+  </data>
+  <data name="lblCabSaldoFin" xml:space="preserve">
+    <value>Saldo final</value>
+  </data>  
+  <!-- frmInfoMayorContabAltaEdita Fin -->
+  
+  <!-- frmInfoMovAuxiliarAltaEdita Inicio -->
+  <data name="lblCabTituloInfoMovAuxiliar" xml:space="preserve">
+    <value>Llistat de Moviments d'Auxiliar</value>
+  </data>
+  <data name="lblDelPeriodo" xml:space="preserve">
+    <value>Del període</value>
+  </data>
+  <data name="lblAlPeriodo" xml:space="preserve">
+    <value>al període</value>
+  </data>
+  <data name="lblTipoAux" xml:space="preserve">
+    <value>Tipo de Auxiliar</value>
+  </data>
+  <data name="lblCuentasAuxliar" xml:space="preserve">
+    <value>Lista de Cuentas de Auxiliar</value>
+  </data>  
+  <data name="lblDocumentos" xml:space="preserve">
+    <value>Documentos</value>
+  </data>
+   <data name="lblCancelados" xml:space="preserve">
+    <value>Cancelados</value>
+  </data>
+  <data name="lblNoCancelados" xml:space="preserve">
+    <value>No cancelados</value>
+  </data>  
+  <data name="lblTodos" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="lblTotales" xml:space="preserve">
+    <value>Totales</value>
+  </data>
+  <data name="errCuentaAuxiliarExiste" xml:space="preserve">
+    <value>La cuenta de auxiliar ya está en la lista</value>
+  </data>
+  <data name="errGetTiposAux" xml:space="preserve">
+    <value>Error obtenint els tipus d'auxiliar</value>
+  </data>
+  <data name="lblTotalCtaMayor" xml:space="preserve">
+    <value>Total Compte Major</value>
+  </data>
+  <data name="lblTotalCompania" xml:space="preserve">
+    <value>Total Companyia</value>
+  </data>
+  <data name="lblTotalCtaAux" xml:space="preserve">
+    <value>Total Compte Auxiliar</value>
+  </data>
+  <data name="lblCabCodigoCompania" xml:space="preserve">
+    <value>Cia</value>
+  </data>
+  <data name="lblCabTA" xml:space="preserve">
+    <value>TA</value>
+  </data>  
+  <data name="lblCabAuxiliar" xml:space="preserve">
+    <value>Auxiliar</value>
+  </data>
+  <data name="lblCabNombre" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="lblCabZona" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="lblCabCtaMayor" xml:space="preserve">
+    <value>Compte Major</value>
+  </data>
+  <data name="lblCabComprobante" xml:space="preserve">
+    <value>Comprovant</value>
+  </data>
+  <data name="lblCabFContable" xml:space="preserve">
+    <value>D. Comptable</value>
+  </data>
+  <data name="lblCabNDocumento" xml:space="preserve">
+    <value>N. Document</value>
+  </data>
+  <data name="lblCabFDocum" xml:space="preserve">
+    <value>D. Docum</value>
+  </data>  
+  <data name="lblCabFechaVencim" xml:space="preserve">
+    <value>D. Vencim.</value>
+  </data>
+  <data name="lblCabRU" xml:space="preserve">
+    <value>RU</value>
+  </data>
+  <data name="lblCabAux2" xml:space="preserve">
+    <value>Auxiliar2</value>
+  </data>
+  <data name="lblCabAux3" xml:space="preserve">
+    <value>Auxiliar3</value>
+  </data>
+  <data name="lblCabDescripcion" xml:space="preserve">
+    <value>Descripció</value>
+  </data>
+  <data name="lblCabSaldo" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <!-- frmInfoMovAuxiliarAltaEdita Fin -->
+  
+  <!-- frmInfoMovIVAAltaEdita Inicio -->
+  <data name="lblListaCompFiscales" xml:space="preserve">
+    <value>Llista de Companyies Fiscals</value>
+  </data>
+  <data name="lblLibroSerie" xml:space="preserve">
+    <value>Per Llibre/Sèrie</value>
+  </data>
+  <data name="lblLibro" xml:space="preserve">
+    <value>Llibre</value>
+  </data>
+  <data name="lblSerie" xml:space="preserve">
+    <value>Sèrie</value>
+  </data>
+  <data name="lblTipoTransac" xml:space="preserve">
+    <value>Per Tipus de Transacció</value>
+  </data>
+  <data name="lblSoportado" xml:space="preserve">
+    <value>Suportat</value>
+  </data>
+  <data name="lblRepercutido" xml:space="preserve">
+    <value>Repercutit</value>
+  </data>
+  <data name="lblAnoMesDesde" xml:space="preserve">
+    <value>Any-Mes Des</value>
+  </data>
+  <data name="lblAnoMesHasta" xml:space="preserve">
+    <value>Any-Mes Fins</value>
+  </data>
+  <data name="lblTotalPorSerie" xml:space="preserve">
+    <value>Total per Sèrie</value>
+  </data>
+  <data name="errCompFiscalExiste" xml:space="preserve">
+    <value>La companyia fiscal ja és a la llista</value>
+  </data>
+  <data name="errSerieExiste" xml:space="preserve">
+    <value>La sèrie ja és a la llista</value>
+  </data>
+  <data name="errCompaniaFiscalObl" xml:space="preserve">
+    <value>És obligatori informar la companyia fiscal</value>
+  </data>
+  <data name="errLibroObl" xml:space="preserve">
+    <value>És obligatori informar el Llibre</value>
+  </data>
+  <data name="errAnoObl" xml:space="preserve">
+    <value>És obligatori informar l'Any</value>
+  </data>
+  <data name="errAnoFormatoIncorrecto" xml:space="preserve">
+    <value>Any Incorrecte</value>
+  </data>
+  <data name="errMesObl" xml:space="preserve">
+    <value>És obligatori informar el Mes</value>
+  </data>
+  <data name="errMesFormatoIncorrecto" xml:space="preserve">
+    <value>Mes incorrecte</value>
+  </data>
+  <data name="lblCabNumMvto" xml:space="preserve">
+    <value>Nom. Mvt.</value>
+  </data>
+  <data name="lblCabFechaCont" xml:space="preserve">
+    <value>Data Compt.</value>
+  </data>
+  <data name="lblCabFechaDoc" xml:space="preserve">
+    <value>Data Docum.</value>
+  </data>
+  <data name="lblCabNumDoc" xml:space="preserve">
+    <value>Nom. Docum.</value>
+  </data>
+  <data name="lblCabNIdFiscal" xml:space="preserve">
+    <value>N. Ident. Fiscal</value>
+  </data>
+  <data name="lblCabRazonSocial" xml:space="preserve">
+    <value>Nom/Raó Social</value>
+  </data>
+  <data name="lblCabBaseImponible" xml:space="preserve">
+    <value>Base Imposable</value>
+  </data>
+  <data name="lblCabPorcIVA" xml:space="preserve">
+    <value>%IVA</value>
+  </data>
+  <data name="lblCuotaIVADeduc" xml:space="preserve">
+    <value>Quota IVA Deduïble</value>
+  </data>
+  <data name="lblCuotaNoDeduc" xml:space="preserve">
+    <value>Quota No Deduïble</value>
+  </data>
+  <data name="lblCuotaIVA" xml:space="preserve">
+    <value>Quota IVA</value>
+  </data>
+  <data name="lblPorcREquiv" xml:space="preserve">
+    <value>%R.Eqv.</value>
+  </data>
+  <data name="lblRecargoEquiv" xml:space="preserve">
+    <value>Recàrrec Equiv.</value>
+  </data>
+  <data name="lblTotalFactura" xml:space="preserve">
+    <value>Total Factura</value>
+  </data>
+  <data name="lblCodIVA" xml:space="preserve">
+    <value>Codi IVA</value>
+  </data>
+  <data name="lblSoportRepercut" xml:space="preserve">
+    <value>S/R</value>
+  </data>
+  <data name="lblTotalSerie" xml:space="preserve">
+    <value>Total Sèrie</value>
+  </data>
+  <data name="lblTotalLibro" xml:space="preserve">
+    <value>Total Llibre</value>
+  </data>
+  <data name="lblAnoMes" xml:space="preserve">
+    <value>Any/Mes</value>
+  </data>
+  <!-- frmInfoMovIVAAltaEdita Fin -->    
+</root>

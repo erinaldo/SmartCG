@@ -1,0 +1,1308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+  <!-- Globales Inicio -->
+  <data name="lblAceptar" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="lblCancelar" xml:space="preserve">
+    <value>Résilier</value>
+  </data>
+  <data name="errValTitulo" xml:space="preserve">
+    <value>Erreur</value>
+  </data>  
+  <data name="lblSeleccionar" xml:space="preserve">
+    <value>Sélectionner</value>
+  </data>	
+  <data name="toolStripNuevo" xml:space="preserve">
+    <value>Nouveau</value>
+  </data>
+  <data name="toolStripEditar" xml:space="preserve">
+    <value>Modifier</value>
+  </data>            
+  <data name="toolStripEliminar" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>              
+  <data name="toolStripSuprimir" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>            
+  <data name="toolStripImprimir" xml:space="preserve">
+    <value>Imprimer</value>
+  </data>
+  <data name="toolStripSalir" xml:space="preserve">
+    <value>Laisser</value>
+  </data>
+  <data name="toolStripImportar" xml:space="preserve">
+    <value>Importer</value>
+  </data>
+  <data name="toolStripTransferir" xml:space="preserve">
+    <value>Transfert</value>
+  </data>
+  <data name="lblCabecera" xml:space="preserve">
+    <value>En-tête</value>
+  </data> 
+  <data name="lblCompania" xml:space="preserve">
+    <value>Société</value>
+  </data> 
+  <data name="lblAnoPeriodo" xml:space="preserve">
+    <value>Année-Période</value>
+  </data> 
+  <data name="lblTipo" xml:space="preserve">
+    <value>Type</value>
+  </data>   
+  <data name="lblNoComprobante" xml:space="preserve">
+    <value>Nº Preuve</value>
+  </data>
+  <data name="lblListaCampoCodigo" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="lblListaCampoDescripcion" xml:space="preserve">
+    <value>Description</value>
+  </data>  
+  <data name="lblListaCompanias" xml:space="preserve">
+    <value>Liste de Sociétés</value>
+  </data>
+  <data name="lblListaTipos" xml:space="preserve">
+    <value>Liste de Types de Preuve</value>
+  </data>
+  <data name="lblConfirm" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="lblPrefijo" xml:space="preserve">
+    <value>Préfixe</value>
+  </data>
+  <data name="lblBiblioteca" xml:space="preserve">
+    <value>Bibliothèque</value>
+  </data>
+  <!-- Globales Fin -->  
+	
+  <!-- frmPrincipal Inicio -->
+  <data name="lblfrmPrincipalTitulo" xml:space="preserve">
+    <value>Reçus Module d'entrée</value>
+  </data>
+  <data name="menuItemCompContables" xml:space="preserve">
+    <value>Chèques Comptables</value>
+  </data>
+  <data name="menuItemCompExtraContables" xml:space="preserve">
+    <value>Chèques Non-comptables</value>
+  </data>  
+  <data name="menuItemConfig" xml:space="preserve">
+    <value>Configuration</value>
+  </data>      
+  <data name="menuItemAbout" xml:space="preserve">
+    <value>Sur</value>
+  </data>  
+  <data name="menuItemSalir" xml:space="preserve">
+    <value>Laisser</value>
+  </data>  
+  <data name="subMenuItemGestionCompCont" xml:space="preserve">
+    <value>Gestion</value>
+  </data>
+  <data name="subMenuItemEntradaCompCont" xml:space="preserve">
+    <value>Entrée</value>
+  </data>
+    <data name="subMenuItemModelosCompCont" xml:space="preserve">
+    <value>Modèles</value>
+  </data>  
+  <data name="subMenuItemTransferirCompCont" xml:space="preserve">
+    <value>Transfert à financer</value>
+  </data>
+  <data name="subMenuItemTransferirCompEditadosCompCont" xml:space="preserve">
+    <value>Bons édités</value>
+  </data>  
+  <data name="subMenuItemTransferirArchivoCompCont" xml:space="preserve">
+    <value>De fichier externe</value>
+  </data>  
+  <data name="subMenuItemImportarCompCont" xml:space="preserve">
+    <value>Importer finance</value>
+  </data>
+  <!-- frmPrincipal Fin -->
+  
+  <!-- frmCompContLista Inicio -->
+  <data name="lblfrmCompContListaTitulo" xml:space="preserve">
+    <value>Liste de Chèques Comptable</value>
+  </data>
+  <data name="CompContdgHeaderArchivo" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="CompContdgHeaderCompania" xml:space="preserve">
+    <value>Enterprise</value>
+  </data>
+  <data name="CompContdgHeaderAAPP" xml:space="preserve">
+    <value>AA-PP</value>
+  </data>
+  <data name="CompContdgHeaderDescripcion" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="CompContdgHeaderTipo" xml:space="preserve">
+    <value>Catégorie</value>
+  </data>  
+  <data name="CompContdgHeaderNoComp" xml:space="preserve">
+    <value>No Comp</value>
+  </data>
+  <data name="CompContdgHeaderFecha" xml:space="preserve">
+    <value>Ferme</value>
+  </data>  
+  <data name="CompContdgHeaderClase" xml:space="preserve">
+    <value>Clase</value>
+  </data>
+  <data name="CompContdgHeaderTasa" xml:space="preserve">
+    <value>Tasa</value>
+  </data>  
+  <data name="CompContdgHeaderDebeML" xml:space="preserve">
+    <value>Devrait ML</value>
+  </data>  
+  <data name="CompContdgHeaderHaberML" xml:space="preserve">
+    <value>Avoir ML</value>
+  </data>  
+  <data name="CompContdgHeaderDebeME" xml:space="preserve">
+    <value>Devrait ME</value>
+  </data>  
+  <data name="CompContdgHeaderHaberME" xml:space="preserve">
+    <value>Avoir ME</value>
+  </data>    
+  <data name="CompContdgHeaderNoMovimiento" xml:space="preserve">
+    <value>No Mov</value>
+  </data>  
+  <data name="CompContdgHeaderTransferido" xml:space="preserve">
+    <value>Transféré</value>
+  </data>  
+  <data name="errNoExistencomprobantes" xml:space="preserve">
+    <value>Il n'existe aucune preuve de l'itinéraire</value>
+  </data>        
+  <data name="wrnTitulo" xml:space="preserve">
+    <value>Avertissement</value>
+  </data>
+  <data name="wrnSuprimirComprobante" xml:space="preserve">
+    <value>Il supprimera le bon</value>
+  </data>
+  <data name="wrnSuprimirComprobantePregunta" xml:space="preserve">
+    <value>Voulez-vous continuer?</value>
+  </data>
+  <data name="lblErrSelSoloUnComp" xml:space="preserve">
+    <value>Vous devez sélectionner une seule preuve</value>
+  </data>
+  <data name="lblErrFechaDebeFormato" xml:space="preserve">
+    <value>La date à partir de pas dans un format valide</value>
+  </data>
+  <data name="lblErrFechaHastaFormato" xml:space="preserve">
+    <value>La date de ne pas avoir un format valide</value>
+  </data>
+  <data name="lblErrNoComp" xml:space="preserve">
+    <value>Il n'y a pas de preuves pour les critères de recherche utilisés</value>
+  </data>
+  <data name="lblCompTransferidoOK" xml:space="preserve">
+    <value>La preuve a été transféré correctement</value>
+  </data>
+  <data name="lblCompsTransferidosOK" xml:space="preserve">
+    <value>Les chèques ont été transférés correctement</value>
+  </data>
+  <data name="lblCompNoTransferido" xml:space="preserve">
+    <value>Le bon de réduction ne peut pas être transféré</value>
+  </data>
+  <data name="lblCompsNoTransferidos" xml:space="preserve">
+    <value>Il n'y a pas des bons qui pourraient être transférées</value>
+  </data>
+  <data name="errDelLotesTabla" xml:space="preserve">
+    <value>Error eliminando lotes de las tablas</value>
+  </data>
+  <data name="errDelComp" xml:space="preserve">
+    <value>Error eliminando comprobantes</value>
+  </data>
+  <data name="errSelUnComp" xml:space="preserve">
+    <value>Debe seleccionar al menos un comprobante</value>
+  </data>
+  <data name="errPrefijoVacio" xml:space="preserve">
+    <value>El prefijo no puede estar en blanco</value>
+  </data>
+  <data name="errBibliotecaVacia" xml:space="preserve">
+    <value>La biblioteca no puede estar en blanco</value>
+  </data>
+  <data name="errColaSalidaSinBilio" xml:space="preserve">
+    <value>Si la Cola de salida está informada, también tiene que estar informada la biblioteca</value>
+  </data>
+  <data name="errNoExisteTablaParaPrefLote" xml:space="preserve">
+    <value>No existen las tablas para el prefijo del lote</value>
+  </data>
+  <data name="errVerificarExisteTablaPrefLote" xml:space="preserve">
+    <value>No existen las tablas para el prefijo del lote</value>
+  </data>
+  <data name="errNumCompExiste" xml:space="preserve">
+    <value>El número de comprobante ya está asignado</value>
+  </data>
+  <data name="errVerificarNumComp" xml:space="preserve">
+    <value>El número de comprobante ya está asignado</value>
+  </data>
+  <data name="errTransferComp" xml:space="preserve">
+    <value>Error transfiriendo los comprobantes</value>
+  </data>
+  <data name="errTransferCabComp" xml:space="preserve">
+    <value>Error transfiriendo la cabecera del comprobante</value>
+  </data>
+  <data name="errTransferDetComp" xml:space="preserve">
+    <value>Error transfiriendo el detalle del comprobante</value>
+  </data>
+  <data name="wrnSuprimirVariosComprobantes" xml:space="preserve">
+    <value>comprobantes se van a eliminar</value>
+  </data>
+  
+  <data name="errGetCompanias" xml:space="preserve">
+    <value>Sociétés d'erreur se</value>
+  </data>
+  <data name="errGetTiposComp" xml:space="preserve">
+    <value>Erreur d'obtention des types de preuve</value>
+  </data>
+  <data name="wrn2RervertirComp" xml:space="preserve">
+    <value>Il est inversée. Voulez-vous transférer?</value>
+  </data>
+  <!-- frmCompContLista Fin --> 
+    
+  <!-- frmCompContAltaEdita Inicio -->
+  <data name="lblfrmCompContAltaEditaTitulo" xml:space="preserve">
+    <value>Comptabilité de preuve</value>
+  </data>
+  <data name="lblfrmCompContAltaEditaTituloNuevo" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="lblfrmCompContAECabeceraFecha" xml:space="preserve">
+    <value>Date</value>
+  </data>    
+  <data name="lblfrmCompContAECabeceraClase" xml:space="preserve">
+    <value>Classe</value>
+  </data>   
+  <data name="lblfrmCompContAECabeceraTasa" xml:space="preserve">
+    <value>Taux</value>
+  </data>   
+  <data name="lblfrmCompContAECabeceraDescripcion" xml:space="preserve">
+    <value>Description</value>
+  </data>     
+  <data name="lblfrmCompContAETablaTotalesGroup" xml:space="preserve">
+    <value>Totaux</value>
+  </data>  
+  <data name="lblfrmCompContAETablaTotalesTotalDebe" xml:space="preserve">
+    <value>Total Débit</value>
+  </data>
+  <data name="lblfrmCompContAETablaTotalesTotalHaber" xml:space="preserve">
+    <value>Total Crédit</value>
+  </data>
+  <data name="lblfrmCompContAETablaTotalesMonedaLocal" xml:space="preserve">
+    <value>Devise Locale</value>
+  </data>
+  <data name="lblfrmCompContAETablaTotalesMonedaExt" xml:space="preserve">
+    <value>Devise Étrangère</value>
+  </data>  
+  <data name="lblfrmCompContAETablaTotalesImporte3" xml:space="preserve">
+    <value>Montant-3 </value>
+  </data>  
+  <data name="lblfrmCompContAETablaTotalesNoApuntes" xml:space="preserve">
+    <value>Nombre annotations</value>
+  </data>  
+  <data name="lblfrmCompContAERevertirGroup" xml:space="preserve">
+    <value>Retourner preuve dans le suivante période</value>
+  </data>
+  <data name="lblfrmCompContAERevertirNo" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="lblfrmCompContAERevertirImportes" xml:space="preserve">
+    <value>Retourner montants</value>
+  </data>
+  <data name="lblfrmCompContAERevertirImportesDH" xml:space="preserve">
+    <value>Retourner montants et D/C</value>
+  </data>
+  <data name="lblfrmCompContBotGrabar" xml:space="preserve">
+    <value>Grabar</value>
+  </data>
+  <data name="lblfrmCompContBotGrabarComo" xml:space="preserve">
+    <value>Grabar Como</value>
+  </data>
+  <data name="lblfrmCompContBotSelModelo" xml:space="preserve">
+    <value>Seleccionar Modelo</value>
+  </data>
+  <data name="lblfrmCompContBotValidar" xml:space="preserve">
+    <value>Validar</value>
+  </data>
+  <data name="lblfrmCompContBotRevertir" xml:space="preserve">
+    <value>Revertir importes</value>
+  </data>
+    <data name="lblfrmCompContClickDerAdicionarFila" xml:space="preserve">
+    <value>Ajouter rangée</value>
+  </data>
+  <data name="lblfrmCompContClickDerInsertarFila" xml:space="preserve">
+    <value>Insérer rangée</value>
+  </data>
+  <data name="lblfrmCompContClickDerSuprimirFila" xml:space="preserve">
+    <value>Supprimer rangée</value>
+  </data>
+  <data name="lblfrmCompContClickDerBuscar" xml:space="preserve">
+    <value>Chercher</value>
+  </data>
+  <data name="lblfrmCompContClickDerAjustCol" xml:space="preserve">
+    <value>Ajuster colonnes</value>
+  </data>
+  <data name="lblfrmCompContClickDerExportar" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="lblfrmCompContClickDerImportar" xml:space="preserve">
+    <value>Importer</value>
+  </data>  
+  <data name="lblfrmCompContClickDerCortar" xml:space="preserve">
+    <value>Couper</value>
+  </data>
+  <data name="lblfrmCoContClickDerCopiar" xml:space="preserve">
+    <value>Copier</value>
+  </data>      
+  <data name="lblfrmCompContClickDerPegar" xml:space="preserve">
+    <value>Coller</value>
+  </data>      
+  <data name="lblfrmCompContClickDerBorrar" xml:space="preserve">
+    <value>Effacer</value>
+  </data>
+  <data name="lblfrmCompContdgCuenta" xml:space="preserve">
+    <value>Compte</value>
+  </data>
+  <data name="lblfrmCompContdgAux1" xml:space="preserve">
+    <value>Auxiliaire-1</value>
+  </data>
+  <data name="lblfrmCompContdgAux2" xml:space="preserve">
+    <value>Auxiliaire-2</value>
+  </data>
+  <data name="lblfrmCompContdgAux3" xml:space="preserve">
+    <value>Auxiliaire-3</value>
+  </data>
+  <data name="lblfrmCompContdgDH" xml:space="preserve">
+    <value>D/C</value>
+  </data>
+  <data name="lblfrmCompContdgMonedaLocal" xml:space="preserve">
+    <value>Devise Locale</value>
+  </data>
+  <data name="lblfrmCompContdgMonedaExt" xml:space="preserve">
+    <value>Devise Étrangère</value>
+  </data>
+  <data name="lblfrmCompContdgRU" xml:space="preserve">
+    <value>RU</value>
+  </data>
+  <data name="lblfrmCompContdgDesc" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lblfrmCompContdgDocumento" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="lblfrmCompContdgFecha" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="lblfrmCompContdgVencimiento" xml:space="preserve">
+    <value>Échéance</value>
+  </data>
+  <data name="lblfrmCompContdgDocumento2" xml:space="preserve">
+    <value>Document-2</value>
+  </data>
+  <data name="lblfrmCompContdgImporte3" xml:space="preserve">
+    <value>Montant-3</value>
+  </data>
+  <data name="lblfrmCompContdgIva" xml:space="preserve">
+    <value>Tva</value>
+  </data>
+  <data name="lblfrmCompContdgCifDni" xml:space="preserve">
+    <value>Cif/Cni</value>
+  </data>
+  <data name="lblfrmCompContdgPrefijoDoc" xml:space="preserve">
+    <value>Document de préfixe</value>
+  </data>
+  <data name="lblfrmCompContdgNumFactAmp" xml:space="preserve">
+    <value>Élargi Numéro de Facture</value>
+  </data>
+  <data name="lblfrmCompContdgNumFactRectif" xml:space="preserve">
+    <value>Numéro de Facture Rectifié</value>
+  </data>
+  <data name="lblfrmCompContdgFechaServIVA" xml:space="preserve">
+    <value>Date de service</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserAlfa1" xml:space="preserve">
+    <value>Champ Utilisateur alpha 1</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserAlfa2" xml:space="preserve">
+    <value>Champ Utilisateur alpha 2</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserAlfa3" xml:space="preserve">
+    <value>Champ Utilisateur alpha 3</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserAlfa4" xml:space="preserve">
+    <value>Champ Utilisateur alpha 4</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserAlfa5" xml:space="preserve">
+    <value>Champ Utilisateur alpha 5</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserAlfa6" xml:space="preserve">
+    <value>Champ Utilisateur alpha 6</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserAlfa7" xml:space="preserve">
+    <value>Champ Utilisateur alpha 7</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserAlfa8" xml:space="preserve">
+    <value>Champ Utilisateur alpha 8</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserNum1" xml:space="preserve">
+    <value>Champ numérique de l'utilisateur 1</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserNum2" xml:space="preserve">
+    <value>Champ numérique de l'utilisateur 2</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserFecha1" xml:space="preserve">
+    <value>Champ de date de l'utilisateur 1</value>
+  </data>
+  <data name="lblfrmCompContdgCampoUserFecha2" xml:space="preserve">
+    <value>Champ de date de l'utilisateur 2</value>
+  </data>
+  <data name="lblClaseValor0" xml:space="preserve">
+    <value>Unique ML</value>
+  </data>    
+  <data name="lblClaseValor1" xml:space="preserve">
+    <value>ML calculé ME</value>
+  </data>  
+  <data name="lblClaseValor2" xml:space="preserve">
+    <value>ME calculé ML</value>
+  </data>  
+  <data name="lblClaseValor3" xml:space="preserve">
+    <value>ML et ME</value>
+  </data>  
+  <data name="lblfrmCompContErrComp" xml:space="preserve">
+    <value>La société n'est pas valide</value>
+  </data>
+  <data name="lblfrmCompContErrAAPPVacio" xml:space="preserve">
+    <value>Vous devez entrer le Année-Période</value>
+  </data>    
+  <data name="lblfrmCompContErrAAPP" xml:space="preserve">
+    <value>L'Année-Période n'est pas valable pour l'entreprise sélectionnée</value>
+  </data>  
+  <data name="lblfrmCompContErrAAPPExcep" xml:space="preserve">
+    <value>Impossible de valider la période ans</value>
+  </data>  
+  <data name="lblfrmCompContErrTipo" xml:space="preserve">
+    <value>Le type est invalide</value>
+  </data>  
+  <data name="lblfrmCompContErrTipoExcep" xml:space="preserve">
+    <value>Impossible de valider le type</value>
+  </data>  
+  <data name="lblfrmCompContErrFecha" xml:space="preserve">
+    <value>La date n'est pas dans le délai</value>
+  </data>  
+  <data name="lblfrmCompContErrFechaExcep" xml:space="preserve">
+    <value>Erreur de valider la date</value>
+  </data>
+  <data name="lblfrmCompContErrSinCuadrar" xml:space="preserve">
+    <value>Preuve sans quadrature</value>
+  </data>
+  <data name="lblCompContDebe" xml:space="preserve">
+    <value>Devrait</value>
+  </data>
+  <data name="lblCompContHaber" xml:space="preserve">
+    <value>Avoir</value>
+  </data>
+  <data name="errExportExcel" xml:space="preserve">
+    <value>Erreur exportation fichier Excel</value>
+  </data>
+  <data name="errImportExcel" xml:space="preserve">
+    <value>Erreur importation d'un fichier excel</value>
+  </data>
+  <data name="errGrabarErrores" xml:space="preserve">
+    <value>Nous avons trouvé les erreurs suivantes</value>
+  </data>
+  <data name="errGrabarErroresPreg" xml:space="preserve">
+    <value>Quoi qu'il en soit vouloir enregistrer le fichier?</value>
+  </data>
+  <data name="lblValidarOk" xml:space="preserve">
+    <value>Validation correcte</value>
+  </data>
+  <data name="lblSelCuentaMayor" xml:space="preserve">
+    <value>Sélectionnez Compte Maire</value>
+  </data>
+  <data name="errNoPlanCompania" xml:space="preserve">
+    <value>Il est pas le type de plan défini pour l'entreprise sélectionnée</value>
+  </data>
+  <data name="lblSelCuentaAux1" xml:space="preserve">
+    <value>Sélectionnez Adjoint Compte1</value>
+  </data>
+  <data name="errNoCtaAux1" xml:space="preserve">
+    <value>Elle ne se définit pour le compte du grand livre compte assistant1 sélectionné</value>
+  </data>
+  <data name="lblSelCuentaAux2" xml:space="preserve">
+    <value>Sélectionnez Adjoint Compte2</value>
+  </data>
+  <data name="errNoCtaAux2" xml:space="preserve">
+    <value>Elle ne se définit pour le compte du grand livre compte assistant2 sélectionné</value>
+  </data>
+  <data name="lblSelCuentaAux3" xml:space="preserve">
+    <value>Sélectionnez Adjoint Compte3</value>
+  </data>
+  <data name="errNoCtaAux3" xml:space="preserve">
+    <value>Elle ne se définit pour le compte du grand livre compte assistant3 sélectionné</value>
+  </data>
+  <data name="lblSelCuentaIVA" xml:space="preserve">
+    <value>Sélectionnez TVA</value>
+  </data>
+  <data name="errNoCtaIVA" xml:space="preserve">
+    <value>Elle ne se définit compte de la TVA pour le plan d'entreprise sélectionnée</value>
+  </data>
+  <data name="lblGridErrorCabTipo" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="lblGridErrorCabLinea" xml:space="preserve">
+    <value>Ligne</value>
+  </data>
+  <data name="lblGridErrorCabError" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="lblfrmCompContVerComent" xml:space="preserve">
+    <value>Voir Commentaires</value>
+  </data>
+  <data name="lblfrmCompContdgPais" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="lblConfDelLineasDetalle" xml:space="preserve">
+    <value>Ils sont de supprimer les lignes de détail. Continuer?</value>
+  </data>
+  <data name="lblCompContValidando" xml:space="preserve">
+    <value>Validation</value>
+  </data>
+  <data name="lblCompContConErrores" xml:space="preserve">
+    <value>Preuve d'erreurs</value>
+  </data>
+  <data name="lblCompContComprobante" xml:space="preserve">
+    <value>Réception</value>
+  </data>
+  <data name="lblCompContExportando" xml:space="preserve">
+    <value>Exportando</value>
+  </data>
+  <data name="lblCompContImportando" xml:space="preserve">
+    <value>Importation</value>
+  </data>
+  <data name="errActualizarCabCompCont" xml:space="preserve">
+    <value>Erreur en-tête de la mise à jour la preuve</value>
+  </data>
+  <data name="errActualizarDetCompCont" xml:space="preserve">
+    <value>Erreur de mise à jour des preuves détaillées</value>
+  </data>
+  <data name="lblfrmCompContErrCtaMayor" xml:space="preserve">
+    <value>La compte est invalide</value>
+  </data>
+  <data name="lblfrmCompContErrCtaMayorExcep" xml:space="preserve">
+    <value>Impossible de valider le compte du grand livre général</value>
+  </data>
+  <data name="lblfrmCompContErrCtaAuxiliar" xml:space="preserve">
+    <value>Compte auxiliaire est invalide</value>
+  </data>
+  <data name="lblfrmCompContErrCtaAuxiliarExcep" xml:space="preserve">
+    <value>Impossible de valider le compte assistant</value>
+  </data>
+  <data name="lblfrmCompContErrIVA" xml:space="preserve">
+    <value>Le code de la TVA est pas valide</value>
+  </data>
+  <data name="lblfrmCompContErrIVAExcep" xml:space="preserve">
+    <value>Impossible de valider le code de la TVA</value>
+  </data>
+  <data name="lblSelCuenta" xml:space="preserve">
+    <value>Sélectionnez compte</value>
+  </data>
+  <data name="errNoCta" xml:space="preserve">
+    <value>Il est pas défini pour le compte assistant</value>
+  </data>
+  <data name="lblfrmCompContCopia" xml:space="preserve">
+    <value>copie</value>
+  </data>
+  <!-- frmCompContAltaEdita Fin -->  
+
+  <!-- frmCompContImportarDeFinanzas Inicio -->
+  <data name="lblfrmCompContImportarDeFinanzasTitulo" xml:space="preserve">
+    <value>Importer Preuves de Finances</value>
+  </data> 
+  <data name="lblCompContImpDeFinBuscar" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="lblCompContImpDeFinImportar" xml:space="preserve">
+    <value>Importer</value>
+  </data>
+  <data name="errCompaniaObl" xml:space="preserve">
+    <value>Il est obligatoire d'informer la société</value>
+  </data>
+  <data name="errAAPPoTipoObl" xml:space="preserve">
+    <value>Il est obligatoire de déclarer l'année période ou du type</value>
+  </data>  
+  <data name="lblEstadoAprobado" xml:space="preserve">
+    <value>Approuvé</value>
+  </data>
+  <data name="lblEstadoContabilizado" xml:space="preserve">
+    <value>J'ai posté</value>
+  </data>
+  <data name="lblEstadoRechazado" xml:space="preserve">
+    <value>Rejeté</value>
+  </data>
+  <data name="lblEstadoNoAprobado" xml:space="preserve">
+    <value>Non approuvé</value>
+  </data>
+  <data name="errTipoNoExiste" xml:space="preserve">
+    <value>N'existe pas de type</value>
+  </data>
+  <data name="lblfrmImportarDeFinanzasValTipoExcep" xml:space="preserve">
+    <value>Impossible de valider le type</value>
+  </data>
+  <data name="errCompaniaNoExiste" xml:space="preserve">
+    <value>N'existe pas Société</value>
+  </data>
+  <data name="lblfrmImportarDeFinanzasValCiaExcep" xml:space="preserve">
+    <value>Erreur de validation de la société</value>
+  </data>
+  <!-- frmCompContImportarDeFinanzas Fin -->
+    
+  <!-- frmCompContTransferirFinanComprobantes Inicio -->
+  <data name="lblfrmCompContTransferirFinanComprobantesTitulo" xml:space="preserve">
+    <value>Transférer Preuves à Finances</value>
+  </data>
+  <data name="lblCompTransALArchivo" xml:space="preserve">
+    <value>Archives</value>
+  </data>  
+  <data name="lblCompTransALNo" xml:space="preserve">
+    <value>Non</value>
+  </data> 
+  <data name="lblCompTransALSi" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="lblSelArchForNoAmp" xml:space="preserve">
+    <value>Sélectionnez les fichiers dans non étendu</value>
+  </data>
+  <data name="lblArchivos" xml:space="preserve">
+    <value>Fichiers</value>
+  </data>  
+  <!-- frmCompContTransferirFinanComprobantes Fin -->
+	
+  <!-- frmTransferirComprobantes (Contable [frmCompContTransferirFinanComprobantes] y Extracontable []) Inicio -->
+  <data name="lblCompTransFinComprobantes" xml:space="preserve">
+    <value>Preuves</value>
+  </data>
+  <data name="lblCompTransFinPath" xml:space="preserve">
+    <value>Emplacement</value>
+  </data>
+  <data name="lblCompTransEstado" xml:space="preserve">
+    <value>État</value>
+  </data>
+  <data name="lblCompTransFinNoTransf" xml:space="preserve">
+    <value>Non Transférés</value>
+  </data>
+  <data name="lblCompTransFinTodos" xml:space="preserve">
+    <value>Tous</value>
+  </data>
+  <data name="lblCompTransFinLoteBatch" xml:space="preserve">
+    <value>Lot Batch</value>
+  </data>
+  <data name="lblCompTransFinPrefijo" xml:space="preserve">
+    <value>Préfixe</value>
+  </data>  
+  <data name="lblCompTransFinBiblioteca" xml:space="preserve">
+    <value>Bibliothèque</value>
+  </data>
+  <data name="lblCompTransFinCola" xml:space="preserve">
+    <value>File de sortie</value>
+  </data>
+  <data name="lblCompTransFinBorrarLote" xml:space="preserve">
+    <value>Effacer Données Lot</value>
+  </data>
+  <data name="lblCompTransFinTipoTransf" xml:space="preserve">
+    <value>Type de Transfert</value>
+  </data>
+  <data name="lblCompTransFinGenerarLoteB" xml:space="preserve">
+    <value>Génèrer Uniquement Lot</value>
+  </data>
+  <data name="lblCompTransFinGenerarLoteBA" xml:space="preserve">
+    <value>Générer Lot et Ajouter</value>
+  </data>
+  <data name="lblCompTransFinNoAprob" xml:space="preserve">
+    <value>Non Approuvé/s</value>
+  </data>
+  <data name="lblCompTransFinAprob" xml:space="preserve">
+    <value>Approuvé/s</value>
+  </data>
+  <data name="lblCompTransFinContab" xml:space="preserve">
+    <value>Comptabilisé/s</value>
+  </data>
+  <data name="lblCompTransFinVerNoComp" xml:space="preserve">
+    <value>Voir les numéros de preuve</value>
+  </data>
+  <data name="lblCompTransFinTransferir" xml:space="preserve">
+    <value>Transférer</value>
+  </data>
+  <!-- frmTransferirComprobantes (Contable [frmCompContTransferirFinanComprobantes] y Extracontable []) Fin -->  
+    
+  <!-- frmCompContTransferirArchivoLote Inicio -->
+  <data name="lblfrmCompContTransferirArchivoLoteTitulo" xml:space="preserve">
+    <value>Exporter Lot</value>
+  </data>  
+  <!-- frmCompContTransferirArchivoLote Fin -->
+
+  <!-- frmConfig Inicio -->
+  <data name="lblfrmConfigTitulo" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="lblConfiggbFicherosComprobantes" xml:space="preserve">
+    <value> Preuve fichier path </value>
+  </data>
+  <data name="lblConfigCompContable" xml:space="preserve">
+    <value>Comptable</value>
+  </data>
+  <data name="lblConfigCompExtra" xml:space="preserve">
+    <value>Non-comptable</value>
+  </data>
+  <data name="lblConfiggbModelosComprobantes" xml:space="preserve">
+    <value>  Preuve modèles path  </value>
+  </data>
+  <data name="lblConfigModeloContable" xml:space="preserve">
+    <value>Comptable</value>
+  </data>
+  <data name="lblConfigModeloExtra" xml:space="preserve">
+    <value>Non-comptable</value>
+  </data>
+  <data name="lblConfigSelPath" xml:space="preserve">
+    <value>Sélectionnez un dossier</value>
+  </data>  
+  <!-- frmConfig Fin -->
+  
+  <!-- ComprobanteContable Inicio -->
+  <data name="error_148" xml:space="preserve">
+    <value>Ne existe pas entreprise</value>
+  </data>
+  <data name="error_149" xml:space="preserve">
+    <value>Société inactive</value>
+  </data>
+  <data name="error_79" xml:space="preserve">
+    <value>Utilisateur non autorisé pour ce produit</value>
+  </data>
+  <data name="error_150" xml:space="preserve">
+    <value>Période mauvais</value>
+  </data>
+  <data name="error_151" xml:space="preserve">
+    <value>Il n'y a pas de type preuve</value>
+  </data>
+  <data name="error_152" xml:space="preserve">
+    <value>Type de coupon valide pour batch input</value>
+  </data>
+  <data name="error_153" xml:space="preserve">
+    <value>Type preuve inactif</value>
+  </data>
+  <data name="error_154" xml:space="preserve">
+    <value>Date de la preuve incorrecte pour la période</value>
+  </data>
+  <data name="error_155" xml:space="preserve">
+    <value>Classe de la preuve devrait être 0,1,2 ou 3</value>
+  </data>
+  <data name="error_156" xml:space="preserve">
+    <value>Bon de classe non valide pour la monnaie</value>
+  </data>
+  <data name="error_157" xml:space="preserve">
+    <value>Taux de change non valide</value>
+  </data>
+  <data name="error_158" xml:space="preserve">
+    <value>Ne existe pas le compte maire</value>
+  </data>
+  <data name="error_159" xml:space="preserve">
+    <value>Le compte est pas plus en détail</value>
+  </data>
+  <data name="error_160" xml:space="preserve">
+    <value>Plus compte inactif</value>
+  </data>
+  <data name="error_161" xml:space="preserve">
+    <value>Le compte maire réservé à d'autres entreprises</value>
+  </data>  
+  <data name="error_162" xml:space="preserve">
+    <value>Le compte maire nécessite premier auxiliaire</value>
+  </data>
+  <data name="error_163" xml:space="preserve">
+    <value>Le compte maire ne porte pas les premiers auxiliaires</value>
+  </data>
+  <data name="error_164" xml:space="preserve">
+    <value>Premier auxiliar: Compte auxiliaire ne existe pas</value>
+  </data>
+  <data name="error_165" xml:space="preserve">
+    <value>Premier auxiliar: Compte inactif auxiliaire</value>
+  </data>
+  <data name="error_166" xml:space="preserve">
+    <value>Premier auxiliar: Compte auxiliaire réservée pour d'autres entreprises</value>
+  </data>
+  <data name="error_167" xml:space="preserve">
+    <value>Le compte maire nécessite deuxième auxiliaire</value>
+  </data>
+  <data name="error_168" xml:space="preserve">
+    <value>Le compte maire ne porte pas les deuxièmes auxiliaires</value>
+  </data>
+  <data name="error_169" xml:space="preserve">
+    <value>Deuxième auxiliar: Compte auxiliaire ne existe pas</value>
+  </data>
+  <data name="error_170" xml:space="preserve">
+    <value>Deuxième auxiliar: Compte inactif auxiliaire</value>
+  </data>  
+  <data name="error_171" xml:space="preserve">
+    <value>Deuxième auxiliar: Compte auxiliaire réservée pour d'autres entreprises</value>
+  </data>  
+  <data name="error_172" xml:space="preserve">
+    <value>Le compte maire nécessite troisième auxiliaire</value>
+  </data>  
+  <data name="error_173" xml:space="preserve">
+    <value>Le compte maire ne porte pas les troisièmes auxiliaires</value>
+  </data>
+  <data name="error_174" xml:space="preserve">
+    <value>Troisième auxiliar: Compte auxiliaire ne existe pas</value>
+  </data>  
+  <data name="error_175" xml:space="preserve">
+    <value>Troisième auxiliar: Compte inactif auxiliaire</value>
+  </data>
+  <data name="error_176" xml:space="preserve">
+    <value>Troisième auxiliar: Compte auxiliaire réservée pour d'autres entreprises</value>
+  </data>
+  <data name="error_177" xml:space="preserve">
+    <value>Tapez faux mouvement</value>
+  </data>
+  <data name="error_178" xml:space="preserve">
+    <value>Monnaie locale doit être vide pour le type de preuve 2</value>
+  </data>
+  <data name="error_179" xml:space="preserve">
+    <value>Les devises étrangères doivent être bon blanc pour les classes 0 et 1</value>
+  </data>
+  <data name="error_180" xml:space="preserve">
+    <value>Ce mouvement ne porte pas monnaie étrangère</value>
+  </data>
+  <data name="error_181" xml:space="preserve">
+    <value>Ce siège est pas numéroté documents</value>
+  </data>
+  <data name="error_182" xml:space="preserve">
+    <value>Document manquant numéro</value>
+  </data>
+  <data name="error_183" xml:space="preserve">
+    <value>Ce siège est document non daté</value>
+  </data>
+  <data name="error_184" xml:space="preserve">
+    <value>Document manquant jour</value>
+  </data>
+  <data name="error_185" xml:space="preserve">
+    <value>Ce siège ne porte pas la date d'expiration</value>
+  </data>
+  <data name="error_186" xml:space="preserve">
+    <value>Le manque de maturité</value>
+  </data>
+  <data name="error_187" xml:space="preserve">
+    <value>Ce siège ne prend pas deuxième document</value>
+  </data>
+  <data name="error_188" xml:space="preserve">
+    <value>Le second document est manquant</value>
+  </data>  
+  <data name="error_189" xml:space="preserve">
+    <value>Votre mode pas défini</value>
+  </data> 
+  <data name="error_190" xml:space="preserve">
+    <value>Ce document doit être annulé de portefeuilles</value>
+  </data>
+  <data name="error_191" xml:space="preserve">
+    <value>Ce siège ne doit pas prendre la troisième quantité</value>
+  </data>
+  <data name="error_192" xml:space="preserve">
+    <value>Société non défini dans le tableau des sociétés de l'impôt</value>
+  </data>  
+  <data name="error_193" xml:space="preserve">
+    <value>Lorsque le compte est l'impôt et le code de la TVA est vide, ne pas second document</value>
+  </data>
+  <data name="error_194" xml:space="preserve">
+    <value>Compte du grand livre de la TVA invalide</value>
+  </data>
+  <data name="error_195" xml:space="preserve">
+    <value>Nombre document manquant TVA</value>
+  </data>
+  <data name="error_196" xml:space="preserve">
+    <value>Code de la TVA inactive</value>
+  </data>
+  <data name="error_197" xml:space="preserve">
+    <value>La TVA document de nombre ne peut être supérieur à 9999999</value>
+  </data>
+  <data name="error_198" xml:space="preserve">
+    <value>Le code de la TVA ne est pas attribué à le compte maire</value>
+  </data>  
+  <data name="error_199" xml:space="preserve">
+    <value>Ne existe pas le code des impôts</value>
+  </data>
+  <data name="error_200" xml:space="preserve">
+    <value>Preuve de la classe 2 ne supporte pas la TVA</value>
+  </data>
+  <data name="error_201" xml:space="preserve">
+    <value>Année/mois fermé mouvements de TVA</value>
+  </data>
+  <data name="error_202" xml:space="preserve">
+    <value>Manquant numéro d'identification fiscale</value>
+  </data>
+  <data name="error_203" xml:space="preserve">
+    <value>Ce siège ne prend pas numéro d'identification fiscale</value>
+  </data>  
+  <data name="error_204" xml:space="preserve">
+    <value>Ce siège doit porter tiers des quantités</value>
+  </data>
+  <data name="error_205" xml:space="preserve">
+    <value>Cif ne figure pas dans maîtres ou professeurs assistants Cif/Cni</value>
+  </data>  
+  <data name="error_206" xml:space="preserve">
+    <value>Superat màxim admès per ajust arrodoniment</value>
+  </data>  
+  <!-- ComprobanteContableFin -->
+  
+  <!-- frmCompExtContLista Inicio -->
+  <data name="lblfrmCompExtContListaTitulo" xml:space="preserve">
+    <value>Liste des hors Preuve</value>
+  </data>
+  <data name="errPrefLoteReservado" xml:space="preserve">
+    <value>Beaucoup préfixe réservé</value>
+  </data>
+  <!-- frmCompExtContLista Fin -->
+  
+  <!-- ComprobanteContableTransferir Inicio -->
+  <data name="errVerificarDatosLote" xml:space="preserve">
+    <value>Vérification d'erreur si les données lot</value>
+  </data>
+  <data name="errFicheroBadCabecera" xml:space="preserve">
+    <value>Fichier incorrect (Header)</value>
+  </data>
+  <data name="errProcesandoFichero" xml:space="preserve">
+    <value>Fichier de traitement d'erreur</value>
+  </data>
+  <data name="errInsertGLC04" xml:space="preserve">
+    <value>Erreur insérer dans le tableau GLC04</value>
+  </data>
+  <data name="errDelDatosLote" xml:space="preserve">
+    <value>Erreur de retirer le lot de la table</value>
+  </data>
+  <data name="errExistenDatosLote" xml:space="preserve">
+    <value>Données de lots là dans la table</value>
+  </data>
+  <data name="errLoteEnUso" xml:space="preserve">
+    <value>Lot en cours d'utilisation</value>
+  </data>
+  <data name="errVerificarPrefLoteGLC04" xml:space="preserve">
+    <value>Erreur vérifier le code de lot sur la table GLC04</value>
+  </data>
+  <data name="errInsertCabComp" xml:space="preserve">
+    <value>Erreur insérant la tête du bon</value>
+  </data>
+  <data name="errInsertDetComp" xml:space="preserve">
+    <value>Erreur insertion preuve détaillée</value>
+  </data>
+  <!-- ComprobanteContableTransferir Fin -->
+  
+  <!-- ComprobanteExtContableTransferir Inicio -->
+  <data name="errTransferComprob" xml:space="preserve">
+    <value>Erreur preuve transfert</value>
+  </data>
+  <data name="errInsertPRC04" xml:space="preserve">
+    <value>Erreur insérer dans le tableau PRC04</value>
+  </data>
+  <!-- ComprobanteExtContableTransferir Fin -->
+  
+  <!-- frmCompContGestionLotes Inicio -->
+  <data name="lblfrmCompContGestionLotes" xml:space="preserve">
+    <value>Gestion des Lots</value>
+  </data>
+  <data name="lblEdicionLotes" xml:space="preserve">
+    <value>Édition des Lotes</value>
+  </data>
+  <data name="lblFormatoAmpliado" xml:space="preserve">
+    <value>Format élargi</value>
+  </data>
+  <data name="lblSi" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="lblNo" xml:space="preserve">
+    <value>Pas</value>
+  </data>
+  <data name="lblUsuario" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+  <data name="lblMostrartodos" xml:space="preserve">
+    <value>Voir tous les lots traités</value>
+  </data>
+  <data name="lblGestionLotProc" xml:space="preserve">
+    <value>Gestion des lots traités</value>
+  </data>
+  <data name="toolStripSuprimirHcoMensajes" xml:space="preserve">
+    <value>Supprimer l'historique des messages</value>
+  </data>
+  <data name="lblCabeceraComp" xml:space="preserve">
+    <value>Cabeceras de comprobantes</value>
+  </data>
+  <data name="lblLotesProc" xml:space="preserve">
+    <value>Lots traités</value>
+  </data>
+  <data name="lblErrores" xml:space="preserve">
+    <value>Erreurs</value>
+  </data>
+  <data name="dgHeaderLotesErroresTipoTransf" xml:space="preserve">
+    <value>Type de transfert</value>
+  </data>
+  <data name="dgHeaderLotesErroresOrigen" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="dgHeaderLotesErroresHora" xml:space="preserve">
+    <value>Heur</value>
+  </data>
+  <data name="dgHeaderLotesErroresNumErrores" xml:space="preserve">
+    <value>Nombre d'erreurs</value>
+  </data>
+  <data name="lblSuprimirHcoMensError" xml:space="preserve">
+    <value>Supprimer l'historique des messages d'erreur</value>
+  </data>
+  <data name="lblHastaFecha" xml:space="preserve">
+    <value>À jour</value>
+  </data>
+  <data name="confEliminarMensajesError" xml:space="preserve">
+    <value>Ils sont pour supprimer tous les messages d'erreur à ce jour. Continuer?</value>
+  </data>
+  <data name="errFechaDesdeFormatoNoValido" xml:space="preserve">
+    <value>La date à partir n'a pas un format valide</value>
+  </data>
+  <data name="lblErrNoLotes" xml:space="preserve">
+    <value>Il y a beaucoup transformés pour les critères de recherche utilisés</value>
+  </data>
+  <data name="errFechaHastaNoInf" xml:space="preserve">
+    <value>Vous devez entrer une date jusqu'à ce qui supprime les messages d'erreur historiques</value>
+  </data>
+  <data name="errCargandoComp" xml:space="preserve">
+    <value>Erreur lors du chargement du bon</value>
+  </data>
+  <data name="errTraspasandoComp" xml:space="preserve">
+    <value>Erreur de transférer beaucoup</value>
+  </data>
+  <data name="confTraspasarCompErroresLote" xml:space="preserve">
+    <value>Il y a des bons erronés dans le lot. Vous voulez les transférer?</value>
+  </data>
+  <data name="confEliminarApuntesComp" xml:space="preserve">
+    <value>Ils sont d'éliminer toutes les notes des coupons sélectionnés. Continuer?</value>
+  </data>
+  <data name="confEliminarMensajesErrorSel" xml:space="preserve">
+    <value>Ils sont d'éliminer toute erreur de messages sélectionnés. Continuer?</value>
+  </data>
+  <data name="errTablaCabLoteNoExiste" xml:space="preserve">
+    <value>Il n'y a pas de table d'en-tête de lot</value>
+  </data>
+  <data name="errTablaDetLoteNoExiste" xml:space="preserve">
+    <value>Il n'y a pas de détails de la table de lots</value>
+  </data>
+  <data name="errVerificarTablaLote" xml:space="preserve">
+    <value>Pas de table de lot</value>
+  </data>
+  <data name="errNoExistenLotes" xml:space="preserve">
+    <value>Aucun lot</value>
+  </data>
+  <data name="lblNoExistenCompConErrores" xml:space="preserve">
+    <value>Aucun coupons avec des erreurs</value>
+  </data>
+  <data name="lblNoExistenDatosCriterioSel" xml:space="preserve">
+    <value>Aucun critère de sélection de données</value>
+  </data>
+  <data name="lblSelSolo1Lote" xml:space="preserve">
+    <value>Vous devez sélectionner un seul lot</value>
+  </data>
+  <data name="lblNoErrores" xml:space="preserve">
+    <value>Aucune erreur n'a été détectée</value>
+  </data>
+  <data name="errNoExisteComp" xml:space="preserve">
+    <value>Il n'y a pas de preuve</value>
+  </data>
+  <data name="errRecuperandoComp" xml:space="preserve">
+    <value>Erreur preuve récupération</value>
+  </data>
+  <data name="lblTipoTransContab" xml:space="preserve">
+    <value>Comptabilisés</value>
+  </data>
+  <data name="lblTipoTransAprob" xml:space="preserve">
+    <value>Approuvé</value>
+  </data>
+  <data name="lblTipoTransNoAprob" xml:space="preserve">
+    <value>Non approuvé</value>
+  </data>
+  <!-- frmCompContGestionLotes Fin -->
+  
+  <!-- frmCompContListaGLB01 Inicio -->
+  <data name="lblfrmCompContListaGLB01Titulo" xml:space="preserve">
+    <value>Liste des pièces justificatives</value>
+  </data>
+  <data name="toolStripAprobar" xml:space="preserve">
+    <value>Approuver</value>
+  </data>
+  <data name="toolStripRechazar" xml:space="preserve">
+    <value>Rejeter</value>
+  </data>
+  <data name="toolStripContabilizar" xml:space="preserve">
+    <value>Comptabilité</value>
+  </data>
+  <data name="toolStripAprobarContab" xml:space="preserve">
+    <value>Approuver+Comptabilité</value>
+  </data>
+  <data name="toolStripRevertir" xml:space="preserve">
+    <value>Revenir</value>
+  </data>
+  <data name="toolStripActualizar" xml:space="preserve">
+    <value>Mettre à jour</value>
+  </data>
+  <data name="toolStripVerAccAct" xml:space="preserve">
+    <value>Voir Actions Actuelles</value>
+  </data>
+  <data name="toolStripVerHistorial" xml:space="preserve">
+    <value>Afficher l'historique</value>
+  </data>
+  <data name="lblEstado" xml:space="preserve">
+    <value>État</value>
+  </data>
+  <data name="lblModoTrabajo" xml:space="preserve">
+    <value>Mode de travail</value>
+  </data>
+  <data name="lblEstadoAccion" xml:space="preserve">
+    <value>État précédent - Action</value>
+  </data>
+  <data name="lblUsuarioApp" xml:space="preserve">
+    <value>Utilisateur de l'application</value>
+  </data>
+  <data name="lblUsuarioRed" xml:space="preserve">
+    <value>Réseau d'utilisateur</value>
+  </data>
+  <data name="errBusqComp" xml:space="preserve">
+    <value>Pas trouvé de preuve pour les critères de recherche sélectionnés</value>
+  </data>
+  <data name="errAccionesActuales" xml:space="preserve">
+    <value>Aucune mesure n'a été prise sur les bons</value>
+  </data>
+  <data name="errVisorHistorial" xml:space="preserve">
+    <value>L'histoire n'a pas été trouvé pour le bon sélectionné</value>
+  </data>
+  <data name="errAccionYaEjecutada" xml:space="preserve">
+    <value>L'action exécutée précédemment</value>
+  </data>
+  <data name="errAccionNoPermitida" xml:space="preserve">
+    <value>Pas permis action pour le bon</value>
+  </data>
+  <data name="lblAccion" xml:space="preserve">
+    <value>Ação</value>
+  </data>
+  <data name="lblAccionNoPermitida" xml:space="preserve">
+    <value>pas permis bon</value>
+  </data>
+  <data name="lblNumero" xml:space="preserve">
+    <value>Le numéro</value>
+  </data>
+  <data name="lblContabilizarComp" xml:space="preserve">
+    <value>Bon comptable</value>
+  </data>
+  <data name="lblRevertirComp" xml:space="preserve">
+    <value>Rétablir la preuve</value>
+  </data>
+  <data name="errYaNoExiste" xml:space="preserve">
+    <value>ça n'existe plus</value>
+  </data>
+  <!-- frmCompContListaGLB01 Fin -->
+  
+  <!-- frmCompContAltaEditaComentarios Inicio -->
+  <data name="lblfrmCompContAltaEditaComentariosTitulo" xml:space="preserve">
+    <value>Voir / Modifier Commentaires</value>
+  </data>
+  <data name="lblfrmCompContAEComGuardarCambios" xml:space="preserve">
+    <value>Voulez-vous enregistrer vos modifications?</value>
+  </data>
+  <!-- frmCompContAltaEditaComentarios Fin -->
+</root>

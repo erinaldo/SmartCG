@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>0</Contable>
+    <Transferido>1</Transferido>
+    <Compania>SA</Compania>
+    <AnoPeriodo>1912</AnoPeriodo>
+    <Tipo>47</Tipo>
+    <Numero />
+    <Fecha>20191201</Fecha>
+    <AnoPeriodoDesde>1909</AnoPeriodoDesde>
+    <AnoPeriodoHasta>1912</AnoPeriodoHasta>
+    <Descripcion />
+    <TipoExtDefecto>CF</TipoExtDefecto>
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>3.639,00</MonedaLocalDebe>
+    <MonedaLocalHaber>0,00</MonedaLocalHaber>
+    <NumeroApuntes>3</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>669000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>CF</TipoExt>
+    <Descripcion>gtos. finanz. amortiz. prest.</Descripcion>
+    <PRD1909>1.210,25</PRD1909>
+    <PRD1910>0,00</PRD1910>
+    <PRD1911>1.210,25</PRD1911>
+    <PRD1912>1.218,50</PRD1912>
+  </Detalle>
+  <Detalle />
+</Comprobante>

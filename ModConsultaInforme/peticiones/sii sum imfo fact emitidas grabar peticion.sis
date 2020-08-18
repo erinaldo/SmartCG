@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MISIISINF</Codigo>
+    <Descripcion>kk</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>txtEjercicio</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>2015</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbEjercicio</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>cmbPeriodo</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>cmbOperacion</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbLibro</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>01</Valor>
+  </Control>
+  <Control>
+    <Nombre>chkCiasFiscalesTodas</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>lbCiasFiscales</Nombre>
+    <Tipo>ListBox</Tipo>
+    <Valor>W1</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCiaFiscal</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtElemento</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtFactura</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Facturas Emitidas</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtOperacionDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Alta</Valor>
+  </Control>
+</Formulario>

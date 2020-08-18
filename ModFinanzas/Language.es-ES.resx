@@ -1,0 +1,1045 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	
+  <!-- Globales Inicio -->
+  <data name="lblAceptar" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="lblCancelar" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="errValTitulo" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <!-- Globales Fin -->
+  
+  <!-- frmPrincipal Inicio -->
+  <data name="lblfrmPrincipalTitulo" xml:space="preserve">
+    <value>Módulo Finanzas</value>
+  </data>
+    <data name="menuItemConfig" xml:space="preserve">
+    <value>Configuración</value>
+  </data>    
+  <data name="menuItemAbout" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>   
+  <data name="menuItemSalir" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="errCargarOpciones" xml:space="preserve">
+    <value>No es posible cargar las opciones del Módulo de Finanzas</value>
+  </data>
+  
+  <!-- TreeView Menú Click Derecho Inicio -->
+  <data name="lblDesactivar" xml:space="preserve">
+    <value>Desactivar</value>
+  </data>
+  <data name="lblAddOpcion" xml:space="preserve">
+    <value>Añadir Opción</value>
+  </data>
+  <data name="lblDelOpcion" xml:space="preserve">
+    <value>Quitar Opción</value>
+  </data>
+  <data name="lblAddGrupo" xml:space="preserve">
+    <value>Añadir Grupo</value>
+  </data>
+  <data name="lblDelGrupoItem" xml:space="preserve">
+    <value>Quitar Grupo/Elemento</value>
+  </data>
+  <!-- TreeView Menú Click Derecho Fin -->
+  
+  <data name="wrnTitulo" xml:space="preserve">
+    <value>Advertencia</value>
+  </data>
+  <data name="wrnDesactivarOpcion" xml:space="preserve">
+    <value>Se va a desactivar la opción</value>
+  </data>
+  <data name="wrnPreguntaContinuar" xml:space="preserve">
+    <value>¿Desea continuar?</value>
+  </data>
+  <data name="wrnEliminarOpcion" xml:space="preserve">
+    <value>Se va a eliminar la opción</value>
+  </data>
+  
+  <!-- Menú Árbol Inicio -->
+  <data name="MB" xml:space="preserve">
+    <value>Módulo Básico</value>
+  </data>
+  <data name="MB_CG1" xml:space="preserve">
+    <value>Definiciones Generales</value>
+  </data>
+  <data name="MB_CG1_GLP002" xml:space="preserve">
+    <value>Parámetros Generales de la Instalación</value>
+  </data>
+  <data name="MB_CG1_AT" xml:space="preserve">
+    <value>Autorizaciones</value>
+  </data>
+  <data name="MB_CG1_AT_ATP003" xml:space="preserve">
+    <value>Definición de Usuarios</value>
+  </data>
+  <data name="MB_CG1_AT_ATP001" xml:space="preserve">
+    <value>Autorización para crear elementos</value>
+  </data>
+  <data name="MB_CG1_AT_ATP002" xml:space="preserve">
+    <value>Cambio de propietario</value>
+  </data>
+  <data name="MB_CG1_AT_ATP011" xml:space="preserve">
+    <value>Autorización sobre elementos</value>
+  </data>
+  <data name="MB_CG1_AT_ATP012" xml:space="preserve">
+    <value>Autorización sobre procesos</value>
+  </data>
+  <data name="MB_CG1_AT_ATP400" xml:space="preserve">
+    <value>Listar Usuarios</value>
+  </data>
+  <data name="MB_CG1_AT_ATP404" xml:space="preserve">
+    <value>Listar autorización para crear elementos</value>
+  </data>
+  <data name="MB_CG1_AT_ATP405" xml:space="preserve">
+    <value>Listar elementos por propietario</value>
+  </data>
+  <data name="MB_CG1_AT_ATP406" xml:space="preserve">
+    <value>Listar autorización sobre elementos</value>
+  </data>
+  <data name="MB_CG1_AT_ATP407" xml:space="preserve">
+    <value>Listar autorización sobre procesos</value>
+  </data>
+  <data name="MB_CG1_AT_AT402" xml:space="preserve">
+    <value>Listar autorizaciones públicas</value>
+  </data>
+  <data name="MB_CG1_AT_ATP412" xml:space="preserve">
+    <value>Listar autorizaciones por usuario</value>
+  </data>
+  <data name="MB_CG1_AT_ATP414" xml:space="preserve">
+    <value>Conexiones por usuario</value>
+  </data>
+  <data name="MB_CG1_DF2" xml:space="preserve">
+    <value>Compañías y Grupos de Compañías</value>
+  </data>
+  <data name="MB_CG1_DF2_GLP110" xml:space="preserve">
+    <value>Actualización de Compañías</value>
+  </data>
+  <data name="MB_CG1_DF2_GLP170" xml:space="preserve">
+    <value>Actualización de Grupos de Compañías</value>
+  </data>
+  <data name="MB_CG1_DF2_GLP491" xml:space="preserve">
+    <value>Listado de Compañías</value>
+  </data>
+  <data name="MB_CG1_DF2_GLP497" xml:space="preserve">
+    <value>Listado de Grupos de Compañías</value>
+  </data>
+  <data name="MB_CG1_GLP040" xml:space="preserve">
+    <value>Tabla de Calendarios Contables</value>
+  </data>
+  <data name="MB_CG1_GLP030" xml:space="preserve">
+    <value>Tabla de Monedas</value>
+  </data>
+  <data name="MB_CG1_GLP055" xml:space="preserve">
+    <value>Tabla de Clases de Documento</value>
+  </data>
+  <data name="MB_CG1_CG083" xml:space="preserve">
+    <value>Ver otra Moneda Local</value>
+  </data>
+  <data name="MB_CG1_GL480A" xml:space="preserve">
+    <value>Listado de Tablas definidas</value>
+  </data>
+  <data name="MB_CG1_CG011" xml:space="preserve">
+    <value>Cambiar de usuario</value>
+  </data>
+  <data name="MB_CG2" xml:space="preserve">
+    <value>Menú de Mantenimiento</value>
+  </data>
+  <data name="MB_CG2_GL501" xml:space="preserve">
+    <value>Reorganización de datos de Uniclass Finanzas</value>
+  </data>
+  <data name="MB_CG2_GLP595" xml:space="preserve">
+    <value>Reorganizar Cuentas de Auxiliar</value>
+  </data>
+  <data name="MB_CG2_GLP630" xml:space="preserve">
+    <value>Generar archivos entrada batch</value>
+  </data>
+  <data name="MB_CG3" xml:space="preserve">
+    <value>Entrada de datos</value>
+  </data>
+  <data name="MB_CG3_GL200" xml:space="preserve">
+    <value>Entrada Interactiva</value>
+  </data>
+  <data name="MB_CG3_GLP217" xml:space="preserve">
+    <value>Recepción de Lotes (Batch)</value>
+  </data>
+  <data name="MB_CG3_GLP631" xml:space="preserve">
+    <value>Edición de lotes batch</value>
+  </data>
+  <data name="MB_CG3_GLP400" xml:space="preserve">
+    <value>Listado de Movimientos Introducidos</value>
+  </data>
+  <data name="MB_CG3_GLP226" xml:space="preserve">
+    <value>Contabilización</value>
+  </data>
+  <data name="MB_CG3_GLP280" xml:space="preserve">
+    <value>Cierre de Periodos</value>
+  </data>
+  <data name="MB_CG3_GLP610" xml:space="preserve">
+    <value>Cierre de Ejercicios Económicos</value>
+  </data>
+  <data name="MB_CG3_GLP621" xml:space="preserve">
+    <value>Cierre de Ejercicio para Cuentas Patrimoniales</value>
+  </data>
+  <data name="MB_CG3_GL201" xml:space="preserve">
+    <value>Trabajar con una Lista de Comprobantes</value>
+  </data>
+  <data name="MB_CG3_GLP202" xml:space="preserve">
+    <value>Aprobación de Comprobantes Adicionados</value>
+  </data>
+  <data name="MB_CG3_GLP632" xml:space="preserve">
+    <value>Gestión de Lotes Procesados</value>
+  </data>
+  <data name="MB_CG3_GLP227" xml:space="preserve">
+    <value>Histórico de Comprobantes</value>
+  </data>
+  <data name="MB_GL" xml:space="preserve">
+    <value>Contabilidad General</value>
+  </data>
+  <data name="MB_GL_GL1" xml:space="preserve">
+    <value>Definiciones de Contabilidad General</value>
+  </data>
+  <data name="MB_GL_GL1_GLP120" xml:space="preserve">
+    <value>Actualizar parámetros de Planes de Cuentas</value>
+  </data>
+  <data name="MB_GL_GL1_GL130A" xml:space="preserve">
+    <value>Actualizar Cuentas de Mayor</value>
+  </data>
+  <data name="MB_GL_GL1_GLP050" xml:space="preserve">
+    <value>Actualizar tabla de Tipos de Comprobante</value>
+  </data>
+  <data name="MB_GL_GL1_GLP135" xml:space="preserve">
+    <value>Combinaciones cuentas mayor/aux</value>
+  </data>
+  <data name="MB_GL_GL1_GLP083" xml:space="preserve">
+    <value>Actualizar Grupos de Cuentas de Mayor</value>
+  </data>
+  <data name="MB_GL_GL1_GLP492" xml:space="preserve">
+    <value>Listar Planes de Cuentas</value>
+  </data>
+  <data name="MB_GL_GL1_GLP493" xml:space="preserve">
+    <value>Listar Cuentas de Mayor</value>
+  </data>
+  <data name="MB_GL_GL1_GL480B" xml:space="preserve">
+    <value>Listado de Tablas Definidas</value>
+  </data>
+  <data name="MB_GL_GL1_GLP136" xml:space="preserve">
+    <value>Listar Combinaciones cuentas Mayor/aux</value>
+  </data>
+  <data name="MB_GL_GL1_GLP499" xml:space="preserve">
+    <value>Listar Grupos de Cuentas de Mayor</value>
+  </data>
+  <data name="MB_GL_GL2" xml:space="preserve">
+    <value>Información de Contabilidad General</value>
+  </data>
+  <data name="MB_GL_GL2_GDP400" xml:space="preserve">
+    <value>Diarios</value>
+  </data>
+  <data name="MB_GL_GL2_GLP310" xml:space="preserve">
+    <value>Consulta de Saldos y Movimientos</value>
+  </data>
+  <data name="MB_GL_GL2_GLP410" xml:space="preserve">
+    <value>Listado del Mayor de Contabilidad</value>
+  </data>  
+  <data name="MB_GL_GL2_GLP415" xml:space="preserve">
+    <value>Balance de Comprobación (Sumas y Saldos)</value>
+  </data>  
+  <data name="MB_GL_GL2_GLP346" xml:space="preserve">
+    <value>Consulta Selectiva de Movimientos</value>
+  </data>
+  <data name="MB_AX" xml:space="preserve">
+    <value>Libros Auxiliares de Contabilidad</value>
+  </data>
+  <data name="MB_AX_AX1" xml:space="preserve">
+    <value>Menú de Definición de Libros Auxiliares</value>
+  </data>
+  <data name="MB_AX_AX1_GLP140" xml:space="preserve">
+    <value>Actualizar Tipos de Auxiliar</value>
+  </data>
+  <data name="MB_AX_AX1_GL150A" xml:space="preserve">
+    <value>Actualizar Cuentas de Auxiliar</value>
+  </data>
+  <data name="MB_AX_AX1_GLP070" xml:space="preserve">
+    <value>Actualizar Tablas de Vencimientos</value>
+  </data>
+  <data name="MB_AX_AX1_GLP468" xml:space="preserve">
+    <value>Actualizar Tablas de Ingresos y Pagos</value>
+  </data>
+  <data name="MB_AX_AX1_GLP081" xml:space="preserve">
+    <value>Actualizar Grupos de Cuentas de Auxiliar</value>
+  </data>
+  <data name="MB_AX_AX1_GLP141" xml:space="preserve">
+    <value>Actualizar Clases de Zona</value>
+  </data>
+  <data name="MB_AX_AX1_GLP142" xml:space="preserve">
+    <value>Actualizar Zonas</value>
+  </data>  
+  <data name="MB_AX_AX1_G3P750" xml:space="preserve">
+    <value>Actualizar Análisis Antigüedad Deuda</value>
+  </data>
+  <data name="MB_AX_AX1_GLP494" xml:space="preserve">
+    <value>Listar Tipos de Auxiliar</value>
+  </data>
+  <data name="MB_AX_AX1_GLP495" xml:space="preserve">
+    <value>Listar Cuentas de Auxiliar</value>
+  </data>
+  <data name="MB_AX_AX1_GLP472" xml:space="preserve">
+    <value>Listar Tablas de Ingresos y Pagos</value>
+  </data>
+  <data name="MB_AX_AX1_GL498" xml:space="preserve">
+    <value>Listar Grupos de Cuentas de Auxiliar</value>
+  </data>
+  <data name="MB_AX_AX1_GLP143" xml:space="preserve">
+    <value>Listar Clases de zona</value>
+  </data>
+  <data name="MB_AX_AX1_GLP144" xml:space="preserve">
+    <value>Listar Zonas</value>
+  </data>
+  <data name="MB_AX_AX2" xml:space="preserve">
+    <value>Menú de Información de Libros Auxiliares</value>
+  </data>  
+  <data name="MB_AX_AX2_G3P751" xml:space="preserve">
+    <value>Antigüedad de la Deuda</value>
+  </data>
+  <data name="MB_AX_AX2_GLP320" xml:space="preserve">
+    <value>Consulta de primer Auxiliar</value>
+  </data>
+  <data name="MB_AX_AX2_GLP425" xml:space="preserve">
+    <value>Listado por periodos / fecha</value>
+  </data>
+  <data name="MB_AX_AX2_GLP423" xml:space="preserve">
+    <value>Listado de Movimientos por Documento</value>
+  </data>
+  <data name="MB_AX_AX2_GLP420" xml:space="preserve">
+    <value>Listado de Cuadre con Mayor</value>
+  </data>
+  <data name="MB_AX_AX2_GLP430" xml:space="preserve">
+    <value>Análisis por Vencimiento</value>
+  </data>
+  <data name="MB_AX_AX2_GLP469" xml:space="preserve">
+    <value>Previsión de Ingresos y Pagos</value>
+  </data>
+  <data name="MB_AX_AX2_GLP370" xml:space="preserve">
+    <value>Consulta de Auxiliares por NIF</value>
+  </data>
+  <data name="MB_AX_AX2_GLP330" xml:space="preserve">
+    <value>Consulta de Auxiliares</value>
+  </data>
+  <data name="MB_AX_AX2_GLP450" xml:space="preserve">
+    <value>Listado de Movimientos de Auxiliar</value>
+  </data>
+  <data name="MB_AX_AX2_GLP460" xml:space="preserve">
+    <value>Listado Resumido de Auxiliares</value>
+  </data>
+  <data name="MB_XT" xml:space="preserve">
+    <value>Datos Extracontables</value>
+  </data>
+  <data name="MB_XT_PR061A" xml:space="preserve">
+    <value>Actualización Tipos de Extracontable</value>
+  </data>
+  <data name="MB_XT_PR010A" xml:space="preserve">
+    <value>Entrada interactiva de Datos Extracontables</value>
+  </data>
+  <data name="MB_XT_PR020A" xml:space="preserve">
+    <value>Cálculo de Datos Extracontables</value>
+  </data>
+  <data name="MB_XT_PR317A" xml:space="preserve">
+    <value>Recepción de Lotes de Extracontables (Batch)</value>
+  </data>
+  <data name="MB_XT_PRP631" xml:space="preserve">
+    <value>Edición de Lotes de Extracontables batch</value>
+  </data>
+  <data name="MB_XT_PRP400" xml:space="preserve">
+    <value>Listado de Extracontables por Comprobantes</value>
+  </data>
+  <data name="MB_XT_PRP410" xml:space="preserve">
+    <value>Listado de Extracontables por Mayor</value>
+  </data>
+  <data name="MB_XT_PRP040" xml:space="preserve">
+    <value>Borrar datos Extracontables</value>
+  </data>
+  <data name="MB_CG120" xml:space="preserve">
+    <value>Información de Saldos y Movimientos</value>
+  </data>
+  <data name="MB_CG120_GLP440" xml:space="preserve">
+    <value>Listados de Movimientos</value>
+  </data>  
+  <data name="MB_CG120_GLP300" xml:space="preserve">
+    <value>Consultas de Saldos y Movimientos</value>
+  </data>
+  <data name="MB_CG120_GLP475" xml:space="preserve">
+    <value>Definir Grupos de Listados</value>
+  </data>
+  <data name="MB_CG120_GLP476" xml:space="preserve">
+    <value>Generar un Grupo de Listados</value>
+  </data>
+  <data name="MB_AU" xml:space="preserve">
+    <value>Auditoría y Programas de Ayuda</value>
+  </data>
+  <data name="MB_AU_AUP003" xml:space="preserve">
+    <value>Auditoría de Diarios</value>
+  </data>
+  <data name="MB_AU_AUP020" xml:space="preserve">
+    <value>Reconstruir Totales D/H de Comprobantes</value>
+  </data>
+  <data name="MB_AU_AUP040" xml:space="preserve">
+    <value>Auditoría y Reconstrucción de Saldos</value>
+  </data>
+  <data name="MB_AU_AUP220" xml:space="preserve">
+    <value>Reversión de Comprobantes</value>
+  </data>
+  <data name="MB_AU_AU030" xml:space="preserve">
+    <value>Sincronización de autorizaciones con maestros</value>
+  </data>
+  <data name="MB_AU_AU001" xml:space="preserve">
+    <value>Reajuste de parámetros de Cuentas de Mayor</value>
+  </data>
+  <data name="MB_AU_SAP002" xml:space="preserve">
+    <value>Reconstrucción de saldos Cuentas Reflejas</value>
+  </data>
+  <data name="MB_AU_AUP143" xml:space="preserve">
+    <value>Auditoría de Zonas</value>
+  </data>  
+  <data name="MB_AU_AUP046" xml:space="preserve">
+    <value>Construir / eliminar saldos a último nivel</value>
+  </data>  
+  <data name="MB_AU_AUP049" xml:space="preserve">
+    <value>Auditoria y reconstrucción de Extracontables</value>
+  </data>  
+  <data name="MB_AU_EU" xml:space="preserve">
+    <value>Cambio de Moneda</value>
+  </data>  
+  <data name="MB_AU_EU_EUP010" xml:space="preserve">
+    <value>Tabla de Valores Generales</value>
+  </data>  
+  <data name="MB_AU_EU_EUP020" xml:space="preserve">
+    <value>Tabla de Excepciones</value>
+  </data>  
+  <data name="MB_AU_EU_EUP011" xml:space="preserve">
+    <value>Tabla de Auxiliares para ajustes</value>
+  </data>  
+  <data name="MB_AU_EU_EUP109" xml:space="preserve">
+    <value>Validación y listado de las Tablas</value>
+  </data>  
+  <data name="MB_AU_EU_EU500" xml:space="preserve">
+    <value>Cambiar a Moneda Alternativa un Plan</value>
+  </data>  
+  <data name="MB_AU_EU_EU700" xml:space="preserve">
+    <value>Cambiar a Moneda Alternativa los Extracontables</value>
+  </data>
+  <data name="MB_AU_EU_AU700" xml:space="preserve">
+    <value>Cambiar de Plan de Cuentas a una Compañía</value>
+  </data>
+  <data name="MI" xml:space="preserve">
+    <value>Gestión de Impuestos</value>
+  </data>  
+  <data name="MI_IV1" xml:space="preserve">
+    <value>Definiciones generales</value>
+  </data>
+  <data name="MI_IV1_IVP120" xml:space="preserve">
+    <value>Actualizar Tablas de Compañías Fiscales</value>
+  </data>
+  <data name="MI_IV1_IVP100" xml:space="preserve">
+    <value>Actualizar Códigos de IVA</value>
+  </data>
+  <data name="MI_IV1_IV150A" xml:space="preserve">
+    <value>Actualizar Maestro de CIF/DNI</value>
+  </data>
+  <data name="MI_IV1_IV160" xml:space="preserve">
+    <value>Actualizar Maestro de Referencias Catrastales</value>
+  </data>
+  <data name="MI_IV1_IV590" xml:space="preserve">
+    <value>Normalización de CIF/DNI</value>
+  </data>
+  <data name="MI_IV1_IV595" xml:space="preserve">
+    <value>Validación del archivo de movimientos IVA</value>
+  </data>
+  <data name="MI_IV1_IV600" xml:space="preserve">
+    <value>Reorganización archivos de IVA</value>
+  </data>  
+  <data name="MI_IV1_IV122" xml:space="preserve">
+    <value>Modalidad de las Declaraciones</value>
+  </data>
+  <data name="MI_IV1_IVP121" xml:space="preserve">
+    <value>Listar Tablas de Compañías Fiscales</value>
+  </data>
+  <data name="MI_IV1_IVP101" xml:space="preserve">
+    <value>Listar Códigos de IVA</value>
+  </data>
+  <data name="MI_IV1_IVP151" xml:space="preserve">
+    <value>Listar Maestro de CIF/DNI</value>
+  </data>
+  <data name="MI_IVP300" xml:space="preserve">
+    <value>Extracción de movimientos Contables</value>
+  </data>  
+  <data name="MI_IVP410" xml:space="preserve">
+    <value>Numeración de movimientos</value>
+  </data>
+  <data name="MI_IVP200" xml:space="preserve">
+    <value>Actualización directa de movimientos</value>
+  </data>
+  <data name="MI_IVP400" xml:space="preserve">
+    <value>Listado mensual/trimestral</value>
+  </data>
+  <data name="MI_IV2" xml:space="preserve">
+    <value>IVA Modelo 303</value>
+  </data>
+  <data name="MI_IV2_IVP424" xml:space="preserve">
+    <value>Claves Legales para Códigos de IVA Mod. 303</value>
+  </data>
+  <data name="MI_IV2_IVP420" xml:space="preserve">
+    <value>Extracción de datos Mod. 303</value>
+  </data>
+  <data name="MI_IV2_IVP430" xml:space="preserve">
+    <value>Gestión de la Declaración Mod. 303</value>
+  </data>  
+  <data name="MI_IV3" xml:space="preserve">
+    <value>IVA Modelo 340</value>
+  </data>
+  <data name="MI_IV3_IV700" xml:space="preserve">
+    <value>Claves Legales para Códigos de IVA Mod. 340</value>
+  </data>
+  <data name="MI_IV3_IV710" xml:space="preserve">
+    <value>Extracción de datos Mod. 340</value>
+  </data>
+  <data name="MI_IV3_IV735" xml:space="preserve">
+    <value>Gestión de la Declaración Mod. 340</value>
+  </data>
+  <data name="MI_IV4" xml:space="preserve">
+    <value>IVA Modelo 347</value>
+  </data>
+  <data name="MI_IV4_IV128" xml:space="preserve">
+    <value>Extracción de datos Mod. 347</value>
+  </data>
+  <data name="MI_IV4_IV129" xml:space="preserve">
+    <value>Gestión de la Declaración Mod. 347</value>
+  </data>
+  <data name="MI_IV5" xml:space="preserve">
+    <value>IVA Modelo 390</value>
+  </data>
+  <data name="MI_IV5_IVP426" xml:space="preserve">
+    <value>Listado Resumen Anual Mod. 390</value>
+  </data>
+  <data name="MI_IV6" xml:space="preserve">
+    <value>IVA Modelo 349</value>
+  </data>
+  <data name="MI_IV6_IV121" xml:space="preserve">
+    <value>Claves Legales para Códigos de IVA Mod. 349</value>
+  </data>  
+  <data name="MI_IV6_IV123" xml:space="preserve">
+    <value>Extracción de datos Mod. 349</value>
+  </data>
+  <data name="MI_IV6_IV124" xml:space="preserve">
+    <value>Gestión de la Declaración Mod. 349</value>
+  </data>
+  <data name="MI_IV7" xml:space="preserve">
+    <value>IRPF Modelo 180</value>
+  </data>
+  <data name="MI_IV7_IV6108" xml:space="preserve">
+    <value>Claves Legales para Códigos Fiscales Mod. 180</value>
+  </data>  
+  <data name="MI_IV7_IV620" xml:space="preserve">
+    <value>Extracción de datos Mod. 180</value>
+  </data>
+  <data name="MI_IV7_IV630" xml:space="preserve">
+    <value>Gestión de la Declaración Mod. 180</value>
+  </data>
+  <data name="MI_IV8" xml:space="preserve">
+    <value>IRPF Modelo 190</value>
+  </data>
+  <data name="MI_IV8_IV6109" xml:space="preserve">
+    <value>Claves Legales para Códigos Fiscales Mod. 190</value>
+  </data>  
+  <data name="MI_IV8_IVP920" xml:space="preserve">
+    <value>Extracción de datos Mod. 190</value>
+  </data>
+  <data name="MI_IV8_IV930" xml:space="preserve">
+    <value>Gestión de la Declaración Mod. 190</value>
+  </data>
+  <data name="MI_IVP220" xml:space="preserve">
+    <value>Anulación de comprobantes extraídos</value>
+  </data>
+  <data name="MI_IVP280" xml:space="preserve">
+    <value>Cierre de meses</value>
+  </data>
+  <data name="MI_IVP489" xml:space="preserve">
+    <value>Consulta de transacciones de IVA</value>
+  </data>
+  <data name="MG" xml:space="preserve">
+    <value>Generador de Informes</value>
+  </data>
+  <data name="MG_EF" xml:space="preserve">
+    <value>Estructuras</value>
+  </data>
+  <data name="MG_EF_EFP003" xml:space="preserve">
+    <value>Actualizar el Índice</value>
+  </data>
+  <data name="MG_EF_EFP004" xml:space="preserve">
+    <value>Listar el Índice</value>
+  </data>  
+  <data name="MG_EF_EF010" xml:space="preserve">
+    <value>Definición de Líneas de Estructuras</value>
+  </data>
+  <data name="MG_EF_EFP002" xml:space="preserve">
+    <value>Listar Borradores</value>
+  </data>
+  <data name="MG_EF_EFP020" xml:space="preserve">
+    <value>Generar un listado</value>
+  </data>
+  <data name="MG_EF_EFP040" xml:space="preserve">
+    <value>Copiar una Definición</value>
+  </data>
+  <data name="MG_EF_EFP410" xml:space="preserve">
+    <value>Listado de Cuentas de Mayor - Estructuras</value>
+  </data>
+  <data name="MG_EF_EFP050" xml:space="preserve">
+    <value>Renumerar una Estructura</value>
+  </data>  
+  <data name="MG_PRP110" xml:space="preserve">
+    <value>Definición de Informes</value>
+  </data>
+  <data name="MG_PRP120" xml:space="preserve">
+    <value>Listar Borradores</value>
+  </data>  
+  <data name="MG_PRP200" xml:space="preserve">
+    <value>Generar un Informe</value>
+  </data>
+  <data name="MG_PRP210" xml:space="preserve">
+    <value>Definir Grupos de Informes</value>
+  </data>
+  <data name="MG_PRP220" xml:space="preserve">
+    <value>Generar Grupo de Informes</value>
+  </data>
+  <data name="M3" xml:space="preserve">
+    <value>Gestión de Terceros</value>
+  </data>
+  <data name="M3_C3" xml:space="preserve">
+    <value>Cobros de Terceros</value>
+  </data> 
+  <data name="M3_C3_C31" xml:space="preserve">
+    <value>Parametrización Básica</value>
+  </data>
+  <data name="M3_C3_C31_C3100" xml:space="preserve">
+    <value>Actualizar Tipos de Proceso</value>
+  </data>
+  <data name="M3_C3_C31_C3120" xml:space="preserve">
+    <value>Actualizar Códigos de Reservado Usuario</value>
+  </data>
+  <data name="M3_C3_C31_C3125" xml:space="preserve">
+    <value>Actualizar Modelos de Selección</value>
+  </data>
+  <data name="M3_C3_C31_C3155" xml:space="preserve">
+    <value>Actualizar Modelos de Comprobante</value>
+  </data>
+  <data name="M3_C3_C31_C3130" xml:space="preserve">
+    <value>Actualizar Tabla de Procesos-Operaciones</value>
+  </data>
+  <data name="M3_C3_C31_C3135" xml:space="preserve">
+    <value>Actualizar Tabla de Procesos-Reservado Usuario</value>
+  </data>  
+  <data name="M3_C3_C31_C3140" xml:space="preserve">
+    <value>Actualizar Tabla de Procesos-Selecciones</value>
+  </data>  
+  <data name="M3_C3_C31_C3490" xml:space="preserve">
+    <value>Listar Códigos de Reservado Usuario</value>
+  </data>
+  <data name="M3_C3_C31_C3491" xml:space="preserve">
+    <value>Listar Modelos de Selección</value>
+  </data>
+  <data name="M3_C3_C31_C3493" xml:space="preserve">
+    <value>Listar Modelos de Comprobante</value>
+  </data>  
+  <data name="M3_C3_C31_C3494" xml:space="preserve">
+    <value>Listar Procesos-Operaciones</value>
+  </data>
+  <data name="M3_C3_C31_C3495" xml:space="preserve">
+    <value>Listar Procesos-Reservado Usuario</value>
+  </data> 
+  <data name="M3_C3_C31_C3496" xml:space="preserve">
+    <value>Listar Procesos-Selecciones</value>
+  </data>  
+  <data name="M3_C3_C32" xml:space="preserve">
+    <value>Parametrización Adicional</value>
+  </data>
+  <data name="M3_C3_C32_C3160" xml:space="preserve">
+    <value>Actualizar Tabla de Líneas de Texto</value>
+  </data>
+  <data name="M3_C3_C32_C3170" xml:space="preserve">
+    <value>Actualizar Definiciones de Rankings</value>
+  </data>
+  <data name="M3_C3_C32_C3180" xml:space="preserve">
+    <value>Actualizar Modelos Selección Auxiliares</value>
+  </data>
+  <data name="M3_C3_C32_C3162" xml:space="preserve">
+    <value>Actualizar Tabla de Dotaciones</value>
+  </data>
+  <data name="M3_C3_C32_C3164" xml:space="preserve">
+    <value>Actualizar Tablas de Estadísticas</value>
+  </data>  
+  <data name="M3_C3_C32_C3184" xml:space="preserve">
+    <value>Actualizar Informes de G3</value>
+  </data>
+  <data name="M3_C3_C32_C3497" xml:space="preserve">
+    <value>Listar Tabla de Líneas de Texto</value>
+  </data>
+  <data name="M3_C3_C32_C3498" xml:space="preserve">
+    <value>Listar Definiciones de Rankings</value>
+  </data>
+  <data name="M3_C3_C32_C3499" xml:space="preserve">
+    <value>Listar Modelos de Selección de Auxiliares</value>
+  </data>
+  <data name="M3_C3_C32_C3489" xml:space="preserve">
+    <value>Listar Tablas de Estadísticas</value>
+  </data>
+  <data name="M3_C3_C32_C3488" xml:space="preserve">
+    <value>Listar Informes de G3</value>
+  </data>
+  <data name="M3_C3_C3010" xml:space="preserve">
+    <value>Procesos de Cobros</value>
+  </data>
+  <data name="M3_C3_C3011" xml:space="preserve">
+    <value>Otras opciones</value>
+  </data>
+  <data name="M3_P3" xml:space="preserve">
+    <value>Pagos a Terceros</value>
+  </data>  
+  <data name="M3_P3_P31" xml:space="preserve">
+    <value>Parametrización Básica</value>
+  </data>  
+  <data name="M3_P3_P31_P3100" xml:space="preserve">
+    <value>Actualizar Tipos de Proceso</value>
+  </data>
+  <data name="M3_P3_P31_P3120" xml:space="preserve">
+    <value>Actualizar Códigos de Reservado Usuario</value>
+  </data>  
+  <data name="M3_P3_P31_P3125" xml:space="preserve">
+    <value>Actualizar Modelos de Selección</value>
+  </data>
+  <data name="M3_P3_P31_P3155" xml:space="preserve">
+    <value>Actualizar Modelos de Comprobante</value>
+  </data>
+  <data name="M3_P3_P31_P3130" xml:space="preserve">
+    <value>Actualizar Tabla de Procesos-Operaciones</value>
+  </data>
+  <data name="M3_P3_P31_P3135" xml:space="preserve">
+    <value>Actualizar Tabla de Procesos-Reservado Usuario</value>
+  </data>
+  <data name="M3_P3_P31_P3140" xml:space="preserve">
+    <value>Actualizar Tabla de Procesos-Selecciones</value>
+  </data>  
+  <data name="M3_P3_P31_P3490" xml:space="preserve">
+    <value>Listar Códigos de Reservado Usuario</value>
+  </data>  
+  <data name="M3_P3_P31_P3491" xml:space="preserve">
+    <value>Listar Modelos de Selección</value>
+  </data>  
+  <data name="M3_P3_P31_P3493" xml:space="preserve">
+    <value>Listar Modelos de Comprobante</value>
+  </data> 
+  <data name="M3_P3_P31_P3494" xml:space="preserve">
+    <value>Listar Procesos-Operaciones</value>
+  </data>
+  <data name="M3_P3_P31_P3495" xml:space="preserve">
+    <value>Listar Procesos-Reservado Usuario</value>
+  </data>
+  <data name="M3_P3_P31_P3496" xml:space="preserve">
+    <value>Listar Procesos-Selecciones</value>
+  </data>  
+  <data name="M3_P3_P32" xml:space="preserve">
+    <value>Parametrización Adicional</value>
+  </data>  
+  <data name="M3_P3_P32_P3160" xml:space="preserve">
+    <value>Actualizar Tabla de Líneas de Texto</value>
+  </data>  
+  <data name="M3_P3_P32_P3170" xml:space="preserve">
+    <value>Actualizar Definiciones de Rankings</value>
+  </data>  
+  <data name="M3_P3_P32_P3180" xml:space="preserve">
+    <value>Actualizar Modelos Selección Auxiliares</value>
+  </data>  
+  <data name="M3_P3_P32_P3164" xml:space="preserve">
+    <value>Actualizar Tablas de Estadísticas</value>
+  </data>  
+  <data name="M3_P3_P32_P3184" xml:space="preserve">
+    <value>Actualizar Informes de G3</value>
+  </data>  
+  <data name="M3_P3_P32_P3497" xml:space="preserve">
+    <value>Listar Tabla de Líneas de Texto</value>
+  </data>  
+  <data name="M3_P3_P32_P3498" xml:space="preserve">
+    <value>Listar Definiciones de Rankings</value>
+  </data>
+  <data name="M3_P3_P32_P3499" xml:space="preserve">
+    <value>Listar Modelos de Selección de Auxiliares</value>
+  </data>  
+  <data name="M3_P3_P32_P3489" xml:space="preserve">
+    <value>Listar Tablas de Estadísticas</value>
+  </data>
+  <data name="M3_P3_P32_P3488" xml:space="preserve">
+    <value>Listar Informes de G3</value>
+  </data>
+  <data name="M3_P3_P3010" xml:space="preserve">
+    <value>Procesos de Pagos</value>
+  </data>
+  <data name="M3_P3_P3011" xml:space="preserve">
+    <value>Otras opciones</value>
+  </data>
+  <data name="MC" xml:space="preserve">
+    <value>Distribución de Costes</value>
+  </data>
+  <data name="MC_DCP010" xml:space="preserve">
+    <value>Actualizar Fórmulas</value>
+  </data>
+  <data name="MC_DCP020" xml:space="preserve">
+    <value>Actualizar Ordenes de Ejecución</value>
+  </data>
+  <data name="MC_DCP030" xml:space="preserve">
+    <value>Actualizar Cuentas Inter compañía</value>
+  </data>
+  <data name="MC_PR061B" xml:space="preserve">
+    <value>Actualizar Tipos de Extracontable</value>
+  </data>  
+  <data name="MC_DCP700" xml:space="preserve">
+    <value>Ejecucion de una Distribución</value>
+  </data>
+  <data name="MC_DCP109" xml:space="preserve">
+    <value>Listar Fórmulas</value>
+  </data>
+  <data name="MC_DCP119" xml:space="preserve">
+    <value>Listar Ordenes de Ejecución</value>
+  </data>
+  <data name="MC_DCP129" xml:space="preserve">
+    <value>Listar Cuentas Ínter companía</value>
+  </data>
+  <data name="MP" xml:space="preserve">
+    <value>Cambio de Plan Contable</value>
+  </data>  
+  <data name="MP_CPP702" xml:space="preserve">
+    <value>Actualización de Tablas para Cambio de Plan</value>
+  </data>
+  <data name="MP_CPP703" xml:space="preserve">
+    <value>Validación y Listado de las Tablas</value>
+  </data>
+  <data name="MP_CPP705" xml:space="preserve">
+    <value>Cambio de Plan Contable a Compañías</value>
+  </data>
+  <data name="MP_CPP710" xml:space="preserve">
+    <value>Copiar Movimientos y Saldos de una Compañía</value>
+  </data>
+  <data name="MT" xml:space="preserve">
+    <value>Interfase de Tesorería</value>
+  </data>
+  <data name="MT_PS000" xml:space="preserve">
+    <value>Parámetros generales del interfaz</value>
+  </data>
+  <data name="MT_PS010" xml:space="preserve">
+    <value>Actualización de cuentas de mayor a seleccionar</value>
+  </data>
+  <data name="MT_PS004" xml:space="preserve">
+    <value>Actualización de valores por defecto</value>
+  </data>
+  <data name="MT_PS015" xml:space="preserve">
+    <value>Selección de comprobantes para interfaz</value>
+  </data>
+  <data name="MT_PS050" xml:space="preserve">
+    <value>Transferencia de datos seleccionados a PC</value>
+  </data>
+  <data name="MT_PS030" xml:space="preserve">
+    <value>Anulación de comprobantes seleccionados</value>
+  </data>  
+  <data name="MT_PS031" xml:space="preserve">
+    <value>Reorganización de extracciones de Finanzas</value>
+  </data>
+  <data name="MT_PS031B" xml:space="preserve">
+    <value>Reorganización de comprobantes extraídos</value>
+  </data>
+  <data name="MT_PS070" xml:space="preserve">
+    <value>Cambio de Entorno</value>
+  </data>
+  <data name="MO" xml:space="preserve">
+    <value>Opciones especiales</value>
+  </data>  
+  <data name="MX" xml:space="preserve">
+    <value>Menú Personalizado</value>
+  </data>
+  <data name="AD" xml:space="preserve">
+    <value>Accesos Directos</value>
+  </data>
+  <data name="AD_Spool" xml:space="preserve">
+    <value>Spool</value>
+  </data>
+  <data name="AD_Proecesos" xml:space="preserve">
+    <value>Procesos</value>
+  </data>
+  <!-- Menú Árbol Fin -->
+
+  <!-- frmPrincipal Fin -->
+  
+  <!-- frmAddOpcionEspecial Inicio -->
+  <data name="lblfrmAddOpcionEspecial" xml:space="preserve">
+    <value>Añadir Opción Especial</value>
+  </data>
+  <data name="grpBoxProceso" xml:space="preserve">
+    <value>Proceso</value>
+  </data>  
+  <data name="lblNombre" xml:space="preserve">
+    <value>Nombre</value>
+  </data>  
+  <data name="lblDesc" xml:space="preserve">
+    <value>Descripción</value>
+  </data> 
+  <data name="errValNombreDescProceso" xml:space="preserve">
+    <value>Debe introducir un nombre y una descripción para el proceso</value>
+  </data>  
+  <data name="errValNombreProceso" xml:space="preserve">
+    <value>Debe introducir un nombre para el proceso</value>
+  </data>  
+  <data name="errValDescProceso" xml:space="preserve">
+    <value>Debe introducir una descripción para el proceso</value>
+  </data>  
+  <!-- frmAddOpcionEspecial Fin -->
+  
+  <!-- frmAddMenuPersonalizado Inicio -->
+  <data name="lblfrmAddMenuPersonalizado" xml:space="preserve">
+    <value>Añadir Menú Personalizado</value>
+  </data>
+  <data name="grpBoxMenu" xml:space="preserve">
+    <value>Menú</value>
+  </data>  
+  <data name="lblDescMenu" xml:space="preserve">
+    <value>Descripción</value>
+  </data> 
+  <data name="errValDescMenu" xml:space="preserve">
+    <value>Debe introducir una descripción para el menú</value>
+  </data>  
+  <!-- frmAddMenuPersonalizado Fin -->
+  
+  <!-- frmActivarOpciones Inicio -->
+  <data name="lblfrmActivarTitulo" xml:space="preserve">
+    <value>Activar Opciones</value>
+  </data>
+  <data name="lblOpcionesNoActivas" xml:space="preserve">
+    <value>Opciones No Activas</value>
+  </data>  
+  <data name="wrnOpcionesActivas" xml:space="preserve">
+    <value>Todas las opciones están activas</value>
+  </data>  
+  <data name="lblActivar" xml:space="preserve">
+    <value>Activar</value>
+  </data>
+  <data name="wrnActivarOpcion" xml:space="preserve">
+    <value>Se va a activar la opción</value>
+  </data>  
+  <!-- frmActivarOpciones Fin -->
+  
+  <!-- frmAbout Inicio -->
+  <data name="lblfrmAboutTitulo" xml:space="preserve">
+    <value>Acerca de Módulo de Finanzas</value>
+  </data>
+  <data name="lblVersion" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <!-- frmAbout Fin -->  
+</root> 

@@ -1,0 +1,112 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MISIICINF</Codigo>
+    <Descripcion>2015</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>txtMaskFechaPresentacionHasta</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor>  -  -</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtMaskFechaPresentacionDesde</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor>  -  -</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtMaskFechaExpedicion</Nombre>
+    <Tipo>MaskedTextBox</Tipo>
+    <Valor>  -  -</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbEstadoAceptadoErrores</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbEstadoCorrecto</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbEstadoSoloErrores</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbEstadoTodas</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtNumSerieFactura</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>cmbTipoIdentif</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtNombreRazon</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtCodPais</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>txtNIF</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>rbOtro</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbNIF</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtEjercicio</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>2015</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCiaFiscal</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>W1 - COMPAÑIA DE DEMOSTRACION, S.A. - A08126898</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtElemento</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>W1 - COMPAÑIA DE DEMOSTRACION, S.A. - A08126898</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbPeriodo</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>0A</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbLibro</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>15</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Facturas Emitidas</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtLibroDesc</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Operaciones de seguros</Valor>
+  </Control>
+</Formulario>

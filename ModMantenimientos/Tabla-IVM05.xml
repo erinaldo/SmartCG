@@ -1,0 +1,38 @@
+﻿<Tabla>
+  <nombre>IVM05</nombre>
+  <lista>NITRCF,PCIFCF,NOMBCF</lista>
+  <orden>NITRCF</orden>
+  <codigo>NITRCF</codigo>
+  <estado>STATCF</estado>
+  <estadoValor>estadoActivo</estadoValor>
+  <Campo>
+    <nombre>NITRCF</nombre>
+    <tipo>S</tipo>
+    <longitud>13</longitud>
+	<desc_es-ES>Identificación fiscal o DNI</desc_es-ES>
+	<desc_ca-ES>Identificación fiscal o DNI</desc_ca-ES>
+	<desc_en-US>Identificación fiscal o DNI</desc_en-US>
+	<desc_fr-FR>Identificación fiscal o DNI</desc_fr-FR>
+	<desc_pt-PT>Identificación fiscal o DNI</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>PCIFCF</nombre>
+    <tipo>S</tipo>
+    <longitud>2</longitud>
+	<desc_es-ES>País</desc_es-ES>
+	<desc_ca-ES>País</desc_ca-ES>
+	<desc_en-US>Country</desc_en-US>
+	<desc_fr-FR>País</desc_fr-FR>
+	<desc_pt-PT>País</desc_pt-PT>
+  </Campo>
+  <Campo>
+    <nombre>NOMBCF</nombre>
+    <tipo>S</tipo>
+    <longitud>40</longitud>
+	<desc_es-ES>Nombre</desc_es-ES>
+	<desc_ca-ES>Nom</desc_ca-ES>
+	<desc_en-US>Name</desc_en-US>
+	<desc_fr-FR>Nombre</desc_fr-FR>
+	<desc_pt-PT>Nombre</desc_pt-PT>
+  </Campo>
+</Tabla>

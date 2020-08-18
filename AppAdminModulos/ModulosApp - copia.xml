@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<Modulos_Tabla>
+  <Modulo>
+    <id>1</id>
+    <nombre>Módulo pago a proveedores</nombre>
+    <namespace>ModPagoProv</namespace>
+    <formulario>frmPrincipal</formulario>
+    <imagen>modPagoProv.jpg</imagen>
+    <basico>true</basico>
+    <activo>true</activo>
+  </Modulo>
+  <Modulo>
+    <id>2</id>
+    <nombre>Módulo de impuestos</nombre>
+    <namespace>ModImpuestos</namespace>
+    <formulario>frmPrincipal</formulario>
+    <imagen>modImpuestos.jpg</imagen>
+    <basico>false</basico>
+    <activo>true</activo>
+  </Modulo>
+  <Modulo>
+    <id>3</id>
+    <nombre>Módulo de contabilidad general</nombre>
+    <namespace>aa</namespace>
+    <formulario>test</formulario>
+    <imagen>modContabilidad.jpg</imagen>
+    <basico>false</basico>
+    <activo>true</activo>
+  </Modulo>
+  <Modulo>
+    <id>4</id>
+    <nombre>prueba</nombre>
+    <namespace>dll</namespace>
+    <formulario>formulario</formulario>
+    <imagen>imagen</imagen>
+    <basico>false</basico>
+    <activo>false</activo>
+  </Modulo>
+  <Modulo>
+    <id>5</id>
+    <nombre>otra prueba</nombre>
+    <namespace>test1</namespace>
+    <formulario>aa</formulario>
+    <imagen>imagen</imagen>
+    <basico>false</basico>
+    <activo>false</activo>
+  </Modulo>
+</Modulos_Tabla>

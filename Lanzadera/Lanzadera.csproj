@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0CE2C810-8BC3-4094-A645-7FB920AFE868}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartCG</RootNamespace>
+    <AssemblyName>SmartCG</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SmartCGIcono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.Themes.Aqua.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.Themes.MaterialBlueGrey.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.Themes.Office2013Light.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmValidaClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidaClave.Designer.cs">
+      <DependentUpon>frmValidaClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFrmAbout.Designer.cs">
+      <DependentUpon>RadFrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntornoLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntornoLista.Designer.cs">
+      <DependentUpon>frmEntornoLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntornoAltaEdita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntornoAltaEdita.Designer.cs">
+      <DependentUpon>frmEntornoAltaEdita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginApp.Designer.cs">
+      <DependentUpon>frmLoginApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlantilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlantilla.Designer.cs">
+      <DependentUpon>frmPlantilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdiomaSection.cs" />
+    <Compile Include="IFormEntorno.cs" />
+    <Compile Include="IOpcionesMenu.cs" />
+    <Compile Include="Language.ca-ES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.ca-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language.es-ES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language.fr-FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language.pt-PT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuloSection.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadFrmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFrmConfig.Designer.cs">
+      <DependentUpon>RadFrmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadFrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadFrmMain.Designer.cs">
+      <DependentUpon>RadFrmMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmValidaClave.resx">
+      <DependentUpon>frmValidaClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFrmAbout.resx">
+      <DependentUpon>RadFrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntornoAltaEdita.resx">
+      <DependentUpon>frmEntornoAltaEdita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntornoLista.resx">
+      <DependentUpon>frmEntornoLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginApp.resx">
+      <DependentUpon>frmLoginApp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlantilla.resx">
+      <DependentUpon>frmPlantilla.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.ca-ES.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.ca-ES.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.es-ES.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.es-ES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.fr-FR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.fr-FR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.pt-PT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.pt-PT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RadFrmConfig.resx">
+      <DependentUpon>RadFrmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadFrmMain.resx">
+      <DependentUpon>RadFrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModComprobantes\ModComprobantes.csproj">
+      <Project>{BD5DD326-0DBA-4020-93E6-7F0872645C24}</Project>
+      <Name>ModComprobantes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModConsultaInforme\ModConsultaInforme.csproj">
+      <Project>{909A408F-76E7-43E1-BABF-3E63FDA51FD0}</Project>
+      <Name>ModConsultaInforme</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModFinanzas\ModFinanzas.csproj">
+      <Project>{F09D0797-7F9A-4C9A-B73F-74AB414010C0}</Project>
+      <Name>ModFinanzas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModMantenimientos\ModMantenimientos.csproj">
+      <Project>{95DEA494-9B3D-443E-B9A2-D7A5EDFE9B6B}</Project>
+      <Name>ModMantenimientos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModSII\ModSII.csproj">
+      <Project>{0D35B265-9A28-4EC7-8D2C-79EA9631305D}</Project>
+      <Name>ModSII</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjectModel\ObjectModel.csproj">
+      <Project>{21301E59-2720-4026-86C5-12ACDFEE08B7}</Project>
+      <Name>ObjectModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
+    <Content Include="SmartCGIcono.ico" />
+    <None Include="images\treeview_collapse.png" />
+    <None Include="images\treeview_expand.png" />
+    <None Include="images\Buscar.ico" />
+    <None Include="images\search.png" />
+    <None Include="images\delete.png" />
+    <None Include="images\SmartCGByAggity.png" />
+    <Content Include="MenuTreeView.xml" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\SmartCGByAggity.png" />
+    <None Include="Resources\SmartCGByAggity.bmp" />
+    <Content Include="Resources\treeview_collapse.png" />
+    <Content Include="Resources\treeview_expand.png" />
+    <None Include="images\Eliminar.png" />
+    <None Include="images\Aggity.gif" />
+    <None Include="Resources\Eliminar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

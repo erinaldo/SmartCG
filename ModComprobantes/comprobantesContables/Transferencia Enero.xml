@@ -1,0 +1,134 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>0</Transferido>
+    <Extendido>0</Extendido>
+    <Compania>BA</Compania>
+    <AnoPeriodo>0001</AnoPeriodo>
+    <Tipo>21</Tipo>
+    <Numero>8</Numero>
+    <Fecha>20000125</Fecha>
+    <Clase>0</Clase>
+    <Tasa />
+    <Descripcion>Transferencia Enero</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>5700000,00</MonedaLocalDebe>
+    <MonedaLocalHaber>-5700000,00</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>0,00</Importe3Debe>
+    <Importe3Haber>0,00</Importe3Haber>
+    <NumeroApuntes>6</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>410200</Cuenta>
+    <Auxiliar1>1000</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>2500000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>transferencia</Descripcion>
+    <Documento>99-118</Documento>
+    <Fecha>20000125</Fecha>
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>572000</Cuenta>
+    <Auxiliar1>01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-2500000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>transferencia CL-1000</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>410200</Cuenta>
+    <Auxiliar1>1003</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>2000000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>transferencia</Descripcion>
+    <Documento>99-120</Documento>
+    <Fecha>20000125</Fecha>
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>572000</Cuenta>
+    <Auxiliar1>01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-2000000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>transferencia CL-1003</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>410200</Cuenta>
+    <Auxiliar1>1008</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1200000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>transferencia</Descripcion>
+    <Documento>99-122</Documento>
+    <Fecha>20000125</Fecha>
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>572000</Cuenta>
+    <Auxiliar1>01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1200000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>transferencia CL-1008</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <MonedaExt />
+  </Detalle>
+</Comprobante>

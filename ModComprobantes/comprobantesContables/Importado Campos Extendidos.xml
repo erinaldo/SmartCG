@@ -1,0 +1,1046 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>0</Transferido>
+    <Extendido>1</Extendido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>1402</AnoPeriodo>
+    <Tipo>01</Tipo>
+    <Numero />
+    <Fecha>20140215</Fecha>
+    <Clase>0</Clase>
+    <Tasa />
+    <Descripcion>CC 3.1</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>12100,00</MonedaLocalDebe>
+    <MonedaLocalHaber>-12100,00</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>10000,00</Importe3Debe>
+    <Importe3Haber>0,00</Importe3Haber>
+    <NumeroApuntes>30</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-14</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>20140125</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000014</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>14</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SC</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-15</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>20140225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000015</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>15</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SC</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-16</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>25/03/2014</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000016</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>16</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SC</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-17</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>25/04/2014</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000017</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>17</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SC</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-18</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>25/05/2014</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000018</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>18</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SC</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-19</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>25/06/2014</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000019</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>19</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-20</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>25/07/2014</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000020</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>20</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-21</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>25/08/2014</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000021</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>21</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-22</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>25/09/2014</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000022</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>22</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1000,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>40000</Cuenta>
+    <Auxiliar1>001</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento>02-23</Documento>
+    <Fecha>20140201</Fecha>
+    <Vencimiento>25/10/2014</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3>0</Importe3>
+    <Iva />
+    <CifDni />
+    <PrefijoDoc />
+    <NumFactAmp>02-0000023</NumFactAmp>
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+  <Detalle>
+    <Cuenta>47300</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>210,00</MonedaLocal>
+    <MonedaExt />
+    <RU />
+    <Descripcion>CC 3.1</Descripcion>
+    <Documento />
+    <Fecha>20140201</Fecha>
+    <Vencimiento />
+    <Documento2>23</Documento2>
+    <Importe3>1000,00</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>37286206D</CifDni>
+    <PrefijoDoc />
+    <NumFactAmp />
+    <NumFactRectif />
+    <FechaServIVA>0</FechaServIVA>
+    <CampoUserAlfa1 />
+    <CampoUserAlfa2 />
+    <CampoUserAlfa3 />
+    <CampoUserAlfa4 />
+    <CampoUserAlfa5 />
+    <CampoUserAlfa6 />
+    <CampoUserAlfa7 />
+    <CampoUserAlfa8 />
+    <CampoUserNum1>0</CampoUserNum1>
+    <CampoUserNum2>0</CampoUserNum2>
+    <CampoUserFecha1>0</CampoUserFecha1>
+    <CampoUserFecha2>0</CampoUserFecha2>
+  </Detalle>
+</Comprobante>

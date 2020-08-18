@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<Modulos_Tabla>
+  <Modulo>
+    <id>1</id>
+    <nombre>Módulo de comprobantes</nombre>
+    <namespace>ModComprobantes</namespace>
+    <formulario>frmPrincipal</formulario>
+    <imagen>modComprobantes.jpg</imagen>
+    <basico>true</basico>
+    <activo>true</activo>
+  </Modulo>
+  <Modulo>
+    <id>2</id>
+    <nombre>Módulo de finanzas</nombre>
+    <namespace>ModFinanzas</namespace>
+    <formulario>frmPrincipal</formulario>
+    <imagen>modFinanzas.jpg</imagen>
+    <basico>true</basico>
+    <activo>true</activo>
+  </Modulo>
+  <Modulo>
+    <id>3</id>
+    <nombre>Módulo de consultas e informes</nombre>
+    <namespace>ModConsultaInforme</namespace>
+    <formulario>frmPrincipal</formulario>
+    <imagen>modConsultaInforme.jpg</imagen>
+    <basico>true</basico>
+    <activo>true</activo>
+  </Modulo>
+  <Modulo>
+    <id>4</id>
+    <nombre>Módulo de mantenimientos</nombre>
+    <namespace>ModMantenimientos</namespace>
+    <formulario>frmPrincipal</formulario>
+    <imagen>modMantenimientos.jpg</imagen>
+    <basico>true</basico>
+    <activo>true</activo>
+  </Modulo>
+  <Modulo>
+    <id>5</id>
+    <nombre>Módulo de impuestos</nombre>
+    <namespace>ModImpuestos</namespace>
+    <formulario>frmPrincipal</formulario>
+    <imagen>modImpuestos.jpg</imagen>
+    <basico>false</basico>
+    <activo>true</activo>
+  </Modulo>
+  <Modulo>
+    <id>6</id>
+    <nombre>Módulo pago a proveedores</nombre>
+    <namespace>ModPagoProv</namespace>
+    <formulario>frmPrincipal</formulario>
+    <imagen>modPagoProv.jpg</imagen>
+    <basico>true</basico>
+    <activo>true</activo>
+  </Modulo>
+</Modulos_Tabla>

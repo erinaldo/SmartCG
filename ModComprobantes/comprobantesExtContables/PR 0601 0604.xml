@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>0</Contable>
+    <Transferido>0</Transferido>
+    <Compania>W1</Compania>
+    <AnoPeriodo>0601</AnoPeriodo>
+    <Tipo>01</Tipo>
+    <Numero>258</Numero>
+    <Fecha>20060102</Fecha>
+    <AnoPeriodoDesde>0601</AnoPeriodoDesde>
+    <AnoPeriodoHasta>0604</AnoPeriodoHasta>
+    <Descripcion>Presupuesto 0601</Descripcion>
+    <TipoExtDefecto>PR</TipoExtDefecto>
+    <AcumularImportes>1</AcumularImportes>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>1708,84</MonedaLocalDebe>
+    <MonedaLocalHaber>0,00</MonedaLocalHaber>
+    <NumeroApuntes>4</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>60000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <TipoExt>PR</TipoExt>
+    <Descripcion />
+    <PRD0601>112,80</PRD0601>
+    <PRD0602>672,80</PRD0602>
+    <PRD0603>363,35</PRD0603>
+    <PRD0604>559,89</PRD0604>
+  </Detalle>
+  <Detalle />
+</Comprobante>

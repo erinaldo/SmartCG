@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MCIMAYCONT</Codigo>
+    <Descripcion>test</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>tgTexBoxSelPlan</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>Z  -  PLAN DE CUENTAS DEMOSTRACION</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelGrupo</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>GC  -  GRUPO CONSOLIDADO W1 + W9</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCompania</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>dateTimeHastaFecha</Nombre>
+    <Tipo>DateTimePicker</Tipo>
+    <Valor>13/10/2016</Valor>
+  </Control>
+  <Control>
+    <Nombre>dateTimeDesdeFecha</Nombre>
+    <Tipo>DateTimePicker</Tipo>
+    <Valor>13/10/2016</Valor>
+  </Control>
+  <Control>
+    <Nombre>lbCuentasMayor</Nombre>
+    <Tipo>ListBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCuentasMayor</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>chkTotalCuenta</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbOrdenComp</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>TN</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbMoneda</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>ML</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtHastaPeriodos</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>0701</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtDesdePeriodos</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>0701</Valor>
+  </Control>
+  <Control>
+    <Nombre>txttitulo</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Mayor de Contabilidad</Valor>
+  </Control>
+  <Control>
+    <Nombre>chkSaldoInicial</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbPeriodos</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbFecha</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+</Formulario>

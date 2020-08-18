@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D35B265-9A28-4EC7-8D2C-79EA9631305D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModSII</RootNamespace>
+    <AssemblyName>ModSII</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCWF\2020.1.113.40\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiAlerta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiAlerta.Designer.cs">
+      <DependentUpon>frmSiiAlerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaAgrupadaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaAgrupadaCliente.Designer.cs">
+      <DependentUpon>frmSiiConsultaAgrupadaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaAgrupadaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaAgrupadaProveedor.Designer.cs">
+      <DependentUpon>frmSiiConsultaAgrupadaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaCliente.Designer.cs">
+      <DependentUpon>frmSiiConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaPagosRecibidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaPagosRecibidas.Designer.cs">
+      <DependentUpon>frmSiiConsultaPagosRecibidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaListaMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaListaMovimientos.Designer.cs">
+      <DependentUpon>frmSiiConsultaListaMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlantilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlantilla.Designer.cs">
+      <DependentUpon>frmPlantilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaInfo.Designer.cs">
+      <DependentUpon>frmSiiConsultaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaProveedor.Designer.cs">
+      <DependentUpon>frmSiiConsultaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewBienInversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewBienInversion.Designer.cs">
+      <DependentUpon>frmSiiConsultaViewBienInversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewDetOperacIntracomunitaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewDetOperacIntracomunitaria.Designer.cs">
+      <DependentUpon>frmSiiConsultaViewDetOperacIntracomunitaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewFactEmitida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewFactEmitida.Designer.cs">
+      <DependentUpon>frmSiiConsultaViewFactEmitida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewFactInformadaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewFactInformadaCliente.Designer.cs">
+      <DependentUpon>frmSiiConsultaViewFactInformadaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewFactInformadaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewFactInformadaProveedor.Designer.cs">
+      <DependentUpon>frmSiiConsultaViewFactInformadaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewFactRecibida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiConsultaViewFactRecibida.Designer.cs">
+      <DependentUpon>frmSiiConsultaViewFactRecibida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiDatosLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiDatosLocal.Designer.cs">
+      <DependentUpon>frmSiiDatosLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiEnviosConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiEnviosConsulta.Designer.cs">
+      <DependentUpon>frmSiiEnviosConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiLocalDescuadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiLocalDescuadre.Designer.cs">
+      <DependentUpon>frmSiiLocalDescuadre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiSituacionGral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiSituacionGral.Designer.cs">
+      <DependentUpon>frmSiiSituacionGral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiSuministroInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiSuministroInfo.Designer.cs">
+      <DependentUpon>frmSiiSuministroInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiSuministroInfoRespuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiSuministroInfoRespuesta.Designer.cs">
+      <DependentUpon>frmSiiSuministroInfoRespuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiiSuministroInfoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiiSuministroInfoView.Designer.cs">
+      <DependentUpon>frmSiiSuministroInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Language.ca-ES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.ca-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language.es-ES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language.fr-FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language.pt-PT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LibroAgenciasViajes.cs" />
+    <Compile Include="LibroBienesInversion.cs" />
+    <Compile Include="LibroCobrosEmitidas.cs" />
+    <Compile Include="LibroCobrosMetalico.cs" />
+    <Compile Include="LibroDetOperacIntracomunitarias.cs" />
+    <Compile Include="LibroFacturasExpedidas.cs" />
+    <Compile Include="LibroFacturasRecibidas.cs" />
+    <Compile Include="LibroOperacionesSeguros.cs" />
+    <Compile Include="LibroPagoRecibidas.cs" />
+    <Compile Include="LibroUtiles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\tgSIIWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiAlerta.resx">
+      <DependentUpon>frmSiiAlerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaAgrupadaCliente.resx">
+      <DependentUpon>frmSiiConsultaAgrupadaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaAgrupadaProveedor.resx">
+      <DependentUpon>frmSiiConsultaAgrupadaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaCliente.resx">
+      <DependentUpon>frmSiiConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaPagosRecibidas.resx">
+      <DependentUpon>frmSiiConsultaPagosRecibidas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaListaMovimientos.resx">
+      <DependentUpon>frmSiiConsultaListaMovimientos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlantilla.resx">
+      <DependentUpon>frmPlantilla.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaInfo.resx">
+      <DependentUpon>frmSiiConsultaInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaProveedor.resx">
+      <DependentUpon>frmSiiConsultaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaViewBienInversion.resx">
+      <DependentUpon>frmSiiConsultaViewBienInversion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaViewDetOperacIntracomunitaria.resx">
+      <DependentUpon>frmSiiConsultaViewDetOperacIntracomunitaria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaViewFactEmitida.resx">
+      <DependentUpon>frmSiiConsultaViewFactEmitida.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaViewFactInformadaCliente.resx">
+      <DependentUpon>frmSiiConsultaViewFactInformadaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaViewFactInformadaProveedor.resx">
+      <DependentUpon>frmSiiConsultaViewFactInformadaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiConsultaViewFactRecibida.resx">
+      <DependentUpon>frmSiiConsultaViewFactRecibida.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiDatosLocal.resx">
+      <DependentUpon>frmSiiDatosLocal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiEnviosConsulta.resx">
+      <DependentUpon>frmSiiEnviosConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiLocalDescuadre.resx">
+      <DependentUpon>frmSiiLocalDescuadre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiSituacionGral.resx">
+      <DependentUpon>frmSiiSituacionGral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiSuministroInfo.resx">
+      <DependentUpon>frmSiiSuministroInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiSuministroInfoRespuesta.resx">
+      <DependentUpon>frmSiiSuministroInfoRespuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiiSuministroInfoView.resx">
+      <DependentUpon>frmSiiSuministroInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.ca-ES.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.ca-ES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.es-ES.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.es-ES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.fr-FR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.fr-FR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language.pt-PT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.pt-PT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\tgSIIWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\tgSIIWebService\TGsiiWebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObjectModel\ObjectModel.csproj">
+      <Project>{21301E59-2720-4026-86C5-12ACDFEE08B7}</Project>
+      <Name>ObjectModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\PagosCobros.png" />
+    <None Include="imagenes\Movimientos.png" />
+    <None Include="Web References\tgSIIWebService\TGsiiWebService.disco" />
+    <None Include="imagenes\Enviar.png" />
+    <None Include="imagenes\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/TGsiiWebService/TGsiiWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\tgSIIWebService\</RelPath>
+      <UpdateFromURL>http://localhost/TGsiiWebService/TGsiiWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ModSII_tgSIIWebService_TGsiiService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<MenuPrincipal id="null">
+  <nodo id="ModComp" activo="1" orden="1" icono="" textoDefecto="Módulo de comprobantes">
+	<nodo id="ModComp_Contab" activo="1" orden="1" icono="" textoDefecto="Comprobantes Contables">
+      <item id="ModComp_Contab_Gest" activo="1" orden="1" icono="" dll="ModComprobantes" formulario="frmCompContLista" textoDefecto="Gestión" />
+      <item id="ModComp_Contab_GestLot" activo="1" orden="2" icono="" dll="ModComprobantes" formulario="frmCompContGestionLotes" textoDefecto="Gestión de Lotes" />
+	  <item id="ModComp_Contab_Modelo" activo="1" orden="3" icono="" dll="ModComprobantes" formulario="frmModeloCompContLista" textoDefecto="Modelos" />
+	</nodo>
+	<nodo id="ModComp_ExtContab" activo="1" orden="2" icono="" textoDefecto="Comprobantes ExtraContables">
+      <item id="ModComp_ExtContab_Gest" activo="1" orden="1" icono="" dll="ModComprobantes" formulario="frmCompExtContLista" textoDefecto="Gestión" />
+      <item id="ModComp_ExtContab_TranfFinan" activo="1" orden="2" icono="" dll="ModComprobantes" formulario="frmCompExtContTransferirFinanComprobantes" textoDefecto="Transferir a Finanzas" />
+	  <item id="ModComp_ExtContab_ImpoFinan" activo="1" orden="3" icono="" dll="ModComprobantes" formulario="frmCompExtContImportarDeFinanzas" textoDefecto="Importar de Finanzas" />
+	</nodo>
+  </nodo>
+  <nodo id="ModCons" activo="1" orden="1" icono="" textoDefecto="Módulo de Consultas e Informes">
+	<nodo id="ModCons_Inf" activo="1" orden="1" icono="" textoDefecto="Informes">
+      <item id="ModCons_Inf_DiarioDet" activo="1" orden="1" icono="" dll="ModConsultaInforme" formulario="frmInfoDiarioAltaEdita" textoDefecto="Diario Detallado" parametro="InformeDiarioDetalladoTipo=frmInfoDiarioAltaEdita.DiarioDetalladoTipo.Detallado" />
+	  <item id="ModCons_Inf_DiarioResuFecha" activo="1" orden="1" icono="" dll="ModConsultaInforme" formulario="frmInfoDiarioAltaEdita" textoDefecto="Diario ResumidoFecha" parametro="ResumidoFecha" />
+	  <item id="ModCons_Inf_DiarioDet" activo="1" orden="2" icono="" dll="ModConsultaInforme" formulario="frmInfoDiarioAltaEdita" textoDefecto="Diario Detallado" parametro="" />
+	  <!--item id="ModCons_Inf_DiarioResuPeri" activo="1" orden="3" icono="" dll="ModConsultaInforme" formulario="frmInfoDiarioAltaEdita" textoDefecto="Diario ResumidoFecha" parametro="InformeDiarioDetalladoTipo=ResumidoPeriodo" /-->
+	</nodo>
+  </nodo>
+  <nodo id="ModMto" activo="1" orden="1" icono="" textoDefecto="Módulo de Mantenimientos">
+	<nodo id="ModMto_TabMae" activo="1" orden="1" icono="" textoDefecto="Tablas Maestras">
+      <item id="ModMto_TabMae_Comp" activo="1" orden="1" icono="" dll="ModMantenimientos" formulario="frmListaGenerica" textoDefecto="Compañías" parametro="Titulo=Mantenimiento de Compañías;Tabla=GLM01;AutClaseElemento=002;AutGrupo=01;AutOperConsulta=10;AutOperModifica=20" />
+	  <item id="ModMto_TabMae_GrupComp" activo="1" orden="2" icono="" dll="ModMantenimientos" formulario="frmListaGenerica" textoDefecto="Grupo de Compañías" parametro="Titulo=Mantenimiento de Grupos de Compañías;Tabla=GLM07;AutClaseElemento=001;AutGrupo=01;AutOperConsulta=10;AutOperModifica=20" />
+	</nodo>
+  </nodo>
+</MenuPrincipal>

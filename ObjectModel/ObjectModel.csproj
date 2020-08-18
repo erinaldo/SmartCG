@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21301E59-2720-4026-86C5-12ACDFEE08B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObjectModel</RootNamespace>
+    <AssemblyName>ObjectModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Documents.SpreadsheetStreaming, Version=2020.2.504.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.Themes.Office2013Light.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.Themes.TelerikMetro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2020.2.504.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2020.2.504.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.Windows.Documents.Fixed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2020.2.504.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2020.2.504.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2020.2.504.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2020.2.504.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikData, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\TelerikData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikExport, Version=2020.2.512.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2020.2.512.40\TelerikExport.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditoriaGLL04.cs" />
+    <Compile Include="Autorizaciones.cs" />
+    <Compile Include="CGParametrosGrles.cs" />
+    <Compile Include="CheckBoxHeaderCell.cs" />
+    <Compile Include="ClaveAplicacion.cs" />
+    <Compile Include="ClaveGenerar.cs" />
+    <Compile Include="CryptoManager.cs" />
+    <Compile Include="ElementoClase.cs" />
+    <Compile Include="Entorno.cs" />
+    <Compile Include="ExcelExportImport.cs" />
+    <Compile Include="ExportTelerik.cs" />
+    <Compile Include="FormularioPeticion.cs" />
+    <Compile Include="FormularioValoresCampos.cs" />
+    <Compile Include="GenericComparer.cs" />
+    <Compile Include="GlobalVar.cs" />
+    <Compile Include="IComparable.cs" />
+    <Compile Include="IOpcionesMenu.cs" />
+    <Compile Include="IReLocalizable.cs" />
+    <Compile Include="LanguageProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDatos.cs" />
+    <Compile Include="RadDataFilterLocalizationProviderES.cs" />
+    <Compile Include="RadGridLocalizationProviderES.cs" />
+    <Compile Include="RadItemDragDropManager.cs" />
+    <Compile Include="RadOpenFolderDialogLocalizationProviderES.cs" />
+    <Compile Include="ScrollableMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScrollableMessageBox.Designer.cs">
+      <DependentUpon>ScrollableMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGBuscador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TGBuscador.Designer.cs">
+      <DependentUpon>TGBuscador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGBuscadorSelColumnas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TGBuscadorSelColumnas.Designer.cs">
+      <DependentUpon>TGBuscadorSelColumnas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TGElementosSel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TGElementosSel.Designer.cs">
+      <DependentUpon>TGElementosSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGGridBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TGGridBuscar.Designer.cs">
+      <DependentUpon>TGGridBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGPeticionGrabar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TGPeticionGrabar.Designer.cs">
+      <DependentUpon>TGPeticionGrabar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TGGrid.Designer.cs">
+      <DependentUpon>TGGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGGrid3Niveles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TGGrid3Niveles.Designer.cs">
+      <DependentUpon>TGGrid3Niveles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGIban.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TGIban.Designer.cs">
+      <DependentUpon>TGIban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGPeticionesListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TGPeticionesListar.Designer.cs">
+      <DependentUpon>TGPeticionesListar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TGTexBoxSel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TGTexBoxSel.Designer.cs">
+      <DependentUpon>TGTexBoxSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToggleStateConverter.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Utiles.cs" />
+    <Compile Include="UtilesCGConsultas.cs" />
+    <Compile Include="XCola.cs" />
+    <Compile Include="XContro.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScrollableMessageBox.resx">
+      <DependentUpon>ScrollableMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGBuscador.resx">
+      <DependentUpon>TGBuscador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGBuscadorSelColumnas.resx">
+      <DependentUpon>TGBuscadorSelColumnas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGElementosSel.resx">
+      <DependentUpon>TGElementosSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGGridBuscar.resx">
+      <DependentUpon>TGGridBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGPeticionGrabar.resx">
+      <DependentUpon>TGPeticionGrabar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGGrid.resx">
+      <DependentUpon>TGGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGGrid3Niveles.resx">
+      <DependentUpon>TGGrid3Niveles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGIban.resx">
+      <DependentUpon>TGIban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGPeticionesListar.resx">
+      <DependentUpon>TGPeticionesListar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TGTexBoxSel.resx">
+      <DependentUpon>TGTexBoxSel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Seleccionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnaSel.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

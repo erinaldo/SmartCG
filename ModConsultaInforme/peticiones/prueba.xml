@@ -1,0 +1,92 @@
+<?xml version="1.0" standalone="yes"?>
+<Formulario>
+  <Cabecera>
+    <Codigo>MCIMOVAUX</Codigo>
+    <Descripcion>dgdgdgdg</Descripcion>
+  </Cabecera>
+  <Control>
+    <Nombre>tgTexBoxSelTipoAux</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>CL  -  CLIENTES</Valor>
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelPlan</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelGrupo</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCompania</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor>W1  -  COMPAÑIA DE DEMOSTRACION, S.A.</Valor>
+  </Control>
+  <Control>
+    <Nombre>cmbMoneda</Nombre>
+    <Tipo>ComboBox</Tipo>
+    <Valor>ML</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbTodos</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbDocNoCancelados</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>rbDocCancelados</Nombre>
+    <Tipo>RadioButton</Tipo>
+    <Valor>1</Valor>
+  </Control>
+  <Control>
+    <Nombre>lbCuentasAux</Nombre>
+    <Tipo>ListBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCuentasAux</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>lbCuentasMayor</Nombre>
+    <Tipo>ListBox</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>tgTexBoxSelCuentasMayor</Nombre>
+    <Tipo>TGTexBoxSel</Tipo>
+    <Valor />
+  </Control>
+  <Control>
+    <Nombre>chkTotales</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>txttitulo</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>Movimientos de Auxiliar</Valor>
+  </Control>
+  <Control>
+    <Nombre>chkSaldoInicial</Nombre>
+    <Tipo>CheckBox</Tipo>
+    <Valor>0</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtHastaFecha</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>3999</Valor>
+  </Control>
+  <Control>
+    <Nombre>txtDesdeFecha</Nombre>
+    <Tipo>TextBox</Tipo>
+    <Valor>4001</Valor>
+  </Control>
+</Formulario>

@@ -1,0 +1,318 @@
+<?xml version="1.0" standalone="yes"?>
+<Comprobante>
+  <Cabecera>
+    <Contable>1</Contable>
+    <Transferido>0</Transferido>
+    <Extendido>0</Extendido>
+    <Compania>SA</Compania>
+    <AnoPeriodo>1412</AnoPeriodo>
+    <Tipo>47</Tipo>
+    <Numero>5</Numero>
+    <Fecha>20141210</Fecha>
+    <Clase>0</Clase>
+    <Tasa>0,0000000</Tasa>
+    <Descripcion>PROFESIONALES DICIEMBRE 14</Descripcion>
+    <Revertir>N</Revertir>
+  </Cabecera>
+  <Totales>
+    <MonedaLocalDebe>38380,21</MonedaLocalDebe>
+    <MonedaLocalHaber>-38380,21</MonedaLocalHaber>
+    <MonedaExtDebe>0,00</MonedaExtDebe>
+    <MonedaExtHaber>0,00</MonedaExtHaber>
+    <Importe3Debe>31719,18</Importe3Debe>
+    <Importe3Haber>-31719,18</Importe3Haber>
+    <NumeroApuntes>16</NumeroApuntes>
+  </Totales>
+  <Detalle>
+    <Cuenta>620004</Cuenta>
+    <Auxiliar1>SX01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>4856,74</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1019,92</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000013</Documento2>
+    <Importe3>4856,74</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>37286206D</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>475001</Cuenta>
+    <Auxiliar1>S16</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1019,92</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000013</Documento2>
+    <Importe3>-4856,74</Importe3>
+    <Iva>21</Iva>
+    <CifDni>37286206D</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>400000</Cuenta>
+    <Auxiliar1>SP02</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-4856,74</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento>14-0000013</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento>20141225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>620004</Cuenta>
+    <Auxiliar1>SX01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>5536,42</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1162,65</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000014</Documento2>
+    <Importe3>5536,42</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>35050021E</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>475001</Cuenta>
+    <Auxiliar1>S15</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1162,65</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000014</Documento2>
+    <Importe3>-5536,42</Importe3>
+    <Iva>21</Iva>
+    <CifDni>35050021E</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>400000</Cuenta>
+    <Auxiliar1>SP02</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-5536,42</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento>14-0000014</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento>20141225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>620004</Cuenta>
+    <Auxiliar1>SX01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>12456,33</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>2615,83</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000015</Documento2>
+    <Importe3>12456,33</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>35050021E</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>475001</Cuenta>
+    <Auxiliar1>S17</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-2615,83</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000015</Documento2>
+    <Importe3>-12456,33</Importe3>
+    <Iva>21</Iva>
+    <CifDni>35050021E</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>400000</Cuenta>
+    <Auxiliar1>SP02</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-12456,33</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento>14-0000015</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento>20141225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>620004</Cuenta>
+    <Auxiliar1>SX01</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>8869,69</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha />
+    <Vencimiento />
+    <Documento2 />
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Cuenta>472000</Cuenta>
+    <Auxiliar1 />
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>D</DH>
+    <MonedaLocal>1862,63</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000016</Documento2>
+    <Importe3>8869,69</Importe3>
+    <Iva>SB</Iva>
+    <CifDni>37286206D</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>475001</Cuenta>
+    <Auxiliar1>S16</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-1862,63</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento />
+    <Fecha>20141201</Fecha>
+    <Vencimiento />
+    <Documento2>14-000000016</Documento2>
+    <Importe3>-8869,69</Importe3>
+    <Iva>21</Iva>
+    <CifDni>37286206D</CifDni>
+  </Detalle>
+  <Detalle>
+    <Cuenta>400000</Cuenta>
+    <Auxiliar1>SP02</Auxiliar1>
+    <Auxiliar2 />
+    <Auxiliar3 />
+    <DH>H</DH>
+    <MonedaLocal>-8869,69</MonedaLocal>
+    <MonedaExt>0,00</MonedaExt>
+    <RU />
+    <Descripcion>Serv. Mensual</Descripcion>
+    <Documento>14-0000016</Documento>
+    <Fecha>20141201</Fecha>
+    <Vencimiento>20141225</Vencimiento>
+    <Documento2>* -000000000</Documento2>
+    <Importe3 />
+    <Iva />
+    <CifDni />
+  </Detalle>
+  <Detalle>
+    <Fecha />
+    <Vencimiento />
+  </Detalle>
+</Comprobante>
