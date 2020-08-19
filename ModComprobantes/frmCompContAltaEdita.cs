@@ -50,6 +50,7 @@ namespace ModComprobantes
         private bool nuevoComprobanteGLB01;
         private bool nuevoComprobanteGLB01CabeceraGrabada;  //Se utiliza para indicar si se está trabajando con la opción nuevoComprobanteGLB01 y se ha grabado ya la cabecera
         private string nombreComprobante;
+        private string compania;
         private string archivoComprobante;
         private ComprobanteContable comprobanteContableImportar;
 
@@ -263,6 +264,17 @@ namespace ModComprobantes
             }
         }
 
+        public string Compania
+        {
+            get
+            {
+                return (this.compania);
+            }
+            set
+            {
+                this.compania = value;
+            }
+        }
         public string ArchivoComprobante
         {
             get
@@ -4435,8 +4447,17 @@ namespace ModComprobantes
         {
             string result = "";
             string gravedad = "0";
+            string codigo = "";
+
+            if (Batch && !BatchLote)
+            {
+                codigo = compania;
+            }
+            else
+            {
+                codigo = this.cmbCompania.SelectedValue.ToString();
+            }
             
-            string codigo = this.cmbCompania.SelectedValue.ToString();
             string validarCompania = this.ValidarCompania(codigo);
             if (validarCompania != "")
             {
@@ -4476,7 +4497,7 @@ namespace ModComprobantes
             //Validar Importe
             bool documentoSinImporte = this.ValidarComprobanteSinImporte();
             string validarSinImporte = "";
-            if (documentoSinImporte)
+            if (!documentoSinImporte)
             { 
                 validarSinImporte = "  - " + this.LP.GetText("lblfrmCompContErrSinImporte", "Comprobante sin Importes") + "\n\r";
                 gravedad = "1";
@@ -4670,10 +4691,13 @@ namespace ModComprobantes
                 {
                     monedaExtHaber = Convert.ToDecimal(monedaExtHaberStr);
                 }
-                    
-                    if (monedaLocalDebe != 0 || monedaLocalHaber !=0 ||
-                        monedaExtDebe != 0 || monedaExtHaber != 0
-                        ) result = false;
+
+                /* if (monedaLocalDebe != 0 || monedaLocalHaber !=0 ||
+                    monedaExtDebe != 0 || monedaExtHaber != 0
+                    ) result = false; */
+                if (monedaLocalDebe == 0 && monedaLocalHaber  == 0 &&
+                    monedaExtDebe == 0 && monedaExtHaber == 0
+                    ) result = false;
             }
             catch (Exception ex)
             {
@@ -6714,7 +6738,7 @@ namespace ModComprobantes
 
                 //Validar Importe
                 bool comprobanteSinImporte = this.ValidarComprobanteSinImporte();
-                if (comprobanteSinImporte) comp.DSErroresAdd(-1, this.LP.GetText("lblfrmCompContErrSinImportes", "Comprobante sin Importes"), "T", "");
+                if (!comprobanteSinImporte) comp.DSErroresAdd(-1, this.LP.GetText("lblfrmCompContErrSinImportes", "Comprobante sin Importes"), "T", "");
 
                 bool resultAux = true;
                 bool resultDetalle = true;
@@ -6738,7 +6762,7 @@ namespace ModComprobantes
                 this.progressBarEspera.Visible = false;
                 this.grBoxProgressBar.Visible = false;
 
-                if (!resultCabecera || !resultDetalle || !comprobanteCuadra)
+                if (!resultCabecera || !resultDetalle || !comprobanteCuadra || !comprobanteSinImporte)
                 {
                     utiles.ButtonEnabled(ref this.radButtonValidarErrores, true);
 

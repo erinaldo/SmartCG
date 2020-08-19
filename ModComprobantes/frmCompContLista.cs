@@ -900,7 +900,7 @@ namespace ModComprobantes
 
                 // Set cursor as hourglass
                 Cursor.Current = Cursors.WaitCursor;
-
+                 
                 frmCompContAltaEdita frmAltaEdita = new frmCompContAltaEdita
                 {
                     NuevoComprobante = false,
@@ -909,7 +909,8 @@ namespace ModComprobantes
                     ArchivoComprobante = archivo,
                     Batch = true,
                     BatchLote = false,
-                    BatchLoteError = false,                    
+                    BatchLoteError = false,
+                    Compania = this.radGridViewComprobantes.Rows[rowIndex].Cells["compania"].Value.ToString(),
                     FrmPadre = this
                 };
                 frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);

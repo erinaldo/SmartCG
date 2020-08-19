@@ -1168,7 +1168,8 @@ namespace ModComprobantes
 
                     //if (this.bbddDB2) rowLote["AÑOCWS"] = dtLotes.Rows[i]["AÑOCWS"].ToString(); jl
                     //if (this.bbddDB2) rowLote[2] = dtLotes.Rows[i]["AÑOCWS"].ToString();
-                    if (this.bbddDB2) rowLote[2] = dtLotes.Rows[i][2].ToString();
+                    //if (this.bbddDB2) rowLote[2] = dtLotes.Rows[i][2].ToString();
+                    if (this.bbddDB2) rowLote[2] = dtLotes.Rows[i]["DOCDWS"].ToString();
                     else rowLote["AVOCWS"] = dtLotes.Rows[i]["AVOCWS"].ToString();
 
                     rowLote["LAPSWS"] = dtLotes.Rows[i]["LAPSWS"].ToString();
@@ -2559,6 +2560,7 @@ namespace ModComprobantes
                 string Descripcion = e.Valor[19].ToString().Trim();
                 string Clase = e.Valor[20].ToString().Trim();
                 string Tasa = e.Valor[21].ToString().Trim();
+                if (Tasa == "") Tasa = "0,0000000";
 
                 // busco fila seleccionada.
                 for (int i = 0; i < this.radGridViewEditarLotes.Rows.Count; i++)
