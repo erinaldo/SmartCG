@@ -146,7 +146,7 @@ namespace ModSII
                         try
                         {
                             fechaCG = Convert.ToInt32(fechaCGStr);
-                            if (fechaCG != 0) row["CobroFecha"] = utiles.FechaToFormatoCG(fechaCGStr).ToShortDateString();
+                            if (fechaCG != 0) row["CobroFecha"] = utiles.FormatoCGToFecha(fechaCGStr).ToShortDateString();
                             else row["CobroFecha"] = "";
                         }
                         catch { row["CobroFecha"] = ""; };

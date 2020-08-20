@@ -1617,7 +1617,7 @@ namespace ModConsultaInforme
                         {
                             //Cuenta con desgloce de movimientos
                             comprobante[2] = anoSAPRDT + "-" + perSAPRDT + "-" + ticodt + "-" + nucodt;
-                            comprobante[3] = utiles.FechaToFormatoCG(dr["FECODT"].ToString()).ToShortDateString();
+                            comprobante[3] = utiles.FormatoCGToFecha(dr["FECODT"].ToString()).ToShortDateString();
                             comprobante[4] = dr["CAUXDT"].ToString();
 
                             string clase = dr["CLDODT"].ToString().Trim();

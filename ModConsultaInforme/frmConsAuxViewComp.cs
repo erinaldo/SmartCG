@@ -645,7 +645,7 @@ namespace ModConsultaInforme
                     rowComp["CDIVDT"] = cIVA;
 
                     fdocdt = dr.GetValue(dr.GetOrdinal("FDOCDT")).ToString().Trim();
-                    if (fdocdt != "" && fdocdt != "0") rowComp["FDOCDT"] = utiles.FechaToFormatoCG(fdocdt).ToShortDateString();
+                    if (fdocdt != "" && fdocdt != "0") rowComp["FDOCDT"] = utiles.FormatoCGToFecha(fdocdt).ToShortDateString();
                     else rowComp["FDOCDT"] = "";
 
                     if (cIVA != "" && fdocdt != "") porcIVA = this.ObtenerPorcentajeIVA(cIVA, fdocdt);
@@ -661,7 +661,7 @@ namespace ModConsultaInforme
                     rowComp["NUCODT"] = nuco;
 
                     fecodt = dr.GetValue(dr.GetOrdinal("FECODT")).ToString().Trim();
-                    if (fecodt != "" && fecodt != "0") rowComp["FECODT"] = utiles.FechaToFormatoCG(fecodt).ToShortDateString();
+                    if (fecodt != "" && fecodt != "0") rowComp["FECODT"] = utiles.FormatoCGToFecha(fecodt).ToShortDateString();
                     else rowComp["FECODT"] = "";
 
                     rowComp["CCIADT"] = dr.GetValue(dr.GetOrdinal("CCIADT")).ToString();
@@ -673,7 +673,7 @@ namespace ModConsultaInforme
                     rowComp["NDOCDT"] = doc;
 
                     fevedt = dr.GetValue(dr.GetOrdinal("FEVEDT")).ToString().Trim();
-                    if (fevedt != "" && fevedt != "0") rowComp["FEVEDT"] = utiles.FechaToFormatoCG(fevedt).ToShortDateString();
+                    if (fevedt != "" && fevedt != "0") rowComp["FEVEDT"] = utiles.FormatoCGToFecha(fevedt).ToShortDateString();
                     else rowComp["FEVEDT"] = "";
 
                     rowComp["TEINDT"] = dr.GetValue(dr.GetOrdinal("TEINDT")).ToString();
@@ -723,7 +723,7 @@ namespace ModConsultaInforme
                         rowComp["NFARDX"] = dr.GetValue(dr.GetOrdinal("NFARDX")).ToString();
 
                         fivadx = dr.GetValue(dr.GetOrdinal("FIVADX")).ToString().Trim();
-                        if (fivadx != "" && fivadx != "0") rowComp["FIVADX"] = utiles.FechaToFormatoCG(fivadx).ToShortDateString();
+                        if (fivadx != "" && fivadx != "0") rowComp["FIVADX"] = utiles.FormatoCGToFecha(fivadx).ToShortDateString();
                         else rowComp["FIVADX"] = "";
 
                         rowComp["USA1DX"] = dr.GetValue(dr.GetOrdinal("USA1DX")).ToString();

@@ -291,7 +291,7 @@ namespace ModSII
                     iDEmisorFacturaNIF = dr.GetValue(dr.GetOrdinal("NIFES2")).ToString().Trim();
                     numSerieFacturaEmisor = dr.GetValue(dr.GetOrdinal("NSFES2")).ToString().Trim();
                     fechaExpedicionFacturaEmisorCG = dr.GetValue(dr.GetOrdinal("FDOCS2")).ToString().Trim();
-                    fechaExpedicionFacturaEmisor = utiles.FechaToFormatoCG(fechaExpedicionFacturaEmisorCG).ToShortDateString();
+                    fechaExpedicionFacturaEmisor = utiles.FormatoCGToFecha(fechaExpedicionFacturaEmisorCG).ToShortDateString();
 
                     destinatarioNIF = dr.GetValue(dr.GetOrdinal("NIFCS2")).ToString().Trim();
                     if (destinatarioNIF != "")
@@ -507,7 +507,7 @@ namespace ModSII
                         try
                         {
                             fechaCG = Convert.ToInt32(fechaCGStr);
-                            if (fechaCG != 0) row["FacturasRectificadasFechaExpedicionFacturaEmisor"] = utiles.FechaToFormatoCG(fechaCGStr).ToShortDateString();
+                            if (fechaCG != 0) row["FacturasRectificadasFechaExpedicionFacturaEmisor"] = utiles.FormatoCGToFecha(fechaCGStr).ToShortDateString();
                             else row["FacturasRectificadasFechaExpedicionFacturaEmisor"] = "";
                         }
                         catch { row["FacturasRectificadasFechaExpedicionFacturaEmisor"] = ""; };
@@ -526,7 +526,7 @@ namespace ModSII
                         try
                         {
                             fechaCG = Convert.ToInt32(fechaCGStr);
-                            if (fechaCG != 0) row["FechaOperacion"] = utiles.FechaToFormatoCG(fechaCGStr).ToShortDateString();
+                            if (fechaCG != 0) row["FechaOperacion"] = utiles.FormatoCGToFecha(fechaCGStr).ToShortDateString();
                             else row["FechaOperacion"] = "";
                         }
                         catch { row["FechaOperacion"] = ""; };

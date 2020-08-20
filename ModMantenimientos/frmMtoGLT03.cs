@@ -495,7 +495,7 @@ namespace ModMantenimientos
                         rowInfo = new GridViewDataRowInfo(this.radGridViewTasaCambio.MasterView);
 
                         fecha = this.dtTasaCambioGrid.Rows[i]["FCAMMF"].ToString();
-                        fechaFormato = utiles.FechaToFormatoCG(fecha);
+                        fechaFormato = utiles.FormatoCGToFecha(fecha);
 
                         //rowInfo.Cells["Fecha"].Value = this.FechaConFormato(fecha);
                         rowInfo.Cells["Fecha"].Value = fechaFormato;

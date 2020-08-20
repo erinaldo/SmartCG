@@ -379,6 +379,15 @@ namespace ModMantenimientos
 
         private void RadButtonTextBoxPlanCuentas_TextChanged(object sender, EventArgs e)
         {
+            //para evitar que salte 2 veces el evento al asignar la descripcion
+            if (this.radButtonTextBoxPlanCuentas.Tag != null && this.radButtonTextBoxPlanCuentas.Text != null)
+            {
+                if (this.radButtonTextBoxPlanCuentas.Tag.ToString().Trim() != "" && this.radButtonTextBoxPlanCuentas.Text.Trim() != "") 
+                {
+                    if (this.radButtonTextBoxPlanCuentas.Tag.ToString().Substring(0, 1) == this.radButtonTextBoxPlanCuentas.Text.Substring(0, 1)) return;
+                }
+            }
+
             string codigo = this.radButtonTextBoxPlanCuentas.Text.Trim();
             if (codigo != "")
             {
@@ -411,6 +420,7 @@ namespace ModMantenimientos
                         string planDesc = utilesCG.ObtenerDescDadoCodigo("GLM02", "TIPLMP", "NOMBMP", this.codPlan, false, "").Trim();
                         if (planDesc != "") plan += " " + separadorDesc + " " + planDesc;
 
+                        this.radButtonTextBoxPlanCuentas.Tag = this.radButtonTextBoxPlanCuentas.Text;
                         this.radButtonTextBoxPlanCuentas.Text = plan;
 
                         this.VerificarAutorizaciones();
@@ -425,6 +435,9 @@ namespace ModMantenimientos
                 else
                 {
                     this.radButtonTextBoxPlanCuentas.Focus();
+                    this.radButtonTextBoxPlanCuentas.Tag = "";
+
+                    this.radGridViewCuentasMayor.Visible = false;
                 }
             }
             else
@@ -518,6 +531,10 @@ namespace ModMantenimientos
                 //185; 219; 245
                 //e.CellElement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(219)))), ((int)(((byte)(245)))));
             }
+        }
+        private void radGridViewCuentasMayor_Leave(object sender, EventArgs e)
+        {
+            //utiles.guardarLayout(this.Name, ref radGridViewCuentasMayor);
         }
         #endregion
 
@@ -1090,9 +1107,12 @@ namespace ModMantenimientos
                     
                     this.radGridViewCuentasMayor.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
 
-                    this.radGridViewCuentasMayor.Rows[0].IsCurrent = true;
+                    if (this.radGridViewCuentasMayor.Groups.Count == 0) this.radGridViewCuentasMayor.Rows[0].IsCurrent = true;
                     this.radGridViewCuentasMayor.Focus();
                     this.radGridViewCuentasMayor.Select();
+
+                    //cargar layout
+                    //utiles.cargarLayout(this.Name, ref radGridViewCuentasMayor);
 
                     this.radGridViewCuentasMayor.Refresh();
                     
@@ -1562,5 +1582,6 @@ namespace ModMantenimientos
         }
         #endregion
 
+        
     }
 }

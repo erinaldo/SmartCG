@@ -882,7 +882,7 @@ namespace ModConsultaInforme
                 //buscar última fecha del periodo
                 string fechaFinPeriodo = utilesCG.ObtenerFechaFinCalendarioDadoPeriodo(this.calendario, AAPPHasta);
 
-                DateTime fechaUltPeriodo = utiles.FechaToFormatoCG(fechaFinPeriodo);
+                DateTime fechaUltPeriodo = utiles.FormatoCGToFecha(fechaFinPeriodo);
 
                 dr = GlobalVar.ConexionCG.ExecuteReader(query, GlobalVar.ConexionCG.GetConnectionValue);
 
@@ -1424,19 +1424,19 @@ namespace ModConsultaInforme
 
                 if (fdocdt != 0)
                 {
-                    fechaDoc = utiles.FechaToFormatoCG(fdocdt.ToString());
+                    fechaDoc = utiles.FormatoCGToFecha(fdocdt.ToString());
                     rowDoc["FDOCDT"] = fechaDoc.ToShortDateString();
                 }
                 else rowDoc["FDOCDT"] = "";
 
-                if (fevedt != 0) rowDoc["FEVEDT"] = utiles.FechaToFormatoCG(fevedt.ToString()).ToShortDateString();
+                if (fevedt != 0) rowDoc["FEVEDT"] = utiles.FormatoCGToFecha(fevedt.ToString()).ToShortDateString();
                 else rowDoc["FEVEDT"] = "";
 
                 DateTime fecha1raCanc = new DateTime();
 
                 if (fecodt != 0)
                 {
-                    fecha1raCanc = utiles.FechaToFormatoCG(fecodt.ToString());
+                    fecha1raCanc = utiles.FormatoCGToFecha(fecodt.ToString());
                     rowDoc["FECODT"] = fecha1raCanc.ToShortDateString();
                 }
                 else rowDoc["FECODT"] = "";

@@ -3720,7 +3720,7 @@ namespace ModMantenimientos
                         rowInfo = new GridViewDataRowInfo(this.radGridViewTiposIVA.MasterView);
 
                         fecha = this.dtTiposIVAGrid.Rows[i]["FEIVCX"].ToString();
-                        fechaFormato = utiles.FechaToFormatoCG(fecha);
+                        fechaFormato = utiles.FormatoCGToFecha(fecha);
 
                         //rowInfo.Cells["Fecha"].Value = this.FechaConFormato(fecha);
                         rowInfo.Cells["FechaEfectiva"].Value = fechaFormato;

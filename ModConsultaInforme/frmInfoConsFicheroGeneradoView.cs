@@ -93,6 +93,9 @@ namespace ModConsultaInforme
             //Cargar los datos de la Grid
             this.FillDataGrid();
 
+            //cargar layout
+            utiles.cargarLayout(this.Name, ref radGridViewInfConsGenerados);
+
             Cursor.Current = Cursors.Default;
         }
         
@@ -156,7 +159,7 @@ namespace ModConsultaInforme
             string formulario = "";
             if (this.ficherosGeneradosViewTipo == FicherosGeneradosView.Informe) formulario = " - Informe";
             else formulario = " - Consulta";
-            Log.Info("FIN Diario Detallado" + formulario);
+            Log.Info("FIN Informe/Consulta Fichero Generado Visualizar" + formulario);
         }
 
         private void radButtonActualizarLista_Click(object sender, EventArgs e)
@@ -184,6 +187,12 @@ namespace ModConsultaInforme
                 e.CellElement.Font = newFont;
             }
         }
+
+        private void radGridViewInfConsGenerados_Leave(object sender, EventArgs e)
+        {
+            utiles.guardarLayout(this.Name, ref radGridViewInfConsGenerados);
+        }
+
         #endregion
 
         #region Métodos Privados
@@ -317,7 +326,7 @@ namespace ModConsultaInforme
 
                     this.radGridViewInfConsGenerados.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
 
-                    this.radGridViewInfConsGenerados.Rows[0].IsCurrent = true;
+                    if (this.radGridViewInfConsGenerados.Groups.Count == 0) this.radGridViewInfConsGenerados.Rows[0].IsCurrent = true;
                     this.radGridViewInfConsGenerados.Focus();
                     this.radGridViewInfConsGenerados.Select();
 
@@ -604,6 +613,5 @@ namespace ModConsultaInforme
             return (tipo);
         }
         #endregion
-
     }
 }

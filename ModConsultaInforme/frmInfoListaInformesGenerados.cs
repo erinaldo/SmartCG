@@ -58,6 +58,9 @@ namespace ModConsultaInforme
             //Cargar los datos de la Grid
             this.FillDataGrid();
 
+            //cargar layout
+            utiles.cargarLayout(this.Name, ref radGridViewInformesGenerados);
+
             Cursor.Current = Cursors.Default;
         }
 
@@ -253,6 +256,11 @@ namespace ModConsultaInforme
                 e.CellElement.Font = newFont;
             }
         }
+
+        private void radGridViewInformesGenerados_Leave(object sender, EventArgs e)
+        {
+            utiles.guardarLayout(this.Name, ref radGridViewInformesGenerados);
+        }
         #endregion
 
         #region Métodos Privados
@@ -350,7 +358,7 @@ namespace ModConsultaInforme
                                 break;
                         }
 
-                        rowDataTableGrid["FECHW8"] = utiles.FechaToFormatoCG(dr["FECHW8"].ToString()).ToShortDateString();
+                        rowDataTableGrid["FECHW8"] = utiles.FormatoCGToFecha(dr["FECHW8"].ToString()).ToShortDateString();
                         rowDataTableGrid["HORAW8"] = ConvertirHora(dr["HORAW8"].ToString());
                         rowDataTableGrid["NERRW8"] = dr["NERRW8"].ToString().PadLeft(4, '0');
 
@@ -381,7 +389,7 @@ namespace ModConsultaInforme
                     
                     this.radGridViewInformesGenerados.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
 
-                    this.radGridViewInformesGenerados.Rows[0].IsCurrent = true;
+                    if (this.radGridViewInformesGenerados.Groups.Count == 0) this.radGridViewInformesGenerados.Rows[0].IsCurrent = true;
                     this.radGridViewInformesGenerados.Focus();
                     this.radGridViewInformesGenerados.Select();
 
@@ -564,7 +572,7 @@ namespace ModConsultaInforme
                 documento_HTML.Append("             <td class=Texto width =\"40%\">" + sNCIAW8 + "</td>\n");
                 documento_HTML.Append("             <td class=Texto width =\"40%\">" + "&nbsp;" + " </td>\n");
                 //documento_HTML.Append("             <td class=Texto width =\"40%\">" + "FECHA " + sFECHA + "</td>\n");
-                documento_HTML.Append("             <td class=Texto width =\"40%\">" + "FECHA " + utiles.FechaToFormatoCG(sFECHW8).ToShortDateString() + "</td>\n");
+                documento_HTML.Append("             <td class=Texto width =\"40%\">" + "FECHA " + utiles.FormatoCGToFecha(sFECHW8).ToShortDateString() + "</td>\n");
                 documento_HTML.Append("         </tr>\n");
                 documento_HTML.Append("         <tr>\n");
                 documento_HTML.Append("             <td class=Texto width =\"40%\">" + "PLAN " + sTIPLW8 + "</td>\n");
@@ -948,5 +956,6 @@ namespace ModConsultaInforme
             return (result);
         }
         #endregion
+
     }
 }

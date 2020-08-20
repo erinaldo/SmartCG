@@ -215,11 +215,14 @@ namespace ModMantenimientos
                 //this.radGridViewInfo.MasterTemplate.BestFitColumns();
                 this.radGridViewInfo.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
 
-                this.radGridViewInfo.Rows[0].IsCurrent = true;
+                if (this.radGridViewInfo.Groups.Count ==0) this.radGridViewInfo.Rows[0].IsCurrent = true;
                 this.radGridViewInfo.Focus();
                 this.radGridViewInfo.Select();
                 //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, this.radPanelApp.Size.Height - this.radCollapsiblePanelDataFilter.Size.Height - 3);
                 //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, 609);
+
+                //cargar layout
+                //utiles.cargarLayout(this.Name, ref radGridViewInfo, this.tabla);
 
                 this.radGridViewInfo.Refresh();
             }
@@ -388,6 +391,12 @@ namespace ModMantenimientos
                 e.CellElement.Font = newFont;
             }
         }
+
+        private void radGridViewInfo_Leave(object sender, EventArgs e)
+        {
+            //utiles.guardarLayout(this.Name, ref radGridViewInfo, this.Tabla);
+        }
+
         #endregion
 
         #region Métodos privados

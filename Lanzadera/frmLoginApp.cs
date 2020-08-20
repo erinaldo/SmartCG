@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -409,6 +410,20 @@ namespace SmartCG
                         }
                         catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
                     }
+
+                    //crear carpeta de usuario si no existe (para configuracion de grids)
+                    string carpetaUsuario = Application.StartupPath + @"\app\usuarios\" + GlobalVar.UsuarioEnv.UserNameEnv;
+                    try
+                    {
+                        // Si no existe
+                        if (!Directory.Exists(carpetaUsuario))
+                        {
+                            // Crea carpeta
+                            DirectoryInfo di = Directory.CreateDirectory(carpetaUsuario);
+                        }
+                    }
+                    catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
+                    //
 
                     this.Close();
                 }

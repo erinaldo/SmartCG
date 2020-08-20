@@ -212,6 +212,15 @@ namespace ModMantenimientos
             {
                 if (codigo != "" && codigo.Length >= 3)
                 {
+                    //para evitar que salte 2 veces el evento al asignar la descripcion
+                    if (this.radButtonTextBoxClaseZona.Tag != null && this.radButtonTextBoxClaseZona.Text != null)
+                    {
+                        if (this.radButtonTextBoxClaseZona.Tag.ToString().Trim() != "" && this.radButtonTextBoxClaseZona.Text.Trim() != "")
+                        {
+                            if (this.radButtonTextBoxClaseZona.Tag.ToString().Substring(0, 3) == this.radButtonTextBoxClaseZona.Text.Substring(0, 3)) return;
+                        }
+                    }
+
                     Cursor.Current = Cursors.WaitCursor;
 
                     if (codigo.Length <= 3) this.codClaseZona = this.radButtonTextBoxClaseZona.Text;
@@ -237,6 +246,7 @@ namespace ModMantenimientos
                         string claseZonaDesc = utilesCG.ObtenerDescDadoCodigo("GLM10", "CLASZ0", "NOMBZ0", this.codClaseZona, false, "").Trim();
                         if (claseZonaDesc != "") claseZona += " " + separadorDesc + " " + claseZonaDesc;
 
+                        this.radButtonTextBoxClaseZona.Tag = this.radButtonTextBoxClaseZona.Text;
                         this.radButtonTextBoxClaseZona.Text = claseZona;
 
                         this.VerificarAutorizaciones();
@@ -249,6 +259,9 @@ namespace ModMantenimientos
                 }
                 else
                 {
+                    this.radButtonTextBoxClaseZona.Focus();
+                    this.radButtonTextBoxClaseZona.Tag = "";
+
                     this.radGridViewZonas.Visible = false;
                 }
             }
@@ -335,6 +348,11 @@ namespace ModMantenimientos
         private void FrmMtoGLM11Sel_FormClosing(object sender, FormClosingEventArgs e)
         {
             Log.Info("FIN Mantenimiento de Zonas Gestión");
+        }
+
+        private void radGridViewZonas_Leave(object sender, EventArgs e)
+        {
+            //utiles.guardarLayout(this.Name, ref radGridViewZonas);
         }
         #endregion
 
@@ -691,9 +709,12 @@ namespace ModMantenimientos
 
                     this.radGridViewZonas.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
 
-                    this.radGridViewZonas.Rows[0].IsCurrent = true;
+                    if (this.radGridViewZonas.Groups.Count == 0) this.radGridViewZonas.Rows[0].IsCurrent = true;
                     this.radGridViewZonas.Focus();
                     this.radGridViewZonas.Select();
+
+                    //cargar layout
+                    //utiles.cargarLayout(this.Name, ref radGridViewZonas);
 
                     this.radGridViewZonas.Refresh();
 
@@ -782,5 +803,6 @@ namespace ModMantenimientos
                 e.CellElement.Font = newFont;
             }
         }
+        
     }
 }

@@ -217,7 +217,7 @@ namespace ModSII
                     row["NIFDL1"] = dr.GetValue(dr.GetOrdinal("NIFDL1")).ToString();
                     
                     fecha = dr.GetValue(dr.GetOrdinal("DATEL1")).ToString();
-                    if (fecha != "0") fecha = utiles.FechaToFormatoCG(fecha).ToShortDateString();
+                    if (fecha != "0") fecha = utiles.FormatoCGToFecha(fecha).ToShortDateString();
                     else fecha = "";
                     row["DATEL1"] = fecha;
 

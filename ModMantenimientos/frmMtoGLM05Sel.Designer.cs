@@ -150,6 +150,7 @@
             this.radGridViewCuentasAux.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewCuentasAux_ViewCellFormatting);
             this.radGridViewCuentasAux.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewCuentasAux_CellClick);
             this.radGridViewCuentasAux.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewCuentasAux_CellDoubleClick);
+            this.radGridViewCuentasAux.Leave += new System.EventHandler(this.radGridViewCuentasAux_Leave);
             // 
             // radPanelAcciones
             // 
@@ -238,7 +239,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1111, 881);
+            this.ClientSize = new System.Drawing.Size(1119, 912);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelAcciones);
             this.Controls.Add(this.radPanelMenuPath);

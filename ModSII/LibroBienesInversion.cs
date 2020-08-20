@@ -240,7 +240,7 @@ namespace ModSII
 
                     row["IDEmisorFactura"] = iDEmisorFacturaNIF;
                     row["NumSerieFacturaEmisor"] = numSerieFacturaEmisor;
-                    fechaExpedicionFacturaEmisorSII = utiles.FechaToFormatoCG(fechaExpedicionFacturaEmisor).ToShortDateString();
+                    fechaExpedicionFacturaEmisorSII = utiles.FormatoCGToFecha(fechaExpedicionFacturaEmisor).ToShortDateString();
                     row["FechaExpedicionFacturaEmisor"] = fechaExpedicionFacturaEmisorSII;
                     row["IdentificacionBien"] = dr.GetValue(dr.GetOrdinal("IDEBS4")).ToString().Trim();
 
@@ -255,7 +255,7 @@ namespace ModSII
                         try
                         {
                             fechaCG = Convert.ToInt32(fechaCGStr);
-                            if (fechaCG != 0) row["FechaInicioUtilizacion"] = utiles.FechaToFormatoCG(fechaCGStr).ToShortDateString();
+                            if (fechaCG != 0) row["FechaInicioUtilizacion"] = utiles.FormatoCGToFecha(fechaCGStr).ToShortDateString();
                             else row["FechaInicioUtilizacion"] = "";
                         }
                         catch { row["FechaInicioUtilizacion"] = ""; };

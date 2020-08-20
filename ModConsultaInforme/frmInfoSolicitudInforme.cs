@@ -39,6 +39,9 @@ namespace ModConsultaInforme
 
             //Cargar los datos de la Grid
             this.FillDataGrid();
+
+            //cargar layout
+            utiles.cargarLayout(this.Name, ref radGridViewSolicitudes);
         }
 
         private void RadButtonListaInformes_Click(object sender, EventArgs e)
@@ -108,6 +111,11 @@ namespace ModConsultaInforme
                 //e.CellElement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(219)))), ((int)(((byte)(245)))));
             }
         }
+
+        private void radGridViewSolicitudes_Leave(object sender, EventArgs e)
+        {
+            utiles.guardarLayout(this.Name, ref radGridViewSolicitudes);
+        }
         #endregion
 
         #region Métodos Privados
@@ -169,7 +177,7 @@ namespace ModConsultaInforme
 
                     this.radGridViewSolicitudes.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
 
-                    this.radGridViewSolicitudes.Rows[0].IsCurrent = true;
+                    if (this.radGridViewSolicitudes.Groups.Count == 0) this.radGridViewSolicitudes.Rows[0].IsCurrent = true;
                     this.radGridViewSolicitudes.Focus();
                     this.radGridViewSolicitudes.Select();
 
@@ -255,5 +263,6 @@ namespace ModConsultaInforme
         }
         #endregion
 
+        
     }
 }

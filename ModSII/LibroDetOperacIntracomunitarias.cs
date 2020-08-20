@@ -224,7 +224,7 @@ namespace ModSII
 
                     row["IDEmisorFactura"] = iDEmisorFacturaNIF;
                     row["NumSerieFacturaEmisor"] = numSerieFacturaEmisor;
-                    fechaExpedicionFacturaEmisorSII = utiles.FechaToFormatoCG(fechaExpedicionFacturaEmisor).ToShortDateString();
+                    fechaExpedicionFacturaEmisorSII = utiles.FormatoCGToFecha(fechaExpedicionFacturaEmisor).ToShortDateString();
                     row["FechaExpedicionFacturaEmisor"] = fechaExpedicionFacturaEmisorSII;
 
                     row["ContraparteNombreRazon"] = dr.GetValue(dr.GetOrdinal("NRZCS5")).ToString().Trim();

@@ -202,6 +202,15 @@ namespace ModMantenimientos
 
         private void RadButtonTextBoxPlan_TextChanged(object sender, EventArgs e)
         {
+            //para evitar que salte 2 veces el evento al asignar la descripcion
+            if (this.radButtonTextBoxPlan.Tag != null && this.radButtonTextBoxPlan.Text != null)
+            {
+                if (this.radButtonTextBoxPlan.Tag.ToString().Trim() != "" && this.radButtonTextBoxPlan.Text.Trim() != "")
+                {
+                    if (this.radButtonTextBoxPlan.Tag.ToString().Substring(0, 1) == this.radButtonTextBoxPlan.Text.Substring(0, 1)) return;
+                }
+            }
+
             string codigo = this.radButtonTextBoxPlan.Text.Trim();
 
             if (codigo != "")
@@ -237,6 +246,7 @@ namespace ModMantenimientos
                         string planDesc = utilesCG.ObtenerDescDadoCodigo("GLM02", "TIPLMP", "NOMBMP", this.codPlan, false, "").Trim();
                         if (planDesc != "") plan += " " + separadorDesc + " " + planDesc;
 
+                        this.radButtonTextBoxPlan.Tag = this.radButtonTextBoxPlan.Text;
                         this.radButtonTextBoxPlan.Text = plan;
 
                         //Carga los datos de la Grid
@@ -250,6 +260,7 @@ namespace ModMantenimientos
                 else
                 {
                     this.radButtonTextBoxPlan.Focus();
+                    this.radButtonTextBoxPlan.Tag = "";
 
                     this.radGridViewCodIva.Visible = false;
                 }

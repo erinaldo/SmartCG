@@ -465,7 +465,7 @@ namespace ModConsultaInforme
                     rowTrans["RECNB3"] = dr.GetValue(dr.GetOrdinal("RECNB3")).ToString();
                    
                     fecha = dr.GetValue(dr.GetOrdinal("FECOB3")).ToString().Trim();
-                    if (fecha != "" && fecha != "0") rowTrans["FECOB3"] = utiles.FechaToFormatoCG(fecha).ToShortDateString();
+                    if (fecha != "" && fecha != "0") rowTrans["FECOB3"] = utiles.FormatoCGToFecha(fecha).ToShortDateString();
                     else rowTrans["FECOB3"] = "";
 
                     clase = dr.GetValue(dr.GetOrdinal("CLDOB3")).ToString().Trim();
@@ -475,11 +475,11 @@ namespace ModConsultaInforme
                     rowTrans["CLDOB3_NDOCB3"] = clase.PadLeft(2, '0') + "-" + noDoc.PadLeft(7, '0');
 
                     fecha = dr.GetValue(dr.GetOrdinal("FDOCB3")).ToString().Trim();
-                    if (fecha != "" && fecha != "0") rowTrans["FDOCB3"] = utiles.FechaToFormatoCG(fecha).ToShortDateString();
+                    if (fecha != "" && fecha != "0") rowTrans["FDOCB3"] = utiles.FormatoCGToFecha(fecha).ToShortDateString();
                     else rowTrans["FDOCB3"] = "";
 
                     fecha = dr.GetValue(dr.GetOrdinal("FIVAB3")).ToString().Trim();
-                    if (fecha != "" && fecha != "0") rowTrans["FIVAB3"] = utiles.FechaToFormatoCG(fecha).ToShortDateString();
+                    if (fecha != "" && fecha != "0") rowTrans["FIVAB3"] = utiles.FormatoCGToFecha(fecha).ToShortDateString();
                     else rowTrans["FIVAB3"] = "";
 
                     pais = dr.GetValue(dr.GetOrdinal("PCIFB3")).ToString().Trim();

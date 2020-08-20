@@ -263,6 +263,11 @@ namespace ModMantenimientos
         {
             Log.Info("FIN Mantenimiento de Cuentas de Auxiliar Gestión");
         }
+
+        private void radGridViewCuentasAux_Leave(object sender, EventArgs e)
+        {
+            //utiles.guardarLayout(this.Name, ref radGridViewCuentasAux);
+        }
         #endregion
 
         #region Métodos Privados
@@ -587,6 +592,15 @@ namespace ModMantenimientos
                 //this.tgBuscadorCtasAux.ValorFiltro.Text = "";
                 if (codigo.Length >= 2)
                 {
+                    //para evitar que salte 2 veces el evento al asignar la descripcion
+                    if (this.radButtonTextBoxTipoAux.Tag != null && this.radButtonTextBoxTipoAux.Text != null)
+                    {
+                        if (this.radButtonTextBoxTipoAux.Tag.ToString().Trim() != "" && this.radButtonTextBoxTipoAux.Text.Trim() != "")
+                        {
+                            if (this.radButtonTextBoxTipoAux.Tag.ToString().Substring(0, 2) == this.radButtonTextBoxTipoAux.Text.Substring(0, 2)) return;
+                        }
+                    }
+
                     Cursor.Current = Cursors.WaitCursor;
 
                     if (codigo.Length <= 2) this.codTipoAux = this.radButtonTextBoxTipoAux.Text;
@@ -617,6 +631,7 @@ namespace ModMantenimientos
                             string tipoAuxDesc = utilesCG.ObtenerDescDadoCodigo("GLM04", "TAUXMT", "NOMBMT", this.codTipoAux, false, "").Trim();
                             if (tipoAuxDesc != "") tipoAux += " " + separadorDesc + " " + tipoAuxDesc;
 
+                            this.radButtonTextBoxTipoAux.Tag = this.radButtonTextBoxTipoAux.Text;
                             this.radButtonTextBoxTipoAux.Text = tipoAux;
 
                             //----------------------- Buscador y Grid -------------------------------
@@ -659,9 +674,12 @@ namespace ModMantenimientos
 
                                 this.radGridViewCuentasAux.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
 
-                                this.radGridViewCuentasAux.Rows[0].IsCurrent = true;
+                                if (this.radGridViewCuentasAux.Groups.Count == 0) this.radGridViewCuentasAux.Rows[0].IsCurrent = true;
                                 this.radGridViewCuentasAux.Focus();
                                 this.radGridViewCuentasAux.Select();
+
+                                //cargar layout
+                                //utiles.cargarLayout(this.Name, ref radGridViewCuentasAux);
 
                                 this.radGridViewCuentasAux.Refresh();
 
@@ -690,6 +708,7 @@ namespace ModMantenimientos
                 else
                 {
                     this.radButtonTextBoxTipoAux.Focus();
+                    this.radButtonTextBoxTipoAux.Tag = "";
 
                     this.radGridViewCuentasAux.Visible = false;
                 }
@@ -734,5 +753,6 @@ namespace ModMantenimientos
                 e.CellElement.Font = newFont;
             }
         }
+
     }
 }

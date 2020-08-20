@@ -1250,7 +1250,7 @@ namespace ModConsultaInforme
                         idInterno = cciaic + " " + anoSAPRIC + " " + perSAPRIC + " " + ticoic2Pos + " " + nucoic;
 
                         cabeceraComp[0] = noComp.ToString();
-                        cabeceraComp[1] = utiles.FechaToFormatoCG(dr["FECOIC"].ToString()).ToShortDateString();
+                        cabeceraComp[1] = utiles.FormatoCGToFecha(dr["FECOIC"].ToString()).ToShortDateString();
                         cabeceraComp[2] = idInterno;
                         cabeceraComp[3] = utilesCG.ObtenerDescripcionComprobante(cciaic, sapric, ticoic, nucoic);   //GLAI3.Desc
                         cabeceraComp[4] = "";
@@ -1453,7 +1453,7 @@ namespace ModConsultaInforme
                                 idInterno = cciadt + " " + anoSAPRDT + " " + perSAPRDT;
 
                                 cabeceraComp[0] = noComp.ToString();
-                                cabeceraComp[1] = utiles.FechaToFormatoCG(dr["FECODT"].ToString()).ToShortDateString();
+                                cabeceraComp[1] = utiles.FormatoCGToFecha(dr["FECODT"].ToString()).ToShortDateString();
                                 cabeceraComp[2] = idInterno;
                                 cabeceraComp[3] = this.LP.GetText("lblResumenMovDia", "Resumen movimientos del día");
                                 cabeceraComp[4] = "";
@@ -1512,7 +1512,7 @@ namespace ModConsultaInforme
 
 
                                 cabeceraComp[0] = noComp.ToString();
-                                cabeceraComp[1] = utiles.FechaToFormatoCG(fechasCalendario[1]).ToShortDateString();
+                                cabeceraComp[1] = utiles.FormatoCGToFecha(fechasCalendario[1]).ToShortDateString();
                                 cabeceraComp[2] = idInterno;
                                 cabeceraComp[3] = this.LP.GetText("lblResumenMovPeriodo", "Resumen movimientos del periodo");
                                 cabeceraComp[4] = "";

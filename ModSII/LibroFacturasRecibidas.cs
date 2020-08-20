@@ -316,7 +316,7 @@ namespace ModSII
 
                     numSerieFacturaEmisor = dr.GetValue(dr.GetOrdinal("NSFES3")).ToString().Trim();
                     fechaExpedicionFacturaEmisor = dr.GetValue(dr.GetOrdinal("FDOCS3")).ToString().Trim();
-                    fechaExpedicionFacturaEmisorSII = utiles.FechaToFormatoCG(fechaExpedicionFacturaEmisor).ToShortDateString();
+                    fechaExpedicionFacturaEmisorSII = utiles.FormatoCGToFecha(fechaExpedicionFacturaEmisor).ToShortDateString();
 
                     importeActual = dr.GetValue(dr.GetOrdinal("IMPTS3")).ToString().Trim();
                     
@@ -528,7 +528,7 @@ namespace ModSII
                         try
                         {
                             fechaCG = Convert.ToInt32(fechaCGStr);
-                            if (fechaCG != 0) row["FacturasRectificadasFechaExpedicionFacturaEmisor"] = utiles.FechaToFormatoCG(fechaCGStr).ToShortDateString();
+                            if (fechaCG != 0) row["FacturasRectificadasFechaExpedicionFacturaEmisor"] = utiles.FormatoCGToFecha(fechaCGStr).ToShortDateString();
                             else row["FacturasRectificadasFechaExpedicionFacturaEmisor"] = "";
                         }
                         catch { row["FacturasRectificadasFechaExpedicionFacturaEmisor"] = ""; };
@@ -545,7 +545,7 @@ namespace ModSII
                         try
                         {
                             fechaCG = Convert.ToInt32(fechaCGStr);
-                            if (fechaCG != 0) row["FechaOperacion"] = utiles.FechaToFormatoCG(fechaCGStr).ToShortDateString();
+                            if (fechaCG != 0) row["FechaOperacion"] = utiles.FormatoCGToFecha(fechaCGStr).ToShortDateString();
                             else row["FechaOperacion"] = "";
                         }
                         catch { row["FechaOperacion"] = ""; };
@@ -590,7 +590,7 @@ namespace ModSII
                         try
                         {
                             fechaCG = Convert.ToInt32(fechaCGStr);
-                            if (fechaCG != 0) row["FechaRegistroContable"] = utiles.FechaToFormatoCG(fechaCGStr).ToShortDateString();
+                            if (fechaCG != 0) row["FechaRegistroContable"] = utiles.FormatoCGToFecha(fechaCGStr).ToShortDateString();
                             else row["FechaRegistroContable"] = "";
                         }
                         catch { row["FechaRegistroContable"] = ""; };

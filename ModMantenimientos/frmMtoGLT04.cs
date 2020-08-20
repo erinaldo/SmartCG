@@ -553,8 +553,8 @@ namespace ModMantenimientos
                         if (saprfl.Length >= 2) periodo = saprfl.Substring(saprfl.Length - 2, 2);
                         else periodo = saprfl;
 
-                        dtFechaIniOriginal = utiles.FechaToFormatoCG(inlafl);
-                        dtFechaFinOriginal = utiles.FechaToFormatoCG(finlfl);
+                        dtFechaIniOriginal = utiles.FormatoCGToFecha(inlafl);
+                        dtFechaFinOriginal = utiles.FormatoCGToFecha(finlfl);
 
                         saprflDestino = saaDestino + periodo;   //Esto es para el periodo
                         //calcular el saaDestinoFechaIni y ssaaDestinoFechaFinal
@@ -956,7 +956,7 @@ namespace ModMantenimientos
 
                 string fechaIni = rowBBDD["INLAFL"].ToString();
                 fechaIni = fechaIni.PadLeft(7, '0');
-                DateTime fechaI = utiles.FechaToFormatoCG(fechaIni);
+                DateTime fechaI = utiles.FormatoCGToFecha(fechaIni);
                 rowGrid["FechaIni"] = fechaI.Date.ToShortDateString();
 
                 string fechaFin = rowBBDD["FINLFL"].ToString();
@@ -967,7 +967,7 @@ namespace ModMantenimientos
                 }
                 else
                 {
-                    DateTime fechaF = utiles.FechaToFormatoCG(fechaFin);
+                    DateTime fechaF = utiles.FormatoCGToFecha(fechaFin);
                     rowGrid["FechaFin"] = fechaF.Date.ToShortDateString();
                 }
 
@@ -1253,7 +1253,7 @@ namespace ModMantenimientos
                     else
                     {
                         //Calcular la fecha final (fecha inicial del periodo posterior menos 1)
-                        dt = utiles.FechaToFormatoCG(fechaIniPeriodoPosterior);
+                        dt = utiles.FormatoCGToFecha(fechaIniPeriodoPosterior);
                         dt = dt.AddDays(-1);
                         fechaFinInt = utiles.FechaToFormatoCG(dt, true);
                     }
@@ -1281,7 +1281,7 @@ namespace ModMantenimientos
                 if (resultPeriodoAnterior == "" && saapp != "-1" && fechaIniPeriodoAnterior != "-1" && fechaIniPeriodoAnterior != "-1")
                 {
                     //Calcular la fecha final (fecha inicial del periodo posterior menos 1)
-                    dt = utiles.FechaToFormatoCG(fechaIni.ToString());
+                    dt = utiles.FormatoCGToFecha(fechaIni.ToString());
                     dt = dt.AddDays(-1);
                     fechaFinInt = utiles.FechaToFormatoCG(dt, true);
 
@@ -1339,7 +1339,7 @@ namespace ModMantenimientos
                 {
                     existePeriodoAnterior = true;
                     //Comprobar que la nueva fecha de inicio del periodo actual tiene que ser mayor que la fecha de inicio del periodo anterior
-                    dtPeriodoAnterior = utiles.FechaToFormatoCG(fechaIniPeriodoAnterior);
+                    dtPeriodoAnterior = utiles.FormatoCGToFecha(fechaIniPeriodoAnterior);
                     if (dtPeriodoModificar < dtPeriodoAnterior)
                     {
                         result = "La fecha de inicio ya se encuentra definida en el periodo anterior";
@@ -1357,7 +1357,7 @@ namespace ModMantenimientos
                 {
                     existePeriodoPosterior = true;
                     //Comprobar que la nueva fecha de inicio del periodo actual tiene que ser menos que la fecha de inicio del periodo posterior
-                    dtPeriodoPosterior = utiles.FechaToFormatoCG(fechaIniPeriodoPosterior);
+                    dtPeriodoPosterior = utiles.FormatoCGToFecha(fechaIniPeriodoPosterior);
                     if (dtPeriodoModificar > dtPeriodoPosterior)
                     {
                         result = "La fecha de inicio ya se encuentra definida en el periodo posterior";
@@ -1773,13 +1773,13 @@ namespace ModMantenimientos
                 DateTime dtPeriodoNuevo;
                 DateTime dtPeriodoExiste;
 
-                dtPeriodoNuevo = utiles.FechaToFormatoCG(inlafl);
+                dtPeriodoNuevo = utiles.FormatoCGToFecha(inlafl);
 
                 if (resultPeriodoAnterior == "" && saappAux != "-1" && fechaIniPeriodoAnterior != "-1" && fechaIniPeriodoAnterior != "-1")
                 {
                     //Comprobar que la fecha de inicio del periodo nuevo ha de ser mayor que la fecha de inicio del periodo anterior
 
-                    dtPeriodoExiste = utiles.FechaToFormatoCG(fechaIniPeriodoAnterior);
+                    dtPeriodoExiste = utiles.FormatoCGToFecha(fechaIniPeriodoAnterior);
                     if (dtPeriodoNuevo <= dtPeriodoExiste)
                     {
                         result = "La fecha ya se encuentra definida en este calendario";
@@ -1796,7 +1796,7 @@ namespace ModMantenimientos
                 if (fechaIniPeriodoPosterior != "-1")
                 {
                     //Comprobar que la fecha de inicio del periodo nuevo ha de ser mayor que la fecha de inicio del periodo posterior
-                    dtPeriodoExiste = utiles.FechaToFormatoCG(fechaIniPeriodoPosterior);
+                    dtPeriodoExiste = utiles.FormatoCGToFecha(fechaIniPeriodoPosterior);
 
                     if (dtPeriodoNuevo >= dtPeriodoExiste)
                     {
@@ -1852,8 +1852,8 @@ namespace ModMantenimientos
                 {
                     if (fechaFinUltPeriodo != "9999999")
                     {
-                        DateTime dtFechaIniNuevoPeriodo = utiles.FechaToFormatoCG(inlaflDestino);
-                        DateTime dtFechaFinUltPeriodo = utiles.FechaToFormatoCG(fechaFinUltPeriodo);
+                        DateTime dtFechaIniNuevoPeriodo = utiles.FormatoCGToFecha(inlaflDestino);
+                        DateTime dtFechaFinUltPeriodo = utiles.FormatoCGToFecha(fechaFinUltPeriodo);
 
                         if (dtFechaFinUltPeriodo > dtFechaIniNuevoPeriodo)
                         {

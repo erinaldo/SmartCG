@@ -1095,8 +1095,8 @@ namespace ModConsultaInforme
                     datos[1] = librb3;
                     datos[2] = serib3;
                     datos[3] = dr.GetValue(dr.GetOrdinal("RECNB3")).ToString().PadLeft(6, '0');
-                    datos[4] = utiles.FechaToFormatoCG(dr.GetValue(dr.GetOrdinal("FECOB3")).ToString()).ToShortDateString();
-                    datos[5] = utiles.FechaToFormatoCG(fechaDocumentoActual).ToShortDateString();
+                    datos[4] = utiles.FormatoCGToFecha(dr.GetValue(dr.GetOrdinal("FECOB3")).ToString()).ToShortDateString();
+                    datos[5] = utiles.FormatoCGToFecha(fechaDocumentoActual).ToShortDateString();
                     datos[6] = claseActual.PadLeft(2, '0') + "-" + documentoActual.PadLeft(7, '0') ;
                     
                     pcifb3 = dr.GetValue(dr.GetOrdinal("PCIFB3")).ToString();

@@ -231,7 +231,7 @@ namespace ModSII
                     row["NumSerieFacturaEmisor"] = dr.GetValue(dr.GetOrdinal("NSFES9")).ToString().Trim();
 
                     fechaExpedicionFacturaEmisor = dr.GetValue(dr.GetOrdinal("FDOCS9")).ToString().Trim();
-                    fechaExpedicionFacturaEmisorSII = utiles.FechaToFormatoCG(fechaExpedicionFacturaEmisor).ToShortDateString();
+                    fechaExpedicionFacturaEmisorSII = utiles.FormatoCGToFecha(fechaExpedicionFacturaEmisor).ToShortDateString();
                     row["FechaExpedicionFacturaEmisor"] = fechaExpedicionFacturaEmisorSII;
 
                     fechaCGStr = dr.GetValue(dr.GetOrdinal("FPAGS9")).ToString().Trim();
@@ -240,7 +240,7 @@ namespace ModSII
                         try
                         {
                             fechaCG = Convert.ToInt32(fechaCGStr);
-                            if (fechaCG != 0) row["PagoFecha"] = utiles.FechaToFormatoCG(fechaCGStr).ToShortDateString();
+                            if (fechaCG != 0) row["PagoFecha"] = utiles.FormatoCGToFecha(fechaCGStr).ToShortDateString();
                             else row["PagoFecha"] = "";
                         }
                         catch { row["PagoFecha"] = ""; };

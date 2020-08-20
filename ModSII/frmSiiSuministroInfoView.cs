@@ -460,7 +460,7 @@ namespace ModSII
                     row["NSFE"] = dr.GetValue(dr.GetOrdinal("NSFES2")).ToString().Trim();
 
                     FDOC = dr.GetValue(dr.GetOrdinal("FDOCS2")).ToString();
-                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FechaToFormatoCG(FDOC).ToShortDateString();
+                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FormatoCGToFecha(FDOC).ToShortDateString();
                     else row["FDOC"] = "";
 
                     string codOper = dr.GetValue(dr.GetOrdinal("COPSS2")).ToString().Trim();
@@ -613,7 +613,7 @@ namespace ModSII
                     row["NSFE"] = dr.GetValue(dr.GetOrdinal("NSFES3")).ToString().Trim();
 
                     FDOC = dr.GetValue(dr.GetOrdinal("FDOCS3")).ToString();
-                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FechaToFormatoCG(FDOC).ToShortDateString();
+                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FormatoCGToFecha(FDOC).ToShortDateString();
                     else row["FDOC"] = "";
 
                     string codOper = dr.GetValue(dr.GetOrdinal("COPSS3")).ToString().Trim();
@@ -764,7 +764,7 @@ namespace ModSII
                     row["NSFE"] = dr.GetValue(dr.GetOrdinal("NSFES4")).ToString().Trim();
 
                     FDOC = dr.GetValue(dr.GetOrdinal("FDOCS4")).ToString();
-                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FechaToFormatoCG(FDOC).ToShortDateString();
+                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FormatoCGToFecha(FDOC).ToShortDateString();
                     else row["FDOC"] = "";
 
                     row["PRAD"] = dr.GetValue(dr.GetOrdinal("PRADS4")).ToString().Trim();
@@ -1024,7 +1024,7 @@ namespace ModSII
                     row["NSFE"] = dr.GetValue(dr.GetOrdinal("NSFES5")).ToString().Trim();
 
                     FDOC = dr.GetValue(dr.GetOrdinal("FDOCS5")).ToString();
-                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FechaToFormatoCG(FDOC).ToShortDateString();
+                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FormatoCGToFecha(FDOC).ToShortDateString();
                     else row["FDOC"] = "";
 
                     /*row["COPS"] = dr.GetValue(dr.GetOrdinal("COPSS3")).ToString().Trim();
@@ -1298,11 +1298,11 @@ namespace ModSII
                     row["NSFR"] = dr.GetValue(dr.GetOrdinal("NSFRS9")).ToString().Trim();
 
                     FDOC = dr.GetValue(dr.GetOrdinal("FDOCS9")).ToString();
-                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FechaToFormatoCG(FDOC).ToShortDateString();
+                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FormatoCGToFecha(FDOC).ToShortDateString();
                     else row["FDOC"] = "";
 
                     FDOC = dr.GetValue(dr.GetOrdinal("FPAGS9")).ToString();
-                    if (FDOC != "" && FDOC != "0") row["FPAG"] = utiles.FechaToFormatoCG(FDOC).ToShortDateString();
+                    if (FDOC != "" && FDOC != "0") row["FPAG"] = utiles.FormatoCGToFecha(FDOC).ToShortDateString();
                     else row["FPAG"] = "";
 
                     importe = 0;
@@ -1443,11 +1443,11 @@ namespace ModSII
                     row["NSFR"] = dr.GetValue(dr.GetOrdinal("NSFRS8")).ToString().Trim();
 
                     FDOC = dr.GetValue(dr.GetOrdinal("FDOCS8")).ToString();
-                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FechaToFormatoCG(FDOC).ToShortDateString();
+                    if (FDOC != "" && FDOC != "0") row["FDOC"] = utiles.FormatoCGToFecha(FDOC).ToShortDateString();
                     else row["FDOC"] = "";
 
                     FDOC = dr.GetValue(dr.GetOrdinal("FCOBS8")).ToString();
-                    if (FDOC != "" && FDOC != "0") row["FCOB"] = utiles.FechaToFormatoCG(FDOC).ToShortDateString();
+                    if (FDOC != "" && FDOC != "0") row["FCOB"] = utiles.FormatoCGToFecha(FDOC).ToShortDateString();
                     else row["FCOB"] = "";
 
                     importe = 0;

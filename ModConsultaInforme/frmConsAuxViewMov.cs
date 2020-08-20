@@ -592,11 +592,11 @@ namespace ModConsultaInforme
                     rowMov["DOCUMENTO"] = clase.PadLeft(2, '0') + "-" + doc.PadLeft(7, '0');
 
                     fdocdt = dr.GetValue(dr.GetOrdinal("FDOCDT")).ToString().Trim();
-                    if (fdocdt != "" && fdocdt != "0") rowMov["FDOCDT"] = utiles.FechaToFormatoCG(fdocdt).ToShortDateString();
+                    if (fdocdt != "" && fdocdt != "0") rowMov["FDOCDT"] = utiles.FormatoCGToFecha(fdocdt).ToShortDateString();
                     else rowMov["FDOCDT"] = "";
 
                     fevedt = dr.GetValue(dr.GetOrdinal("FEVEDT")).ToString().Trim();
-                    if (fevedt != "" && fevedt != "0") rowMov["FEVEDT"] = utiles.FechaToFormatoCG(fevedt).ToShortDateString();
+                    if (fevedt != "" && fevedt != "0") rowMov["FEVEDT"] = utiles.FormatoCGToFecha(fevedt).ToShortDateString();
                     else rowMov["FEVEDT"] = "";
 
                     rowMov["TMOVDT"] = dr.GetValue(dr.GetOrdinal("TMOVDT")).ToString();
@@ -682,7 +682,7 @@ namespace ModConsultaInforme
                     rowMov["NUCODTFormat"] = nuco.PadLeft(5, '0');
 
                     fecodt = dr.GetValue(dr.GetOrdinal("FECODT")).ToString().Trim();
-                    if (fecodt != "" && fecodt != "0") rowMov["FECODT"] = utiles.FechaToFormatoCG(fecodt).ToShortDateString();
+                    if (fecodt != "" && fecodt != "0") rowMov["FECODT"] = utiles.FormatoCGToFecha(fecodt).ToShortDateString();
                     else rowMov["FECODT"] = "";
 
                     rowMov["SIMIDT"] = dr.GetValue(dr.GetOrdinal("SIMIDT")).ToString();
@@ -694,7 +694,7 @@ namespace ModConsultaInforme
                         rowMov["NFARDX"] = dr.GetValue(dr.GetOrdinal("NFARDX")).ToString();
 
                         fivadx = dr.GetValue(dr.GetOrdinal("FIVADX")).ToString().Trim();
-                        if (fivadx != "" && fivadx != "0") rowMov["FIVADX"] = utiles.FechaToFormatoCG(fivadx).ToShortDateString();
+                        if (fivadx != "" && fivadx != "0") rowMov["FIVADX"] = utiles.FormatoCGToFecha(fivadx).ToShortDateString();
                         else rowMov["FIVADX"] = "";
 
                         rowMov["USA1DX"] = dr.GetValue(dr.GetOrdinal("USA1DX")).ToString();

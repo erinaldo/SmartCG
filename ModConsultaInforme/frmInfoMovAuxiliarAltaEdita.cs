@@ -1722,13 +1722,13 @@ namespace ModConsultaInforme
                             comprobante += dr.GetValue(dr.GetOrdinal("TICODT")).ToString().PadLeft(2, '0') + "-" + dr.GetValue(dr.GetOrdinal("NUCODT")).ToString().PadLeft(5, '0');
                             datos[6] = comprobante;
 
-                            datos[7] = utiles.FechaToFormatoCG(dr["FECODT"].ToString()).ToShortDateString();
+                            datos[7] = utiles.FormatoCGToFecha(dr["FECODT"].ToString()).ToShortDateString();
                             datos[8] = "";
                             if (cldodtActual != "" || ndocdtActual != "0") datos[8] = cldodtActual.PadRight(2, ' ') + "-" + ndocdtActual.PadLeft(7, '0');
                             datos[9] = "";
-                            if (dr["FDOCDT"].ToString() != "0") datos[9] = utiles.FechaToFormatoCG(dr["FDOCDT"].ToString()).ToShortDateString();
+                            if (dr["FDOCDT"].ToString() != "0") datos[9] = utiles.FormatoCGToFecha(dr["FDOCDT"].ToString()).ToShortDateString();
                             datos[10] = "";
-                            if (dr["FEVEDT"].ToString() != "0") datos[10] = utiles.FechaToFormatoCG(dr["FEVEDT"].ToString()).ToShortDateString();
+                            if (dr["FEVEDT"].ToString() != "0") datos[10] = utiles.FormatoCGToFecha(dr["FEVEDT"].ToString()).ToShortDateString();
                             datos[11] = dr.GetValue(dr.GetOrdinal("TEINDT")).ToString();
                             datos[12] = dr.GetValue(dr.GetOrdinal("AUAD01")).ToString();
                             datos[13] = dr.GetValue(dr.GetOrdinal("AUAD02")).ToString();

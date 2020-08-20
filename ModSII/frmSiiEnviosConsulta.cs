@@ -769,7 +769,7 @@ namespace ModSII
                     row["NIF"] = dr.GetValue(dr.GetOrdinal("NIFDR1")).ToString().Trim();
                                         
                     fechaEnvio = dr.GetValue(dr.GetOrdinal("DATER1")).ToString().Trim();
-                    fechaEnvioFormatoSII = utiles.FechaToFormatoCG(fechaEnvio).ToShortDateString();
+                    fechaEnvioFormatoSII = utiles.FormatoCGToFecha(fechaEnvio).ToShortDateString();
                     row["Fecha"] = fechaEnvioFormatoSII;
                     row["DATER1"] = fechaEnvio;
 
@@ -1055,7 +1055,7 @@ namespace ModSII
                     row["NumSerieFactura"] = dr.GetValue(dr.GetOrdinal("NSFEL1")).ToString().Trim();
 
                     fechaExpedicionFactura = dr.GetValue(dr.GetOrdinal("FDOCL1")).ToString().Trim();
-                    fechaExpedicionFacturaSII = utiles.FechaToFormatoCG(fechaExpedicionFactura).ToShortDateString();
+                    fechaExpedicionFacturaSII = utiles.FormatoCGToFecha(fechaExpedicionFactura).ToShortDateString();
                     row["FechaExpedicionFactura"] = fechaExpedicionFacturaSII;
 
                     iDEmisorFacturaNIF = dr.GetValue(dr.GetOrdinal("NIFEL1")).ToString().Trim();
@@ -1286,7 +1286,7 @@ namespace ModSII
                         string csv = this.tgGridResumen.SelectedRows[0].Cells["CSV"].Value.ToString();
                         string nifCia = this.tgGridResumen.SelectedRows[0].Cells["NIF"].Value.ToString();
                         string fecha = this.tgGridResumen.SelectedRows[0].Cells["DATER1"].Value.ToString();
-                        string fechaEnvioFormatoSII = utiles.FechaToFormatoCG(fecha).ToShortDateString();
+                        string fechaEnvioFormatoSII = utiles.FormatoCGToFecha(fecha).ToShortDateString();
                         string hora = this.tgGridResumen.SelectedRows[0].Cells["TIMER1"].Value.ToString();
                         string horaEnvioFormatoSII = hora.Trim();
                         if (horaEnvioFormatoSII != "0" && horaEnvioFormatoSII != "")

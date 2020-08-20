@@ -89,6 +89,7 @@
             this.radGridViewInfConsGenerados.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewInfConsGenerados_ViewCellFormatting);
             this.radGridViewInfConsGenerados.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewInfConsGenerados_CellClick);
             this.radGridViewInfConsGenerados.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewInfConsGenerados_CellDoubleClick);
+            this.radGridViewInfConsGenerados.Leave += new System.EventHandler(this.radGridViewInfConsGenerados_Leave);
             // 
             // radLabelNoHayInfo
             // 
@@ -187,7 +188,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1434, 974);
+            this.ClientSize = new System.Drawing.Size(1482, 1158);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelAcciones);
             this.Controls.Add(this.radPanelMenuPath);
