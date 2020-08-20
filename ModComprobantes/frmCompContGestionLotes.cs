@@ -2557,9 +2557,9 @@ namespace ModComprobantes
                 string lblImporte3Debe = e.Valor[15].ToString().Trim();
                 string lblImporte3Haber = e.Valor[16].ToString().Trim();
                 string numapuntes = e.Valor[17].ToString().Trim();
-                string Descripcion = e.Valor[19].ToString().Trim();
-                string Clase = e.Valor[20].ToString().Trim();
-                string Tasa = e.Valor[21].ToString().Trim();
+                string Descripcion = e.Valor[18].ToString().Trim();
+                string Clase = e.Valor[19].ToString().Trim();
+                string Tasa = e.Valor[20].ToString().Trim();
                 if (Tasa == "") Tasa = "0,0000000";
 
                 // busco fila seleccionada.

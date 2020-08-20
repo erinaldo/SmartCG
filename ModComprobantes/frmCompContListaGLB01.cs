@@ -138,7 +138,7 @@ namespace ModComprobantes
                     Batch = false,
                     FrmPadre = this
                 };
-                //frmCompCont.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
+                frmCompCont.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
                 frmCompCont.Show();
 
                 // Set cursor as default arrow
@@ -2083,23 +2083,23 @@ namespace ModComprobantes
             {
                 string Cab_compania = e.Valor[0].ToString().Trim();
                 string aapp = e.Valor[1].ToString().Trim();
-                string aappFormat = aapp;
-                if (aapp.Length == 5) aappFormat = aapp.Substring(1, 4);
-                else if (aapp.Length < 4) aapp = aapp.PadRight(4, ' ');
-                aappFormat = aappFormat.Substring(0, 2) + "-" + aappFormat.Substring(2, 2);
-                string Cab_anoperiodo = aappFormat;
+                string Cab_anoperiodo = aapp;
                 string Cab_tipo = e.Valor[2].ToString().Trim();
                 string Cab_noComprobante = e.Valor[3].ToString().Trim();
-                string Cab_fecha = utiles.FechaToFormatoCG(e.Valor[4].ToString().Trim()).ToShortDateString();
-                //string Cab_fecha = e.Valor[4].ToString().Trim();
-                string Cab_extendido = e.Valor[5].ToString().Trim();
-                string lblTotalDebe = e.Valor[6].ToString().Trim();
-                string lblTotalHaber = e.Valor[7].ToString().Trim();
-                string lblExtDebe = e.Valor[8].ToString().Trim();
-                string lblExtHaber = e.Valor[9].ToString().Trim();
-                string lblImporte3Debe = e.Valor[10].ToString().Trim();
-                string lblImporte3Haber = e.Valor[11].ToString().Trim();
-                string numapuntes = e.Valor[12].ToString().Trim();
+                string Cab_fecha = e.Valor[4].ToString().Trim();
+                string Cab_compania_ant = e.Valor[5].ToString().Trim();
+                string Cab_anoperiodo_ant = e.Valor[6].ToString().Trim();
+                string Cab_tipo_ant = e.Valor[7].ToString().Trim();
+                string Cab_noComprobante_ant = e.Valor[8].ToString().Trim();
+                string Cab_fecha_ant = e.Valor[9].ToString().Trim();
+                string Cab_extendido = e.Valor[10].ToString().Trim();
+                string lblTotalDebe = e.Valor[11].ToString().Trim();
+                string lblTotalHaber = e.Valor[12].ToString().Trim();
+                string lblExtDebe = e.Valor[13].ToString().Trim();
+                string lblExtHaber = e.Valor[14].ToString().Trim();
+                string lblImporte3Debe = e.Valor[15].ToString().Trim();
+                string lblImporte3Haber = e.Valor[16].ToString().Trim();
+                string numapuntes = e.Valor[17].ToString().Trim();
 
                 // busco fila seleccionada.
                 for (int i = 0; i < this.radGridViewComprobantes.Rows.Count; i++)
@@ -2118,19 +2118,7 @@ namespace ModComprobantes
                     }
                 }
 
-                /* MessageBox.Show("Compañia:" + Cab_compania + "\n\r" +
-                                "Periodo:" + Cab_anoperiodo + "\n\r" +
-                                "Tipo CMP:" + Cab_tipo + "\n\r" +
-                                "Num. CMP:" + Cab_noComprobante + "\n\r" +
-                                "Fecha:" + Cab_fecha + "\n\r" +
-                                "Cmp Ext:" + Cab_extendido + "\n\r" +
-                                "Total Debe:" + lblTotalDebe + "\n\r" +
-                                "Total Haber:" + lblTotalHaber + "\n\r" +
-                                "Mon.Extr. Debe:" + lblExtDebe + "\n\r" +
-                                "Mon.Extr. Haber:" + lblExtHaber + "\n\r" +
-                                "Importe3 Debe:" + lblImporte3Debe + "\n\r" +
-                                "Importe3 Haber:" + lblImporte3Haber + "\n\r" +
-                                "Num.Apuntes:" + numapuntes); */
+                
 
             }
             catch (Exception ex)

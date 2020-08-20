@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -110,7 +111,29 @@ namespace ObjectModel
 
             return (odbcArray);
         }
+        public void cargarLayout(string frmName, ref Telerik.WinControls.UI.RadGridView grid, string tablaName = "")
+        {
+            string menuXMLConfGrid = Application.StartupPath + @"\app\usuarios\" + GlobalVar.UsuarioEnv.UserNameEnv;
+            string s = menuXMLConfGrid + @"\" + frmName + "_" + grid.Name;
+            if (tablaName != "") s = s + "_" + tablaName;
+            s = s + ".xml";
+            if (File.Exists(s) == true)
+            {
+                grid.LoadLayout(s);
+            }
+        }
 
+
+        public void guardarLayout(string frmName, ref Telerik.WinControls.UI.RadGridView grid, string tablaName = "")
+        {
+            string menuXMLConfGrid = Application.StartupPath + @"\app\usuarios\" + GlobalVar.UsuarioEnv.UserNameEnv;
+            string s = menuXMLConfGrid + @"\" + frmName + "_" + grid.Name;
+            if (tablaName != "") s = s + "_" + tablaName;
+            s = s + ".xml";
+
+
+            grid.SaveLayout(s);
+        }
         /// <summary>
         /// Actualiza una variable del appSettings
         /// </summary>
@@ -575,7 +598,31 @@ namespace ObjectModel
 
             return (result);
         }
+        public DateTime FormatoCGToFecha(string fecha)
+        {
+            DateTime result = new DateTime();
 
+            try
+            {
+                if (fecha != "")
+                {
+                    if (fecha.Length == 6 || fecha.Length == 7)
+                    {
+                        int fechaAux = Convert.ToInt32(fecha) + 19000000;
+                        string fechaRes = fechaAux.ToString();
+
+                        result = new DateTime(Convert.ToInt16(fechaRes.Substring(0, 4)), Convert.ToInt16(fechaRes.Substring(4, 2)), Convert.ToInt16(fechaRes.Substring(6, 2)));
+                    }
+                    else if (fecha.Length == 8)
+                    {
+                        result = new DateTime(Convert.ToInt16(fecha.Substring(0, 4)), Convert.ToInt16(fecha.Substring(4, 2)), Convert.ToInt16(fecha.Substring(6, 2)));
+                    }
+                }
+            }
+            catch (Exception ex) { GlobalVar.Log.Error(ex.Message); }
+
+            return (result);
+        }
         /// <summary>
         /// Dado una fecha en formato (dd/mm/aa) devuelve la fecha convertida a DateTime
         /// </summary>

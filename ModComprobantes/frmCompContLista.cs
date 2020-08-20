@@ -1753,7 +1753,7 @@ namespace ModComprobantes
                         this.radGridViewComprobantes.Rows[i].Cells["HaberML"].Value = lblTotalHaber.ToString().Trim();
                         this.radGridViewComprobantes.Rows[i].Cells["DebeME"].Value = lblExtDebe.ToString().Trim();
                         this.radGridViewComprobantes.Rows[i].Cells["HaberME"].Value = lblExtHaber.ToString().Trim();
-                        
+                        this.radGridViewComprobantes.Rows[i].Cells["noMovimiento"].Value = numapuntes;
                     }
                 }
 

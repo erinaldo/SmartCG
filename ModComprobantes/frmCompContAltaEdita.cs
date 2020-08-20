@@ -2381,7 +2381,7 @@ namespace ModComprobantes
             //if (this.edicionComprobanteGLB01) query += "where TIVOTV = '" + this.comprobanteContableImportar.Cab_tipo + "' ";
             //else query += "where CODITV='0' "; //jl
             if (batch) query += "where CODITV='1' ";
-            else query += "where CODITV='0' ";
+            //else query += "where CODITV='0' ";
 
             // if (this.edicionComprobanteGLB01) query += "where CODITV='1' and TIVOTV = '" + this.comprobanteContableImportar.Cab_tipo + "' ";
             // else if (this.nuevoComprobanteGLB01) query += "where STATTV='V' and CODITV='0' ";
@@ -2638,29 +2638,29 @@ namespace ModComprobantes
 
                 this.dateTimePickerFecha.Value = utiles.FechaToFormatoCG(this.comprobanteContableImportar.Cab_fecha);
 
-                string tipo = this.comprobanteContableImportar.Cab_tipo.Trim();
+                String tipo = this.comprobanteContableImportar.Cab_tipo.Trim();
                 if (tipo != "")
                 {
                     //if (!this.edicionComprobanteGLB01)
                     if (this.edicionComprobanteGLB01 || (Batch==true && BatchLote==true))
                         try
                     {
-                        this.cmbTipo.SelectedValue = tipo;
-                        if (this.cmbTipo.SelectedValue == null)
+                            this.cmbTipo.SelectedValue = tipo;
+                            if (this.cmbTipo.SelectedValue == null)
                         {
-                            RadMessageBox.Show("El tipo " + tipo + "no es válido. Debe seleccionar uno.");
+                            RadMessageBox.Show("El tipo " + tipo + " no es válido. Debe seleccionar uno.");
                             errorTipo = true;
                         }
                     }
                     catch
                     {
-                        RadMessageBox.Show("El tipo " + tipo + "no es válido. Debe seleccionar uno.");
+                        RadMessageBox.Show("El tipo " + tipo + " no es válido. Debe seleccionar uno.");
                         errorTipo = true;
                     }
                 }
                 else
                 {
-                    RadMessageBox.Show("Debe seleccionar el tipo.");
+                    RadMessageBox.Show(" Debe seleccionar el tipo.");
                     errorTipo = true;
                 }
                 
@@ -4103,11 +4103,10 @@ namespace ModComprobantes
                     this.GLM01_TIPLMG = dr["TIPLMG"].ToString().Trim();
 
                     //Verificar si tiene campos extendidos (sólo para el caso de los xmls, no para la gestión de lotes que ya viene informado)
-                    ///if (!(this.edicionLote || this.edicionLoteError)) this.extendido = this.CamposExtendidos();
-                    if (!(this.edicionLoteError) && this.comprobanteContableImportar.Cab_extendido == "1") this.extendido = this.CamposExtendidos();
+                    if (!(this.edicionLote || this.edicionLoteError)) this.extendido = this.CamposExtendidos();
                     else this.extendido = false;
 
-                    //Actualizar las columnas de campos extendidos de la Grid de detalles
+                    //Actualizar las columnas de campos extend idos de la Grid de detalles
                     this.ActualizarDetallesCamposExtendidos();
 
                     result = "";
@@ -6436,6 +6435,7 @@ namespace ModComprobantes
             {
                 if (this.cmbCompania.SelectedValue != null) this.cmbCompania.Tag = this.cmbCompania.SelectedValue.ToString();
                 this.txtMaskAAPP.Tag = this.txtMaskAAPP.Text;
+                
                 this.dateTimePickerFecha.Tag = this.dateTimePickerFecha.Value;
                 if (this.cmbTipo.SelectedValue != null) this.cmbTipo.Tag = this.cmbTipo.SelectedValue.ToString();
                 this.txtNoComprobante.Tag = this.txtNoComprobante.Text;
@@ -6575,6 +6575,7 @@ namespace ModComprobantes
                 }
 
                 //Actualizar los atributos TAG de los controles de la cabecera
+                
                 ActualizaValoresOrigenControles();
                 dGrabar = true;
                 DevolverValor(); //jl
@@ -7290,14 +7291,22 @@ private void RadButtonExportar_Click(object sender, EventArgs e)
                     //elementosSel.Add(this.dgDetalle.dsDatos.Tables["Cabecera"].Rows[0]["Fecha"]);
                     //DateTime fecha_int = Convert.ToDateTime(this.dgDetalle.dsDatos.Tables["Cabecera"].Rows[0]["Fecha"].ToString());
                     string fecha_Seditar = this.dgDetalle.dsDatos.Tables["Cabecera"].Rows[0]["Fecha"].ToString();
-                    elementosSel.Add(fecha_Seditar.Substring(6, 2) + "/" + fecha_Seditar.Substring(4, 2) +
-                                "/" + fecha_Seditar.Substring(2, 2));
+                    if (Batch == false)
+                    {
+                        elementosSel.Add(fecha_Seditar.Substring(6, 2) + "/" + fecha_Seditar.Substring(4, 2) +
+                                    "/" + fecha_Seditar.Substring(0, 4));
+                    }
+                    else
+                    {
+                        elementosSel.Add(fecha_Seditar.Substring(6, 2) + "/" + fecha_Seditar.Substring(4, 2) +
+                                    "/" + fecha_Seditar.Substring(2, 2));
+                    }
                     elementosSel.Add(compania_ant);
                     elementosSel.Add(aapp_ant);
                     elementosSel.Add(tipo_ant);
                     elementosSel.Add(nocomp_ant);
                     elementosSel.Add(fecha_ant);
-                    elementosSel.Add(this.comprobanteContableImportar.Cab_extendido);
+                    //elementosSel.Add(this.comprobanteContableImportar.Cab_extendido);
                 }
                 else
                 {
@@ -7336,7 +7345,8 @@ private void RadButtonExportar_Click(object sender, EventArgs e)
                 elementosSel.Add(this.lblMonedaExtranjera_Haber.Text); // Ext. Haber
                 elementosSel.Add(this.lblImporte3_Debe.Text); // Importe 3 Debe
                 elementosSel.Add(this.lblImporte3_Haber.Text); // Importe 3 Haber
-                elementosSel.Add(this.lblNoApuntes_Valor.Text); // N.Apuntes
+                //elementosSel.Add(this.lblNoApuntes_Valor.Text); // N.Apuntes
+                elementosSel.Add(this.dgDetalle.dsDatos.Tables["Totales"].Rows[0]["NumeroApuntes"]); // N.Apuntes
             }
             if (Batch == true)
             {
