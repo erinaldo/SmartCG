@@ -573,7 +573,7 @@ namespace ObjectModel
         /// </summary>
         /// <param name="fecha">Fecha Formato CG</param>
         /// <returns></returns>
-        public DateTime FechaToFormatoCG(string fecha)
+        /*/public DateTime FechaToFormatoCG(string fecha)
         {
             DateTime result = new DateTime();
 
@@ -597,7 +597,7 @@ namespace ObjectModel
             catch (Exception ex) { GlobalVar.Log.Error(ex.Message); }
 
             return (result);
-        }
+        }*/
         public DateTime FormatoCGToFecha(string fecha)
         {
             DateTime result = new DateTime();

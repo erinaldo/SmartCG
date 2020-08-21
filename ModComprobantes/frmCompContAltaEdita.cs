@@ -5916,7 +5916,7 @@ namespace ModComprobantes
                 //    if (!row.IsNewRow) this.Rows.Remove(row);
                 if (dgDetalle.IsCurrentCellInEditMode == false)
                 {
-                    if (this.edicionLote || this.edicionLoteError || this.edicionComprobanteGLB01)
+                    if (this.edicionLote || this.edicionLoteError || this.edicionComprobanteGLB01 || Batch)
                     {
                         if (this.dgDetalle.SelectedRows.Count == 1 && TodaFilaEnBlanco(this.dgDetalle.dsDatos.Tables["Detalle"], 0))
                         {
@@ -5927,7 +5927,7 @@ namespace ModComprobantes
                         }
 
                         //Pedir confirmacion
-                        string mensaje = this.LP.GetText("lblConfDelLineasDetalle", "Se van a elimimar las líneas de detalle. ¿Desea continuar?");
+                        string mensaje = this.LP.GetText("lblConfDelLineasDetalle", "Se van a eliminar las líneas de detalle. ¿Desea continuar?");
                         DialogResult result = MessageBox.Show(mensaje, this.LP.GetText("lblConfirm", "Confirmación"), MessageBoxButtons.YesNo);
                         if (result == DialogResult.No)
                         {
@@ -6550,7 +6550,7 @@ namespace ModComprobantes
                     {
                         //Actualiza el comprobante en las tablas
                         this.ActualizarComprobanteTablas();
-                        this.Close();
+                        //this.Close(); //jl
                     }
                     else
                         if (this.nuevoComprobante || this.importarComprobante)
@@ -6575,8 +6575,7 @@ namespace ModComprobantes
                 }
 
                 //Actualizar los atributos TAG de los controles de la cabecera
-                
-                ActualizaValoresOrigenControles();
+                ActualizaValoresOrigenControles(); 
                 dGrabar = true;
                 DevolverValor(); //jl
                 this.Close(); //jl
