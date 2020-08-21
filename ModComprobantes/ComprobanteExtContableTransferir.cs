@@ -205,7 +205,7 @@ namespace ModComprobantes
                             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
                             try { noComp = ds.Tables["Cabecera"].Rows[0]["Numero"].ToString(); }
                             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
-                            try { fecha = ds.Tables["Cabecera"].Rows[0]["Fecha"].ToString(); if (fecha != "") fecha = utiles.FechaToFormatoCG(fecha).ToShortDateString(); }
+                            try { fecha = ds.Tables["Cabecera"].Rows[0]["Fecha"].ToString(); if (fecha != "") fecha = utiles.FormatoCGToFecha(fecha).ToShortDateString(); }
                             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
 
                             //Verificar que exista la tabla de Totales
@@ -290,7 +290,7 @@ namespace ModComprobantes
                     string fecha = this.dsComprobante.Tables["Cabecera"].Rows[0]["Fecha"].ToString().Trim();
                     if (fecha != "")
                     {
-                        this.FECOHD = utiles.FechaToFormatoCG(utiles.FechaToFormatoCG(fecha), true).ToString();
+                        this.FECOHD = utiles.FechaToFormatoCG(utiles.FormatoCGToFecha(fecha), true).ToString();
                     }
                     
                     //Buscar el plan de la compañía (el método devuelve además el calendario)
@@ -663,7 +663,7 @@ namespace ModComprobantes
 
                     if (CCIAHD != cciaActual || SAPCHD != aappActual || TICOHD != ticoActual || NUCOHD != numCompActual || FECOHD != fechaAct)
                     {
-                        fechaConFormato = utiles.FechaToFormatoCG(FECOHD).ToShortDateString();
+                        fechaConFormato = utiles.FormatoCGToFecha(FECOHD).ToShortDateString();
                         aappConFormato = utiles.AAPPConFormato(SAPCHD);
 
                         result += "     Cia: " + CCIAHD + " AAPP: " + aappConFormato + " Tico: " + TICOHD + " No. Comp: " + NUCOHD + " Fecha: " + fechaConFormato + "\n\r";   //Falta traducir

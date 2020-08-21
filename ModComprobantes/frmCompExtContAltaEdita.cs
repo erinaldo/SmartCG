@@ -2310,7 +2310,7 @@ namespace ModComprobantes
 
                         this.txtNoComprobante.Text = ds.Tables["Cabecera"].Rows[0]["Numero"].ToString();
                         string fecha = ds.Tables["Cabecera"].Rows[0]["Fecha"].ToString();
-                        this.dateTimePickerFecha.Text = utiles.FechaToFormatoCG(fecha).ToShortDateString();
+                        this.dateTimePickerFecha.Text = utiles.FormatoCGToFecha(fecha).ToShortDateString();
                         this.txtDescripcion.Text = ds.Tables["Cabecera"].Rows[0]["Descripcion"].ToString();
 
                         this.txtMaskAAPPDesde.Text = ds.Tables["Cabecera"].Rows[0]["AnoPeriodoDesde"].ToString();

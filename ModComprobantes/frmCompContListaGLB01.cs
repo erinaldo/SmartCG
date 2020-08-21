@@ -1044,7 +1044,7 @@ namespace ModComprobantes
                         aappAux = aappAux.Substring(0, 2) + "-" + aappAux.Substring(2, 2);
                         rowComprobante["AAPP"] = aappAux;
 
-                        rowComprobante["Fecha"] = utiles.FechaToFormatoCG(dr["FECOIC"].ToString()).ToShortDateString();
+                        rowComprobante["Fecha"] = utiles.FormatoCGToFecha(dr["FECOIC"].ToString()).ToShortDateString();
                         rowComprobante["Clase"] = dr["TVOUIC"].ToString().Trim();
                         rowComprobante["DebeML"] = dr["DEBEIC"].ToString().Trim();
                         rowComprobante["HaberML"] = dr["HABEIC"].ToString().Trim();
@@ -2479,7 +2479,7 @@ namespace ModComprobantes
                 {
                     rowHistorial = this.dtVerHistorial.NewRow();
 
-                    rowHistorial["Fecha"] = utiles.FechaToFormatoCG(dr["DATEL2"].ToString().Trim()).ToShortDateString();
+                    rowHistorial["Fecha"] = utiles.FormatoCGToFecha(dr["DATEL2"].ToString().Trim()).ToShortDateString();
 
                     hora = dr["TIMEL2"].ToString().Trim();
                     if (hora != "")
@@ -2659,7 +2659,7 @@ namespace ModComprobantes
 
                 if (dr.Read())
                 {
-                    this.radGridViewComprobantes.Rows[indice].Cells["Fecha"].Value = utiles.FechaToFormatoCG(dr["FECOIC"].ToString()).ToShortDateString();
+                    this.radGridViewComprobantes.Rows[indice].Cells["Fecha"].Value = utiles.FormatoCGToFecha(dr["FECOIC"].ToString()).ToShortDateString();
                     this.radGridViewComprobantes.Rows[indice].Cells["Clase"].Value = dr["TVOUIC"].ToString().Trim();
                     this.radGridViewComprobantes.Rows[indice].Cells["DebeML"].Value = dr["DEBEIC"].ToString().Trim();
                     this.radGridViewComprobantes.Rows[indice].Cells["HaberML"].Value = dr["HABEIC"].ToString().Trim();

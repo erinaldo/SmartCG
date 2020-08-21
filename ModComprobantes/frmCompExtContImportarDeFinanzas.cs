@@ -261,7 +261,7 @@ namespace ModComprobantes
                             numero = dr["NUCOP3"].ToString().Trim();
                             rowComp["NoComp"] = numero;
 
-                            rowComp["Fecha"] = utiles.FechaToFormatoCG(dr["FECOP3"].ToString()).ToShortDateString();
+                            rowComp["Fecha"] = utiles.FormatoCGToFecha(dr["FECOP3"].ToString()).ToShortDateString();
                             rowComp["NoMovimiento"] = dr["NOMOV"].ToString().Trim();
                             rowComp["Estado"] = this.ObtenerEstadoComprobante(dr["STATP3"].ToString()).Trim();
                             

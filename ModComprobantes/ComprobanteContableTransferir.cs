@@ -315,7 +315,7 @@ namespace ModComprobantes
                             dr["tipo"] = tipo;
 
                             dr["noComp"] = noComp;
-                            dr["fecha"] = utiles.FechaToFormatoCG(fecha).ToShortDateString();
+                            dr["fecha"] = utiles.FormatoCGToFecha(fecha).ToShortDateString();
                             dr["clase"] = clase;
                             dr["tasa"] = tasa;
                             if (transferido == "1") dr["transferido"] = true;

@@ -1711,7 +1711,7 @@ namespace ModComprobantes
                 string Cab_anoperiodo = e.Valor[1].ToString().Trim();
                 string Cab_tipo = e.Valor[2].ToString().Trim();
                 string Cab_noComprobante = e.Valor[3].ToString().Trim();
-                string Cab_fecha = utiles.FechaToFormatoCG(e.Valor[4].ToString().Trim()).ToShortDateString();
+                string Cab_fecha = utiles.FormatoCGToFecha(e.Valor[4].ToString().Trim()).ToShortDateString();
                 //string Cab_fecha = e.Valor[4].ToString().Trim();
                 string Cab_compania_ant = e.Valor[5].ToString().Trim();
                 string Cab_anoperiodo_ant = e.Valor[6].ToString().Trim();

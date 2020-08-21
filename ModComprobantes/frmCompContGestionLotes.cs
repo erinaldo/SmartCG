@@ -1333,7 +1333,7 @@ namespace ModComprobantes
                     catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
 
                     rowLotesErrores["DATE24Origen"] = fecha;
-                    dtFecha = utiles.FechaToFormatoCG(fechaInt.ToString());
+                    dtFecha = utiles.FormatoCGToFecha(fechaInt.ToString());
                     rowLotesErrores["DATE24"] = dtFecha.Date.ToShortDateString();
 
                     hora = dtErrores.Rows[i]["TIME24"].ToString();

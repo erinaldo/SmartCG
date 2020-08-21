@@ -261,7 +261,7 @@ namespace ModComprobantes
                             aux = aux.Trim();
                             rowComp["descripcion"] = aux;
 
-                            rowComp["Fecha"] = utiles.FechaToFormatoCG(dr["FECOIC"].ToString()).ToShortDateString();
+                            rowComp["Fecha"] = utiles.FormatoCGToFecha(dr["FECOIC"].ToString()).ToShortDateString();
                             rowComp["Clase"] = dr["TVOUIC"].ToString().Trim();
                             rowComp["Tasa"] = dr["TASCIC"].ToString().Trim();
                             rowComp["DebeML"] = dr["DEBEIC"].ToString().Trim();

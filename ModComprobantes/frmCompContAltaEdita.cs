@@ -2461,7 +2461,7 @@ namespace ModComprobantes
                         this.txtNoComprobante.Text = ds.Tables["Cabecera"].Rows[0]["Numero"].ToString();
                         nocomp_ant = this.txtNoComprobante.Text;
                         string fecha = ds.Tables["Cabecera"].Rows[0]["Fecha"].ToString();
-                        this.dateTimePickerFecha.Text = utiles.FechaToFormatoCG(fecha).ToShortDateString();
+                        this.dateTimePickerFecha.Text = utiles.FormatoCGToFecha(fecha).ToShortDateString();
                         fecha_ant = this.dateTimePickerFecha.Text;
 
                         string clase = ds.Tables["Cabecera"].Rows[0]["Clase"].ToString();
@@ -2636,7 +2636,7 @@ namespace ModComprobantes
                 if (sigloanoper.Length == 5) sigloanoper = sigloanoper.Substring(1, 4);
                 this.txtMaskAAPP.Text = sigloanoper;
 
-                this.dateTimePickerFecha.Value = utiles.FechaToFormatoCG(this.comprobanteContableImportar.Cab_fecha);
+                this.dateTimePickerFecha.Value = utiles.FormatoCGToFecha(this.comprobanteContableImportar.Cab_fecha);
 
                 String tipo = this.comprobanteContableImportar.Cab_tipo.Trim();
                 if (tipo != "")
@@ -2735,8 +2735,8 @@ namespace ModComprobantes
                         fecha = this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["Fecha"].ToString().Trim();
                         vencimiento = this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["Vencimiento"].ToString().Trim();
 
-                        if (fecha != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["Fecha"] = utiles.FechaToFormatoCG(fecha).ToShortDateString();
-                        if (vencimiento != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["Vencimiento"] = utiles.FechaToFormatoCG(vencimiento).ToShortDateString();
+                        if (fecha != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["Fecha"] = utiles.FormatoCGToFecha(fecha).ToShortDateString();
+                        if (vencimiento != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["Vencimiento"] = utiles.FormatoCGToFecha(vencimiento).ToShortDateString();
 
                         if (this.extendido)
                         {
@@ -2744,9 +2744,9 @@ namespace ModComprobantes
                             USF1 = this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["CampoUserFecha1"].ToString().Trim();
                             USF2 = this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["CampoUserFecha2"].ToString().Trim();
 
-                            if (fechaServ != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["FechaServIVA"] = utiles.FechaToFormatoCG(fechaServ).ToShortDateString();
-                            if (USF1 != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["CampoUserFecha1"] = utiles.FechaToFormatoCG(USF1).ToShortDateString();
-                            if (USF2 != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["CampoUserFecha2"] = utiles.FechaToFormatoCG(USF2).ToShortDateString();
+                            if (fechaServ != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["FechaServIVA"] = utiles.FormatoCGToFecha(fechaServ).ToShortDateString();
+                            if (USF1 != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["CampoUserFecha1"] = utiles.FormatoCGToFecha(USF1).ToShortDateString();
+                            if (USF2 != "") this.dgDetalle.dsDatos.Tables["Detalle"].Rows[i]["CampoUserFecha2"] = utiles.FormatoCGToFecha(USF2).ToShortDateString();
                         }
 
                         //QUITAR COMENTARIO
@@ -3132,7 +3132,7 @@ namespace ModComprobantes
                     }
                     else
                     {
-                        result = utiles.FechaToFormatoCG(fecha).ToShortDateString();
+                        result = utiles.FormatoCGToFecha(fecha).ToShortDateString();
                     }
                 }
             }
