@@ -312,6 +312,7 @@
             this.dgDetalle.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDetalle_CellEnter);
             this.dgDetalle.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDetalle_CellValidated);
             this.dgDetalle.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DgDetalle_CellValidating);
+            this.dgDetalle.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDetalle_CellValueChanged);
             this.dgDetalle.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgDetalle_ColumnHeaderMouseClick);
             this.dgDetalle.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DgDetalle_ColumnWidthChanged);
             this.dgDetalle.CurrentCellChanged += new System.EventHandler(this.DgDetalle_CurrentCellChanged);
@@ -510,7 +511,7 @@
             this.txtNoComprobante.Padding = new System.Windows.Forms.Padding(3);
             this.txtNoComprobante.Size = new System.Drawing.Size(76, 25);
             this.txtNoComprobante.TabIndex = 60;
-            this.txtNoComprobante.Enter += new System.EventHandler(this.TxtNoComprobante_Enter);
+            this.txtNoComprobante.Enter += new System.EventHandler(this.TxtDescripcion_Enter);
             this.txtNoComprobante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNoComprobante_KeyPress);
             // 
             // lblNoComprobante
@@ -834,6 +835,7 @@
             this.Controls.Add(this.radPanelAcciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCompContAltaEdita";
+            // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;

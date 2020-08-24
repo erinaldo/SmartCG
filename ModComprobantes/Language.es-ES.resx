@@ -680,7 +680,7 @@
     <value>Biblioteca</value>
   </data>
   <data name="lblConfDelLineasDetalle" xml:space="preserve">
-    <value>Se van a elimimar las líneas de detalle. ¿Desea continuar?</value>
+    <value>Se van a eliminar las líneas de detalle. ¿Desea continuar?</value>
   </data>
   <data name="lblCompContValidando" xml:space="preserve">
     <value>Validando</value>

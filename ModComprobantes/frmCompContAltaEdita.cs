@@ -92,6 +92,7 @@ namespace ModComprobantes
         private string tipo_ant;
         private string nocomp_ant;
         private string fecha_ant;
+        
 
         //TextBox que se utiliza en el DataGridView de Detalles para validar que las monedas y el importe sean sólo numéricos
         TextBox tb;
@@ -110,6 +111,7 @@ namespace ModComprobantes
         private bool gridChange = false;
         private bool dGrabar = false;
         private bool dNoPreguntar = false;
+        private bool gridCambiada = false;
         private DataTable dtClase;
 
         private DataTable dtRevertir;
@@ -590,7 +592,8 @@ namespace ModComprobantes
             this.dgDetalle.BorrarDetalles();
             this.dgDetalle.Refresh();
         }
-        
+
+   
         private void FrmCompContAltaEdita_FormClosing(object sender, FormClosingEventArgs e)
         {
             bool cerrarForm = true;
@@ -610,15 +613,15 @@ namespace ModComprobantes
                 }
                 else
                 {
-                    if (cmbCompania != this.cmbCompania.Tag.ToString() ||
-                        this.txtMaskAAPP.Text != this.txtMaskAAPP.Tag.ToString() ||
+                    if (cmbCompania != compania_ant ||
+                        this.txtMaskAAPP.Text != aapp_ant ||
                         this.dateTimePickerFecha.Value != Convert.ToDateTime(this.dateTimePickerFecha.Tag) ||
-                        cmbTipo != this.cmbTipo.Tag.ToString() ||
-                        this.txtNoComprobante.Text != this.txtNoComprobante.Tag.ToString() ||
+                        cmbTipo != tipo_ant ||
+                        this.txtNoComprobante.Text != nocomp_ant ||
                         cmbClase != this.cmbClase.Tag.ToString() ||
                         this.txtTasa.Text != this.txtTasa.Tag.ToString() ||
                         this.txtDescripcion.Text != this.txtDescripcion.Tag.ToString() ||
-                        this.gridChange)
+                        this.gridCambiada)
                     {
                         preguntar = true;
                     }
@@ -632,6 +635,8 @@ namespace ModComprobantes
                     {
                         this.radButtonGrabar.PerformClick();
                         e.Cancel = false;
+                        this.gridCambiada = false;
+                        dNoPreguntar = true;
                     }
                     else if (result == DialogResult.Cancel)
                     {
@@ -966,6 +971,8 @@ namespace ModComprobantes
             if (celdaActiva != null)
             {
                 this.gridChange = true;
+                this.gridCambiada = true;
+
 
                 string columnName = tgGridDetalles.Columns[celdaActiva.ColumnIndex].Name;
                 switch (columnName)
@@ -3230,6 +3237,8 @@ namespace ModComprobantes
 
                 //Actualizar el listado de comprobantes del formulario frmCompContLista
                 this.ActualizarFormularioListaComprobantes();
+                gridCambiada = false;
+                dNoPreguntar = true;
             }
             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
         }
@@ -3792,6 +3801,8 @@ namespace ModComprobantes
                 }
 
                 int registros = GlobalVar.ConexionCG.ExecuteNonQuery(query, GlobalVar.ConexionCG.GetConnectionValue);
+                gridCambiada = false;
+                dNoPreguntar = true;
             }
             catch (Exception ex)
             {
@@ -5916,7 +5927,7 @@ namespace ModComprobantes
                 //    if (!row.IsNewRow) this.Rows.Remove(row);
                 if (dgDetalle.IsCurrentCellInEditMode == false)
                 {
-                    if (this.edicionLote || this.edicionLoteError || this.edicionComprobanteGLB01 || Batch)
+                    if (this.edicionLote || this.edicionLoteError || this.edicionComprobanteGLB01)
                     {
                         if (this.dgDetalle.SelectedRows.Count == 1 && TodaFilaEnBlanco(this.dgDetalle.dsDatos.Tables["Detalle"], 0))
                         {
@@ -6312,6 +6323,8 @@ namespace ModComprobantes
                             if (this.extendido == true) result = comp.InsertarDetalleComprobanteExtGLBX1();
                         }
                     }
+                    gridCambiada = false;
+                    dNoPreguntar = true;
                 }
                 
                 //result = this.ActualizarComprobanteTablaDetalleGLB01(codCompania, saappInicial, codTipoInicial, noCompInicial);
@@ -6489,19 +6502,23 @@ namespace ModComprobantes
                     return;
                 }
             }
-                if (grabar)
+            
+            if (grabar)
             {
                 // Actualizar valores de tag para que no pregunte por cambios al salir
-                this.cmbCompania.Tag = this.cmbCompania.SelectedValue.ToString();
-                this.txtMaskAAPP.Tag = this.txtMaskAAPP.Text.ToString();
-                this.dateTimePickerFecha.Tag = Convert.ToDateTime(this.dateTimePickerFecha.Value);
-                if (this.cmbTipo.SelectedValue == null) this.cmbTipo.Tag = "";
-                else this.cmbTipo.Tag = this.cmbTipo.SelectedValue.ToString();
-                this.txtNoComprobante.Tag = this.txtNoComprobante.Text.ToString();
-                this.cmbClase.Tag = this.cmbClase.SelectedValue.ToString();
-                this.txtTasa.Tag = this.txtTasa.Text.ToString();
-                this.txtDescripcion.Tag = this.txtDescripcion.Text.ToString();
-                this.gridChange = false;
+                if (!gridCambiada)
+                {
+                    this.cmbCompania.Tag = this.cmbCompania.SelectedValue.ToString();
+                    this.txtMaskAAPP.Tag = this.txtMaskAAPP.Text.ToString();
+                    this.dateTimePickerFecha.Tag = Convert.ToDateTime(this.dateTimePickerFecha.Value);
+                    if (this.cmbTipo.SelectedValue == null) this.cmbTipo.Tag = "";
+                    else this.cmbTipo.Tag = this.cmbTipo.SelectedValue.ToString();
+                    this.txtNoComprobante.Tag = this.txtNoComprobante.Text.ToString();
+                    this.cmbClase.Tag = this.cmbClase.SelectedValue.ToString();
+                    this.txtTasa.Tag = this.txtTasa.Text.ToString();
+                    this.txtDescripcion.Tag = this.txtDescripcion.Text.ToString();
+                    this.gridChange = false;
+                }
 
                 if (this.edicionComprobanteGLB01 && this.comprobanteSoloConsulta)
                 {
@@ -7364,6 +7381,15 @@ private void RadButtonExportar_Click(object sender, EventArgs e)
                 ArgSel(new ActualizaListaComprobantesArgs(elementosSel));
             }
         }
+
+        private void dgDetalle_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            string msg = String.Format(
+        "Cell at row {0}, column {1} value changed",
+        e.RowIndex, e.ColumnIndex);
+            MessageBox.Show(msg, "Cell Value Changed");
+        }
+
         #endregion
 
         #endregion
