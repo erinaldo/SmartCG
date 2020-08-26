@@ -391,9 +391,9 @@ namespace ModComprobantes
                 aapp_ant = this.txtMaskAAPP.Value.ToString();
                 nocomp_ant = this.comprobanteContableImportar.Cab_noComprobante;
                 DateTime fecha_int = Convert.ToDateTime(this.dateTimePickerFecha.Text);
-                string fecha_Seditar = utiles.FechaToFormatoCG(fecha_int, false, 6).ToString().Trim();
-                fecha_ant = fecha_Seditar.Substring(4, 2) + "/" + fecha_Seditar.Substring(2, 2) +
-                            "/" + fecha_Seditar.Substring(0, 2);
+                string fecha_Seditar = comprobanteContableImportar.Cab_fecha;
+                fecha_ant = fecha_Seditar.Substring(6, 2) + "/" + fecha_Seditar.Substring(4, 2) +
+                            "/" + fecha_Seditar.Substring(2, 2);
                 //Calcular los totales
                 this.CalcularTotales();
 

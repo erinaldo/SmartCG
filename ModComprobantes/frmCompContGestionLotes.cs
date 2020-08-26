@@ -1684,7 +1684,8 @@ namespace ModComprobantes
 
                         string fecha = "";
                         //if (this.bbddDB2) fecha += row.Cells["AÑOEWS"].Value.ToString().Trim();
-                        if (this.bbddDB2) fecha += row.Cells[9].Value.ToString().Trim();
+                        //if (this.bbddDB2) fecha += row.Cells[9].Value.ToString().Trim();
+                        if (this.bbddDB2) fecha += row.Cells[5].Value.ToString().Substring(6,2);
                         else fecha += row.Cells["AVOEWS"].Value.ToString().Trim();
 
                         if (fecha == "") fecha += "00";
@@ -1700,8 +1701,10 @@ namespace ModComprobantes
                             fecha = anoOrigenInt.ToString();
                         }
 
-                        fecha += row.Cells["MESEWS"].Value.ToString().PadLeft(2, '0');
-                        fecha += row.Cells["DIAEWS"].Value.ToString().PadLeft(2, '0');
+                        //fecha += row.Cells["MESEWS"].Value.ToString().PadLeft(2, '0');
+                        fecha += row.Cells[5].Value.ToString().Substring(3,2);
+                        //fecha += row.Cells["DIAEWS"].Value.ToString().PadLeft(2, '0');
+                        fecha += row.Cells[5].Value.ToString().Substring(0, 2);
 
                         comprobante.Cab_fecha = fecha;
                         comprobante.Cab_clase = row.Cells["TVOUWS"].Value.ToString();
