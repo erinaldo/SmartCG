@@ -513,7 +513,7 @@ namespace ModComprobantes
                                     compania = row.Cells["CCIAWS"].Value.ToString();
                                     if (tipoBaseDatosCG == "DB2")
                                         //ano = row.Cells["AÑOCWS"].Value.ToString();
-                                        ano = row.Cells[2].Value.ToString();
+                                        ano = row.Cells[1].Value.ToString().Substring(0,2);
                                     else
                                         ano = row.Cells["AVOCWS"].Value.ToString();
                                     //periodo = row.Cells["LAPSWS"].Value.ToString().Trim();
