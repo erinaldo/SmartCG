@@ -625,7 +625,7 @@ namespace ModComprobantes
                     {
                         preguntar = true;
                     }
-                }
+                } 
                 if (!dNoPreguntar && preguntar == true)
                 {
                     string mensaje = "¿Desea guardar los cambios efectuados?";  //Falta traducir

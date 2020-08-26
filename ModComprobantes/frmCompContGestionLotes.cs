@@ -1748,7 +1748,7 @@ namespace ModComprobantes
                         frmCompCont.Show();
                     }
                 }
-            }
+            } 
             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
 
             return (result);
