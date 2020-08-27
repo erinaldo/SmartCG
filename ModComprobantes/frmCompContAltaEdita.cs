@@ -624,7 +624,7 @@ namespace ModComprobantes
                         this.gridCambiada)
                     {
                         preguntar = true;
-                    }
+                    } 
                 } 
                 if (!dNoPreguntar && preguntar == true)
                 {
