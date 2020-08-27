@@ -1204,7 +1204,7 @@ namespace ModComprobantes
                         DialogResult resultDialog = RadMessageBox.Show(mensaje, this.LP.GetText("lblConfirm", "Confirmación"), MessageBoxButtons.YesNo);
                         if (resultDialog == DialogResult.No) transfComp = false;
                         else transfComp = true;
-
+ 
                     }
                     else transfComp = true;
 
