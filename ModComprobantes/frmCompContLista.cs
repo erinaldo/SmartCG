@@ -62,25 +62,6 @@ namespace ModComprobantes
         {
             InitializeComponent();
 
-            radCollapsiblePanelBuscadorExpandedHeight = this.radCollapsiblePanelBuscador.Height;
-            this.radCollapsiblePanelBuscador.IsExpanded = false;
-            this.radCollapsiblePanelBuscador.EnableAnimation = false;
-
-            this.txtMaskAAPP.AutoSize = false;
-            this.txtMaskAAPP.Size = new Size(this.txtMaskAAPP.Width, 30);
-
-            this.txtMaskFechaDesde.AutoSize = false;
-            this.txtMaskFechaDesde.Size = new Size(this.txtMaskFechaDesde.Width, 30);
-
-            this.txtMaskFechaHasta.AutoSize = false;
-            this.txtMaskFechaHasta.Size = new Size(this.txtMaskFechaHasta.Width, 30);
-
-            this.cmbCompania.AutoSize = false;
-            this.cmbCompania.Size = new Size(this.cmbCompania.Width, 30);
-
-            this.cmbTipo.AutoSize = false;
-            this.cmbTipo.Size = new Size(this.cmbTipo.Width, 30);
-
             this.gbLote.ElementTree.EnableApplicationThemeName = false;
             this.gbLote.ThemeName = "ControlDefault";
 
@@ -180,179 +161,6 @@ namespace ModComprobantes
         private void DgComprobantes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.EditarComprobante(this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow));
-        }
-
-        private void BtnTodos_Click(object sender, EventArgs e)
-        {
-            this.cmbCompania.Text = "";
-            this.cmbCompania.SelectedIndex = -1;
-            this.txtMaskAAPP.Value = null;
-            this.cmbTipo.Text = "";
-            this.cmbTipo.SelectedIndex = -1;
-            this.txtMaskFechaDesde.Text = "";
-            this.txtMaskFechaHasta.Text = "";
-            this.txtDescripcionBusador.Text = "";
-
-            this.chkNoTransferidos.Checked = false;
-            this.chkTransferidos.Checked = false;
-
-            this.dataTable.DefaultView.RowFilter = "";
-
-            this.radCollapsiblePanelBuscador.Collapse();
-
-            this.radGridViewComprobantes.Visible = true;
-            this.Refresh();
-        }
-
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //Filtrar la Grid
-                string filtro = "";
-                string compania = "";
-                string aapp = "";
-                string tipo = "";
-                string fechaDesde = "";
-                string fechaHasta = "";
-                string descripcion = "";
-
-                compania = this.cmbCompania.Text.Trim();
-                if (compania.Length > 2) compania = compania.Substring(0, 2);
-
-                tipo = this.cmbTipo.Text.Trim();
-                if (tipo.Length > 2) tipo = tipo.Substring(0, 2);
-
-                string errorTitulo = this.LP.GetText("errValTitulo", "Error");
-                DateTime dt;
-
-                this.txtMaskFechaDesde.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-                fechaDesde = this.txtMaskFechaDesde.Value.ToString();
-                this.txtMaskFechaDesde.TextMaskFormat = MaskFormat.IncludeLiterals;
-                if (fechaDesde != "")
-                {
-                    fechaDesde = this.txtMaskFechaDesde.Text.Trim();
-                    try
-                    {
-                        dt = Convert.ToDateTime(fechaDesde);
-                    }
-                    catch(Exception ex)
-                    {
-                        Log.Error(Utiles.CreateExceptionString(ex));
-
-                        RadMessageBox.Show(this.LP.GetText("lblErrFechaDebeFormato", "La fecha desde no tiene un formato válido"), errorTitulo);
-                        this.txtMaskFechaDesde.Focus();
-                        return;
-                    }
-                }
-
-                this.txtMaskFechaHasta.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-                fechaHasta = this.txtMaskFechaHasta.Value.ToString();
-                this.txtMaskFechaHasta.TextMaskFormat = MaskFormat.IncludeLiterals;
-                if (fechaHasta != "")
-                {
-                    fechaHasta = this.txtMaskFechaHasta.Text.Trim();
-                    try
-                    {
-                        dt = Convert.ToDateTime(fechaHasta);
-                    }
-                    catch(Exception ex)
-                    {
-                        Log.Error(Utiles.CreateExceptionString(ex));
-
-                        RadMessageBox.Show(this.LP.GetText("lblErrFechaHastaFormato", "La fecha hasta no tiene un formato válido"), errorTitulo);
-                        this.txtMaskFechaHasta.Focus();
-                        return;
-                    }
-                }
-
-                descripcion = this.txtDescripcionBusador.Text.Trim();
-
-                if (compania != "")
-                {
-                    filtro = string.Format("compania LIKE '%{0}%'", compania);
-                }
-
-                this.txtMaskAAPP.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-                aapp = this.txtMaskAAPP.Value.ToString();
-                this.txtMaskAAPP.TextMaskFormat = MaskFormat.IncludeLiterals;
-                if (aapp != "")
-                {
-                    if (filtro != "") filtro += " AND ";
-                    filtro += string.Format("aapp LIKE '%{0}%'", aapp);
-                }
-
-                if (tipo != "")
-                {
-                    if (filtro != "") filtro += " AND ";
-                    filtro += string.Format("tipo LIKE '%{0}%'", tipo);
-                }
-
-                if (fechaDesde != "")
-                {
-                    if (fechaHasta != "")
-                    {
-                        //fecha entre desde y hasta
-                        if (filtro != "") filtro += " AND ";
-                        filtro += string.Format("fecha >= '{0}' AND fecha <= '{1}'", fechaDesde, fechaHasta);
-                    }
-                    else
-                    {
-                        //fecha mayor o igual que desde
-                        if (filtro != "") filtro += " AND ";
-                        filtro += string.Format("fecha >= '{0}'", fechaDesde);
-                    }
-                }
-                else
-                    if (fechaHasta != "")
-                    {
-                        //fecha menor o igual que hasta
-                        if (filtro != "") filtro += " AND ";
-                        filtro += string.Format("fecha <= '{0}'", fechaHasta);
-                    }
-
-                if (descripcion != "")
-                {
-                    if (filtro != "") filtro += " AND ";
-                    filtro += string.Format("descripcion LIKE '%{0}%'", descripcion);
-                }
-
-                if (chkTransferidos.Checked && chkNoTransferidos.Checked)
-                {
-                    if (filtro != "") filtro += " AND ";
-                    filtro += "transferido = 1 OR transferido = 0";
-                }
-                else
-                {
-                    if (chkNoTransferidos.Checked)
-                    {
-                        if (filtro != "") filtro += " AND ";
-                        filtro += "transferido = 0";
-                    }
-                    else if (chkTransferidos.Checked)
-                    {
-                        if (filtro != "") filtro += " AND ";
-                        filtro += "transferido = 1";
-                    }
-                }
-
-                this.dataTable.DefaultView.RowFilter = filtro;
-                this.radGridViewComprobantes.Refresh();
-
-                if (this.dataTable.DefaultView.Count == 0 && filtro != "")
-                {
-                    this.radGridViewComprobantes.Visible = false;
-
-                    string error = this.LP.GetText("errValTitulo", "Error");
-                    RadMessageBox.Show(this.LP.GetText("lblErrNoComp", "No existen comprobantes para el criterio de búsqueda utilizado"), error);
-                    this.cmbCompania.Select();
-                }
-                else
-                {
-                    this.radGridViewComprobantes.Visible = true;
-                }
-            }
-            catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
         }
 
         private void BtnTransferir_Click(object sender, EventArgs e)
@@ -500,8 +308,16 @@ namespace ModComprobantes
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            this.radGridViewComprobantes.Height = 480;
+            
+            //this.radGridViewComprobantes.Height = 480;
             this.gbTransferirComp.Visible = false;
+            utiles.ButtonEnabled(ref this.radButtonTransferir, true);
+            //this.Refresh();
+
+            this.radPanelApp.Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom);
+            this.radPanelApp.Height = this.radPanelApp.Height + this.gbTransferirComp.Height;
+            //this.radPanelApp.Refresh();
+            //this.Refresh();
         }
 
         private void RbGenerarLoteAdiciona_CheckedChanged(object sender, EventArgs e)
@@ -583,26 +399,6 @@ namespace ModComprobantes
             utiles.ButtonMouseLeave(ref this.btnCancelar);
         }
 
-        private void BtnBuscar_MouseEnter(object sender, EventArgs e)
-        {
-            utiles.ButtonMouseEnter(ref this.btnBuscar);
-        }
-
-        private void BtnBuscar_MouseLeave(object sender, EventArgs e)
-        {
-            utiles.ButtonMouseLeave(ref this.btnBuscar);
-        }
-
-        private void BtnTodos_MouseEnter(object sender, EventArgs e)
-        {
-            utiles.ButtonMouseEnter(ref this.btnTodos);
-        }
-
-        private void BtnTodos_MouseLeave(object sender, EventArgs e)
-        {
-            utiles.ButtonMouseLeave(ref this.btnTodos);
-        }
-
         private void RadButtonNuevo_MouseEnter(object sender, EventArgs e)
         {
             utiles.ButtonMouseEnter(ref this.radButtonNuevo);
@@ -655,33 +451,12 @@ namespace ModComprobantes
 
         private void RadCollapsiblePanelBuscador_Collapsed(object sender, EventArgs e)
         {
-            if (primeraLlamada) primeraLlamada = false;
-            else
-            {
-                this.radGridViewComprobantes.Location = gridInfoLocation;
-                //Es necesario volver asignar el mismo valor porque en la primera ejecución no lo asigna bien (resta 54 al valor inicial)
-                this.radGridViewComprobantes.Location = gridInfoLocation;
 
-                this.radGridViewComprobantes.Size = gridInfoSize;
-
-                if (this.gbTransferirComp.Visible) this.gbTransferirComp.Location = new Point(this.gbTransferirComp.Location.X, this.radGridViewComprobantes.Location.Y + this.radGridViewComprobantes.Size.Height + 10);
-
-                this.radGridViewComprobantes.Focus();
-                //this.radGridViewAutSobreElementos.Size = new Size(this.radGridViewAutSobreElementos.Size.Width, this.radGridViewAutSobreElementos.Size.Height + radCollapsiblePanelBuscadorExpandedHeight);
-            }
         }
 
         private void RadCollapsiblePanelBuscador_Expanded(object sender, EventArgs e)
         {
-            if (this.radGridViewComprobantes.Visible)
-            {
-                this.radGridViewComprobantes.Location = new Point(this.radGridViewComprobantes.Location.X, gridInfoLocation.Y + radCollapsiblePanelBuscadorExpandedHeight);
-                if (this.gbTransferirComp.Visible) this.gbTransferirComp.Location = new Point(this.gbTransferirComp.Location.X, this.radGridViewComprobantes.Location.Y + this.radGridViewComprobantes.Size.Height + 10);
 
-                this.cmbCompania.Focus();
-                this.cmbCompania.Select();
-                this.radGridViewComprobantes.Refresh();
-            }
         }
 
         private void RbGenerarLoteAdiciona_Click(object sender, EventArgs e)
@@ -691,7 +466,8 @@ namespace ModComprobantes
 
         private void RadGridViewComprobantes_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
-            this.EditarComprobante(this.radGridViewComprobantes.CurrentRow.Index);
+            //this.EditarComprobante(this.radGridViewComprobantes.CurrentRow.Index);
+            this.EditarComprobante(this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow));
         }
 
         private void RadGridViewComprobantes_DataBindingComplete(object sender, GridViewBindingCompleteEventArgs e)
@@ -707,6 +483,28 @@ namespace ModComprobantes
         private void FrmCompContLista_FormClosing(object sender, FormClosingEventArgs e)
         {
             Log.Info("FIN Lista de comprobantes contables");
+        }
+
+        private void radGridViewComprobantes_Leave(object sender, EventArgs e)
+        {
+            utiles.guardarLayout(this.Name, ref radGridViewComprobantes);
+        }
+
+        private void radButtonActualizarLista_Click(object sender, EventArgs e)
+        {
+            //Volver a cargar la lista de comprobantes
+            this.dataTable.Rows.Clear();
+            this.FillDataGrid();
+        }
+
+        private void radButtonActualizarLista_MouseEnter(object sender, EventArgs e)
+        {
+            utiles.ButtonMouseEnter(ref this.radButtonActualizarLista);
+        }
+
+        private void radButtonActualizarLista_MouseLeave(object sender, EventArgs e)
+        {
+            utiles.ButtonMouseLeave(ref this.radButtonActualizarLista);
         }
         #endregion
 
@@ -805,6 +603,7 @@ namespace ModComprobantes
                     catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }   
                 }
 
+                /*
                 if (this.radGridViewComprobantes.Rows.Count > 0)    
                 {
                     this.radGridViewComprobantes.Columns["extendido"].IsVisible = false;
@@ -813,6 +612,43 @@ namespace ModComprobantes
                         this.radGridViewComprobantes.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
                     this.radGridViewComprobantes.MasterTemplate.BestFitColumns();
                     this.radGridViewComprobantes.Rows[0].IsCurrent = true;
+                }
+                */
+
+                if (this.radGridViewComprobantes.Rows.Count > 0)
+                {
+                    for (int i = 0; i < this.radGridViewComprobantes.Columns.Count; i++)
+                    {
+                        this.radGridViewComprobantes.Columns["extendido"].IsVisible = false;
+                        this.radGridViewComprobantes.Columns["revertir"].IsVisible = false;
+
+                        this.radGridViewComprobantes.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
+                        //this.radGridViewInfo.Columns[i].BestFit();
+                        this.radGridViewComprobantes.Columns[i].Width = 600;
+                    }
+
+                    this.radGridViewComprobantes.TableElement.GridViewElement.GroupPanelElement.Text = "Arrastre una columna aquí para agrupar - Pulse ctrl+F para activar la búsqueda";
+                    this.radGridViewComprobantes.AllowSearchRow = true;
+                    this.radGridViewComprobantes.MasterView.TableSearchRow.IsVisible = false;
+                    this.radGridViewComprobantes.TableElement.SearchHighlightColor = Color.Aqua;
+                    this.radGridViewComprobantes.AllowEditRow = false;
+                    this.radGridViewComprobantes.EnableFiltering = true;
+                    //this.radGridViewInfo.MasterView.TableFilteringRow.IsVisible = false;
+
+                    //this.radGridViewInfo.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+                    //this.radGridViewInfo.MasterTemplate.BestFitColumns();
+                    this.radGridViewComprobantes.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
+
+                    if (this.radGridViewComprobantes.Groups.Count == 0) this.radGridViewComprobantes.Rows[0].IsCurrent = true;
+                    this.radGridViewComprobantes.Focus();
+                    this.radGridViewComprobantes.Select();
+                    //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, this.radPanelApp.Size.Height - this.radCollapsiblePanelDataFilter.Size.Height - 3);
+                    //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, 609);
+
+                    //cargar layout
+                    utiles.cargarLayout(this.Name, ref radGridViewComprobantes);
+
+                    this.radGridViewComprobantes.Refresh();
                 }
             }
             catch (Exception ex)
@@ -870,16 +706,7 @@ namespace ModComprobantes
         /// <param name="valor">true -> activa los controles  false -> desactiva los controles</param>
         private void ActivarDesactivarBuscador(bool valor)
         {
-            this.radLabelCompania.Visible = valor;
-            this.cmbCompania.Visible = valor;
-            this.lblAAPP.Visible = valor;
-            this.txtMaskAAPP.Visible = valor;
-            this.lblTipo.Visible = valor;
-            this.cmbTipo.Visible = valor;
-            this.lblFecha.Visible = valor;
-            this.txtMaskFechaDesde.Visible = valor;
-            this.txtMaskFechaHasta.Visible = valor;
-            this.btnBuscar.Visible = valor;
+
         }
 
         /// <summary>
@@ -913,7 +740,7 @@ namespace ModComprobantes
                     Compania = this.radGridViewComprobantes.Rows[rowIndex].Cells["compania"].Value.ToString(),
                     FrmPadre = this
                 };
-                frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
+                //SMR - FALTA AJUSTAR RUTINA, VA MAL!!! frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
                 frmAltaEdita.Show(this);
 
                 // Set cursor as default arrow
@@ -926,15 +753,7 @@ namespace ModComprobantes
         /// </summary>
         private void FillCompanias()
         {
-            string query = "Select CCIAMG, NCIAMG From " + GlobalVar.PrefijoTablaCG + "GLM01 Order by CCIAMG";
-            string result = this.FillComboBox(query, "CCIAMG", "NCIAMG", ref this.cmbCompania, true, -1, false);
-
-            if (result != "")
-            {
-                string error = this.LP.GetText("errValTitulo", "Error");
-                string mensaje = this.LP.GetText("errGetCompanias", "Error obteniendo las compañías") + " (" + result + ")";
-                RadMessageBox.Show(mensaje, error);
-            }
+            
         }
 
         /// <summary>
@@ -942,18 +761,7 @@ namespace ModComprobantes
         /// </summary>
         private void FillTiposComprobantes()
         {
-            // desde Gestion de comprobantes,
-            string query = "Select TIVOTV, NOMBTV From " + GlobalVar.PrefijoTablaCG + "GLT06 ";
-            query += " WHERE CODITV = '0'";
-            query += "Order by TIVOTV";
-            string result = this.FillComboBox(query, "TIVOTV", "NOMBTV", ref this.cmbTipo, true, -1, false);
-
-            if (result != "")
-            {
-                string error = this.LP.GetText("errValTitulo", "Error");
-                string mensaje = this.LP.GetText("errGetTiposComp", "Error obteniendo los tipos de comprobantes") + " (" + result + ")";
-                RadMessageBox.Show(mensaje, error);
-            }
+            
         }
 
         /// <summary>
@@ -967,7 +775,8 @@ namespace ModComprobantes
                 FrmPadre = this,
                 VentanaFlotante = true
             };
-            frmImportarDeFinanzas.Show();
+            //frmImportarDeFinanzas.Show();
+            frmImportarDeFinanzas.ShowDialog(this);
 
             //Reacargar los comprobantes
             //Volver a cargar la lista de comprobantes
@@ -1044,11 +853,18 @@ namespace ModComprobantes
         /// </summary>
         private void TransferirVisualizarControles()
         {
-            if (this.radCollapsiblePanelBuscador.IsExpanded) this.radCollapsiblePanelBuscador.Collapse();
-            this.radGridViewComprobantes.Height = gridInfoSize.Height - this.gbTransferirComp.Height;
-            this.gbTransferirComp.Location = new Point(this.gbTransferirComp.Location.X, this.radGridViewComprobantes.Location.Y + this.radGridViewComprobantes.Size.Height + 10);
+            this.radPanelApp.Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right);
+            this.radPanelApp.Height = this.radPanelApp.Height - this.gbTransferirComp.Height;
+            //this.radPanelApp.Refresh();
+
+            //this.radGridViewComprobantes.Height = gridInfoSize.Height - this.gbTransferirComp.Height;
+            this.gbTransferirComp.Location = new Point(this.gbTransferirComp.Location.X, this.radGridViewComprobantes.Location.Y + this.radGridViewComprobantes.Size.Height + 70);
             this.gbTransferirComp.Visible = true;
+            //this.Refresh();
+
             this.txtDescripcion.Focus();
+
+            utiles.ButtonEnabled(ref this.radButtonTransferir, false);
         }
 
         /// <summary>
@@ -1135,7 +951,8 @@ namespace ModComprobantes
             {
                 for (int i = 0; i < this.radGridViewComprobantes.SelectedRows.Count; i++)
                 {
-                    currentRow = this.radGridViewComprobantes.SelectedRows[i].Index;
+                    //currentRow = this.radGridViewComprobantes.SelectedRows[i].Index;
+                    currentRow = this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.SelectedRows[i]);
                     numComprobante = this.radGridViewComprobantes.Rows[currentRow].Cells["noComp"].Value.ToString();
 
                     if (numComprobante != "")
@@ -1193,7 +1010,8 @@ namespace ModComprobantes
                 bool transfComp = true;
                 for (int i = 0; i < this.radGridViewComprobantes.SelectedRows.Count; i++)
                 {
-                    currentRow = this.radGridViewComprobantes.SelectedRows[i].Index;
+                    //currentRow = this.radGridViewComprobantes.SelectedRows[i].Index;
+                    currentRow = this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.SelectedRows[i]);
 
                     revertir = this.radGridViewComprobantes.Rows[currentRow].Cells["revertir"].Value.ToString();
 
@@ -1700,7 +1518,7 @@ namespace ModComprobantes
                 Batch = true,
                 FrmPadre = this
             };
-            frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
+            //SMR - FALTA AJUSTAR RUTINA, VA MAL!!! frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
             frmAltaEdita.Show(this);
         }
         private void ActualizaListaComprobantes_ArgSel(frmCompContAltaEdita.ActualizaListaComprobantesArgs e)
@@ -1787,7 +1605,8 @@ namespace ModComprobantes
                 string error = this.LP.GetText("errValTitulo", "Error");
                 RadMessageBox.Show(this.LP.GetText("lblErrSelSoloUnComp", "Debe seleccionar un solo comprobante"), error);
             }
-            else this.EditarComprobante(this.radGridViewComprobantes.CurrentRow.Index);
+            //else this.EditarComprobante(this.radGridViewComprobantes.CurrentRow.Index);
+            else this.EditarComprobante(this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow));
         }
 
         /// <summary>

@@ -135,6 +135,7 @@
             this.radButtonExit.Size = new System.Drawing.Size(115, 39);
             this.radButtonExit.TabIndex = 191;
             this.radButtonExit.Text = "Cancelar";
+            this.radButtonExit.Click += new System.EventHandler(this.RadButtonExit_Click);
             this.radButtonExit.MouseEnter += new System.EventHandler(this.RadButtonExit_MouseEnter);
             this.radButtonExit.MouseLeave += new System.EventHandler(this.RadButtonExit_MouseLeave);
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButtonExit.GetChildAt(0))).Text = "Cancelar";

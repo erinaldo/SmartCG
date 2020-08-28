@@ -31,22 +31,6 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompExtContLista));
             this.radPanelApp = new Telerik.WinControls.UI.RadPanel();
-            this.radCollapsiblePanelBuscador = new Telerik.WinControls.UI.RadCollapsiblePanel();
-            this.chkNoTransferidos = new Telerik.WinControls.UI.RadCheckBox();
-            this.lblTipo = new Telerik.WinControls.UI.RadLabel();
-            this.lblFecha = new Telerik.WinControls.UI.RadLabel();
-            this.lblAAPP = new Telerik.WinControls.UI.RadLabel();
-            this.btnTodos = new Telerik.WinControls.UI.RadButton();
-            this.txtMaskAAPP = new Telerik.WinControls.UI.RadMaskedEditBox();
-            this.cmbTipo = new Telerik.WinControls.UI.RadDropDownList();
-            this.cmbCompania = new Telerik.WinControls.UI.RadDropDownList();
-            this.chkTransferidos = new Telerik.WinControls.UI.RadCheckBox();
-            this.radLabelCompania = new Telerik.WinControls.UI.RadLabel();
-            this.txtDescripcionBusador = new Telerik.WinControls.UI.RadTextBoxControl();
-            this.lblDescripcion = new Telerik.WinControls.UI.RadLabel();
-            this.txtMaskFechaHasta = new Telerik.WinControls.UI.RadMaskedEditBox();
-            this.btnBuscar = new Telerik.WinControls.UI.RadButton();
-            this.txtMaskFechaDesde = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.gbTransferirComp = new Telerik.WinControls.UI.RadGroupBox();
             this.btnCancelar = new Telerik.WinControls.UI.RadButton();
             this.btnTransferir = new Telerik.WinControls.UI.RadButton();
@@ -75,25 +59,9 @@
             this.radButtonEliminar = new Telerik.WinControls.UI.RadButton();
             this.radButtonEditar = new Telerik.WinControls.UI.RadButton();
             this.radButtonNuevo = new Telerik.WinControls.UI.RadButton();
+            this.radButtonActualizarLista = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).BeginInit();
             this.radPanelApp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radCollapsiblePanelBuscador)).BeginInit();
-            this.radCollapsiblePanelBuscador.PanelContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chkNoTransferidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblTipo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblFecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblAAPP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTodos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaskAAPP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTipo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbCompania)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkTransferidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabelCompania)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescripcionBusador)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblDescripcion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaskFechaHasta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaskFechaDesde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbTransferirComp)).BeginInit();
             this.gbTransferirComp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
@@ -128,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radButtonEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonNuevo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,194 +106,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radPanelApp.AutoScroll = true;
-            this.radPanelApp.Controls.Add(this.radCollapsiblePanelBuscador);
-            this.radPanelApp.Controls.Add(this.gbTransferirComp);
             this.radPanelApp.Controls.Add(this.lblNoHayComp);
             this.radPanelApp.Controls.Add(this.radGridViewComprobantes);
-            this.radPanelApp.Location = new System.Drawing.Point(164, 45);
+            this.radPanelApp.Location = new System.Drawing.Point(164, 61);
             this.radPanelApp.Name = "radPanelApp";
             this.radPanelApp.Size = new System.Drawing.Size(836, 490);
             this.radPanelApp.TabIndex = 189;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanelApp.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            // 
-            // radCollapsiblePanelBuscador
-            // 
-            this.radCollapsiblePanelBuscador.HeaderText = "Buscador";
-            this.radCollapsiblePanelBuscador.Location = new System.Drawing.Point(19, 0);
-            this.radCollapsiblePanelBuscador.Name = "radCollapsiblePanelBuscador";
-            // 
-            // radCollapsiblePanelBuscador.PanelContainer
-            // 
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.chkNoTransferidos);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.lblTipo);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.lblFecha);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.lblAAPP);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.btnTodos);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.txtMaskAAPP);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.cmbTipo);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.cmbCompania);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.chkTransferidos);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.radLabelCompania);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.txtDescripcionBusador);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.lblDescripcion);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.txtMaskFechaHasta);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.btnBuscar);
-            this.radCollapsiblePanelBuscador.PanelContainer.Controls.Add(this.txtMaskFechaDesde);
-            this.radCollapsiblePanelBuscador.PanelContainer.Size = new System.Drawing.Size(761, 98);
-            this.radCollapsiblePanelBuscador.Size = new System.Drawing.Size(763, 126);
-            this.radCollapsiblePanelBuscador.TabIndex = 61;
-            this.radCollapsiblePanelBuscador.Expanded += new System.EventHandler(this.RadCollapsiblePanelBuscador_Expanded);
-            this.radCollapsiblePanelBuscador.Collapsed += new System.EventHandler(this.RadCollapsiblePanelBuscador_Collapsed);
-            // 
-            // chkNoTransferidos
-            // 
-            this.chkNoTransferidos.Location = new System.Drawing.Point(648, 14);
-            this.chkNoTransferidos.Name = "chkNoTransferidos";
-            this.chkNoTransferidos.Size = new System.Drawing.Size(110, 19);
-            this.chkNoTransferidos.TabIndex = 40;
-            this.chkNoTransferidos.Text = "No Transferidos";
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.Location = new System.Drawing.Point(324, 9);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(30, 19);
-            this.lblTipo.TabIndex = 22;
-            this.lblTipo.Text = "Tipo";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.Location = new System.Drawing.Point(493, 9);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(38, 19);
-            this.lblFecha.TabIndex = 24;
-            this.lblFecha.Text = "Fecha";
-            // 
-            // lblAAPP
-            // 
-            this.lblAAPP.Location = new System.Drawing.Point(272, 9);
-            this.lblAAPP.Name = "lblAAPP";
-            this.lblAAPP.Size = new System.Drawing.Size(41, 19);
-            this.lblAAPP.TabIndex = 8;
-            this.lblAAPP.Text = "AA-PP";
-            // 
-            // btnTodos
-            // 
-            this.btnTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
-            this.btnTodos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnTodos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTodos.Location = new System.Drawing.Point(663, 69);
-            this.btnTodos.Name = "btnTodos";
-            this.btnTodos.Size = new System.Drawing.Size(80, 21);
-            this.btnTodos.TabIndex = 55;
-            this.btnTodos.Text = "Todos";
-            this.btnTodos.Click += new System.EventHandler(this.BtnTodos_Click);
-            this.btnTodos.MouseEnter += new System.EventHandler(this.BtnTodos_MouseEnter);
-            this.btnTodos.MouseLeave += new System.EventHandler(this.BtnTodos_MouseLeave);
-            // 
-            // txtMaskAAPP
-            // 
-            this.txtMaskAAPP.Location = new System.Drawing.Point(275, 29);
-            this.txtMaskAAPP.Mask = "00-00";
-            this.txtMaskAAPP.MaskType = Telerik.WinControls.UI.MaskType.Standard;
-            this.txtMaskAAPP.Name = "txtMaskAAPP";
-            this.txtMaskAAPP.Padding = new System.Windows.Forms.Padding(5);
-            this.txtMaskAAPP.Size = new System.Drawing.Size(45, 28);
-            this.txtMaskAAPP.TabIndex = 15;
-            this.txtMaskAAPP.TabStop = false;
-            this.txtMaskAAPP.Text = "__-__";
-            // 
-            // cmbTipo
-            // 
-            this.cmbTipo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cmbTipo.Location = new System.Drawing.Point(327, 29);
-            this.cmbTipo.MaxLength = 2;
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Padding = new System.Windows.Forms.Padding(3);
-            this.cmbTipo.Size = new System.Drawing.Size(163, 27);
-            this.cmbTipo.TabIndex = 20;
-            this.cmbTipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbTipo_KeyPress);
-            // 
-            // cmbCompania
-            // 
-            this.cmbCompania.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cmbCompania.Location = new System.Drawing.Point(11, 29);
-            this.cmbCompania.MaxLength = 2;
-            this.cmbCompania.Name = "cmbCompania";
-            this.cmbCompania.Padding = new System.Windows.Forms.Padding(3);
-            this.cmbCompania.Size = new System.Drawing.Size(258, 27);
-            this.cmbCompania.TabIndex = 10;
-            this.cmbCompania.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbCompania_KeyPress);
-            // 
-            // chkTransferidos
-            // 
-            this.chkTransferidos.Location = new System.Drawing.Point(648, 39);
-            this.chkTransferidos.Name = "chkTransferidos";
-            this.chkTransferidos.Size = new System.Drawing.Size(90, 19);
-            this.chkTransferidos.TabIndex = 45;
-            this.chkTransferidos.Text = "Transferidos";
-            // 
-            // radLabelCompania
-            // 
-            this.radLabelCompania.Location = new System.Drawing.Point(11, 9);
-            this.radLabelCompania.Name = "radLabelCompania";
-            this.radLabelCompania.Size = new System.Drawing.Size(62, 19);
-            this.radLabelCompania.TabIndex = 6;
-            this.radLabelCompania.Text = "Compañía";
-            // 
-            // txtDescripcionBusador
-            // 
-            this.txtDescripcionBusador.Location = new System.Drawing.Point(85, 61);
-            this.txtDescripcionBusador.Name = "txtDescripcionBusador";
-            this.txtDescripcionBusador.Padding = new System.Windows.Forms.Padding(5);
-            this.txtDescripcionBusador.Size = new System.Drawing.Size(405, 30);
-            this.txtDescripcionBusador.TabIndex = 35;
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.Location = new System.Drawing.Point(11, 67);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(70, 19);
-            this.lblDescripcion.TabIndex = 28;
-            this.lblDescripcion.Text = "Descripción";
-            // 
-            // txtMaskFechaHasta
-            // 
-            this.txtMaskFechaHasta.Location = new System.Drawing.Point(568, 29);
-            this.txtMaskFechaHasta.Mask = "00/00/0000";
-            this.txtMaskFechaHasta.MaskType = Telerik.WinControls.UI.MaskType.Standard;
-            this.txtMaskFechaHasta.Name = "txtMaskFechaHasta";
-            this.txtMaskFechaHasta.Padding = new System.Windows.Forms.Padding(5);
-            this.txtMaskFechaHasta.Size = new System.Drawing.Size(68, 28);
-            this.txtMaskFechaHasta.TabIndex = 30;
-            this.txtMaskFechaHasta.TabStop = false;
-            this.txtMaskFechaHasta.Text = "__/__/____";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBuscar.Location = new System.Drawing.Point(566, 69);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(80, 21);
-            this.btnBuscar.TabIndex = 50;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            this.btnBuscar.MouseEnter += new System.EventHandler(this.BtnBuscar_MouseEnter);
-            this.btnBuscar.MouseLeave += new System.EventHandler(this.BtnBuscar_MouseLeave);
-            // 
-            // txtMaskFechaDesde
-            // 
-            this.txtMaskFechaDesde.Location = new System.Drawing.Point(496, 29);
-            this.txtMaskFechaDesde.Mask = "00/00/0000";
-            this.txtMaskFechaDesde.MaskType = Telerik.WinControls.UI.MaskType.Standard;
-            this.txtMaskFechaDesde.Name = "txtMaskFechaDesde";
-            this.txtMaskFechaDesde.Padding = new System.Windows.Forms.Padding(5);
-            this.txtMaskFechaDesde.Size = new System.Drawing.Size(68, 28);
-            this.txtMaskFechaDesde.TabIndex = 25;
-            this.txtMaskFechaDesde.TabStop = false;
-            this.txtMaskFechaDesde.Text = "__/__/____";
             // 
             // gbTransferirComp
             // 
@@ -334,9 +122,9 @@
             this.gbTransferirComp.Controls.Add(this.gbTransferencia);
             this.gbTransferirComp.Controls.Add(this.gbLote);
             this.gbTransferirComp.HeaderText = " Transferir Comprobantes a Finanzas ";
-            this.gbTransferirComp.Location = new System.Drawing.Point(19, 327);
+            this.gbTransferirComp.Location = new System.Drawing.Point(164, 557);
             this.gbTransferirComp.Name = "gbTransferirComp";
-            this.gbTransferirComp.Size = new System.Drawing.Size(761, 163);
+            this.gbTransferirComp.Size = new System.Drawing.Size(790, 163);
             this.gbTransferirComp.TabIndex = 29;
             this.gbTransferirComp.TabStop = false;
             this.gbTransferirComp.Text = " Transferir Comprobantes a Finanzas ";
@@ -539,11 +327,9 @@
             // 
             // radGridViewComprobantes
             // 
-            this.radGridViewComprobantes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.radGridViewComprobantes.AutoScroll = true;
-            this.radGridViewComprobantes.Location = new System.Drawing.Point(19, 27);
+            this.radGridViewComprobantes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radGridViewComprobantes.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
@@ -554,10 +340,11 @@
             this.radGridViewComprobantes.MasterTemplate.EnableFiltering = true;
             this.radGridViewComprobantes.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridViewComprobantes.Name = "radGridViewComprobantes";
-            this.radGridViewComprobantes.Size = new System.Drawing.Size(758, 462);
+            this.radGridViewComprobantes.Size = new System.Drawing.Size(836, 490);
             this.radGridViewComprobantes.TabIndex = 190;
             this.radGridViewComprobantes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewComprobantes_CellDoubleClick);
             this.radGridViewComprobantes.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewComprobantes_DataBindingComplete);
+            this.radGridViewComprobantes.Leave += new System.EventHandler(this.radGridViewComprobantes_Leave);
             // 
             // radPanelMenuPath
             // 
@@ -584,6 +371,7 @@
             // 
             this.radPanelAcciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.radPanelAcciones.Controls.Add(this.radButtonActualizarLista);
             this.radPanelAcciones.Controls.Add(this.radButtonTransferir);
             this.radPanelAcciones.Controls.Add(this.radButtonImportar);
             this.radPanelAcciones.Controls.Add(this.radButtonEliminar);
@@ -600,7 +388,7 @@
             this.radButtonTransferir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
             this.radButtonTransferir.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.radButtonTransferir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButtonTransferir.Location = new System.Drawing.Point(13, 258);
+            this.radButtonTransferir.Location = new System.Drawing.Point(12, 317);
             this.radButtonTransferir.Name = "radButtonTransferir";
             this.radButtonTransferir.Size = new System.Drawing.Size(145, 44);
             this.radButtonTransferir.TabIndex = 28;
@@ -616,7 +404,7 @@
             this.radButtonImportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
             this.radButtonImportar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.radButtonImportar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButtonImportar.Location = new System.Drawing.Point(13, 199);
+            this.radButtonImportar.Location = new System.Drawing.Point(12, 257);
             this.radButtonImportar.Name = "radButtonImportar";
             this.radButtonImportar.Size = new System.Drawing.Size(145, 44);
             this.radButtonImportar.TabIndex = 27;
@@ -675,12 +463,27 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButtonNuevo.GetChildAt(0))).Text = "Nuevo";
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radButtonNuevo.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             // 
+            // radButtonActualizarLista
+            // 
+            this.radButtonActualizarLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
+            this.radButtonActualizarLista.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.radButtonActualizarLista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radButtonActualizarLista.Location = new System.Drawing.Point(12, 197);
+            this.radButtonActualizarLista.Name = "radButtonActualizarLista";
+            this.radButtonActualizarLista.Size = new System.Drawing.Size(145, 44);
+            this.radButtonActualizarLista.TabIndex = 107;
+            this.radButtonActualizarLista.Text = "Actualizar Lista";
+            this.radButtonActualizarLista.Click += new System.EventHandler(this.radButtonActualizarLista_Click);
+            ((Telerik.WinControls.UI.RadButtonElement)(this.radButtonActualizarLista.GetChildAt(0))).Text = "Actualizar Lista";
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radButtonActualizarLista.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            // 
             // frmCompExtContLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1378, 819);
+            this.ClientSize = new System.Drawing.Size(1394, 881);
+            this.Controls.Add(this.gbTransferirComp);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelMenuPath);
             this.Controls.Add(this.radPanelAcciones);
@@ -697,24 +500,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).EndInit();
             this.radPanelApp.ResumeLayout(false);
             this.radPanelApp.PerformLayout();
-            this.radCollapsiblePanelBuscador.PanelContainer.ResumeLayout(false);
-            this.radCollapsiblePanelBuscador.PanelContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radCollapsiblePanelBuscador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkNoTransferidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblTipo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblFecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblAAPP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTodos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaskAAPP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTipo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbCompania)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkTransferidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabelCompania)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescripcionBusador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblDescripcion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaskFechaHasta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaskFechaDesde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbTransferirComp)).EndInit();
             this.gbTransferirComp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
@@ -752,6 +537,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radButtonEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonNuevo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -759,22 +545,6 @@
 
         #endregion
         private Telerik.WinControls.UI.RadLabel lblNoHayComp;
-        private Telerik.WinControls.UI.RadLabel radLabelCompania;
-        private Telerik.WinControls.UI.RadDropDownList cmbCompania;
-        private Telerik.WinControls.UI.RadLabel lblAAPP;
-        private Telerik.WinControls.UI.RadMaskedEditBox txtMaskAAPP;
-        private Telerik.WinControls.UI.RadLabel lblTipo;
-        private Telerik.WinControls.UI.RadDropDownList cmbTipo;
-        private Telerik.WinControls.UI.RadLabel lblFecha;
-        private Telerik.WinControls.UI.RadMaskedEditBox txtMaskFechaDesde;
-        private Telerik.WinControls.UI.RadMaskedEditBox txtMaskFechaHasta;
-        private Telerik.WinControls.UI.RadButton btnBuscar;
-        //private System.Windows.Forms.GroupBox gbBuscador;
-        private Telerik.WinControls.UI.RadLabel lblDescripcion;
-        private Telerik.WinControls.UI.RadButton btnTodos;
-        private Telerik.WinControls.UI.RadTextBoxControl txtDescripcionBusador;
-        private Telerik.WinControls.UI.RadCheckBox chkTransferidos;
-        private Telerik.WinControls.UI.RadCheckBox chkNoTransferidos;
         private Telerik.WinControls.UI.RadGroupBox gbTransferirComp;
         private Telerik.WinControls.UI.RadGroupBox gbLote;
         private Telerik.WinControls.UI.RadTextBoxControl txtDescripcion;
@@ -802,7 +572,7 @@
         private Telerik.WinControls.UI.RadPanel radPanelMenuPath;
         private Telerik.WinControls.UI.RadLabel radLabelTitulo;
         private Telerik.WinControls.UI.RadPanel radPanelApp;
-        private Telerik.WinControls.UI.RadCollapsiblePanel radCollapsiblePanelBuscador;
         private Telerik.WinControls.UI.RadGridView radGridViewComprobantes;
+        private Telerik.WinControls.UI.RadButton radButtonActualizarLista;
     }
 }

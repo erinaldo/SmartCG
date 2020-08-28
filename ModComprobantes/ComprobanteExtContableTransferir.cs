@@ -99,7 +99,9 @@ namespace ModComprobantes
             try
             {
                 //Adicionar las columnas al DataTable
-                DataColumn col = new DataColumn("archivo", typeof(System.String));
+                DataColumn col = new DataColumn("transferido", typeof(System.Boolean));
+                dataTable.Columns.Add(col);
+                col = new DataColumn("archivo", typeof(System.String));
                 dataTable.Columns.Add(col);
                 col = new DataColumn("compania", typeof(System.String));
                 dataTable.Columns.Add(col);
@@ -118,8 +120,6 @@ namespace ModComprobantes
                 col = new DataColumn("haberML", typeof(System.String));
                 dataTable.Columns.Add(col);
                 col = new DataColumn("noMovimiento", typeof(System.String));
-                dataTable.Columns.Add(col);
-                col = new DataColumn("transferido", typeof(System.Boolean));
                 dataTable.Columns.Add(col);
             }
             catch(Exception ex)

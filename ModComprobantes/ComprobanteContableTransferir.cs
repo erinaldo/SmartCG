@@ -136,7 +136,9 @@ namespace ModComprobantes
             try
             {
                 //Adicionar las columnas al DataTable
-                DataColumn col = new DataColumn("archivo", typeof(System.String));
+                DataColumn col = new DataColumn("transferido", typeof(System.Boolean));
+                dataTable.Columns.Add(col);
+                col = new DataColumn("archivo", typeof(System.String));
                 dataTable.Columns.Add(col);
                 col = new DataColumn("compania", typeof(System.String));
                 dataTable.Columns.Add(col);
@@ -164,8 +166,8 @@ namespace ModComprobantes
                 dataTable.Columns.Add(col);
                 col = new DataColumn("noMovimiento", typeof(System.String));
                 dataTable.Columns.Add(col);
-                col = new DataColumn("transferido", typeof(System.Boolean));
-                dataTable.Columns.Add(col);
+                //col = new DataColumn("transferido", typeof(System.Boolean));
+                //dataTable.Columns.Add(col);
                 col = new DataColumn("extendido", typeof(System.Boolean));
                 dataTable.Columns.Add(col);
                 col = new DataColumn("revertir", typeof(System.String));
