@@ -308,6 +308,16 @@ namespace ModMantenimientos
                 e.CellElement.Font = newFont;
             }
         }
+        private void radGridViewCompFiscales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewCompFiscales.Rows.IndexOf(this.radGridViewCompFiscales.CurrentRow) >= 0)
+                {
+                    this.EditarCompFiscal();
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -828,8 +838,8 @@ namespace ModMantenimientos
             {
             }
         }
+
         #endregion
 
-        
     }
 }

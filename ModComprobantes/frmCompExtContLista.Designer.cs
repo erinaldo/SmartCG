@@ -31,6 +31,8 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompExtContLista));
             this.radPanelApp = new Telerik.WinControls.UI.RadPanel();
+            this.lblNoHayComp = new Telerik.WinControls.UI.RadLabel();
+            this.radGridViewComprobantes = new Telerik.WinControls.UI.RadGridView();
             this.gbTransferirComp = new Telerik.WinControls.UI.RadGroupBox();
             this.btnCancelar = new Telerik.WinControls.UI.RadButton();
             this.btnTransferir = new Telerik.WinControls.UI.RadButton();
@@ -49,19 +51,20 @@
             this.lblBibliotecaPrefijo = new Telerik.WinControls.UI.RadLabel();
             this.txtPrefijo = new Telerik.WinControls.UI.RadTextBoxControl();
             this.lblPrefijo = new Telerik.WinControls.UI.RadLabel();
-            this.lblNoHayComp = new Telerik.WinControls.UI.RadLabel();
-            this.radGridViewComprobantes = new Telerik.WinControls.UI.RadGridView();
             this.radPanelMenuPath = new Telerik.WinControls.UI.RadPanel();
             this.radLabelTitulo = new Telerik.WinControls.UI.RadLabel();
             this.radPanelAcciones = new Telerik.WinControls.UI.RadPanel();
+            this.radButtonActualizarLista = new Telerik.WinControls.UI.RadButton();
             this.radButtonTransferir = new Telerik.WinControls.UI.RadButton();
             this.radButtonImportar = new Telerik.WinControls.UI.RadButton();
             this.radButtonEliminar = new Telerik.WinControls.UI.RadButton();
             this.radButtonEditar = new Telerik.WinControls.UI.RadButton();
             this.radButtonNuevo = new Telerik.WinControls.UI.RadButton();
-            this.radButtonActualizarLista = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).BeginInit();
             this.radPanelApp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblNoHayComp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbTransferirComp)).BeginInit();
             this.gbTransferirComp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
@@ -83,20 +86,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblBibliotecaPrefijo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrefijo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblPrefijo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblNoHayComp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelMenuPath)).BeginInit();
             this.radPanelMenuPath.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelTitulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelAcciones)).BeginInit();
             this.radPanelAcciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonTransferir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonImportar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonNuevo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +113,37 @@
             this.radPanelApp.Size = new System.Drawing.Size(836, 490);
             this.radPanelApp.TabIndex = 189;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanelApp.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // lblNoHayComp
+            // 
+            this.lblNoHayComp.Location = new System.Drawing.Point(19, 28);
+            this.lblNoHayComp.Name = "lblNoHayComp";
+            this.lblNoHayComp.Size = new System.Drawing.Size(142, 19);
+            this.lblNoHayComp.TabIndex = 5;
+            this.lblNoHayComp.Text = "NoExistenComrpobantes";
+            this.lblNoHayComp.Visible = false;
+            // 
+            // radGridViewComprobantes
+            // 
+            this.radGridViewComprobantes.AutoScroll = true;
+            this.radGridViewComprobantes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radGridViewComprobantes.Location = new System.Drawing.Point(0, 0);
+            // 
+            // 
+            // 
+            this.radGridViewComprobantes.MasterTemplate.AllowAddNewRow = false;
+            this.radGridViewComprobantes.MasterTemplate.AllowDeleteRow = false;
+            this.radGridViewComprobantes.MasterTemplate.AllowEditRow = false;
+            this.radGridViewComprobantes.MasterTemplate.AllowSearchRow = true;
+            this.radGridViewComprobantes.MasterTemplate.EnableFiltering = true;
+            this.radGridViewComprobantes.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridViewComprobantes.Name = "radGridViewComprobantes";
+            this.radGridViewComprobantes.Size = new System.Drawing.Size(836, 490);
+            this.radGridViewComprobantes.TabIndex = 190;
+            this.radGridViewComprobantes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewComprobantes_CellDoubleClick);
+            this.radGridViewComprobantes.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewComprobantes_DataBindingComplete);
+            this.radGridViewComprobantes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewComprobantes_KeyPress);
+            this.radGridViewComprobantes.Leave += new System.EventHandler(this.radGridViewComprobantes_Leave);
             // 
             // gbTransferirComp
             // 
@@ -316,36 +347,6 @@
             this.lblPrefijo.TabIndex = 0;
             this.lblPrefijo.Text = "Prefijo";
             // 
-            // lblNoHayComp
-            // 
-            this.lblNoHayComp.Location = new System.Drawing.Point(19, 28);
-            this.lblNoHayComp.Name = "lblNoHayComp";
-            this.lblNoHayComp.Size = new System.Drawing.Size(142, 19);
-            this.lblNoHayComp.TabIndex = 5;
-            this.lblNoHayComp.Text = "NoExistenComrpobantes";
-            this.lblNoHayComp.Visible = false;
-            // 
-            // radGridViewComprobantes
-            // 
-            this.radGridViewComprobantes.AutoScroll = true;
-            this.radGridViewComprobantes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radGridViewComprobantes.Location = new System.Drawing.Point(0, 0);
-            // 
-            // 
-            // 
-            this.radGridViewComprobantes.MasterTemplate.AllowAddNewRow = false;
-            this.radGridViewComprobantes.MasterTemplate.AllowDeleteRow = false;
-            this.radGridViewComprobantes.MasterTemplate.AllowEditRow = false;
-            this.radGridViewComprobantes.MasterTemplate.AllowSearchRow = true;
-            this.radGridViewComprobantes.MasterTemplate.EnableFiltering = true;
-            this.radGridViewComprobantes.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.radGridViewComprobantes.Name = "radGridViewComprobantes";
-            this.radGridViewComprobantes.Size = new System.Drawing.Size(836, 490);
-            this.radGridViewComprobantes.TabIndex = 190;
-            this.radGridViewComprobantes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewComprobantes_CellDoubleClick);
-            this.radGridViewComprobantes.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewComprobantes_DataBindingComplete);
-            this.radGridViewComprobantes.Leave += new System.EventHandler(this.radGridViewComprobantes_Leave);
-            // 
             // radPanelMenuPath
             // 
             this.radPanelMenuPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -382,6 +383,20 @@
             this.radPanelAcciones.Size = new System.Drawing.Size(163, 1288);
             this.radPanelAcciones.TabIndex = 187;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanelAcciones.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // radButtonActualizarLista
+            // 
+            this.radButtonActualizarLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
+            this.radButtonActualizarLista.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.radButtonActualizarLista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radButtonActualizarLista.Location = new System.Drawing.Point(12, 197);
+            this.radButtonActualizarLista.Name = "radButtonActualizarLista";
+            this.radButtonActualizarLista.Size = new System.Drawing.Size(145, 44);
+            this.radButtonActualizarLista.TabIndex = 107;
+            this.radButtonActualizarLista.Text = "Actualizar Lista";
+            this.radButtonActualizarLista.Click += new System.EventHandler(this.radButtonActualizarLista_Click);
+            ((Telerik.WinControls.UI.RadButtonElement)(this.radButtonActualizarLista.GetChildAt(0))).Text = "Actualizar Lista";
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radButtonActualizarLista.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             // 
             // radButtonTransferir
             // 
@@ -463,26 +478,12 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButtonNuevo.GetChildAt(0))).Text = "Nuevo";
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radButtonNuevo.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             // 
-            // radButtonActualizarLista
-            // 
-            this.radButtonActualizarLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
-            this.radButtonActualizarLista.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.radButtonActualizarLista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButtonActualizarLista.Location = new System.Drawing.Point(12, 197);
-            this.radButtonActualizarLista.Name = "radButtonActualizarLista";
-            this.radButtonActualizarLista.Size = new System.Drawing.Size(145, 44);
-            this.radButtonActualizarLista.TabIndex = 107;
-            this.radButtonActualizarLista.Text = "Actualizar Lista";
-            this.radButtonActualizarLista.Click += new System.EventHandler(this.radButtonActualizarLista_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.radButtonActualizarLista.GetChildAt(0))).Text = "Actualizar Lista";
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radButtonActualizarLista.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            // 
             // frmCompExtContLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1394, 881);
+            this.ClientSize = new System.Drawing.Size(1402, 912);
             this.Controls.Add(this.gbTransferirComp);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelMenuPath);
@@ -500,6 +501,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).EndInit();
             this.radPanelApp.ResumeLayout(false);
             this.radPanelApp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblNoHayComp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbTransferirComp)).EndInit();
             this.gbTransferirComp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
@@ -523,21 +527,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblBibliotecaPrefijo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrefijo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblPrefijo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblNoHayComp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelMenuPath)).EndInit();
             this.radPanelMenuPath.ResumeLayout(false);
             this.radPanelMenuPath.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelTitulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelAcciones)).EndInit();
             this.radPanelAcciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonTransferir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonImportar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButtonNuevo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

@@ -502,6 +502,17 @@ namespace ModComprobantes
             this.dataTable.Rows.Clear();
             this.FillDataGrid();
         }
+
+        private void radGridViewComprobantes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow) >= 0)
+                {
+                    this.EditarComprobante(this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow));
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -1131,5 +1142,6 @@ namespace ModComprobantes
             else this.EditarComprobante(this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow));
         }
         #endregion
+
     }
 }

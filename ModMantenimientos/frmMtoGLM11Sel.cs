@@ -803,6 +803,16 @@ namespace ModMantenimientos
                 e.CellElement.Font = newFont;
             }
         }
-        
+
+        private void radGridViewZonas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewZonas.Rows.IndexOf(this.radGridViewZonas.CurrentRow) >= 0)
+                {
+                    this.EditarZona();
+                }
+            }
+        }
     }
 }

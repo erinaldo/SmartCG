@@ -156,6 +156,16 @@ namespace ModMantenimientos
         {
             utiles.SelectUnselectAllRadGridViewRows(ref sender, ref this.radGridViewCalendarios, ref this.selectAll);
         }
+        private void radGridViewCalendarios_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewCalendarios.Rows.IndexOf(this.radGridViewCalendarios.CurrentRow) >= 0)
+                {
+                    this.EditarCalendario();
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados

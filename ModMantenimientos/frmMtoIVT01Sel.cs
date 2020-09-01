@@ -360,6 +360,16 @@ namespace ModMantenimientos
                 e.CellElement.Font = newFont;
             }
         }
+        private void radGridViewCodIva_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewCodIva.Rows.IndexOf(this.radGridViewCodIva.CurrentRow) >= 0)
+                {
+                    this.EditarCodigoIVA();
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -772,6 +782,5 @@ namespace ModMantenimientos
             }
         }
         #endregion
-
     }
 }

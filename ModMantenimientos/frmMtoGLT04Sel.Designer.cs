@@ -87,6 +87,7 @@
             this.radGridViewCalendarios.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewCalendarios_ViewCellFormatting);
             this.radGridViewCalendarios.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.radGridViewCalendarios_CellClick);
             this.radGridViewCalendarios.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewCalendarios_CellDoubleClick);
+            this.radGridViewCalendarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewCalendarios_KeyPress);
             // 
             // radPanelMenuPath
             // 
@@ -194,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1105, 881);
+            this.ClientSize = new System.Drawing.Size(1113, 912);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelMenuPath);
             this.Controls.Add(this.radPanelAcciones);

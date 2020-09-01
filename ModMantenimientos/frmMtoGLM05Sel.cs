@@ -268,6 +268,47 @@ namespace ModMantenimientos
         {
             //utiles.guardarLayout(this.Name, ref radGridViewCuentasAux);
         }
+        private void RadGridViewHeader()
+        {
+            try
+            {
+                if (this.radGridViewCuentasAux.Columns.Count > 0)
+                {
+                    foreach (KeyValuePair<string, string> item in this.displayNames)
+                    {
+                        if (this.radGridViewCuentasAux.Columns.Contains(item.Key)) this.radGridViewCuentasAux.Columns[item.Key].HeaderText = item.Value;
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void radPanelApp_Resize(object sender, EventArgs e)
+        {
+            this.radGridViewCuentasAux.Size = new Size(this.radPanelApp.Size.Width - 66, this.radPanelApp.Size.Height - 121);
+        }
+
+        private void radGridViewCuentasAux_ViewCellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Font newFont = new Font("Segoe UI", 9f, FontStyle.Bold);
+            if (e.CellElement is GridHeaderCellElement || e.CellElement is GridGroupContentCellElement)
+            {
+                e.CellElement.Font = newFont;
+            }
+        }
+
+        private void radGridViewCuentasAux_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewCuentasAux.Rows.IndexOf(this.radGridViewCuentasAux.CurrentRow) >= 0)
+                {
+                    this.EditarCuentaAux();
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -722,37 +763,5 @@ namespace ModMantenimientos
                 utiles.ButtonEnabled(ref this.radButtonExport, false);
             }
         }
-
-        private void RadGridViewHeader()
-        {
-            try
-            {
-                if (this.radGridViewCuentasAux.Columns.Count > 0)
-                {
-                    foreach (KeyValuePair<string, string> item in this.displayNames)
-                    {
-                        if (this.radGridViewCuentasAux.Columns.Contains(item.Key)) this.radGridViewCuentasAux.Columns[item.Key].HeaderText = item.Value;
-                    }
-                }
-            }
-            catch
-            {
-            }
-        }
-
-        private void radPanelApp_Resize(object sender, EventArgs e)
-        {
-            this.radGridViewCuentasAux.Size = new Size(this.radPanelApp.Size.Width - 66, this.radPanelApp.Size.Height - 121);
-        }
-
-        private void radGridViewCuentasAux_ViewCellFormatting(object sender, CellFormattingEventArgs e)
-        {
-            Font newFont = new Font("Segoe UI", 9f, FontStyle.Bold);
-            if (e.CellElement is GridHeaderCellElement || e.CellElement is GridGroupContentCellElement)
-            {
-                e.CellElement.Font = newFont;
-            }
-        }
-
     }
 }
