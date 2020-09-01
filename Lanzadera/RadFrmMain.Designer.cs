@@ -1,4 +1,6 @@
-﻿namespace SmartCG
+﻿using System.Windows.Forms;
+
+namespace SmartCG
 {
     partial class RadFrmMain
     {
@@ -399,6 +401,7 @@
             this.radTreeViewMenu.TabIndex = 2;
             this.radTreeViewMenu.NodeFormatting += new Telerik.WinControls.UI.TreeNodeFormattingEventHandler(this.RadTreeViewMenu_NodeFormatting);
             this.radTreeViewMenu.DoubleClick += new System.EventHandler(this.RadTreeViewMenu_DoubleClick);
+            this.radTreeViewMenu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radTreeViewMenu_KeyDown);
             // 
             // radLlbUniclassFinanzas
             // 
@@ -463,7 +466,6 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "   Smart CG";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RadFrmMain_FormClosing);
             this.Load += new System.EventHandler(this.RadFrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).EndInit();

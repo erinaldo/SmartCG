@@ -180,6 +180,13 @@ namespace SmartCG
         {
             Log.Info("INICIO Smart CG");
 
+            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Maximized;
+            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            ////this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            //this.Visible = true;
+            //this.Focus();
+
             this.radLblEntorno.Text = "";
             this.radLblUser.Text = "";
 
@@ -246,6 +253,10 @@ namespace SmartCG
                 }
             }
             //fin valida clave
+
+            this.radTreeViewMenu.Focus();
+            if (this.radTreeViewMenu.Nodes.Count > 0)
+                this.radTreeViewMenu.SelectedNode = this.radTreeViewMenu.Nodes[0];
         }
 
         private void RadBtnMenuMostrarOcultar_Click(object sender, EventArgs e)
@@ -325,9 +336,10 @@ namespace SmartCG
                     }
 
                     int cantNodos;
-                    if (e is MouseEventArgs args)
-                    {
-                        RadTreeNode clickedNode = this.radTreeViewMenu.GetNodeAt(args.X, args.Y);
+                    ///if (e is MouseEventArgs args)
+                    ///{
+                    ///    RadTreeNode clickedNode = this.radTreeViewMenu.GetNodeAt(args.X, args.Y);
+                        RadTreeNode clickedNode = this.radTreeViewMenu.SelectedNode;
                         if (clickedNode != null)
                         {
                             cantNodos = clickedNode.GetNodeCount(true);
@@ -411,7 +423,7 @@ namespace SmartCG
                                 }
                             }
                         }
-                    }
+                    ///}
                 }
             }
             catch (Exception ex)
@@ -711,6 +723,14 @@ namespace SmartCG
         {
             Log.Info("FIN Smart CG");
         }
+
+        private void radTreeViewMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.RadTreeViewMenu_DoubleClick(sender, e);
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -836,5 +856,6 @@ namespace SmartCG
         }
 
         #endregion
+
     }
 }
