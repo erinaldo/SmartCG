@@ -193,6 +193,17 @@ namespace ModConsultaInforme
             utiles.guardarLayout(this.Name, ref radGridViewInfConsGenerados);
         }
 
+        private void radGridViewInfConsGenerados_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewInfConsGenerados.Rows.IndexOf(this.radGridViewInfConsGenerados.CurrentRow) >= 0)
+                {
+                    this.FileView();
+                }
+            }
+        }
+
         #endregion
 
         #region Métodos Privados
@@ -613,5 +624,6 @@ namespace ModConsultaInforme
             return (tipo);
         }
         #endregion
+
     }
 }

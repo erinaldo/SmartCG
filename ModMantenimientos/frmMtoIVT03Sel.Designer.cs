@@ -90,6 +90,7 @@
             this.radGridViewCompFiscales.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewCompFiscales_ViewCellFormatting);
             this.radGridViewCompFiscales.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewCompFiscales_CellClick);
             this.radGridViewCompFiscales.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewCompFiscales_CellDoubleClick);
+            this.radGridViewCompFiscales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewCompFiscales_KeyPress);
             // 
             // radDataFilterGridInfo
             // 
@@ -210,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1103, 819);
+            this.ClientSize = new System.Drawing.Size(1111, 850);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelAcciones);
             this.Controls.Add(this.radPanelMenuPath);

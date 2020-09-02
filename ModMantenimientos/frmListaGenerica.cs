@@ -396,6 +396,18 @@ namespace ModMantenimientos
         {
             //utiles.guardarLayout(this.Name, ref radGridViewInfo, this.Tabla);
         }
+        
+        private void radGridViewInfo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewInfo.Rows.IndexOf(this.radGridViewInfo.CurrentRow) >= 0)
+                {
+                    this.EditarElemento();
+                }
+            }
+
+        }
 
         #endregion
 

@@ -509,6 +509,17 @@ namespace ModComprobantes
         {
             utiles.ButtonMouseLeave(ref this.radButtonActualizarLista);
         }
+
+        private void radGridViewComprobantes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow) >= 0)
+                {
+                    this.EditarComprobante(this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow));
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -1768,6 +1779,7 @@ namespace ModComprobantes
         }
         #endregion
 
+<<<<<<< HEAD
         private void radGridViewComprobantes_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
@@ -1778,5 +1790,7 @@ namespace ModComprobantes
                 }
             }
         }
+=======
+>>>>>>> d55d2484ceff453df3fa191f98124c8d5d5aad30
     }
 }

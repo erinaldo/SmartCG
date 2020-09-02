@@ -536,6 +536,16 @@ namespace ModMantenimientos
         {
             //utiles.guardarLayout(this.Name, ref radGridViewCuentasMayor);
         }
+        private void radGridViewCuentasMayor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewCuentasMayor.Rows.IndexOf(this.radGridViewCuentasMayor.CurrentRow) >= 0)
+                {
+                    this.EditarCuentaMayor();
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -1580,8 +1590,8 @@ namespace ModMantenimientos
             {
             }
         }
+
         #endregion
 
-        
     }
 }

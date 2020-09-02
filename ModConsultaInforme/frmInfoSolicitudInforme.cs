@@ -116,6 +116,17 @@ namespace ModConsultaInforme
         {
             utiles.guardarLayout(this.Name, ref radGridViewSolicitudes);
         }
+
+        private void radGridViewSolicitudes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewSolicitudes.Rows.IndexOf(this.radGridViewSolicitudes.CurrentRow) >= 0)
+                {
+                    this.SolicitarInfLista();
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -261,8 +272,8 @@ namespace ModConsultaInforme
             }
             Cursor.Current = Cursors.Default;
         }
+
         #endregion
 
-        
     }
 }

@@ -504,7 +504,11 @@ namespace ModComprobantes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1386, 788);
+=======
+            this.ClientSize = new System.Drawing.Size(1442, 1004);
+>>>>>>> d55d2484ceff453df3fa191f98124c8d5d5aad30
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.gbTransferirComp);
             this.Controls.Add(this.radPanelMenuPath);

@@ -232,6 +232,16 @@ namespace ModMantenimientos
                 e.CellElement.Font = newFont;
             }
         }
+        private void radGridViewTiposExt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewTiposExt.Rows.IndexOf(this.radGridViewTiposExt.CurrentRow) >= 0)
+                {
+                    this.EditarTipoExt();
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados

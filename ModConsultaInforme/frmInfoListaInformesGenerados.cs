@@ -261,6 +261,17 @@ namespace ModConsultaInforme
         {
             utiles.guardarLayout(this.Name, ref radGridViewInformesGenerados);
         }
+
+        private void radGridViewInformesGenerados_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewInformesGenerados.Rows.IndexOf(this.radGridViewInformesGenerados.CurrentRow) >= 0)
+                {
+                    this.DescargarInforme();
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados
