@@ -37,15 +37,14 @@ namespace ModComprobantes
             this.radPanelApp = new Telerik.WinControls.UI.RadPanel();
             this.lblNoHayComp = new Telerik.WinControls.UI.RadLabel();
             this.radGridViewComprobantes = new Telerik.WinControls.UI.RadGridView();
-            this.radPanelMenuPath = new Telerik.WinControls.UI.RadPanel();
-            this.radLabelTitulo = new Telerik.WinControls.UI.RadLabel();
-            this.radPanelAcciones = new Telerik.WinControls.UI.RadPanel();
-            this.radButtonActualizarLista = new Telerik.WinControls.UI.RadButton();
-            this.radButtonTransferir = new Telerik.WinControls.UI.RadButton();
-            this.radButtonImportar = new Telerik.WinControls.UI.RadButton();
-            this.radButtonEliminar = new Telerik.WinControls.UI.RadButton();
-            this.radButtonEditar = new Telerik.WinControls.UI.RadButton();
-            this.radButtonNuevo = new Telerik.WinControls.UI.RadButton();
+            this.gbTransferirComp = new Telerik.WinControls.UI.RadGroupBox();
+            this.btnCancelar = new Telerik.WinControls.UI.RadButton();
+            this.btnTransferir = new Telerik.WinControls.UI.RadButton();
+            this.gbTransferencia = new Telerik.WinControls.UI.RadGroupBox();
+            this.chkVerNocomp = new Telerik.WinControls.UI.RadCheckBox();
+            this.cmbEstado = new Telerik.WinControls.UI.RadDropDownList();
+            this.rbGenerarLoteAdiciona = new Telerik.WinControls.UI.RadRadioButton();
+            this.rbGenerarLote = new Telerik.WinControls.UI.RadRadioButton();
             this.gbLote = new Telerik.WinControls.UI.RadGroupBox();
             this.txtDescripcion = new Telerik.WinControls.UI.RadTextBoxControl();
             this.label1 = new Telerik.WinControls.UI.RadLabel();
@@ -57,30 +56,30 @@ namespace ModComprobantes
             this.lblBibliotecaPrefijo = new Telerik.WinControls.UI.RadLabel();
             this.txtPrefijo = new Telerik.WinControls.UI.RadTextBoxControl();
             this.lblPrefijo = new Telerik.WinControls.UI.RadLabel();
-            this.gbTransferencia = new Telerik.WinControls.UI.RadGroupBox();
-            this.chkVerNocomp = new Telerik.WinControls.UI.RadCheckBox();
-            this.cmbEstado = new Telerik.WinControls.UI.RadDropDownList();
-            this.rbGenerarLoteAdiciona = new Telerik.WinControls.UI.RadRadioButton();
-            this.rbGenerarLote = new Telerik.WinControls.UI.RadRadioButton();
-            this.btnTransferir = new Telerik.WinControls.UI.RadButton();
-            this.btnCancelar = new Telerik.WinControls.UI.RadButton();
-            this.gbTransferirComp = new Telerik.WinControls.UI.RadGroupBox();
+            this.radPanelMenuPath = new Telerik.WinControls.UI.RadPanel();
+            this.radLabelTitulo = new Telerik.WinControls.UI.RadLabel();
+            this.radPanelAcciones = new Telerik.WinControls.UI.RadPanel();
+            this.radButtonActualizarLista = new Telerik.WinControls.UI.RadButton();
+            this.radButtonTransferir = new Telerik.WinControls.UI.RadButton();
+            this.radButtonImportar = new Telerik.WinControls.UI.RadButton();
+            this.radButtonEliminar = new Telerik.WinControls.UI.RadButton();
+            this.radButtonEditar = new Telerik.WinControls.UI.RadButton();
+            this.radButtonNuevo = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).BeginInit();
             this.radPanelApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lblNoHayComp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radPanelMenuPath)).BeginInit();
-            this.radPanelMenuPath.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabelTitulo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radPanelAcciones)).BeginInit();
-            this.radPanelAcciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonTransferir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonImportar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonEliminar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonEditar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonNuevo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbTransferirComp)).BeginInit();
+            this.gbTransferirComp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTransferir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbTransferencia)).BeginInit();
+            this.gbTransferencia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkVerNocomp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbEstado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbGenerarLoteAdiciona)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbGenerarLote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbLote)).BeginInit();
             this.gbLote.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).BeginInit();
@@ -93,16 +92,17 @@ namespace ModComprobantes
             ((System.ComponentModel.ISupportInitialize)(this.lblBibliotecaPrefijo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrefijo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblPrefijo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbTransferencia)).BeginInit();
-            this.gbTransferencia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chkVerNocomp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbEstado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbGenerarLoteAdiciona)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbGenerarLote)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTransferir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbTransferirComp)).BeginInit();
-            this.gbTransferirComp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanelMenuPath)).BeginInit();
+            this.radPanelMenuPath.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabelTitulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanelAcciones)).BeginInit();
+            this.radPanelAcciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonTransferir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonImportar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,8 +149,222 @@ namespace ModComprobantes
             this.radGridViewComprobantes.TabIndex = 85;
             this.radGridViewComprobantes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewComprobantes_CellDoubleClick);
             this.radGridViewComprobantes.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewComprobantes_DataBindingComplete);
-            this.radGridViewComprobantes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewComprobantes_KeyPress_1);
+            this.radGridViewComprobantes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewComprobantes_KeyPress);
             this.radGridViewComprobantes.Leave += new System.EventHandler(this.radGridViewComprobantes_Leave);
+            // 
+            // gbTransferirComp
+            // 
+            this.gbTransferirComp.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.gbTransferirComp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gbTransferirComp.Controls.Add(this.btnCancelar);
+            this.gbTransferirComp.Controls.Add(this.btnTransferir);
+            this.gbTransferirComp.Controls.Add(this.gbTransferencia);
+            this.gbTransferirComp.Controls.Add(this.gbLote);
+            this.gbTransferirComp.HeaderText = " Transferir Comprobantes a Finanzas ";
+            this.gbTransferirComp.Location = new System.Drawing.Point(164, 557);
+            this.gbTransferirComp.Name = "gbTransferirComp";
+            this.gbTransferirComp.Size = new System.Drawing.Size(790, 163);
+            this.gbTransferirComp.TabIndex = 120;
+            this.gbTransferirComp.TabStop = false;
+            this.gbTransferirComp.Text = " Transferir Comprobantes a Finanzas ";
+            this.gbTransferirComp.Visible = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCancelar.Location = new System.Drawing.Point(673, 13);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 22);
+            this.btnCancelar.TabIndex = 210;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            this.btnCancelar.MouseEnter += new System.EventHandler(this.BtnCancelar_MouseEnter);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.BtnCancelar_MouseLeave);
+            // 
+            // btnTransferir
+            // 
+            this.btnTransferir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
+            this.btnTransferir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnTransferir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTransferir.Location = new System.Drawing.Point(595, 13);
+            this.btnTransferir.Name = "btnTransferir";
+            this.btnTransferir.Size = new System.Drawing.Size(75, 22);
+            this.btnTransferir.TabIndex = 205;
+            this.btnTransferir.Text = "Transferir";
+            this.btnTransferir.Click += new System.EventHandler(this.BtnTransferir_Click);
+            this.btnTransferir.MouseEnter += new System.EventHandler(this.BtnTransferir_MouseEnter);
+            this.btnTransferir.MouseLeave += new System.EventHandler(this.BtnTransferir_MouseLeave);
+            // 
+            // gbTransferencia
+            // 
+            this.gbTransferencia.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.gbTransferencia.Controls.Add(this.chkVerNocomp);
+            this.gbTransferencia.Controls.Add(this.cmbEstado);
+            this.gbTransferencia.Controls.Add(this.rbGenerarLoteAdiciona);
+            this.gbTransferencia.Controls.Add(this.rbGenerarLote);
+            this.gbTransferencia.HeaderText = " Tipo de Transferencia";
+            this.gbTransferencia.Location = new System.Drawing.Point(451, 32);
+            this.gbTransferencia.Name = "gbTransferencia";
+            this.gbTransferencia.Size = new System.Drawing.Size(308, 128);
+            this.gbTransferencia.TabIndex = 180;
+            this.gbTransferencia.TabStop = false;
+            this.gbTransferencia.Text = " Tipo de Transferencia";
+            // 
+            // chkVerNocomp
+            // 
+            this.chkVerNocomp.Location = new System.Drawing.Point(24, 104);
+            this.chkVerNocomp.Name = "chkVerNocomp";
+            this.chkVerNocomp.Size = new System.Drawing.Size(206, 19);
+            this.chkVerNocomp.TabIndex = 200;
+            this.chkVerNocomp.Text = "Ver los números de comprobante";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cmbEstado.Enabled = false;
+            this.cmbEstado.Location = new System.Drawing.Point(44, 71);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(150, 21);
+            this.cmbEstado.TabIndex = 195;
+            // 
+            // rbGenerarLoteAdiciona
+            // 
+            this.rbGenerarLoteAdiciona.Location = new System.Drawing.Point(24, 50);
+            this.rbGenerarLoteAdiciona.Name = "rbGenerarLoteAdiciona";
+            this.rbGenerarLoteAdiciona.Size = new System.Drawing.Size(158, 19);
+            this.rbGenerarLoteAdiciona.TabIndex = 190;
+            this.rbGenerarLoteAdiciona.Text = "Generar Lote y Adicionar";
+            this.rbGenerarLoteAdiciona.CheckStateChanged += new System.EventHandler(this.RbGenerarLoteAdiciona_CheckedChanged);
+            this.rbGenerarLoteAdiciona.Click += new System.EventHandler(this.RbGenerarLoteAdiciona_Click);
+            // 
+            // rbGenerarLote
+            // 
+            this.rbGenerarLote.Location = new System.Drawing.Point(24, 26);
+            this.rbGenerarLote.Name = "rbGenerarLote";
+            this.rbGenerarLote.Size = new System.Drawing.Size(121, 19);
+            this.rbGenerarLote.TabIndex = 185;
+            this.rbGenerarLote.Text = "Solo Generar Lote";
+            this.rbGenerarLote.CheckStateChanged += new System.EventHandler(this.RbGenerarLote_CheckedChanged);
+            // 
+            // gbLote
+            // 
+            this.gbLote.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.gbLote.Controls.Add(this.txtDescripcion);
+            this.gbLote.Controls.Add(this.label1);
+            this.gbLote.Controls.Add(this.txtBibliotecaCola);
+            this.gbLote.Controls.Add(this.lblBiliotecaCola);
+            this.gbLote.Controls.Add(this.txtCola);
+            this.gbLote.Controls.Add(this.lblCola);
+            this.gbLote.Controls.Add(this.txtBibliotecaPrefijo);
+            this.gbLote.Controls.Add(this.lblBibliotecaPrefijo);
+            this.gbLote.Controls.Add(this.txtPrefijo);
+            this.gbLote.Controls.Add(this.lblPrefijo);
+            this.gbLote.HeaderText = " Lote Batch ";
+            this.gbLote.Location = new System.Drawing.Point(10, 32);
+            this.gbLote.Name = "gbLote";
+            this.gbLote.Size = new System.Drawing.Size(366, 128);
+            this.gbLote.TabIndex = 125;
+            this.gbLote.TabStop = false;
+            this.gbLote.Text = " Lote Batch ";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(88, 20);
+            this.txtDescripcion.MaxLength = 36;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Padding = new System.Windows.Forms.Padding(5);
+            this.txtDescripcion.Size = new System.Drawing.Size(268, 30);
+            this.txtDescripcion.TabIndex = 135;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(19, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 19);
+            this.label1.TabIndex = 130;
+            this.label1.Text = "Descripción";
+            // 
+            // txtBibliotecaCola
+            // 
+            this.txtBibliotecaCola.Enabled = false;
+            this.txtBibliotecaCola.Location = new System.Drawing.Point(166, 120);
+            this.txtBibliotecaCola.MaxLength = 10;
+            this.txtBibliotecaCola.Name = "txtBibliotecaCola";
+            this.txtBibliotecaCola.Padding = new System.Windows.Forms.Padding(5);
+            this.txtBibliotecaCola.Size = new System.Drawing.Size(128, 30);
+            this.txtBibliotecaCola.TabIndex = 175;
+            this.txtBibliotecaCola.Visible = false;
+            // 
+            // lblBiliotecaCola
+            // 
+            this.lblBiliotecaCola.Enabled = false;
+            this.lblBiliotecaCola.Location = new System.Drawing.Point(163, 104);
+            this.lblBiliotecaCola.Name = "lblBiliotecaCola";
+            this.lblBiliotecaCola.Size = new System.Drawing.Size(60, 19);
+            this.lblBiliotecaCola.TabIndex = 170;
+            this.lblBiliotecaCola.Text = "Biblioteca";
+            this.lblBiliotecaCola.Visible = false;
+            // 
+            // txtCola
+            // 
+            this.txtCola.Enabled = false;
+            this.txtCola.Location = new System.Drawing.Point(22, 120);
+            this.txtCola.MaxLength = 10;
+            this.txtCola.Name = "txtCola";
+            this.txtCola.Padding = new System.Windows.Forms.Padding(5);
+            this.txtCola.Size = new System.Drawing.Size(128, 30);
+            this.txtCola.TabIndex = 165;
+            this.txtCola.Visible = false;
+            // 
+            // lblCola
+            // 
+            this.lblCola.Enabled = false;
+            this.lblCola.Location = new System.Drawing.Point(19, 104);
+            this.lblCola.Name = "lblCola";
+            this.lblCola.Size = new System.Drawing.Size(84, 19);
+            this.lblCola.TabIndex = 160;
+            this.lblCola.Text = "Cola de Salida";
+            this.lblCola.Visible = false;
+            // 
+            // txtBibliotecaPrefijo
+            // 
+            this.txtBibliotecaPrefijo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtBibliotecaPrefijo.Location = new System.Drawing.Point(71, 70);
+            this.txtBibliotecaPrefijo.MaxLength = 10;
+            this.txtBibliotecaPrefijo.Name = "txtBibliotecaPrefijo";
+            this.txtBibliotecaPrefijo.Padding = new System.Windows.Forms.Padding(5);
+            this.txtBibliotecaPrefijo.Size = new System.Drawing.Size(128, 30);
+            this.txtBibliotecaPrefijo.TabIndex = 155;
+            this.txtBibliotecaPrefijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBibliotecaPrefijo_KeyPress);
+            // 
+            // lblBibliotecaPrefijo
+            // 
+            this.lblBibliotecaPrefijo.Location = new System.Drawing.Point(68, 54);
+            this.lblBibliotecaPrefijo.Name = "lblBibliotecaPrefijo";
+            this.lblBibliotecaPrefijo.Size = new System.Drawing.Size(60, 19);
+            this.lblBibliotecaPrefijo.TabIndex = 150;
+            this.lblBibliotecaPrefijo.Text = "Biblioteca";
+            // 
+            // txtPrefijo
+            // 
+            this.txtPrefijo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPrefijo.Location = new System.Drawing.Point(22, 70);
+            this.txtPrefijo.MaxLength = 2;
+            this.txtPrefijo.Name = "txtPrefijo";
+            this.txtPrefijo.Padding = new System.Windows.Forms.Padding(5);
+            this.txtPrefijo.Size = new System.Drawing.Size(33, 30);
+            this.txtPrefijo.TabIndex = 145;
+            this.txtPrefijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrefijo_KeyPress);
+            // 
+            // lblPrefijo
+            // 
+            this.lblPrefijo.Location = new System.Drawing.Point(19, 54);
+            this.lblPrefijo.Name = "lblPrefijo";
+            this.lblPrefijo.Size = new System.Drawing.Size(41, 19);
+            this.lblPrefijo.TabIndex = 140;
+            this.lblPrefijo.Text = "Prefijo";
             // 
             // radPanelMenuPath
             // 
@@ -285,220 +499,6 @@ namespace ModComprobantes
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButtonNuevo.GetChildAt(0))).Text = "Nuevo";
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radButtonNuevo.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             // 
-            // gbLote
-            // 
-            this.gbLote.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbLote.Controls.Add(this.txtDescripcion);
-            this.gbLote.Controls.Add(this.label1);
-            this.gbLote.Controls.Add(this.txtBibliotecaCola);
-            this.gbLote.Controls.Add(this.lblBiliotecaCola);
-            this.gbLote.Controls.Add(this.txtCola);
-            this.gbLote.Controls.Add(this.lblCola);
-            this.gbLote.Controls.Add(this.txtBibliotecaPrefijo);
-            this.gbLote.Controls.Add(this.lblBibliotecaPrefijo);
-            this.gbLote.Controls.Add(this.txtPrefijo);
-            this.gbLote.Controls.Add(this.lblPrefijo);
-            this.gbLote.HeaderText = " Lote Batch ";
-            this.gbLote.Location = new System.Drawing.Point(10, 32);
-            this.gbLote.Name = "gbLote";
-            this.gbLote.Size = new System.Drawing.Size(366, 128);
-            this.gbLote.TabIndex = 125;
-            this.gbLote.TabStop = false;
-            this.gbLote.Text = " Lote Batch ";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(88, 20);
-            this.txtDescripcion.MaxLength = 36;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Padding = new System.Windows.Forms.Padding(5);
-            this.txtDescripcion.Size = new System.Drawing.Size(268, 30);
-            this.txtDescripcion.TabIndex = 135;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(19, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 19);
-            this.label1.TabIndex = 130;
-            this.label1.Text = "Descripción";
-            // 
-            // txtBibliotecaCola
-            // 
-            this.txtBibliotecaCola.Enabled = false;
-            this.txtBibliotecaCola.Location = new System.Drawing.Point(166, 120);
-            this.txtBibliotecaCola.MaxLength = 10;
-            this.txtBibliotecaCola.Name = "txtBibliotecaCola";
-            this.txtBibliotecaCola.Padding = new System.Windows.Forms.Padding(5);
-            this.txtBibliotecaCola.Size = new System.Drawing.Size(128, 30);
-            this.txtBibliotecaCola.TabIndex = 175;
-            this.txtBibliotecaCola.Visible = false;
-            // 
-            // lblBiliotecaCola
-            // 
-            this.lblBiliotecaCola.Enabled = false;
-            this.lblBiliotecaCola.Location = new System.Drawing.Point(163, 104);
-            this.lblBiliotecaCola.Name = "lblBiliotecaCola";
-            this.lblBiliotecaCola.Size = new System.Drawing.Size(60, 19);
-            this.lblBiliotecaCola.TabIndex = 170;
-            this.lblBiliotecaCola.Text = "Biblioteca";
-            this.lblBiliotecaCola.Visible = false;
-            // 
-            // txtCola
-            // 
-            this.txtCola.Enabled = false;
-            this.txtCola.Location = new System.Drawing.Point(22, 120);
-            this.txtCola.MaxLength = 10;
-            this.txtCola.Name = "txtCola";
-            this.txtCola.Padding = new System.Windows.Forms.Padding(5);
-            this.txtCola.Size = new System.Drawing.Size(128, 30);
-            this.txtCola.TabIndex = 165;
-            this.txtCola.Visible = false;
-            // 
-            // lblCola
-            // 
-            this.lblCola.Enabled = false;
-            this.lblCola.Location = new System.Drawing.Point(19, 104);
-            this.lblCola.Name = "lblCola";
-            this.lblCola.Size = new System.Drawing.Size(84, 19);
-            this.lblCola.TabIndex = 160;
-            this.lblCola.Text = "Cola de Salida";
-            this.lblCola.Visible = false;
-            // 
-            // txtBibliotecaPrefijo
-            // 
-            this.txtBibliotecaPrefijo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBibliotecaPrefijo.Location = new System.Drawing.Point(71, 70);
-            this.txtBibliotecaPrefijo.MaxLength = 10;
-            this.txtBibliotecaPrefijo.Name = "txtBibliotecaPrefijo";
-            this.txtBibliotecaPrefijo.Padding = new System.Windows.Forms.Padding(5);
-            this.txtBibliotecaPrefijo.Size = new System.Drawing.Size(128, 30);
-            this.txtBibliotecaPrefijo.TabIndex = 155;
-            this.txtBibliotecaPrefijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBibliotecaPrefijo_KeyPress);
-            // 
-            // lblBibliotecaPrefijo
-            // 
-            this.lblBibliotecaPrefijo.Location = new System.Drawing.Point(68, 54);
-            this.lblBibliotecaPrefijo.Name = "lblBibliotecaPrefijo";
-            this.lblBibliotecaPrefijo.Size = new System.Drawing.Size(60, 19);
-            this.lblBibliotecaPrefijo.TabIndex = 150;
-            this.lblBibliotecaPrefijo.Text = "Biblioteca";
-            // 
-            // txtPrefijo
-            // 
-            this.txtPrefijo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPrefijo.Location = new System.Drawing.Point(22, 70);
-            this.txtPrefijo.MaxLength = 2;
-            this.txtPrefijo.Name = "txtPrefijo";
-            this.txtPrefijo.Padding = new System.Windows.Forms.Padding(5);
-            this.txtPrefijo.Size = new System.Drawing.Size(33, 30);
-            this.txtPrefijo.TabIndex = 145;
-            this.txtPrefijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrefijo_KeyPress);
-            // 
-            // lblPrefijo
-            // 
-            this.lblPrefijo.Location = new System.Drawing.Point(19, 54);
-            this.lblPrefijo.Name = "lblPrefijo";
-            this.lblPrefijo.Size = new System.Drawing.Size(41, 19);
-            this.lblPrefijo.TabIndex = 140;
-            this.lblPrefijo.Text = "Prefijo";
-            // 
-            // gbTransferencia
-            // 
-            this.gbTransferencia.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbTransferencia.Controls.Add(this.chkVerNocomp);
-            this.gbTransferencia.Controls.Add(this.cmbEstado);
-            this.gbTransferencia.Controls.Add(this.rbGenerarLoteAdiciona);
-            this.gbTransferencia.Controls.Add(this.rbGenerarLote);
-            this.gbTransferencia.HeaderText = " Tipo de Transferencia";
-            this.gbTransferencia.Location = new System.Drawing.Point(451, 32);
-            this.gbTransferencia.Name = "gbTransferencia";
-            this.gbTransferencia.Size = new System.Drawing.Size(308, 128);
-            this.gbTransferencia.TabIndex = 180;
-            this.gbTransferencia.TabStop = false;
-            this.gbTransferencia.Text = " Tipo de Transferencia";
-            // 
-            // chkVerNocomp
-            // 
-            this.chkVerNocomp.Location = new System.Drawing.Point(24, 104);
-            this.chkVerNocomp.Name = "chkVerNocomp";
-            this.chkVerNocomp.Size = new System.Drawing.Size(206, 19);
-            this.chkVerNocomp.TabIndex = 200;
-            this.chkVerNocomp.Text = "Ver los números de comprobante";
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cmbEstado.Enabled = false;
-            this.cmbEstado.Location = new System.Drawing.Point(44, 71);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(150, 21);
-            this.cmbEstado.TabIndex = 195;
-            // 
-            // rbGenerarLoteAdiciona
-            // 
-            this.rbGenerarLoteAdiciona.Location = new System.Drawing.Point(24, 50);
-            this.rbGenerarLoteAdiciona.Name = "rbGenerarLoteAdiciona";
-            this.rbGenerarLoteAdiciona.Size = new System.Drawing.Size(158, 19);
-            this.rbGenerarLoteAdiciona.TabIndex = 190;
-            this.rbGenerarLoteAdiciona.Text = "Generar Lote y Adicionar";
-            this.rbGenerarLoteAdiciona.CheckStateChanged += new System.EventHandler(this.RbGenerarLoteAdiciona_CheckedChanged);
-            this.rbGenerarLoteAdiciona.Click += new System.EventHandler(this.RbGenerarLoteAdiciona_Click);
-            // 
-            // rbGenerarLote
-            // 
-            this.rbGenerarLote.Location = new System.Drawing.Point(24, 26);
-            this.rbGenerarLote.Name = "rbGenerarLote";
-            this.rbGenerarLote.Size = new System.Drawing.Size(121, 19);
-            this.rbGenerarLote.TabIndex = 185;
-            this.rbGenerarLote.Text = "Solo Generar Lote";
-            this.rbGenerarLote.CheckStateChanged += new System.EventHandler(this.RbGenerarLote_CheckedChanged);
-            // 
-            // btnTransferir
-            // 
-            this.btnTransferir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
-            this.btnTransferir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnTransferir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTransferir.Location = new System.Drawing.Point(595, 13);
-            this.btnTransferir.Name = "btnTransferir";
-            this.btnTransferir.Size = new System.Drawing.Size(75, 22);
-            this.btnTransferir.TabIndex = 205;
-            this.btnTransferir.Text = "Transferir";
-            this.btnTransferir.Click += new System.EventHandler(this.BtnTransferir_Click);
-            this.btnTransferir.MouseEnter += new System.EventHandler(this.BtnTransferir_MouseEnter);
-            this.btnTransferir.MouseLeave += new System.EventHandler(this.BtnTransferir_MouseLeave);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCancelar.Location = new System.Drawing.Point(673, 13);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 22);
-            this.btnCancelar.TabIndex = 210;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            this.btnCancelar.MouseEnter += new System.EventHandler(this.BtnCancelar_MouseEnter);
-            this.btnCancelar.MouseLeave += new System.EventHandler(this.BtnCancelar_MouseLeave);
-            // 
-            // gbTransferirComp
-            // 
-            this.gbTransferirComp.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbTransferirComp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gbTransferirComp.Controls.Add(this.btnCancelar);
-            this.gbTransferirComp.Controls.Add(this.btnTransferir);
-            this.gbTransferirComp.Controls.Add(this.gbTransferencia);
-            this.gbTransferirComp.Controls.Add(this.gbLote);
-            this.gbTransferirComp.HeaderText = " Transferir Comprobantes a Finanzas ";
-            this.gbTransferirComp.Location = new System.Drawing.Point(164, 557);
-            this.gbTransferirComp.Name = "gbTransferirComp";
-            this.gbTransferirComp.Size = new System.Drawing.Size(790, 163);
-            this.gbTransferirComp.TabIndex = 120;
-            this.gbTransferirComp.TabStop = false;
-            this.gbTransferirComp.Text = " Transferir Comprobantes a Finanzas ";
-            this.gbTransferirComp.Visible = false;
-            // 
             // frmCompContLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,18 +525,17 @@ namespace ModComprobantes
             ((System.ComponentModel.ISupportInitialize)(this.lblNoHayComp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radPanelMenuPath)).EndInit();
-            this.radPanelMenuPath.ResumeLayout(false);
-            this.radPanelMenuPath.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabelTitulo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radPanelAcciones)).EndInit();
-            this.radPanelAcciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonTransferir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonImportar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonEliminar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonEditar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButtonNuevo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbTransferirComp)).EndInit();
+            this.gbTransferirComp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTransferir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbTransferencia)).EndInit();
+            this.gbTransferencia.ResumeLayout(false);
+            this.gbTransferencia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkVerNocomp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbEstado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbGenerarLoteAdiciona)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbGenerarLote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbLote)).EndInit();
             this.gbLote.ResumeLayout(false);
             this.gbLote.PerformLayout();
@@ -550,17 +549,18 @@ namespace ModComprobantes
             ((System.ComponentModel.ISupportInitialize)(this.lblBibliotecaPrefijo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrefijo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblPrefijo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbTransferencia)).EndInit();
-            this.gbTransferencia.ResumeLayout(false);
-            this.gbTransferencia.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chkVerNocomp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbEstado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbGenerarLoteAdiciona)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rbGenerarLote)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTransferir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbTransferirComp)).EndInit();
-            this.gbTransferirComp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radPanelMenuPath)).EndInit();
+            this.radPanelMenuPath.ResumeLayout(false);
+            this.radPanelMenuPath.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabelTitulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanelAcciones)).EndInit();
+            this.radPanelAcciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonActualizarLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonTransferir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonImportar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButtonNuevo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

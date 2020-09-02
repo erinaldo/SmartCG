@@ -1546,7 +1546,8 @@ namespace ModComprobantes
             this.dtAccionesActuales.Columns.Add("NoComp", typeof(string));
             this.dtAccionesActuales.Columns.Add("Estado", typeof(string));
             this.dtAccionesActuales.Columns.Add("Accion", typeof(string));
-            
+            this.dtAccionesActuales.Columns.Add("CodAccion", typeof(string));
+
             this.radGridViewAccionesActuales.DataSource = this.dtAccionesActuales;
             //Escribe el encabezado de la Grid de EditarLotes
             this.BuildDisplayNamesAccionesActuales();

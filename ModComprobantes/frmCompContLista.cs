@@ -520,6 +520,7 @@ namespace ModComprobantes
                 }
             }
         }
+
         #endregion
 
         #region Métodos Privados
@@ -1779,15 +1780,6 @@ namespace ModComprobantes
         }
         #endregion
 
-        private void radGridViewComprobantes_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                if (this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow) >= 0)
-                {
-                    this.EditarComprobante(this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow));
-                }
-            }
-        }
+        
     }
 }

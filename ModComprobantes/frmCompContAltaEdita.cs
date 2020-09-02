@@ -1479,15 +1479,16 @@ namespace ModComprobantes
                     string valor = this.dgDetalle.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
                     //QUITAR COMENTARIO
-                    if (!(this.edicionLote || this.edicionLoteError))
-                    {
+                    //if (!(this.edicionLote || this.edicionLoteError))
+                    
+                    //{
                         if (cmbCompania.Text.Substring(0, 2) != "" && nuevoComprobante && !nglm01)
                         {
                             string result1 = this.QueryGLM01(cmbCompania.Text.Substring(0, 2));
                             nglm01 = true;
                         }
                             string result = UpdateEstadoColumnasDadoCuentaMayor(valor, e.RowIndex);
-                    }
+                    //}
 
                     //poner la celda activa la que toque
                     break;
