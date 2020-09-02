@@ -19,6 +19,8 @@ namespace ModComprobantes
         private string _cab_tasa;
         private string _cab_descripcion;
         private string _cab_extendido;
+        private string _cab_tpmoneda;
+        private bool _esnuevo;
 
         private DataTable _det_detalles;
 
@@ -30,7 +32,7 @@ namespace ModComprobantes
 
         //-- Se utiliza para validar el tipo de comprobante batch por defecto, si compGLB01 es true se validan tipos interactivos
         private bool compGLB01 = false;
-
+        
         private readonly Autorizaciones aut;
         private Utiles utiles;
         private readonly UtilesCGConsultas utilesCG;
@@ -71,6 +73,10 @@ namespace ModComprobantes
         private string NM11PX = "";
         private string NM12PX = "";
 
+        public bool nglm02 = false;
+        public bool nglm01 = false;
+        public bool nglmx2 = false;
+
         #region Properties
         public string Cab_compania
         {
@@ -81,6 +87,17 @@ namespace ModComprobantes
             set
             {
                 this._cab_compania = value;
+            }
+        }
+        public string Cab_TpMoneda
+        {
+            get
+            {
+                return (this._cab_tpmoneda);
+            }
+            set
+            {
+                this._cab_tpmoneda = value;
             }
         }
 
@@ -191,7 +208,17 @@ namespace ModComprobantes
                 this._det_detalles = value;
             }
         }
-
+        public bool EsNuevo
+        {
+            get
+            {
+                return (this._esnuevo);
+            }
+            set
+            {
+                this._esnuevo = value;
+            }
+        }
         public string Biblioteca
         {
             get
@@ -251,6 +278,7 @@ namespace ModComprobantes
                 this.compGLB01 = value;
             }
         }
+        
         #endregion
 
         public ComprobanteContable()
@@ -399,7 +427,7 @@ namespace ModComprobantes
                 }
 
                 //------------- Tipo de Comprobante Invalido para Entrada Interactiva ---------------- 
-                if (this.compGLB01 && coditvGLT06 != "0")
+                if (this.compGLB01 && coditvGLT06 != "0" && EsNuevo)
                 {
                     this.DSErroresAdd(-1, this.LP.GetText("error_152_1", "Tipo de comprobante inválido para entrada interactiva"), "C", "cmbTipo"); //Falta traducir
                     result = false;
@@ -465,6 +493,7 @@ namespace ModComprobantes
                 }
 
                 //------------- Clase de comprobante inválida para la moneda  ----------------
+                if (!nglm02)
                 query = "select TIMOMP from " + GlobalVar.PrefijoTablaCG + "GLM02 ";
                 query += "where TIPLMP='" + tPlan + "'";
 
@@ -472,6 +501,7 @@ namespace ModComprobantes
                 if (dr.Read())
                 {
                     timompGLM02 = dr.GetValue(dr.GetOrdinal("TIMOMP")).ToString();
+                    nglm02 = true;
                 }
                 else
                 {
@@ -506,6 +536,8 @@ namespace ModComprobantes
                 if (this._cab_extendido == "1")
                 {
                     //------------- La compañía no tiene campos ampliados (por seguridad, no debería darse el caso)  ----------------
+                    if (nglmx2) return(result);
+
                     query = "select * from " + GlobalVar.PrefijoTablaCG + "GLMX2 ";
                     query += "where TIPLPX = '" + tPlan + "'";
 
@@ -546,6 +578,7 @@ namespace ModComprobantes
                         this.DSErroresAdd(-1, this.LP.GetText("error_209", "La compañía no tiene campos ampliados"), "C", "cmbCompania");  //Falta traducir
                         result = false;
                     }
+                    nglmx2 = true;
                     dr.Close();
                 }
             }

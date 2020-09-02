@@ -1741,6 +1741,7 @@ namespace ModComprobantes
                             Batch = true,                            
                             EdicionLote = true,
                             BatchLote = true,
+                            nGlm02=false
                         };
                         comprobante.Biblioteca = this.txtBiblioteca.Text.Trim();
                         comprobante.Prefijo = this.txtPrefijo.Text.Trim();
@@ -2515,7 +2516,8 @@ namespace ModComprobantes
                         ImportarComprobante = true,
                         EdicionLoteError = true,
                         BatchLoteError = true,
-                        Batch = true
+                        Batch = true,
+                        nGlm02=false
                     };
                     comprobante.Biblioteca = biblioteca;
                     comprobante.Prefijo = prefijo;

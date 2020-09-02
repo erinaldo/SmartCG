@@ -33,7 +33,8 @@ namespace ModComprobantes
 
         public string Saldo_local = "";
         public string Saldo_extran = "";
-
+        public string tpmoneda = "";
+        public string[] cmpextendidos = new string[16];
         public frmCompContListaGLB01()
         {
             InitializeComponent();
@@ -136,6 +137,9 @@ namespace ModComprobantes
                     NuevoComprobanteGLB01 = true,
                     EdicionComprobanteGLB01 = false,
                     Batch = false,
+                    TipoMoneda = tpmoneda,
+                    nGlm02= true,
+                    CmpExtendidos = cmpextendidos,
                     FrmPadre = this
                 };
                 frmCompCont.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
@@ -923,6 +927,8 @@ namespace ModComprobantes
 
                 string codigo = this.cmbCompania.Text.Trim();
                 if (codigo.Length > 2) codigo = codigo.Substring(0, 2);
+                
+                tpmoneda = FillTipoMoneda(codigo);
 
                 string query = "select CCIAIC, SAPRIC, TICOIC, NUCOIC, FECOIC, TVOUIC, DEBEIC, HABEIC, DEMEIC, HAMEIC, TASCIC, SIMIIC, STATIC, ";
 
@@ -1061,7 +1067,8 @@ namespace ModComprobantes
                         rowComprobante["FECOIC"] = dr["FECOIC"].ToString().Trim();
                         rowComprobante["SAPRIC"] = dr["SAPRIC"].ToString().Trim();
                         rowComprobante["STATIC"] = dr["STATIC"].ToString().Trim();
-
+                        
+                        
                         this.dtComprobantes.Rows.Add(rowComprobante);
 
                         cantComp++;
@@ -1590,7 +1597,7 @@ namespace ModComprobantes
         private void FillCompanias()
         {
             //string query = "select CCIAMG, NCIAMG from " + GlobalVar.PrefijoTablaCG + "GLM01 where STATMG='V' order by CCIAMG"; JL
-            string query = "select CCIAMG, NCIAMG from " + GlobalVar.PrefijoTablaCG + "GLM01 order by CCIAMG";
+            string query = "select CCIAMG, NCIAMG, TIPLMG from " + GlobalVar.PrefijoTablaCG + "GLM01 order by CCIAMG";
 
             string result = this.FillComboBox(query, "CCIAMG", "NCIAMG", ref this.cmbCompania, true, -1, false);
 
@@ -1601,11 +1608,46 @@ namespace ModComprobantes
                 RadMessageBox.Show(mensaje, error);
             }
         }
-
         /// <summary>
-        /// Cargar los tipos de comprobantes
+        /// Cargar El Tipo Moneda
         /// </summary>
-        private void FillTiposComprobantes()
+        private string FillTipoMoneda(string compania)
+        {
+            string plan = "";
+            string result = "";
+            IDataReader dr = null;
+            try
+            {
+                //Buscar el plan de la compañía
+                string[] datosCompAct = utilesCG.ObtenerTipoCalendarioCompania(compania.ToString());
+                    plan = datosCompAct[1];
+                
+                //Leer el tipo de moneda
+                string query = "select TIMOMP from ";
+                query += GlobalVar.PrefijoTablaCG + "GLM02 ";
+                query += "where TIPLMP = '" + plan + "'";
+
+                dr = GlobalVar.ConexionCG.ExecuteReader(query, GlobalVar.ConexionCG.GetConnectionValue);
+                
+                if (dr.Read())
+                {
+                    result = dr["TIMOMP"].ToString().Trim();
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                GlobalVar.Log.Error(ex.Message);
+
+                if (dr != null) dr.Close();
+            }
+
+            return (result);
+        }
+            /// <summary>
+            /// Cargar los tipos de comprobantes
+            /// </summary>
+            private void FillTiposComprobantes()
         {
             string query = "Select TIVOTV, NOMBTV From " + GlobalVar.PrefijoTablaCG + "GLT06 ";
             // query += "where CODITV='1' and STATTV='V' order by TIVOTV";  jl
@@ -1689,7 +1731,7 @@ namespace ModComprobantes
                 {
                     RadMessageBox.Show(this.LP.GetText("errPeriodoFormato", "El periodo no tiene un formato correcto"));
                     this.txtMaskAAPP.Focus();
-                    return (false);
+                   return (false); 
                 }
 
                 string periodo = sap.Substring(2, 2);
@@ -1832,6 +1874,7 @@ namespace ModComprobantes
             DataRow row;
 
             string nombreTabla = GlobalVar.PrefijoTablaCG + "GLB01 ";
+            string nombreTabla_X1 = GlobalVar.PrefijoTablaCG + "GLBX1 ";
             string query = "";
 
             /*string query = "select * from " + GlobalVar.PrefijoTablaCG + "GLB01 ";
@@ -1845,7 +1888,8 @@ namespace ModComprobantes
             switch (this.tipoBaseDatosCG)
             {
                 case "DB2":
-                    query = "select RRN(" + nombreTabla + ") as id, " + nombreTabla + ".* from " + nombreTabla;
+                    query = "select RRN(" + nombreTabla + ") as id, " + nombreTabla + " .*, " + nombreTabla_X1 + 
+                             " .*" +  " from " + nombreTabla;
                     break;
                 case "SQLServer":
                     query += "select GERIDENTI as id, " + nombreTabla + ".* from " + nombreTabla;
@@ -1856,7 +1900,8 @@ namespace ModComprobantes
                     query += "select " + campoOracle + " as id, " + nombreTabla + ".* from " + nombreTabla;
                     break;
             }
-
+            query += "left join " + nombreTabla_X1 + " " + nombreTabla_X1 +
+              " ON CCIADX =CCIADT and SAPRDX =SAPRDT and TICODX =TICODT and NUCODX =NUCODT AND SIMIDX=SIMIDT";
             query += " where CCIADT ='" + compania + "' and ";
             query += "SAPRDT =" + anoperiodo + " and ";
             query += "TICODT =" + tipo + " and ";
@@ -1919,7 +1964,35 @@ namespace ModComprobantes
                     {
                         //Si el compobante tiene campos extendidos, leer los valores de los campos extendidos para la línea de detalle
                         simidt = dr["SIMIDT"].ToString().Trim();
-                        this.ObtenerDetalleCamposExtendidos(ref row, compania, anoperiodo, tipo, noComprobante, simidt);
+                        string FIVADX = "";
+                        string USF1DX = "";
+                        string USF2DX = "";
+                        // this.ObtenerDetalleCamposExtendidos(ref row, compania, anoperiodo, tipo, noComprobante, simidt); Jl
+                        row["PrefijoDoc"] = dr["PRFDDX"].ToString().Trim();
+                        row["NumFactAmp"] = dr["NFAADX"].ToString().Trim();
+                        row["NumFactRectif"] = dr["NFARDX"].ToString().Trim();
+                        FIVADX = dr["FIVADX"].ToString().Trim();
+                        row["FechaServIVA"] = "";
+                        if (FIVADX != "" && FIVADX != "0") row["FechaServIVA"] = FIVADX;
+                        //row["FechaServIVA"] = dr["FIVAWS"].ToString().Trim();
+                        row["CampoUserAlfa1"] = dr["USA1DX"].ToString().Trim();
+                        row["CampoUserAlfa2"] = dr["USA2DX"].ToString().Trim();
+                        row["CampoUserAlfa3"] = dr["USA3DX"].ToString().Trim();
+                        row["CampoUserAlfa4"] = dr["USA4DX"].ToString().Trim();
+                        row["CampoUserAlfa5"] = dr["USA5DX"].ToString().Trim();
+                        row["CampoUserAlfa6"] = dr["USA6DX"].ToString().Trim();
+                        row["CampoUserAlfa7"] = dr["USA7DX"].ToString().Trim();
+                        row["CampoUserAlfa8"] = dr["USA8DX"].ToString().Trim();
+                        row["CampoUserNum1"] = dr["USN1DX"].ToString().Trim();
+                        row["CampoUserNum2"] = dr["USN2DX"].ToString().Trim();
+                        USF1DX = dr["USF1DX"].ToString().Trim();
+                        row["CampoUserFecha1"] = "";
+                        if (USF1DX != "" && USF1DX != "0") row["CampoUserFecha1"] = USF1DX;
+                        //row["CampoUserFecha1"] = dr["USF1WS"].ToString().Trim();
+                        USF2DX = dr["USF2DX"].ToString().Trim();
+                        row["CampoUserFecha2"] = "";
+                        if (USF2DX != "" && USF2DX != "0") row["CampoUserFecha2"] = USF2DX;
+                        //row["CampoUserFecha2"] = dr["USF2WS"].ToString().
                     }
 
                     dtDetalle.Rows.Add(row);
@@ -2035,7 +2108,7 @@ namespace ModComprobantes
             comprobante.Cab_fecha = row.Cells["FECOIC"].Value.ToString();
             comprobante.Cab_clase = row.Cells["clase"].Value.ToString();
             comprobante.Cab_tasa = row.Cells["tasa"].Value.ToString();
-
+             
             //Verificar si el comprobante tiene campos extendidos
             bool extendido = this.CamposExtendidos(codigo);
             if (extendido) comprobante.Cab_extendido = "1";
@@ -2072,6 +2145,9 @@ namespace ModComprobantes
                 EdicionComprobanteGLB01 = true,
                 ComprobanteSoloConsulta = soloConsulta,
                 Batch = false,
+                TipoMoneda = tpmoneda,
+                nGlm02 = true,
+                CmpExtendidos = cmpextendidos,
                 FrmPadre = this
             };
             frmCompCont.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
@@ -2172,6 +2248,23 @@ namespace ModComprobantes
                         string FG11PX = dr.GetValue(dr.GetOrdinal("FG11PX")).ToString();
                         string FG12PX = dr.GetValue(dr.GetOrdinal("FG12PX")).ToString();
 
+                        cmpextendidos[0] = FGPRPX;
+                        cmpextendidos[1] = FGFAPX;
+                        cmpextendidos[2] = FGFRPX;
+                        cmpextendidos[3] = FGDVPX;
+                        cmpextendidos[4] = FG01PX;
+                        cmpextendidos[5] = FG02PX;
+                        cmpextendidos[6] = FG03PX;
+                        cmpextendidos[7] = FG04PX;
+                        cmpextendidos[8] = FG05PX;
+                        cmpextendidos[9] = FG06PX;
+                        cmpextendidos[10] = FG07PX;
+                        cmpextendidos[11] = FG08PX;
+                        cmpextendidos[12] = FG09PX;
+                        cmpextendidos[13] = FG10PX;
+                        cmpextendidos[14] = FG11PX;
+                        cmpextendidos[15] = FG12PX;
+
                         //Chequear que al menos exista una columna visible
                         if (FGPRPX == "0" && FGFAPX == "0" && FGFRPX == "0" && FGDVPX == "0" && FG01PX == "0" && FG01PX == "0" &&
                             FG02PX == "0" && FG03PX == "0" && FG04PX == "0" && FG05PX == "0" && FG06PX == "0" && FG06PX == "0" &&
@@ -2194,7 +2287,7 @@ namespace ModComprobantes
 
                 if (dr != null) dr.Close();
             }
-
+             
             return (result);
         }
 

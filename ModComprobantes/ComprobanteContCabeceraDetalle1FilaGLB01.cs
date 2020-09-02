@@ -401,6 +401,7 @@ namespace ModComprobantes
             //}
                 if (this.det_FEVE == "" || this.det_FEVE=="0") this.det_FEVE = "0";
                 feve = this.det_FEVE;
+
                 //else
                 //{
                 //string aa = this.det_FEVE.Substring(2, 2).ToString();
@@ -852,8 +853,9 @@ namespace ModComprobantes
                         string fecha_fmt = this.det_FEVE.Substring(0, 4) + "/" +
                                            this.det_FEVE.Substring(4, 2) + "/" +
                                            this.det_FEVE.Substring(6, 2);
-                        fecha = Convert.ToDateTime(this.det_FEVE);
-                        this.det_FEVE = utiles.FechaToFormatoCG(fecha, false).ToString();
+                        //fecha = Convert.ToDateTime(this.det_FEVE);
+                        fecha = Convert.ToDateTime(fecha_fmt);
+                        this.det_FEVE = utiles.FechaToFormatoCG(fecha, true).ToString();
                     }
                     else this.det_FEVE = "0";
                 }

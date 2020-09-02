@@ -38,6 +38,7 @@ namespace ModComprobantes
 
         private bool nuevoComprobante;
         private bool batch;
+        private string tipomoneda;
         private bool EsNuevo;
         private int row_index;
         private bool importarComprobante;
@@ -53,6 +54,8 @@ namespace ModComprobantes
         private string compania;
         private string archivoComprobante;
         private ComprobanteContable comprobanteContableImportar;
+        private string[] cmpextendidos;
+
 
         private DataSet ds;
 
@@ -116,6 +119,11 @@ namespace ModComprobantes
 
         private DataTable dtRevertir;
 
+        public bool nglm01;
+        public bool nglm02;
+        public bool nglmx2;
+        public string compania_cmb;
+
         public bool NuevoComprobante
         {
             get
@@ -127,6 +135,28 @@ namespace ModComprobantes
                 this.nuevoComprobante = value;
             }
         }
+        public bool nGlm02
+        {
+            get
+            {
+                return (this.nglm02);
+            }
+            set
+            {
+                this.nglm02 = value;
+            }
+        }
+        public bool nGlmx2
+        {
+            get
+            {
+                return (this.nglmx2);
+            }
+            set
+            {
+                this.nglmx2 = value;
+            }
+        }
         public bool Batch
         {
             get
@@ -136,6 +166,28 @@ namespace ModComprobantes
             set
             {
                 this.batch = value;
+            }
+        }
+        public string[] CmpExtendidos
+        {
+            get
+            {
+                return (this.cmpextendidos);
+            }
+            set
+            {
+                this.cmpextendidos = value;
+            }
+        }
+        public string TipoMoneda
+        {
+            get
+            {
+                return (this.tipomoneda);
+            }
+            set
+            {
+                this.tipomoneda = value;
             }
         }
         public int Row_Index
@@ -387,6 +439,7 @@ namespace ModComprobantes
                 
                 // guarda datos cabecera iniciales
                 compania_ant = this.comprobanteContableImportar.Cab_compania;
+                compania_cmb = this.comprobanteContableImportar.Cab_compania;
                 tipo_ant = this.comprobanteContableImportar.Cab_tipo;
                 aapp_ant = this.txtMaskAAPP.Value.ToString();
                 nocomp_ant = this.comprobanteContableImportar.Cab_noComprobante;
@@ -430,8 +483,9 @@ namespace ModComprobantes
                         this.radDropDownListRevertir.Enabled = false;
 
                         if (this.comprobanteSoloConsulta)
-                        {   
+                        {
                             //this.toolStripButtonSelecModelo.Enabled = false;
+                            utiles.ButtonEnabled(ref this.radButtonGrabar, false);
                             utiles.ButtonEnabled(ref this.radButtonRevertir, false);
                             utiles.ButtonEnabled(ref this.radButtonValidar, false);
 
@@ -514,7 +568,8 @@ namespace ModComprobantes
 
             //En el menú derecho en el elemento de insertar filas, poner por defecto 1 fila (1er número del desplegable)
             this.toolStripInsertarFilacmbFilas.SelectedIndex = 0;
-
+            
+            this.WindowState = FormWindowState.Minimized;
             this.WindowState = FormWindowState.Maximized;
         }
         
@@ -604,7 +659,10 @@ namespace ModComprobantes
             if (this.cmbTipo.Text.ToString()!="") cmbTipo = this.cmbTipo.Text.Substring(0, 2).ToString();
             string cmbClase = "";
             if (this.cmbClase.Text.ToString()!="") cmbClase = this.cmbClase.Text.Substring(0, 1).ToString();
-
+            int lng = Convert.ToString(this.dateTimePickerFecha.Tag).Length;
+            string fechatag = Convert.ToString(this.dateTimePickerFecha.Tag).Substring(0, lng);
+            lng = Convert.ToString(this.dateTimePickerFecha.Text).Length;
+            string fechatext = Convert.ToString(this.dateTimePickerFecha.Text).Substring(0, lng);
             try
             {
                 if (this.nuevoComprobante)
@@ -615,7 +673,8 @@ namespace ModComprobantes
                 {
                     if (cmbCompania != compania_ant ||
                         this.txtMaskAAPP.Text != aapp_ant ||
-                        this.dateTimePickerFecha.Value != Convert.ToDateTime(this.dateTimePickerFecha.Tag) ||
+                        //this.dateTimePickerFecha.Value != Convert.ToDateTime(this.dateTimePickerFecha.Tag) ||
+                        fechatext != fechatag ||
                         cmbTipo != tipo_ant ||
                         this.txtNoComprobante.Text != nocomp_ant ||
                         cmbClase != this.cmbClase.Tag.ToString() ||
@@ -1410,7 +1469,7 @@ namespace ModComprobantes
         private void DgDetalle_CellValidated(object sender, DataGridViewCellEventArgs e)
         {
             //string columnName = this.dgDetalle.Columns[this.dgDetalle.CurrentCell.ColumnIndex].Name;
-
+            
             switch (this.dgDetalle.Columns[e.ColumnIndex].Name)
             {
                 case "Cuenta":
@@ -1420,7 +1479,12 @@ namespace ModComprobantes
                     //QUITAR COMENTARIO
                     if (!(this.edicionLote || this.edicionLoteError))
                     {
-                        string result = UpdateEstadoColumnasDadoCuentaMayor(valor, e.RowIndex);
+                        if (nuevoComprobante && !nglm01)
+                        {
+                            string result1 = this.QueryGLM01(this.comprobanteContableImportar.Cab_compania);
+                            nglm01 = true;
+                        }
+                            string result = UpdateEstadoColumnasDadoCuentaMayor(valor, e.RowIndex);
                     }
 
                     //poner la celda activa la que toque
@@ -1845,12 +1909,40 @@ namespace ModComprobantes
         {         
             DataRow row;
             bool todos = false;
+            
+            if (TipoMoneda is null) TipoMoneda = "";
+
+            if (Batch && !BatchLote)
+            { 
+                if (this.cmbCompania.Tag is null && 
+                    this.cmbCompania.Text != "" && 
+                    this.cmbCompania.Text.Substring(0, 2) != Compania)
+                {
+                    nGlm02 = true;
+                }
+                else
+                {
+                if (this.cmbCompania.Tag is null && 
+                        this.cmbCompania.Text != "" && 
+                        this.cmbCompania.Text.Substring(0, 2) == Compania)
+                    nGlm02 = false;
+                }
+            }
+            
+
+            if ((this.cmbCompania.Tag != null && this.cmbCompania.Tag != "") &&
+                (this.cmbCompania.Tag != this.cmbCompania.Text.Substring(0, 2))
+                || BatchLote)
+            {
+                nGlm02 = false;
+            }
 
             IDataReader dr = null;
             string texto0 = "0 - " + this.LP.GetText("lblClaseValor0", "Solo ML");
             string texto1 = "1 - " + this.LP.GetText("lblClaseValor1", "ML calcula ME");
             string texto2 = "2 - " + this.LP.GetText("lblClaseValor2", "ME calcula ML");
             string texto3 = "3 - " + this.LP.GetText("lblClaseValor3", "ML y ME");
+            string TIMOMP = "";
 
             try
             {
@@ -1859,17 +1951,27 @@ namespace ModComprobantes
                 if (this.GLM01_TIPLMG != null && this.GLM01_TIPLMG != "")
                 {
                     //Leer el tipo de moneda
-                    string query = "select TIMOMP from ";
-                    query += GlobalVar.PrefijoTablaCG + "GLM02 ";
-                    query += "where STATMP='V' and TIPLMP = '" + this.GLM01_TIPLMG + "'";
-
-                    dr = GlobalVar.ConexionCG.ExecuteReader(query, GlobalVar.ConexionCG.GetConnectionValue);
-                    string TIMOMP = "";
-                    if (dr.Read())
+                    if (!nGlm02)
                     {
-                        TIMOMP = dr["TIMOMP"].ToString().Trim();
 
-                        if (TIMOMP == "")
+                        string query = "select TIMOMP from ";
+                        query += GlobalVar.PrefijoTablaCG + "GLM02 ";
+                        query += "where STATMP='V' and TIPLMP = '" + this.GLM01_TIPLMG + "'";
+
+                        dr = GlobalVar.ConexionCG.ExecuteReader(query, GlobalVar.ConexionCG.GetConnectionValue);
+                        
+                        if (dr.Read())
+                        {
+                            TIMOMP = dr["TIMOMP"].ToString().Trim();
+                            TipoMoneda = dr["TIMOMP"].ToString().Trim();
+                        }
+                    }
+                    else
+                    {
+                        if (nGlm02) TIMOMP = TipoMoneda;
+                    }
+
+                    if (TIMOMP == "")
                         {
                             //si TIMOMP = "" la clase de comprobante solo puede ser 0 ó 3. 
                             row = dtClase.NewRow();
@@ -1916,11 +2018,13 @@ namespace ModComprobantes
 
                             this.txtTasa.Enabled = true;
                         }
+                    if (!nGlm02)
+                    {
+                        nGlm02 = true;
+                        dr.Close();
                     }
-
-                    dr.Close();
                 }
-                else
+                    else
                 {
                     todos = true;
                 }
@@ -1931,7 +2035,11 @@ namespace ModComprobantes
 
                 todos = true;
 
-                if (dr != null) dr.Close();
+                if (!nGlm02 && dr != null)
+                {
+                    nGlm02 = true;
+                    dr.Close();
+                }
             }
 
             if (todos)
@@ -2223,7 +2331,8 @@ namespace ModComprobantes
                 if (this.nuevoComprobanteGLB01 || this.edicionComprobanteGLB01)
                 {
                     //this.dgDetalle.AddTextBoxColumn(33, "Pais", this.LP.GetText("lblfrmCompContdgCampoPais", "País"), 30, 2, typeof(String), DataGridViewContentAlignment.MiddleLeft, true);
-                  
+                    if (this.NuevoComprobanteGLB01) EsNuevo = true;
+                    else EsNuevo = false;
                     //ComboBox para los paises
                     DataTable tableSourcePaises = new DataTable("tableSourcePaises");
                     tableSourcePaises.Columns.AddRange(new DataColumn[] {
@@ -2716,8 +2825,8 @@ namespace ModComprobantes
                 if (existeDetalle)
                 {
                     //Validar compañia para recuperar el campo GLM01.TIPLMG
-                    string result = this.ValidarCompania(this.comprobanteContableImportar.Cab_compania);
-
+                    // string result = this.ValidarCompania(this.comprobanteContableImportar.Cab_compania);
+                    string result = this.QueryGLM01(this.comprobanteContableImportar.Cab_compania);
                     //Habilitar / Deshabilitar Columnas y Dar Formato a las Fechas
                     string fecha;
                     string vencimiento;
@@ -4087,18 +4196,57 @@ namespace ModComprobantes
             }
         }
 
-        /// <summary>
-        /// Valida la existencia o no de la compañía. Si la encuentra recupera los valores NCIAMG, TITAMG, FELAMG, TIPLMG
-        /// </summary>
-        /// <param name="codigo"></param>
-        /// <returns>Valida la existencia o no de la compañía. Si la encuentra recupera los valores NCIAMG, TITAMG, FELAMG, TIPLMG</returns>
-        private string ValidarCompania(string codigo)
+        private string QueryGLM01(string codigo)
         {
             string result = "";
             IDataReader dr = null;
 
             try
             {
+                if (nglm01) return (result);
+
+                //Comprobar que la compañía es válida
+                string query = "select NCIAMG, TITAMG, FELAMG, TIPLMG from " + GlobalVar.PrefijoTablaCG + "GLM01 ";
+                query += "where STATMG = 'V' and CCIAMG = '" + codigo + "'";
+
+                dr = GlobalVar.ConexionCG.ExecuteReader(query, GlobalVar.ConexionCG.GetConnectionValue);
+
+                if (dr.Read())
+                {
+                    //Inicializar los valores que se necesitan en función de la compañía
+                    this.GLM01_NCIAMG = dr["NCIAMG"].ToString().Trim();
+                    this.GLM01_TITAMG = dr["TITAMG"].ToString().Trim();
+                    this.GLM01_FELAMG = dr["FELAMG"].ToString().Trim();
+                    this.GLM01_TIPLMG = dr["TIPLMG"].ToString().Trim();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(Utiles.CreateExceptionString(ex));
+
+                result = this.LP.GetText("lblfrmCompContErrCompExcep", "Error al validar la compañía") + " (" + ex.Message + ")";
+                if (dr != null) dr.Close();
+            }
+
+            return (result);
+        }
+    
+                /// <summary>
+                /// Valida la existencia o no de la compañía. Si la encuentra recupera los valores NCIAMG, TITAMG, FELAMG, TIPLMG
+                /// </summary>
+                /// <param name="codigo"></param>
+                /// <returns>Valida la existencia o no de la compañía. Si la encuentra recupera los valores NCIAMG, TITAMG, FELAMG, TIPLMG</returns>
+        private string ValidarCompania(string codigo)
+        {
+            string result = "";
+            IDataReader dr = null;
+           
+            try
+            {
+                if ((!Batch && nglm01) || (Batch && nglm01 && codigo== compania_cmb) || compania_ant is null) return ("");
+
+                if (codigo != compania_cmb) compania_cmb = codigo;
+
                 //Comprobar que la compañía es válida
                 string query = "select NCIAMG, TITAMG, FELAMG, TIPLMG from " + GlobalVar.PrefijoTablaCG + "GLM01 ";
                 query += "where STATMG = 'V' and CCIAMG = '" + codigo + "'";
@@ -4112,12 +4260,16 @@ namespace ModComprobantes
                     this.GLM01_TITAMG = dr["TITAMG"].ToString().Trim();
                     this.GLM01_FELAMG = dr["FELAMG"].ToString().Trim();
                     this.GLM01_TIPLMG = dr["TIPLMG"].ToString().Trim();
-
+                    
                     //Verificar si tiene campos extendidos (sólo para el caso de los xmls, no para la gestión de lotes que ya viene informado)
-                    if (!(this.edicionLote || this.edicionLoteError)) this.extendido = this.CamposExtendidos();
-                    else this.extendido = false;
+                    if (!nGlmx2)
+                    {
+                        if (!(this.edicionLote || this.edicionLoteError))
+                            this.extendido = this.CamposExtendidos();
+                        else this.extendido = false;
+                    }
 
-                    //Actualizar las columnas de campos extend idos de la Grid de detalles
+                    //Actualizar las columnas de campos extendidos de la Grid de detalles
                     this.ActualizarDetallesCamposExtendidos();
 
                     result = "";
@@ -4127,7 +4279,7 @@ namespace ModComprobantes
                     //Error la compañía no es válida
                     result = this.LP.GetText("lblfrmCompContErrComp", "La compañía no es válida");
                 }
-
+                nglm01 = true;
                 dr.Close();
             }
             catch (Exception ex)
@@ -4243,8 +4395,11 @@ namespace ModComprobantes
                 string query = "select NOMBTV from " + GlobalVar.PrefijoTablaCG + "GLT06 ";
                 query += "where STATTV = 'V' and TIVOTV = '" + codigo + "'";
 
-                if (!Batch) query += " and CODITV='0' ";
-                else query += " and CODITV='1' ";
+                if (!Batch && this.nuevoComprobanteGLB01) query += " and CODITV='0' ";
+                else
+                {
+                    if (Batch) query += " and CODITV='1' ";
+                }
 
                 dr = GlobalVar.ConexionCG.ExecuteReader(query, GlobalVar.ConexionCG.GetConnectionValue);
 
@@ -5391,9 +5546,14 @@ namespace ModComprobantes
             try
             {
                 //Verificar que exista la tabla GLMX2
-                bool existeTabla = utilesCG.ExisteTabla(tipoBaseDatosCG, "GLMX2");
+                bool existeTabla = false;
 
-                if (!existeTabla) return (result);
+                if (!nGlmx2)
+                {
+                    existeTabla = utilesCG.ExisteTabla(tipoBaseDatosCG, "GLMX2");
+                }
+
+                if (!existeTabla || nGlmx2) return (result);
 
                 string query = "select * from " + GlobalVar.PrefijoTablaCG + "GLMX2 ";
                 query += "where TIPLPX = '" + this.GLM01_TIPLMG + "'";
@@ -5425,6 +5585,7 @@ namespace ModComprobantes
                         FG07PX == "0" && FG08PX == "0" && FG08PX == "0" && FG09PX == "0" && FG10PX == "0" && FG11PX == "0" &&
                         FG12PX == "0")
                     {
+                        nGlmx2 = true;
                         dr.Close();
                         return (result);
                     }
@@ -5561,7 +5722,7 @@ namespace ModComprobantes
                     row["FG12PX"] = FG12PX;
 
                     this.dtGLMX2.Rows.Add(row);
-
+                    nGlmx2 = true;
                     result = true;
                 }
 
@@ -6663,13 +6824,14 @@ namespace ModComprobantes
                 comp = new ComprobanteContable
                 {
                     Cab_compania = this.cmbCompania.SelectedValue.ToString()
+                    
                 };
 
                 //coger el valor sin la máscara
                 this.txtMaskAAPP.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                 comp.Cab_anoperiodo = this.txtMaskAAPP.Value.ToString();
                 this.txtMaskAAPP.TextMaskFormat = MaskFormat.IncludeLiterals;
-
+                comp.EsNuevo = NuevoComprobanteGLB01;
                 comp.Cab_fecha = this.dateTimePickerFecha.Value.ToShortDateString();
 
                 if (this.cmbTipo.SelectedValue != null)
@@ -6684,6 +6846,7 @@ namespace ModComprobantes
                 //Se utiliza para validar el tipo de comprobante (batch o interactivo)
                 if (this.edicionComprobanteGLB01 || this.nuevoComprobanteGLB01) comp.CompGLB01 = true;
                 else comp.CompGLB01 = false;
+                
                 comp.Cab_noComprobante = this.txtNoComprobante.Text;
                 comp.Cab_descripcion = this.txtDescripcion.Text;
                 if (this.cmbClase.SelectedValue != null) comp.Cab_clase = this.cmbClase.SelectedValue.ToString();
@@ -6930,7 +7093,7 @@ namespace ModComprobantes
                 string codigo = this.cmbCompania.SelectedValue.ToString();
 
                 string result = this.ValidarCompania(codigo);
-
+                
                 this.CrearComboClase();
 
                 if (this.nuevoComprobante)
@@ -7369,6 +7532,8 @@ private void RadButtonExportar_Click(object sender, EventArgs e)
                 elementosSel.Add(this.dgDetalle.dsDatos.Tables["Cabecera"].Rows[0]["descripcion"]);
                 elementosSel.Add(this.dgDetalle.dsDatos.Tables["Cabecera"].Rows[0]["clase"]);
                 elementosSel.Add(this.dgDetalle.dsDatos.Tables["Cabecera"].Rows[0]["tasa"]);
+                if (BatchLote == false)
+                    elementosSel.Add(this.ArchivoComprobante);
             }
 
 

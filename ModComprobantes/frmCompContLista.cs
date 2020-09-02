@@ -19,7 +19,7 @@ namespace ModComprobantes
     public partial class frmCompContLista : frmPlantilla, IReLocalizable, IForm
     {
         public string formCode = "MCCLISTA";
-
+        
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
         public struct StructGLL01_MCCLISTA
         {
@@ -57,10 +57,13 @@ namespace ModComprobantes
         private static Point gridInfoLocation = new Point(19, 27);
         private static Size gridInfoSize = new Size(758, 480);
         private static int radCollapsiblePanelBuscadorExpandedHeight = 0;
+        public string tpmoneda = "";
+        public string[] cmpextendidos = new string[16]; 
 
         public frmCompContLista()
         {
-            InitializeComponent();
+            
+        InitializeComponent();
 
             this.gbLote.ElementTree.EnableApplicationThemeName = false;
             this.gbLote.ThemeName = "ControlDefault";
@@ -727,7 +730,9 @@ namespace ModComprobantes
 
                 // Set cursor as hourglass
                 Cursor.Current = Cursors.WaitCursor;
-                 
+
+                //tpmoneda = FillTipoMoneda(this.radGridViewComprobantes.Rows[rowIndex].Cells["compania"].Value.ToString());
+
                 frmCompContAltaEdita frmAltaEdita = new frmCompContAltaEdita
                 {
                     NuevoComprobante = false,
@@ -737,10 +742,13 @@ namespace ModComprobantes
                     Batch = true,
                     BatchLote = false,
                     BatchLoteError = false,
+                    nGlm02=false,
+                    CmpExtendidos = cmpextendidos,
                     Compania = this.radGridViewComprobantes.Rows[rowIndex].Cells["compania"].Value.ToString(),
+
                     FrmPadre = this
                 };
-                //SMR - FALTA AJUSTAR RUTINA, VA MAL!!! frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
+                frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
                 frmAltaEdita.Show(this);
 
                 // Set cursor as default arrow
@@ -756,6 +764,42 @@ namespace ModComprobantes
             
         }
 
+        /// <summary>
+        /// Cargar El Tipo Moneda
+        /// </summary>
+        private string FillTipoMoneda(string compania)
+        {
+            string plan = "";
+            string result = "";
+            IDataReader dr = null;
+            try
+            {
+                //Buscar el plan de la compañía
+                string[] datosCompAct = utilesCG.ObtenerTipoCalendarioCompania(compania.ToString());
+                plan = datosCompAct[1];
+
+                //Leer el tipo de moneda
+                string query = "select TIMOMP from ";
+                query += GlobalVar.PrefijoTablaCG + "GLM02 ";
+                query += "where TIPLMP = '" + plan + "'";
+
+                dr = GlobalVar.ConexionCG.ExecuteReader(query, GlobalVar.ConexionCG.GetConnectionValue);
+
+                if (dr.Read())
+                {
+                    result = dr["TIMOMP"].ToString().Trim();
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                GlobalVar.Log.Error(ex.Message);
+
+                if (dr != null) dr.Close();
+            }
+
+            return (result);
+        }
         /// <summary>
         /// Cargar los tipos de comprobantes
         /// </summary>
@@ -1512,13 +1556,19 @@ namespace ModComprobantes
         /// </summary>
         private void Nuevo()
         {
+            
             frmCompContAltaEdita frmAltaEdita = new frmCompContAltaEdita
             {
                 NuevoComprobante = true,
                 Batch = true,
+                BatchLote = false,
+                BatchLoteError = false,
+                nGlm02 = false,
+                TipoMoneda = "",
+                CmpExtendidos = cmpextendidos,
                 FrmPadre = this
             };
-            //SMR - FALTA AJUSTAR RUTINA, VA MAL!!! frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
+            frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
             frmAltaEdita.Show(this);
         }
         private void ActualizaListaComprobantes_ArgSel(frmCompContAltaEdita.ActualizaListaComprobantesArgs e)
@@ -1548,6 +1598,7 @@ namespace ModComprobantes
                 string descripcion = e.Valor[18].ToString().Trim();
                 string clase = e.Valor[19].ToString().Substring(0, 1).Trim();
                 string tasa = e.Valor[20].ToString().Trim();
+                string archivo = e.Valor[21].ToString();
 
                 // busco fila seleccionada.
                 for (int i = 0; i < this.radGridViewComprobantes.Rows.Count; i++)
@@ -1557,6 +1608,7 @@ namespace ModComprobantes
                     && (this.radGridViewComprobantes.Rows[i].Cells["tipo"].Value.ToString().Trim() == Cab_tipo_ant)
                     && (this.radGridViewComprobantes.Rows[i].Cells["noComp"].Value.ToString().Trim() == Cab_noComprobante_ant)
                     && (this.radGridViewComprobantes.Rows[i].Cells["fecha"].Value.ToString().Trim() == Cab_fecha_ant)
+                    && (this.radGridViewComprobantes.Rows[i].Cells["archivo"].Value.ToString().Trim() == archivo)
                     )
                     {
                         this.radGridViewComprobantes.Rows[i].Cells["compania"].Value = Cab_compania;
@@ -1715,5 +1767,16 @@ namespace ModComprobantes
             this.radContextMenuClickDerecho.Items.Add(menuItemEditar);
         }
         #endregion
+
+        private void radGridViewComprobantes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow) >= 0)
+                {
+                    this.EditarComprobante(this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow));
+                }
+            }
+        }
     }
 }
