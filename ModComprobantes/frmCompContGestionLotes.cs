@@ -10,6 +10,7 @@ using System.Configuration;
 using ObjectModel;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
+using System.Runtime.InteropServices;
 
 namespace ModComprobantes
 {
@@ -22,6 +23,8 @@ namespace ModComprobantes
 
     public partial class frmCompContGestionLotes : frmPlantilla, IReLocalizable
     {
+        public string formCode = "MCCGESTLOT";
+
         private string tipoBaseDatosCG;
 
         private bool bbddDB2 = false;
@@ -37,6 +40,19 @@ namespace ModComprobantes
         bool existeTablaW31;
         bool existeTablaW40;
         bool existeTablaW41;
+
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+        public struct StructGLL01_MCCGESTLOT
+        {
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 1)]
+            public string ampliado;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 2)]
+            public string prefijo;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 10)]
+            public string biblioteca;
+        }
+
+        FormularioValoresCampos valoresFormulario;
 
         private static bool primeraLlamada = true;
         private static Point gridInfoLocation = new Point(19, 28);
@@ -100,6 +116,25 @@ namespace ModComprobantes
             //Habilitar Edicion de Lotes
             this.gbEdicionLotes.Visible = true;
 
+            //Inicializar los valores del formulario
+            this.valoresFormulario = new FormularioValoresCampos();
+            string valores = "";
+            if (this.valoresFormulario.LeerParametros(formCode, ref valores))
+            {
+                if (!this.CargarValoresUltimaPeticion(valores))
+                {
+                    this.txtPrefijo.Text = "";
+                    this.txtBiblioteca.Text = "";
+                    this.radToggleSwitchFormatoAmpliado.Value = true;
+                }
+            }
+            else
+            {
+                this.txtPrefijo.Text = "";
+                this.txtBiblioteca.Text = "";
+                this.radToggleSwitchFormatoAmpliado.Value = true;
+            }
+
             //Ocultar las Grid y la etiquete de Info de Resultados
             this.gbGridEditarLotes.Visible = false;
             this.radGridViewEditarLotes.Visible = false;
@@ -140,7 +175,7 @@ namespace ModComprobantes
             utiles.ButtonEnabled(ref this.radButtonSuprimir, false);
             this.radButtonSuprimirHco.Visible = false;
 
-            this.AcceptButton = this.btnAceptar;
+            //SMR this.AcceptButton = this.btnAceptar;
 
             //this.txtBuscadorPrefijo.Select();
             this.txtPrefijo.Focus();
@@ -177,6 +212,10 @@ namespace ModComprobantes
 
             //Cargar los datos de la edicion de lotes
             this.FillDataGridtgGridEditarLotes();
+
+            //Grabar la petición
+            string valores = this.ValoresPeticion();
+            this.valoresFormulario.GrabarParametros(formCode, valores);
 
             // Set cursor as default arrow
             Cursor.Current = Cursors.Default;
@@ -226,7 +265,9 @@ namespace ModComprobantes
                 this.txtMaskBuscadorFechaHasta.Value = null;
                 this.txtMaskHastaFecha.Value = null;
                 this.gbBuscador.Visible = true;
-                this.radCollapsiblePanelBuscador.Visible = true;
+                //SMR this.radCollapsiblePanelBuscador.Visible = true;
+                this.radCollapsiblePanelBuscador.Visible = false;
+
                 utiles.ButtonEnabled(ref this.radButtonGestionLotesProc, false);
                 utiles.ButtonEnabled(ref radButtonSuprimirHco, true);
                 this.dtLotesError.Clear();
@@ -387,6 +428,7 @@ namespace ModComprobantes
                     this.gbGridLotesErrores.Visible = true;
                     this.radGridViewLotesErrores.Visible = true;
                 }
+
             }
             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
         }
@@ -463,7 +505,7 @@ namespace ModComprobantes
             if (this.bbddDB2) this.txtBiblioteca.Enabled = true;
             else this.txtBiblioteca.Enabled = false;
 
-            this.AcceptButton = this.btnAceptar;
+            //SMR this.AcceptButton = this.btnAceptar;
 
             this.txtPrefijo.Focus();
         }
@@ -641,7 +683,7 @@ namespace ModComprobantes
 
             this.txtMaskHastaFecha.Focus();
 
-            this.AcceptButton = this.btnHcoMensajesAceptar;
+            //SMR this.AcceptButton = this.btnHcoMensajesAceptar;
 
             // Set cursor as default arrow
             Cursor.Current = Cursors.Default;
@@ -729,6 +771,7 @@ namespace ModComprobantes
 
         private void RadCollapsiblePanelBuscador_Expanded(object sender, EventArgs e)
         {
+            /*
             if (this.gbGridLotesErrores.Visible)
             {
                 this.gbGridLotesErrores.Location = new Point(this.gbGridLotesErrores.Location.X, gridInfoLocation.Y + radCollapsiblePanelBuscadorExpandedHeight);
@@ -738,10 +781,12 @@ namespace ModComprobantes
                 this.txtBuscadorPrefijo.Select();
                 this.gbGridLotesErrores.Refresh();
             }
+            */
         }
 
         private void RadCollapsiblePanelBuscador_Collapsed(object sender, EventArgs e)
         {
+            /*
             if (primeraLlamada) primeraLlamada = false;
             else
             {
@@ -751,6 +796,7 @@ namespace ModComprobantes
 
                 this.gbGridLotesErrores.Size = gridInfoSize;
             }
+            */
         }
 
         private void RadGridViewEditarLotes_DataBindingComplete(object sender, Telerik.WinControls.UI.GridViewBindingCompleteEventArgs e)
@@ -784,8 +830,8 @@ namespace ModComprobantes
             this.gbGridCompErrores.Visible = false;
             this.radGridViewCompErrores.Visible = false;
 
-            if (this.tgGridLotesErroresRowSel != -1)
-            {
+            //SMR if (this.tgGridLotesErroresRowSel != -1)
+            //{
                 this.tgGridLotesErroresRowSel = -1;
                 this.radButtonEditar.Enabled = true;
 
@@ -797,7 +843,7 @@ namespace ModComprobantes
                     //this.gbGridLotesErrores.Size = gridInfoSize;
                     this.lotesErrorSizeGrande = true;
                 }
-            }
+            //}
         }
 
         private void RadGridViewLotesErrores_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
@@ -880,6 +926,51 @@ namespace ModComprobantes
         {
             Log.Info("FIN Gestión de Lotes");
         }
+
+        private void radGridViewEditarLotes_Leave(object sender, EventArgs e)
+        {
+            utiles.guardarLayout(this.Name, ref radGridViewEditarLotes);
+        }
+
+        private void radGridViewLotesErrores_Leave(object sender, EventArgs e)
+        {
+            utiles.guardarLayout(this.Name, ref radGridViewLotesErrores);
+        }
+
+        private void radGridViewEditarLotes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewEditarLotes.Rows.IndexOf(this.radGridViewEditarLotes.CurrentRow) >= 0)
+                {
+                    this.EditarLote();
+                }
+            }
+        }
+
+        private void radGridViewLotesErrores_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewLotesErrores.Rows.IndexOf(this.radGridViewLotesErrores.CurrentRow) >= 0)
+                {
+                    this.UI = GestionLotesUserInterfaces.EdicionLotesProcesados;
+
+                    this.EditarLote();
+                }
+            }
+        }
+
+        private void radGridViewCompErrores_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewCompErrores.Rows.IndexOf(this.radGridViewCompErrores.CurrentRow) >= 0)
+                {
+                    this.EditarLote();
+                }
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -923,6 +1014,60 @@ namespace ModComprobantes
             this.gbGridEditarLotes.Text = this.LP.GetText("lblCabeceraComp", "Cabeceras de comprobantes");
             this.gbGridLotesErrores.Text = this.LP.GetText("lblLotesProc", "Lotes procesados");
             this.gbGridCompErrores.Text = this.LP.GetText("lblErrores", "Errores");
+        }
+
+        /// <summary>
+        /// Actualiza los controles con los valores de la última petición
+        /// </summary>
+        /// <returns></returns>
+        private bool CargarValoresUltimaPeticion(string valores)
+        {
+            bool result = false;
+
+            try
+            {
+                IntPtr pBuf = Marshal.StringToBSTR(valores);
+                StructGLL01_MCCGESTLOT myStruct = (StructGLL01_MCCGESTLOT)Marshal.PtrToStructure(pBuf, typeof(StructGLL01_MCCGESTLOT));
+
+                if (myStruct.ampliado == "1") this.radToggleSwitchFormatoAmpliado.Value = true;
+                else this.radToggleSwitchFormatoAmpliado.Value = false;
+
+                this.txtPrefijo.Text = myStruct.prefijo.Trim();
+                this.txtBiblioteca.Text = myStruct.biblioteca.Trim();
+
+                result = true;
+
+                Marshal.FreeBSTR(pBuf);
+            }
+            catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
+
+            return (result);
+        }
+
+        /// <summary>
+        /// Devuelve una  cadena con todos los valores del formulario para grabar en la tabla de peticiones GLL01
+        /// </summary>
+        /// <returns></returns>
+        private string ValoresPeticion()
+        {
+            string result = "";
+            try
+            {
+                StructGLL01_MCCGESTLOT myStruct;
+
+                if (this.radToggleSwitchFormatoAmpliado.Value) myStruct.ampliado = "1";
+                else myStruct.ampliado = "0";
+
+                myStruct.prefijo = this.txtPrefijo.Text.PadRight(2, ' ');
+                myStruct.biblioteca = this.txtBiblioteca.Text.PadRight(10, ' ');
+                
+                result = myStruct.ampliado + myStruct.prefijo + myStruct.biblioteca;
+                
+                int objsize = Marshal.SizeOf(typeof(StructGLL01_MCCGESTLOT));
+            }
+            catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
+
+            return (result);
         }
 
         /// <summary>
@@ -1189,6 +1334,7 @@ namespace ModComprobantes
                     utiles.ButtonEnabled(ref radButtonSuprimir, true);
                     this.gbGridEditarLotes.Visible = true;
                     this.radGridViewEditarLotes.Visible = true;
+                    /*
                     this.radGridViewEditarLotes.Focus();
 
                     for (int i = 0; i < this.radGridViewEditarLotes.Columns.Count; i++)
@@ -1198,6 +1344,36 @@ namespace ModComprobantes
                     this.radGridViewEditarLotes.Rows[0].IsCurrent = true;
                     this.radGridViewEditarLotes.Visible = true;
                     this.radGridViewEditarLotes.Focus();
+                    */
+                    for (int i = 0; i < this.radGridViewEditarLotes.Columns.Count; i++)
+                    {
+                        this.radGridViewEditarLotes.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
+                        //this.radGridViewInfo.Columns[i].BestFit();
+                        this.radGridViewEditarLotes.Columns[i].Width = 600;
+                    }
+
+                    this.radGridViewEditarLotes.TableElement.GridViewElement.GroupPanelElement.Text = "Arrastre una columna aquí para agrupar - Pulse ctrl+F para activar la búsqueda";
+                    this.radGridViewEditarLotes.AllowSearchRow = true;
+                    this.radGridViewEditarLotes.MasterView.TableSearchRow.IsVisible = false;
+                    this.radGridViewEditarLotes.TableElement.SearchHighlightColor = Color.Aqua;
+                    this.radGridViewEditarLotes.AllowEditRow = false;
+                    this.radGridViewEditarLotes.EnableFiltering = true;
+                    //this.radGridViewInfo.MasterView.TableFilteringRow.IsVisible = false;
+
+                    //this.radGridViewInfo.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+                    //this.radGridViewInfo.MasterTemplate.BestFitColumns();
+                    this.radGridViewEditarLotes.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
+
+                    if (this.radGridViewEditarLotes.Groups.Count == 0) this.radGridViewEditarLotes.Rows[0].IsCurrent = true;
+                    this.radGridViewEditarLotes.Focus();
+                    this.radGridViewEditarLotes.Select();
+                    //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, this.radPanelApp.Size.Height - this.radCollapsiblePanelDataFilter.Size.Height - 3);
+                    //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, 609);
+
+                    //cargar layout
+                    utiles.cargarLayout(this.Name, ref radGridViewEditarLotes);
+
+                    this.radGridViewEditarLotes.Refresh();
                 }
                 else
                 {
@@ -1355,7 +1531,8 @@ namespace ModComprobantes
                     utiles.ButtonEnabled(ref radButtonSuprimir, true);
                     this.radButtonSuprimirHco.Visible = true;
                     this.gbGridLotesErrores.Visible = true;
-                    
+
+                    /*
                     for (int i = 0; i < this.radGridViewLotesErrores.Columns.Count; i++)
                         this.radGridViewLotesErrores.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
                     this.radGridViewLotesErrores.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
@@ -1363,6 +1540,36 @@ namespace ModComprobantes
                     this.radGridViewLotesErrores.Rows[0].IsCurrent = true;
                     this.radGridViewLotesErrores.Visible = true;
                     this.radGridViewLotesErrores.Focus();
+                    */
+                    for (int i = 0; i < this.radGridViewLotesErrores.Columns.Count; i++)
+                    {
+                        this.radGridViewLotesErrores.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
+                        //this.radGridViewInfo.Columns[i].BestFit();
+                        this.radGridViewLotesErrores.Columns[i].Width = 600;
+                    }
+
+                    this.radGridViewLotesErrores.TableElement.GridViewElement.GroupPanelElement.Text = "Arrastre una columna aquí para agrupar - Pulse ctrl+F para activar la búsqueda";
+                    this.radGridViewLotesErrores.AllowSearchRow = true;
+                    this.radGridViewLotesErrores.MasterView.TableSearchRow.IsVisible = false;
+                    this.radGridViewLotesErrores.TableElement.SearchHighlightColor = Color.Aqua;
+                    this.radGridViewLotesErrores.AllowEditRow = false;
+                    this.radGridViewLotesErrores.EnableFiltering = true;
+                    //this.radGridViewInfo.MasterView.TableFilteringRow.IsVisible = false;
+
+                    //this.radGridViewInfo.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+                    //this.radGridViewInfo.MasterTemplate.BestFitColumns();
+                    this.radGridViewLotesErrores.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
+
+                    if (this.radGridViewLotesErrores.Groups.Count == 0) this.radGridViewLotesErrores.Rows[0].IsCurrent = true;
+                    this.radGridViewLotesErrores.Focus();
+                    this.radGridViewLotesErrores.Select();
+                    //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, this.radPanelApp.Size.Height - this.radCollapsiblePanelDataFilter.Size.Height - 3);
+                    //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, 609);
+
+                    //cargar layout
+                    utiles.cargarLayout(this.Name, ref radGridViewLotesErrores);
+
+                    this.radGridViewLotesErrores.Refresh();
                 }
                 else
                 {
@@ -1506,7 +1713,9 @@ namespace ModComprobantes
                     {
                         this.gbGridCompErrores.BringToFront();
                         this.gbGridCompErrores.Visible = true;
-                        
+                        this.radGridViewCompErrores.Visible = true;
+
+                        /*
                         for (int i = 0; i < this.radGridViewCompErrores.Columns.Count; i++)
                             this.radGridViewCompErrores.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
                         this.radGridViewCompErrores.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
@@ -1516,6 +1725,40 @@ namespace ModComprobantes
                         this.radGridViewCompErrores.BringToFront();
                         this.radGridViewCompErrores.Focus();
                         this.MostrarOcultarGridCompErrores();
+                        */
+
+                        for (int i = 0; i < this.radGridViewCompErrores.Columns.Count; i++)
+                        {
+                            this.radGridViewCompErrores.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
+                            //this.radGridViewInfo.Columns[i].BestFit();
+                            this.radGridViewCompErrores.Columns[i].Width = 600;
+                        }
+
+                        this.radGridViewCompErrores.TableElement.GridViewElement.GroupPanelElement.Text = "Arrastre una columna aquí para agrupar - Pulse ctrl+F para activar la búsqueda";
+                        this.radGridViewCompErrores.AllowSearchRow = true;
+                        this.radGridViewCompErrores.MasterView.TableSearchRow.IsVisible = false;
+                        this.radGridViewCompErrores.TableElement.SearchHighlightColor = Color.Aqua;
+                        this.radGridViewCompErrores.AllowEditRow = false;
+                        this.radGridViewCompErrores.EnableFiltering = true;
+                        //this.radGridViewInfo.MasterView.TableFilteringRow.IsVisible = false;
+
+                        //this.radGridViewInfo.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+                        //this.radGridViewInfo.MasterTemplate.BestFitColumns();
+                        this.radGridViewCompErrores.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
+
+                        if (this.radGridViewCompErrores.Groups.Count == 0) this.radGridViewCompErrores.Rows[0].IsCurrent = true;
+                        //this.radGridViewCompErrores.Visible = true;
+                        this.radGridViewCompErrores.BringToFront();
+                        this.radGridViewCompErrores.Focus();
+                        this.MostrarOcultarGridCompErrores();
+                        this.radGridViewCompErrores.Select();
+                        //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, this.radPanelApp.Size.Height - this.radCollapsiblePanelDataFilter.Size.Height - 3);
+                        //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, 609);
+
+                        //cargar layout
+                        //utiles.cargarLayout(this.Name, ref radGridViewCompErrores);
+
+                        this.radGridViewCompErrores.Refresh();
                     }
                     else
                     {
@@ -2614,14 +2857,17 @@ namespace ModComprobantes
             //Habilitar Edicion de listado de errores
             this.radCollapsiblePanelBuscador.Collapse();
             this.radCollapsiblePanelBuscador.BringToFront();
-            this.radCollapsiblePanelBuscador.Visible = true;
+            //SMR this.radCollapsiblePanelBuscador.Visible = true;
+            this.radCollapsiblePanelBuscador.Visible = false;
+
             this.gbEdicionLotes.Visible = false;
             utiles.ButtonEnabled(ref this.radButtonGestionLotesProc, false);
             utiles.ButtonEnabled(ref this.radButtonEdicionLotes, true);
             utiles.ButtonEnabled(ref this.radButtonSuprimirHco, true);
             this.gbBuscador.Visible = true;
             this.radCollapsiblePanelBuscador.BringToFront();
-            this.radCollapsiblePanelBuscador.Visible = true;
+            //SMR this.radCollapsiblePanelBuscador.Visible = true;
+            this.radCollapsiblePanelBuscador.Visible = false;
 
             //Ocultar las Grid y la etiquete de Info de Resultados
             this.gbGridEditarLotes.Visible = false;
@@ -2637,7 +2883,7 @@ namespace ModComprobantes
 
             this.mostrarLotesTodos = false;
 
-            this.AcceptButton = this.btnBuscadorBuscar;
+            //SMR this.AcceptButton = this.btnBuscadorBuscar;
 
             this.FillDataGridtgGridLotesErrores();
         }

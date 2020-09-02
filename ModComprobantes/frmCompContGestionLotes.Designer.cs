@@ -33,6 +33,14 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.radPanelApp = new Telerik.WinControls.UI.RadPanel();
+            this.gbEdicionLotes = new Telerik.WinControls.UI.RadGroupBox();
+            this.radToggleSwitchFormatoAmpliado = new Telerik.WinControls.UI.RadToggleSwitch();
+            this.lblFormatoAmpliado = new Telerik.WinControls.UI.RadLabel();
+            this.btnAceptar = new Telerik.WinControls.UI.RadButton();
+            this.txtBiblioteca = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.lblPrefijo = new Telerik.WinControls.UI.RadLabel();
+            this.lblBilioteca = new Telerik.WinControls.UI.RadLabel();
+            this.txtPrefijo = new Telerik.WinControls.UI.RadTextBoxControl();
             this.gbSuprimirHco = new Telerik.WinControls.UI.RadGroupBox();
             this.btnHcoMensajesAceptar = new Telerik.WinControls.UI.RadButton();
             this.btnHcoMensajesCancelar = new Telerik.WinControls.UI.RadButton();
@@ -55,14 +63,6 @@
             this.btnBuscadorBuscar = new Telerik.WinControls.UI.RadButton();
             this.txtMaskBuscadorFechaDesde = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.lblBuscadorFecha = new Telerik.WinControls.UI.RadLabel();
-            this.gbEdicionLotes = new Telerik.WinControls.UI.RadGroupBox();
-            this.radToggleSwitchFormatoAmpliado = new Telerik.WinControls.UI.RadToggleSwitch();
-            this.lblFormatoAmpliado = new Telerik.WinControls.UI.RadLabel();
-            this.btnAceptar = new Telerik.WinControls.UI.RadButton();
-            this.txtBiblioteca = new Telerik.WinControls.UI.RadTextBoxControl();
-            this.lblPrefijo = new Telerik.WinControls.UI.RadLabel();
-            this.lblBilioteca = new Telerik.WinControls.UI.RadLabel();
-            this.txtPrefijo = new Telerik.WinControls.UI.RadTextBoxControl();
             this.lblInfo = new Telerik.WinControls.UI.RadLabel();
             this.gbGridEditarLotes = new Telerik.WinControls.UI.RadGroupBox();
             this.radGridViewEditarLotes = new Telerik.WinControls.UI.RadGridView();
@@ -80,6 +80,15 @@
             this.radLabelTitulo = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).BeginInit();
             this.radPanelApp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbEdicionLotes)).BeginInit();
+            this.gbEdicionLotes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitchFormatoAmpliado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblFormatoAmpliado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBiblioteca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblPrefijo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblBilioteca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrefijo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbSuprimirHco)).BeginInit();
             this.gbSuprimirHco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHcoMensajesAceptar)).BeginInit();
@@ -105,15 +114,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscadorBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaskBuscadorFechaDesde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblBuscadorFecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbEdicionLotes)).BeginInit();
-            this.gbEdicionLotes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitchFormatoAmpliado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblFormatoAmpliado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBiblioteca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblPrefijo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblBilioteca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrefijo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbGridEditarLotes)).BeginInit();
             this.gbGridEditarLotes.SuspendLayout();
@@ -158,6 +158,94 @@
             this.radPanelApp.Size = new System.Drawing.Size(867, 473);
             this.radPanelApp.TabIndex = 15;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanelApp.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // gbEdicionLotes
+            // 
+            this.gbEdicionLotes.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.gbEdicionLotes.Controls.Add(this.radToggleSwitchFormatoAmpliado);
+            this.gbEdicionLotes.Controls.Add(this.lblFormatoAmpliado);
+            this.gbEdicionLotes.Controls.Add(this.btnAceptar);
+            this.gbEdicionLotes.Controls.Add(this.txtBiblioteca);
+            this.gbEdicionLotes.Controls.Add(this.lblPrefijo);
+            this.gbEdicionLotes.Controls.Add(this.lblBilioteca);
+            this.gbEdicionLotes.Controls.Add(this.txtPrefijo);
+            this.gbEdicionLotes.HeaderText = " Edición de Lotes ";
+            this.gbEdicionLotes.Location = new System.Drawing.Point(19, 16);
+            this.gbEdicionLotes.Name = "gbEdicionLotes";
+            this.gbEdicionLotes.Size = new System.Drawing.Size(464, 82);
+            this.gbEdicionLotes.TabIndex = 20;
+            this.gbEdicionLotes.TabStop = false;
+            this.gbEdicionLotes.Text = " Edición de Lotes ";
+            // 
+            // radToggleSwitchFormatoAmpliado
+            // 
+            this.radToggleSwitchFormatoAmpliado.Location = new System.Drawing.Point(196, 42);
+            this.radToggleSwitchFormatoAmpliado.Name = "radToggleSwitchFormatoAmpliado";
+            this.radToggleSwitchFormatoAmpliado.OffText = "";
+            this.radToggleSwitchFormatoAmpliado.OnText = "";
+            this.radToggleSwitchFormatoAmpliado.Size = new System.Drawing.Size(50, 20);
+            this.radToggleSwitchFormatoAmpliado.TabIndex = 50;
+            this.radToggleSwitchFormatoAmpliado.ThemeName = "MaterialBlueGrey";
+            this.radToggleSwitchFormatoAmpliado.Value = false;
+            // 
+            // lblFormatoAmpliado
+            // 
+            this.lblFormatoAmpliado.Location = new System.Drawing.Point(193, 20);
+            this.lblFormatoAmpliado.Name = "lblFormatoAmpliado";
+            this.lblFormatoAmpliado.Size = new System.Drawing.Size(107, 19);
+            this.lblFormatoAmpliado.TabIndex = 45;
+            this.lblFormatoAmpliado.Text = "Formato ampliado";
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAceptar.Location = new System.Drawing.Point(360, 36);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(80, 21);
+            this.btnAceptar.TabIndex = 55;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
+            this.btnAceptar.MouseEnter += new System.EventHandler(this.BtnAceptar_MouseEnter);
+            this.btnAceptar.MouseLeave += new System.EventHandler(this.BtnAceptar_MouseLeave);
+            // 
+            // txtBiblioteca
+            // 
+            this.txtBiblioteca.Enabled = false;
+            this.txtBiblioteca.Location = new System.Drawing.Point(76, 38);
+            this.txtBiblioteca.MaxLength = 10;
+            this.txtBiblioteca.Name = "txtBiblioteca";
+            this.txtBiblioteca.Padding = new System.Windows.Forms.Padding(5);
+            this.txtBiblioteca.Size = new System.Drawing.Size(94, 30);
+            this.txtBiblioteca.TabIndex = 40;
+            this.txtBiblioteca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBiblioteca_KeyPress);
+            // 
+            // lblPrefijo
+            // 
+            this.lblPrefijo.Location = new System.Drawing.Point(17, 18);
+            this.lblPrefijo.Name = "lblPrefijo";
+            this.lblPrefijo.Size = new System.Drawing.Size(41, 19);
+            this.lblPrefijo.TabIndex = 25;
+            this.lblPrefijo.Text = "Prefijo";
+            // 
+            // lblBilioteca
+            // 
+            this.lblBilioteca.Location = new System.Drawing.Point(76, 18);
+            this.lblBilioteca.Name = "lblBilioteca";
+            this.lblBilioteca.Size = new System.Drawing.Size(60, 19);
+            this.lblBilioteca.TabIndex = 35;
+            this.lblBilioteca.Text = "Biblioteca";
+            // 
+            // txtPrefijo
+            // 
+            this.txtPrefijo.Location = new System.Drawing.Point(17, 38);
+            this.txtPrefijo.MaxLength = 2;
+            this.txtPrefijo.Name = "txtPrefijo";
+            this.txtPrefijo.Padding = new System.Windows.Forms.Padding(5);
+            this.txtPrefijo.Size = new System.Drawing.Size(35, 30);
+            this.txtPrefijo.TabIndex = 30;
+            this.txtPrefijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrefijo_KeyPress);
             // 
             // gbSuprimirHco
             // 
@@ -235,6 +323,7 @@
             this.radCollapsiblePanelBuscador.PanelContainer.TabIndex = 70;
             this.radCollapsiblePanelBuscador.Size = new System.Drawing.Size(811, 110);
             this.radCollapsiblePanelBuscador.TabIndex = 65;
+            this.radCollapsiblePanelBuscador.Visible = false;
             this.radCollapsiblePanelBuscador.Expanded += new System.EventHandler(this.RadCollapsiblePanelBuscador_Expanded);
             this.radCollapsiblePanelBuscador.Collapsed += new System.EventHandler(this.RadCollapsiblePanelBuscador_Collapsed);
             // 
@@ -410,94 +499,6 @@
             this.lblBuscadorFecha.TabIndex = 110;
             this.lblBuscadorFecha.Text = "Fecha";
             // 
-            // gbEdicionLotes
-            // 
-            this.gbEdicionLotes.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.gbEdicionLotes.Controls.Add(this.radToggleSwitchFormatoAmpliado);
-            this.gbEdicionLotes.Controls.Add(this.lblFormatoAmpliado);
-            this.gbEdicionLotes.Controls.Add(this.btnAceptar);
-            this.gbEdicionLotes.Controls.Add(this.txtBiblioteca);
-            this.gbEdicionLotes.Controls.Add(this.lblPrefijo);
-            this.gbEdicionLotes.Controls.Add(this.lblBilioteca);
-            this.gbEdicionLotes.Controls.Add(this.txtPrefijo);
-            this.gbEdicionLotes.HeaderText = " Edición de Lotes ";
-            this.gbEdicionLotes.Location = new System.Drawing.Point(19, 16);
-            this.gbEdicionLotes.Name = "gbEdicionLotes";
-            this.gbEdicionLotes.Size = new System.Drawing.Size(464, 82);
-            this.gbEdicionLotes.TabIndex = 20;
-            this.gbEdicionLotes.TabStop = false;
-            this.gbEdicionLotes.Text = " Edición de Lotes ";
-            // 
-            // radToggleSwitchFormatoAmpliado
-            // 
-            this.radToggleSwitchFormatoAmpliado.Location = new System.Drawing.Point(196, 42);
-            this.radToggleSwitchFormatoAmpliado.Name = "radToggleSwitchFormatoAmpliado";
-            this.radToggleSwitchFormatoAmpliado.OffText = "";
-            this.radToggleSwitchFormatoAmpliado.OnText = "";
-            this.radToggleSwitchFormatoAmpliado.Size = new System.Drawing.Size(50, 20);
-            this.radToggleSwitchFormatoAmpliado.TabIndex = 50;
-            this.radToggleSwitchFormatoAmpliado.ThemeName = "MaterialBlueGrey";
-            this.radToggleSwitchFormatoAmpliado.Value = false;
-            // 
-            // lblFormatoAmpliado
-            // 
-            this.lblFormatoAmpliado.Location = new System.Drawing.Point(193, 20);
-            this.lblFormatoAmpliado.Name = "lblFormatoAmpliado";
-            this.lblFormatoAmpliado.Size = new System.Drawing.Size(107, 19);
-            this.lblFormatoAmpliado.TabIndex = 45;
-            this.lblFormatoAmpliado.Text = "Formato ampliado";
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
-            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAceptar.Location = new System.Drawing.Point(360, 36);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(80, 21);
-            this.btnAceptar.TabIndex = 55;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
-            this.btnAceptar.MouseEnter += new System.EventHandler(this.BtnAceptar_MouseEnter);
-            this.btnAceptar.MouseLeave += new System.EventHandler(this.BtnAceptar_MouseLeave);
-            // 
-            // txtBiblioteca
-            // 
-            this.txtBiblioteca.Enabled = false;
-            this.txtBiblioteca.Location = new System.Drawing.Point(76, 38);
-            this.txtBiblioteca.MaxLength = 10;
-            this.txtBiblioteca.Name = "txtBiblioteca";
-            this.txtBiblioteca.Padding = new System.Windows.Forms.Padding(5);
-            this.txtBiblioteca.Size = new System.Drawing.Size(94, 30);
-            this.txtBiblioteca.TabIndex = 40;
-            this.txtBiblioteca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBiblioteca_KeyPress);
-            // 
-            // lblPrefijo
-            // 
-            this.lblPrefijo.Location = new System.Drawing.Point(17, 18);
-            this.lblPrefijo.Name = "lblPrefijo";
-            this.lblPrefijo.Size = new System.Drawing.Size(41, 19);
-            this.lblPrefijo.TabIndex = 25;
-            this.lblPrefijo.Text = "Prefijo";
-            // 
-            // lblBilioteca
-            // 
-            this.lblBilioteca.Location = new System.Drawing.Point(76, 18);
-            this.lblBilioteca.Name = "lblBilioteca";
-            this.lblBilioteca.Size = new System.Drawing.Size(60, 19);
-            this.lblBilioteca.TabIndex = 35;
-            this.lblBilioteca.Text = "Biblioteca";
-            // 
-            // txtPrefijo
-            // 
-            this.txtPrefijo.Location = new System.Drawing.Point(17, 38);
-            this.txtPrefijo.MaxLength = 2;
-            this.txtPrefijo.Name = "txtPrefijo";
-            this.txtPrefijo.Padding = new System.Windows.Forms.Padding(5);
-            this.txtPrefijo.Size = new System.Drawing.Size(35, 30);
-            this.txtPrefijo.TabIndex = 30;
-            this.txtPrefijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrefijo_KeyPress);
-            // 
             // lblInfo
             // 
             this.lblInfo.Location = new System.Drawing.Point(19, 93);
@@ -516,7 +517,7 @@
             this.gbGridEditarLotes.HeaderText = " Cabeceras de comprobantes ";
             this.gbGridEditarLotes.Location = new System.Drawing.Point(19, 113);
             this.gbGridEditarLotes.Name = "gbGridEditarLotes";
-            this.gbGridEditarLotes.Size = new System.Drawing.Size(813, 379);
+            this.gbGridEditarLotes.Size = new System.Drawing.Size(813, 357);
             this.gbGridEditarLotes.TabIndex = 60;
             this.gbGridEditarLotes.TabStop = false;
             this.gbGridEditarLotes.Text = " Cabeceras de comprobantes ";
@@ -527,7 +528,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radGridViewEditarLotes.AutoScroll = true;
-            this.radGridViewEditarLotes.Location = new System.Drawing.Point(18, 28);
+            this.radGridViewEditarLotes.Location = new System.Drawing.Point(17, 25);
             // 
             // 
             // 
@@ -536,10 +537,12 @@
             this.radGridViewEditarLotes.MasterTemplate.AllowEditRow = false;
             this.radGridViewEditarLotes.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridViewEditarLotes.Name = "radGridViewEditarLotes";
-            this.radGridViewEditarLotes.Size = new System.Drawing.Size(783, 308);
+            this.radGridViewEditarLotes.Size = new System.Drawing.Size(780, 319);
             this.radGridViewEditarLotes.TabIndex = 61;
             this.radGridViewEditarLotes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewEditarLotes_CellDoubleClick);
             this.radGridViewEditarLotes.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewEditarLotes_DataBindingComplete);
+            this.radGridViewEditarLotes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewEditarLotes_KeyPress);
+            this.radGridViewEditarLotes.Leave += new System.EventHandler(this.radGridViewEditarLotes_Leave);
             // 
             // gbGridLotesErrores
             // 
@@ -551,7 +554,7 @@
             this.gbGridLotesErrores.HeaderText = " Lotes procesados ";
             this.gbGridLotesErrores.Location = new System.Drawing.Point(20, 28);
             this.gbGridLotesErrores.Name = "gbGridLotesErrores";
-            this.gbGridLotesErrores.Size = new System.Drawing.Size(813, 529);
+            this.gbGridLotesErrores.Size = new System.Drawing.Size(813, 442);
             this.gbGridLotesErrores.TabIndex = 160;
             this.gbGridLotesErrores.TabStop = false;
             this.gbGridLotesErrores.Text = " Lotes procesados ";
@@ -571,12 +574,14 @@
             this.radGridViewLotesErrores.MasterTemplate.AllowEditRow = false;
             this.radGridViewLotesErrores.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridViewLotesErrores.Name = "radGridViewLotesErrores";
-            this.radGridViewLotesErrores.Size = new System.Drawing.Size(776, 404);
+            this.radGridViewLotesErrores.Size = new System.Drawing.Size(780, 396);
             this.radGridViewLotesErrores.TabIndex = 191;
             this.radGridViewLotesErrores.RowFormatting += new Telerik.WinControls.UI.RowFormattingEventHandler(this.RadGridViewLotesErrores_RowFormatting);
             this.radGridViewLotesErrores.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewLotesErrores_CellClick);
             this.radGridViewLotesErrores.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewLotesErrores_CellDoubleClick);
             this.radGridViewLotesErrores.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewLotesErrores_DataBindingComplete);
+            this.radGridViewLotesErrores.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewLotesErrores_KeyPress);
+            this.radGridViewLotesErrores.Leave += new System.EventHandler(this.radGridViewLotesErrores_Leave);
             // 
             // gbGridCompErrores
             // 
@@ -585,9 +590,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbGridCompErrores.Controls.Add(this.radGridViewCompErrores);
             this.gbGridCompErrores.HeaderText = " Errores ";
-            this.gbGridCompErrores.Location = new System.Drawing.Point(19, 306);
+            this.gbGridCompErrores.Location = new System.Drawing.Point(19, 199);
             this.gbGridCompErrores.Name = "gbGridCompErrores";
-            this.gbGridCompErrores.Size = new System.Drawing.Size(801, 158);
+            this.gbGridCompErrores.Size = new System.Drawing.Size(813, 265);
             this.gbGridCompErrores.TabIndex = 40;
             this.gbGridCompErrores.TabStop = false;
             this.gbGridCompErrores.Text = " Errores ";
@@ -607,11 +612,12 @@
             this.radGridViewCompErrores.MasterTemplate.AllowEditRow = false;
             this.radGridViewCompErrores.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.radGridViewCompErrores.Name = "radGridViewCompErrores";
-            this.radGridViewCompErrores.Size = new System.Drawing.Size(783, 118);
+            this.radGridViewCompErrores.Size = new System.Drawing.Size(783, 225);
             this.radGridViewCompErrores.TabIndex = 62;
             this.radGridViewCompErrores.Visible = false;
             this.radGridViewCompErrores.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewCompErrores_CellDoubleClick);
             this.radGridViewCompErrores.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewCompErrores_DataBindingComplete);
+            this.radGridViewCompErrores.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewCompErrores_KeyPress);
             // 
             // radPanelAcciones
             // 
@@ -736,7 +742,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1650, 1332);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelAcciones);
             this.Controls.Add(this.radPanelMenuPath);
@@ -752,6 +758,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).EndInit();
             this.radPanelApp.ResumeLayout(false);
             this.radPanelApp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbEdicionLotes)).EndInit();
+            this.gbEdicionLotes.ResumeLayout(false);
+            this.gbEdicionLotes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitchFormatoAmpliado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblFormatoAmpliado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBiblioteca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblPrefijo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblBilioteca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrefijo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbSuprimirHco)).EndInit();
             this.gbSuprimirHco.ResumeLayout(false);
             this.gbSuprimirHco.PerformLayout();
@@ -779,16 +795,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscadorBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaskBuscadorFechaDesde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblBuscadorFecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gbEdicionLotes)).EndInit();
-            this.gbEdicionLotes.ResumeLayout(false);
-            this.gbEdicionLotes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitchFormatoAmpliado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblFormatoAmpliado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBiblioteca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblPrefijo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblBilioteca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrefijo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbGridEditarLotes)).EndInit();
             this.gbGridEditarLotes.ResumeLayout(false);
