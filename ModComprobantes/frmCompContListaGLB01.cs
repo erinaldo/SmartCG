@@ -348,7 +348,7 @@ namespace ModComprobantes
 
                             //Cambia el estado del comprobante (lo pasa a Aprobado)
                             this.CambiarEstado(this.radGridViewComprobantes.SelectedRows[i], i, "A", "");
-
+                            estado = determinoestadofila();
                             //Insertar la acción de Aprobar en la Grid de Acciones
                             this.InsertarGridAcciones(this.radGridViewComprobantes.SelectedRows[i], "A", estado);
                         }
@@ -474,6 +474,7 @@ namespace ModComprobantes
 
                         //Cambia el estado del comprobante (lo pasa a Aprobado)
                         this.CambiarEstado(this.radGridViewComprobantes.SelectedRows[i], i, "R", "");
+                        estado = determinoestadofila();
 
                         //Insertar la acción de Rechazar en la Grid de Acciones
                         this.InsertarGridAcciones(this.radGridViewComprobantes.SelectedRows[i], "R", estado);
@@ -831,6 +832,7 @@ namespace ModComprobantes
 
                                 //Insertar la acción de Revertir en la Grid de Acciones
                                 this.InsertarGridAcciones(this.radGridViewComprobantes.SelectedRows[i], "RE", estado);
+                                estado = determinoestadofila();
                             }
                             else
                             {
@@ -1302,6 +1304,7 @@ namespace ModComprobantes
             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
         }
 
+        
         private void RadGridViewComprobantes_DataBindingComplete(object sender, Telerik.WinControls.UI.GridViewBindingCompleteEventArgs e)
         {
             if (this.radGridViewComprobantes.Columns.Contains("NoComp")) this.radGridViewComprobantes.Columns["NoComp"].TextAlignment = ContentAlignment.MiddleRight;
@@ -2370,12 +2373,31 @@ namespace ModComprobantes
 
             return (result);
         }
+        private string determinoestadofila()
+        {
+            string estado = "";
+            try
+            {
+                if (this.radGridViewComprobantes.SelectedRows.Count == 1)
+                {
+                    int indice = this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow);
+                    estado = this.radGridViewComprobantes.Rows[indice].Cells["STATIC"].Value.ToString();
+                    this.AccionesPosibles(estado);
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(Utiles.CreateExceptionString(ex));
+
+            }
+            return (estado);
+         }
 
         /// <summary>
         /// Activa / Desactiva los botones de acciones de estado del comprobante
         /// </summary>
         /// <param name="estadoComprobante"></param>
-        private void AccionesPosibles(string estadoComprobante)
+            private void AccionesPosibles(string estadoComprobante)
         {
             if (periodoCerrado)
             {
@@ -2419,7 +2441,8 @@ namespace ModComprobantes
                         utiles.ButtonEnabled(ref this.radButtonContabilizar, false);
                         utiles.ButtonEnabled(ref this.radButtonAprobarContabilizar, true);
                         utiles.ButtonEnabled(ref this.radButtonRevertir, false);
-                        utiles.ButtonEnabled(ref this.radButtonSuprimir, false);
+                        //utiles.ButtonEnabled(ref this.radButtonSuprimir, false);
+                        utiles.ButtonEnabled(ref this.radButtonSuprimir, true);
                         break;
                 }
 

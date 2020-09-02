@@ -660,8 +660,10 @@ namespace ModComprobantes
             string cmbClase = "";
             if (this.cmbClase.Text.ToString()!="") cmbClase = this.cmbClase.Text.Substring(0, 1).ToString();
             int lng = Convert.ToString(this.dateTimePickerFecha.Tag).Length;
+            if (lng > 10) lng = 10;
             string fechatag = Convert.ToString(this.dateTimePickerFecha.Tag).Substring(0, lng);
             lng = Convert.ToString(this.dateTimePickerFecha.Text).Length;
+            if (lng > 10) lng = 10;
             string fechatext = Convert.ToString(this.dateTimePickerFecha.Text).Substring(0, lng);
             try
             {
@@ -1479,9 +1481,9 @@ namespace ModComprobantes
                     //QUITAR COMENTARIO
                     if (!(this.edicionLote || this.edicionLoteError))
                     {
-                        if (nuevoComprobante && !nglm01)
+                        if (cmbCompania.Text.Substring(0, 2) != "" && nuevoComprobante && !nglm01)
                         {
-                            string result1 = this.QueryGLM01(this.comprobanteContableImportar.Cab_compania);
+                            string result1 = this.QueryGLM01(cmbCompania.Text.Substring(0, 2));
                             nglm01 = true;
                         }
                             string result = UpdateEstadoColumnasDadoCuentaMayor(valor, e.RowIndex);

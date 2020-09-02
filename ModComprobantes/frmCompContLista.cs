@@ -1779,8 +1779,7 @@ namespace ModComprobantes
         }
         #endregion
 
-<<<<<<< HEAD
-        private void radGridViewComprobantes_KeyPress(object sender, KeyPressEventArgs e)
+        private void radGridViewComprobantes_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
@@ -1790,7 +1789,5 @@ namespace ModComprobantes
                 }
             }
         }
-=======
->>>>>>> d55d2484ceff453df3fa191f98124c8d5d5aad30
     }
 }

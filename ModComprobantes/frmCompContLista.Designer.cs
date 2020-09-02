@@ -149,7 +149,7 @@ namespace ModComprobantes
             this.radGridViewComprobantes.TabIndex = 85;
             this.radGridViewComprobantes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewComprobantes_CellDoubleClick);
             this.radGridViewComprobantes.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewComprobantes_DataBindingComplete);
-            this.radGridViewComprobantes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewComprobantes_KeyPress);
+            this.radGridViewComprobantes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewComprobantes_KeyPress_1);
             this.radGridViewComprobantes.Leave += new System.EventHandler(this.radGridViewComprobantes_Leave);
             // 
             // radPanelMenuPath
@@ -504,11 +504,7 @@ namespace ModComprobantes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1386, 788);
-=======
-            this.ClientSize = new System.Drawing.Size(1442, 1004);
->>>>>>> d55d2484ceff453df3fa191f98124c8d5d5aad30
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.gbTransferirComp);
             this.Controls.Add(this.radPanelMenuPath);
