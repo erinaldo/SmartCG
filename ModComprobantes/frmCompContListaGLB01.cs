@@ -1441,6 +1441,16 @@ namespace ModComprobantes
         {
             utiles.guardarLayout(this.Name, ref radGridViewVisorHistorial);
         }
+
+        private void radButtonBuscar_Enter(object sender, EventArgs e)
+        {
+            utiles.ButtonMouseEnter(ref this.radButtonBuscar);
+        }
+
+        private void radButtonBuscar_Leave(object sender, EventArgs e)
+        {
+            utiles.ButtonMouseLeave(ref this.radButtonBuscar);
+        }
         #endregion
 
         #region Métodos Privados
@@ -3500,15 +3510,5 @@ namespace ModComprobantes
             return (desc);
         }
         #endregion
-
-        private void radButtonBuscar_Enter(object sender, EventArgs e)
-        {
-            utiles.ButtonMouseEnter(ref this.radButtonBuscar);
-        }
-
-        private void radButtonBuscar_Leave(object sender, EventArgs e)
-        {
-            utiles.ButtonMouseLeave(ref this.radButtonBuscar);
-        }
     }
 }

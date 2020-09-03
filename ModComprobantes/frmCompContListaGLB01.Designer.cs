@@ -310,7 +310,7 @@ namespace ModComprobantes
             // 
             // lblTipo
             // 
-            this.lblTipo.Location = new System.Drawing.Point(414, 19);
+            this.lblTipo.Location = new System.Drawing.Point(414, 21);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(104, 18);
             this.lblTipo.TabIndex = 35;
@@ -486,7 +486,7 @@ namespace ModComprobantes
             this.radGridViewAccionesActuales.MasterTemplate.AllowEditRow = false;
             this.radGridViewAccionesActuales.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.radGridViewAccionesActuales.Name = "radGridViewAccionesActuales";
-            this.radGridViewAccionesActuales.Size = new System.Drawing.Size(838, 148);
+            this.radGridViewAccionesActuales.Size = new System.Drawing.Size(860, 148);
             this.radGridViewAccionesActuales.TabIndex = 192;
             this.radGridViewAccionesActuales.Visible = false;
             this.radGridViewAccionesActuales.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewAccionesActuales_DataBindingComplete);
@@ -613,7 +613,7 @@ namespace ModComprobantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 973);
+            this.ClientSize = new System.Drawing.Size(1247, 1004);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelMenuPath);
             this.Controls.Add(this.radPanelAcciones);
