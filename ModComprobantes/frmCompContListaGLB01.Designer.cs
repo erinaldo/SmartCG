@@ -37,7 +37,7 @@ namespace ModComprobantes
             this.progressBarEspera = new ModComprobantes.NewProgressBar();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.radPanelApp = new Telerik.WinControls.UI.RadPanel();
-            this.radPanelApp.Controls.Add(this.btnSel);
+            this.btnSel = new System.Windows.Forms.Button();
             this.radGridViewComprobantes = new Telerik.WinControls.UI.RadGridView();
             this.gbCabecera = new Telerik.WinControls.UI.RadGroupBox();
             this.radButtonBuscar = new Telerik.WinControls.UI.RadButton();
@@ -71,7 +71,6 @@ namespace ModComprobantes
             this.radButtonEditar = new Telerik.WinControls.UI.RadButton();
             this.radButtonVerAccionesActuales = new Telerik.WinControls.UI.RadButton();
             this.radButtonNuevo = new Telerik.WinControls.UI.RadButton();
-            this.btnSel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).BeginInit();
             this.radPanelApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes)).BeginInit();
@@ -133,6 +132,7 @@ namespace ModComprobantes
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radPanelApp.AutoScroll = true;
+            this.radPanelApp.Controls.Add(this.btnSel);
             this.radPanelApp.Controls.Add(this.radGridViewComprobantes);
             this.radPanelApp.Controls.Add(this.gbCabecera);
             this.radPanelApp.Controls.Add(this.lblResult);
@@ -146,6 +146,15 @@ namespace ModComprobantes
             this.radPanelApp.TabIndex = 5;
             this.radPanelApp.Resize += new System.EventHandler(this.radPanelApp_Resize);
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanelApp.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // btnSel
+            // 
+            this.btnSel.Location = new System.Drawing.Point(839, 5);
+            this.btnSel.Name = "btnSel";
+            this.btnSel.Size = new System.Drawing.Size(19, 20);
+            this.btnSel.TabIndex = 17;
+            this.btnSel.UseVisualStyleBackColor = true;
+            this.btnSel.Click += new System.EventHandler(this.BtnSel_Click);
             // 
             // radGridViewComprobantes
             // 
@@ -168,6 +177,8 @@ namespace ModComprobantes
             this.radGridViewComprobantes.SelectionChanged += new System.EventHandler(this.RadGridViewComprobantes_SelectionChanged);
             this.radGridViewComprobantes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewComprobantes_CellDoubleClick);
             this.radGridViewComprobantes.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewComprobantes_DataBindingComplete);
+            this.radGridViewComprobantes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewComprobantes_KeyPress);
+            this.radGridViewComprobantes.Leave += new System.EventHandler(this.radGridViewComprobantes_Leave);
             // 
             // gbCabecera
             // 
@@ -198,18 +209,20 @@ namespace ModComprobantes
             this.radButtonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
             this.radButtonBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.radButtonBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButtonBuscar.Location = new System.Drawing.Point(641, 39);
+            this.radButtonBuscar.Location = new System.Drawing.Point(607, 102);
             this.radButtonBuscar.Name = "radButtonBuscar";
-            this.radButtonBuscar.Size = new System.Drawing.Size(102, 39);
+            this.radButtonBuscar.Size = new System.Drawing.Size(102, 27);
             this.radButtonBuscar.TabIndex = 75;
             this.radButtonBuscar.Text = "Buscar";
             this.radButtonBuscar.Click += new System.EventHandler(this.RadButtonBuscar_Click);
+            this.radButtonBuscar.Enter += new System.EventHandler(this.radButtonBuscar_Enter);
+            this.radButtonBuscar.Leave += new System.EventHandler(this.radButtonBuscar_Leave);
             this.radButtonBuscar.MouseEnter += new System.EventHandler(this.RadButtonBuscar_MouseEnter);
             this.radButtonBuscar.MouseLeave += new System.EventHandler(this.RadButtonBuscar_MouseLeave);
             // 
             // txtMaskAAPP
             // 
-            this.txtMaskAAPP.Location = new System.Drawing.Point(287, 44);
+            this.txtMaskAAPP.Location = new System.Drawing.Point(323, 44);
             this.txtMaskAAPP.Mask = "00-00";
             this.txtMaskAAPP.MaskType = Telerik.WinControls.UI.MaskType.Standard;
             this.txtMaskAAPP.Name = "txtMaskAAPP";
@@ -221,8 +234,9 @@ namespace ModComprobantes
             // 
             // cmbTipo
             // 
+            this.cmbTipo.AllowShowFocusCues = true;
             this.cmbTipo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cmbTipo.Location = new System.Drawing.Point(339, 44);
+            this.cmbTipo.Location = new System.Drawing.Point(414, 45);
             this.cmbTipo.MaxLength = 2;
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Padding = new System.Windows.Forms.Padding(3);
@@ -231,6 +245,7 @@ namespace ModComprobantes
             // 
             // cmbCompania
             // 
+            this.cmbCompania.AllowShowFocusCues = true;
             this.cmbCompania.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cmbCompania.Location = new System.Drawing.Point(23, 44);
             this.cmbCompania.MaxLength = 2;
@@ -241,8 +256,9 @@ namespace ModComprobantes
             // 
             // cmbModoTrabajo
             // 
+            this.cmbModoTrabajo.AllowShowFocusCues = true;
             this.cmbModoTrabajo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cmbModoTrabajo.Location = new System.Drawing.Point(157, 102);
+            this.cmbModoTrabajo.Location = new System.Drawing.Point(160, 102);
             this.cmbModoTrabajo.Name = "cmbModoTrabajo";
             this.cmbModoTrabajo.Padding = new System.Windows.Forms.Padding(3);
             this.cmbModoTrabajo.Size = new System.Drawing.Size(121, 27);
@@ -250,6 +266,7 @@ namespace ModComprobantes
             // 
             // cmbEstado
             // 
+            this.cmbEstado.AllowShowFocusCues = true;
             this.cmbEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cmbEstado.Location = new System.Drawing.Point(23, 102);
             this.cmbEstado.Name = "cmbEstado";
@@ -259,7 +276,7 @@ namespace ModComprobantes
             // 
             // lblModoTrabajo
             // 
-            this.lblModoTrabajo.Location = new System.Drawing.Point(158, 79);
+            this.lblModoTrabajo.Location = new System.Drawing.Point(157, 79);
             this.lblModoTrabajo.Name = "lblModoTrabajo";
             this.lblModoTrabajo.Size = new System.Drawing.Size(85, 19);
             this.lblModoTrabajo.TabIndex = 65;
@@ -275,17 +292,17 @@ namespace ModComprobantes
             // 
             // txtNoComprobante
             // 
-            this.txtNoComprobante.Location = new System.Drawing.Point(511, 44);
+            this.txtNoComprobante.Location = new System.Drawing.Point(607, 45);
             this.txtNoComprobante.MaxLength = 6;
             this.txtNoComprobante.Name = "txtNoComprobante";
             this.txtNoComprobante.Padding = new System.Windows.Forms.Padding(5);
-            this.txtNoComprobante.Size = new System.Drawing.Size(102, 30);
+            this.txtNoComprobante.Size = new System.Drawing.Size(102, 27);
             this.txtNoComprobante.TabIndex = 50;
             this.txtNoComprobante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNoComprobante_KeyPress);
             // 
             // lblNoComprobante
             // 
-            this.lblNoComprobante.Location = new System.Drawing.Point(511, 21);
+            this.lblNoComprobante.Location = new System.Drawing.Point(607, 21);
             this.lblNoComprobante.Name = "lblNoComprobante";
             this.lblNoComprobante.Size = new System.Drawing.Size(102, 19);
             this.lblNoComprobante.TabIndex = 45;
@@ -293,7 +310,7 @@ namespace ModComprobantes
             // 
             // lblTipo
             // 
-            this.lblTipo.Location = new System.Drawing.Point(339, 21);
+            this.lblTipo.Location = new System.Drawing.Point(414, 19);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(104, 18);
             this.lblTipo.TabIndex = 35;
@@ -301,11 +318,11 @@ namespace ModComprobantes
             // 
             // lblAAPP
             // 
-            this.lblAAPP.Location = new System.Drawing.Point(287, 21);
+            this.lblAAPP.Location = new System.Drawing.Point(323, 21);
             this.lblAAPP.Name = "lblAAPP";
-            this.lblAAPP.Size = new System.Drawing.Size(41, 19);
+            this.lblAAPP.Size = new System.Drawing.Size(76, 19);
             this.lblAAPP.TabIndex = 25;
-            this.lblAAPP.Text = "AA-PP";
+            this.lblAAPP.Text = "Año-Período";
             // 
             // lblCompania
             // 
@@ -437,8 +454,7 @@ namespace ModComprobantes
             // 
             // radGridViewVisorHistorial
             // 
-            this.radGridViewVisorHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radGridViewVisorHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radGridViewVisorHistorial.AutoScroll = true;
             this.radGridViewVisorHistorial.Location = new System.Drawing.Point(11, 371);
             // 
@@ -447,12 +463,14 @@ namespace ModComprobantes
             this.radGridViewVisorHistorial.MasterTemplate.AllowAddNewRow = false;
             this.radGridViewVisorHistorial.MasterTemplate.AllowDeleteRow = false;
             this.radGridViewVisorHistorial.MasterTemplate.AllowEditRow = false;
+            this.radGridViewVisorHistorial.MasterTemplate.MultiSelect = true;
             this.radGridViewVisorHistorial.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridViewVisorHistorial.Name = "radGridViewVisorHistorial";
             this.radGridViewVisorHistorial.Size = new System.Drawing.Size(816, 164);
             this.radGridViewVisorHistorial.TabIndex = 191;
             this.radGridViewVisorHistorial.Visible = false;
             this.radGridViewVisorHistorial.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewVisorHistorial_DataBindingComplete);
+            this.radGridViewVisorHistorial.Leave += new System.EventHandler(this.radGridViewVisorHistorial_Leave);
             // 
             // radGridViewAccionesActuales
             // 
@@ -468,7 +486,7 @@ namespace ModComprobantes
             this.radGridViewAccionesActuales.MasterTemplate.AllowEditRow = false;
             this.radGridViewAccionesActuales.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.radGridViewAccionesActuales.Name = "radGridViewAccionesActuales";
-            this.radGridViewAccionesActuales.Size = new System.Drawing.Size(816, 148);
+            this.radGridViewAccionesActuales.Size = new System.Drawing.Size(838, 148);
             this.radGridViewAccionesActuales.TabIndex = 192;
             this.radGridViewAccionesActuales.Visible = false;
             this.radGridViewAccionesActuales.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewAccionesActuales_DataBindingComplete);
@@ -593,10 +611,9 @@ namespace ModComprobantes
             // 
             // frmCompContListaGLB01
             // 
-            this.AcceptButton = this.radButtonBuscar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1231, 942);
+            this.ClientSize = new System.Drawing.Size(1239, 973);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelMenuPath);
             this.Controls.Add(this.radPanelAcciones);
@@ -605,15 +622,6 @@ namespace ModComprobantes
             this.Name = "frmCompContListaGLB01";
             // 
             // 
-            // btnSel
-            // 
-            this.btnSel.Image = ((System.Drawing.Image)(resources.GetObject("btnSel.Image")));
-            this.btnSel.Location = new System.Drawing.Point(839, 5);
-            this.btnSel.Name = "btnSel";
-            this.btnSel.Size = new System.Drawing.Size(19, 20);
-            this.btnSel.TabIndex = 17;
-            this.btnSel.UseVisualStyleBackColor = true;
-            this.btnSel.Click += new System.EventHandler(this.BtnSel_Click);
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Lista de comprobantes";

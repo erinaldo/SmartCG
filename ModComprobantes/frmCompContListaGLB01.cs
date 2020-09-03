@@ -11,11 +11,14 @@ using System.Configuration;
 using ObjectModel;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
+using System.Runtime.InteropServices;
 
 namespace ModComprobantes
 {
     public partial class frmCompContListaGLB01 :  frmPlantilla, IReLocalizable
     {
+        public string formCode = "MCCLISTCMP";
+
         private string tipoBaseDatosCG = "";
         private string codCompania = "";
         private string codTipo = "";
@@ -30,6 +33,25 @@ namespace ModComprobantes
 
         Dictionary<string, string> displayNamesAccionesActuales;
         private DataTable dtAccionesActuales;
+
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+        public struct StructGLL01_MCCLISTCMP
+        {
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 2)]
+            public string cia;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 4)]
+            public string AAPP;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 2)]
+            public string tipComp;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 6)]
+            public string numComp;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 1)]
+            public string estado;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 1)]
+            public string selTipo;
+        }
+
+        FormularioValoresCampos valoresFormulario;
 
         public string Saldo_local = "";
         public string Saldo_extran = "";
@@ -82,7 +104,32 @@ namespace ModComprobantes
 
             //Traducir los literales
             this.TraducirLiterales();
-            
+
+            //Inicializar los valores del formulario
+            this.valoresFormulario = new FormularioValoresCampos();
+            string valores = "";
+            if (this.valoresFormulario.LeerParametros(formCode, ref valores))
+            {
+                if (!this.CargarValoresUltimaPeticion(valores))
+                {
+                    cmbCompania.Text = "";
+                    txtMaskAAPP.Text = "";
+                    cmbTipo.Text = "";
+                    txtNoComprobante.Text = "";
+                    cmbEstado.SelectedIndex = 0;
+                    cmbModoTrabajo.SelectedIndex = 0;
+                }
+            }
+            else
+            {
+                cmbCompania.Text = "";
+                txtMaskAAPP.Text = "";
+                cmbTipo.Text = "";
+                txtNoComprobante.Text = "";
+                cmbEstado.SelectedIndex = 0;
+                cmbModoTrabajo.SelectedIndex = 0;
+            }
+
             //Inicializar la Barra de Progreso
             this.InitProgressBar();
 
@@ -1083,6 +1130,7 @@ namespace ModComprobantes
                         //Verificar si el AAPP para la companía esta cerrado o no
                         this.periodoCerrado = this.VerificarAAPPEstaCerrado();
 
+                        /*
                         for (int i = 0; i < this.radGridViewComprobantes.Columns.Count; i++)
                         {
                             this.radGridViewComprobantes.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
@@ -1096,7 +1144,36 @@ namespace ModComprobantes
                         this.radGridViewComprobantes.Visible = true;
                         this.radGridViewComprobantes.TableElement.ScrollToRow(0);
                         this.radGridViewComprobantes.Focus();
+                        */
+                        for (int i = 0; i < this.radGridViewComprobantes.Columns.Count; i++)
+                        {
+                            this.radGridViewComprobantes.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
+                            //this.radGridViewInfo.Columns[i].BestFit();
+                            this.radGridViewComprobantes.Columns[i].Width = 600;
+                        }
 
+                        this.radGridViewComprobantes.TableElement.GridViewElement.GroupPanelElement.Text = "Arrastre una columna aquí para agrupar - Pulse ctrl+F para activar la búsqueda";
+                        this.radGridViewComprobantes.AllowSearchRow = true;
+                        this.radGridViewComprobantes.MasterView.TableSearchRow.IsVisible = false;
+                        this.radGridViewComprobantes.TableElement.SearchHighlightColor = Color.Aqua;
+                        this.radGridViewComprobantes.AllowEditRow = false;
+                        this.radGridViewComprobantes.EnableFiltering = true;
+                        //this.radGridViewInfo.MasterView.TableFilteringRow.IsVisible = false;
+
+                        //this.radGridViewInfo.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+                        //this.radGridViewInfo.MasterTemplate.BestFitColumns();
+                        this.radGridViewComprobantes.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
+
+                        if (this.radGridViewComprobantes.Groups.Count == 0) this.radGridViewComprobantes.Rows[0].IsCurrent = true;
+                        this.radGridViewComprobantes.Focus();
+                        this.radGridViewComprobantes.Select();
+                        //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, this.radPanelApp.Size.Height - this.radCollapsiblePanelDataFilter.Size.Height - 3);
+                        //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, 609);
+
+                        //cargar layout
+                        utiles.cargarLayout(this.Name, ref radGridViewComprobantes);
+
+                        this.radGridViewComprobantes.Refresh();
 
                         string estado = this.radGridViewComprobantes.Rows[0].Cells["STATIC"].Value.ToString();
                         this.AccionesPosibles(estado);
@@ -1115,6 +1192,10 @@ namespace ModComprobantes
                     if (dr != null) dr.Close();
                     string error = ex.Message;
                 }
+
+                //Grabar la petición
+                string valores = this.ValoresPeticion();
+                this.valoresFormulario.GrabarParametros(formCode, valores);
 
                 this.progressBarEspera.Visible = false;
             }
@@ -1334,6 +1415,32 @@ namespace ModComprobantes
         {
             Log.Info("FIN Lista de comprobantes");
         }
+
+        private void radPanelApp_Resize(object sender, EventArgs e)
+        {
+            //this.radGridViewComprobantes.Size = new Size(this.radPanelApp.Size.Width - 66, this.radPanelApp.Size.Height - 221);
+            this.radGridViewComprobantes.Size = new Size(this.radPanelApp.Size.Width - 66, this.radPanelApp.Size.Height - 221);
+        }
+
+        private void radGridViewComprobantes_Leave(object sender, EventArgs e)
+        {
+            utiles.guardarLayout(this.Name, ref radGridViewComprobantes);
+        }
+
+        private void radGridViewComprobantes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow) >= 0)
+                {
+                    this.EditarComprobante();
+                }
+            }
+        }
+        private void radGridViewVisorHistorial_Leave(object sender, EventArgs e)
+        {
+            utiles.guardarLayout(this.Name, ref radGridViewVisorHistorial);
+        }
         #endregion
 
         #region Métodos Privados
@@ -1371,6 +1478,85 @@ namespace ModComprobantes
 
             //Traducir los encabezados de las columnas de la Grid de Comprobantes
             if (this.radGridViewComprobantes != null) this.RadGridViewComprobantesHeader();
+        }
+
+        /// <summary>
+        /// Actualiza los controles con los valores de la última petición
+        /// </summary>
+        /// <returns></returns>
+        private bool CargarValoresUltimaPeticion(string valores)
+        {
+            bool result = false;
+
+            try
+            {
+                IntPtr pBuf = Marshal.StringToBSTR(valores);
+                StructGLL01_MCCLISTCMP myStruct = (StructGLL01_MCCLISTCMP)Marshal.PtrToStructure(pBuf, typeof(StructGLL01_MCCLISTCMP));
+
+                for (int x = 0; x < cmbCompania.Items.Count; x++)
+                {
+                    if (cmbCompania.Items[x].Text.PadRight(2, ' ').Substring(0, 2) == myStruct.cia) 
+                    { 
+                        cmbCompania.SelectedIndex = x;
+                        break;
+                    }
+                }
+
+                txtMaskAAPP.Text = myStruct.AAPP;
+
+                for (int x = 0; x < cmbTipo.Items.Count; x++)
+                {
+                    if (cmbTipo.Items[x].Text.PadRight(2, ' ').Substring(0, 2) == myStruct.tipComp)
+                    {
+                        cmbTipo.SelectedIndex = x;
+                        break;
+                    }
+                }
+
+                txtNoComprobante.Text = myStruct.numComp.Trim();
+
+                cmbEstado.SelectedValue = myStruct.estado;
+
+                cmbModoTrabajo.SelectedValue = myStruct.selTipo;
+
+                result = true;
+
+                Marshal.FreeBSTR(pBuf);
+            }
+            catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
+
+            return (result);
+        }
+
+        /// <summary>
+        /// Devuelve una  cadena con todos los valores del formulario para grabar en la tabla de peticiones GLL01
+        /// </summary>
+        /// <returns></returns>
+        private string ValoresPeticion()
+        {
+            string result = "";
+            try
+            {
+                StructGLL01_MCCLISTCMP myStruct;
+
+                myStruct.cia = "  ";
+                if (cmbCompania.Text.Length >= 2) myStruct.cia = cmbCompania.Text.Substring(0, 2).PadRight(2, ' ');
+                myStruct.AAPP = "    ";
+                if (txtMaskAAPP.Text.Length >= 5) myStruct.AAPP = txtMaskAAPP.Text.Substring(0, 2).PadRight(2, ' ') + txtMaskAAPP.Text.Substring(3, 2).PadRight(2, ' ');
+                myStruct.tipComp = "  ";
+                if (cmbTipo.Text.Length >= 2) myStruct.tipComp = cmbTipo.Text.Substring(0, 2).PadRight(2, ' ');
+                myStruct.numComp = "      ";
+                if (txtNoComprobante.Text.Length > 0 ) myStruct.numComp = txtNoComprobante.Text.PadRight(6, ' ');
+                myStruct.estado = cmbEstado.SelectedValue.ToString().PadRight(1, ' ');
+                myStruct.selTipo = cmbModoTrabajo.SelectedValue.ToString().PadRight(1, ' ');
+
+                result = myStruct.cia + myStruct.AAPP + myStruct.tipComp + myStruct.numComp + myStruct.estado + myStruct.selTipo;
+
+                int objsize = Marshal.SizeOf(typeof(StructGLL01_MCCLISTCMP));
+            }
+            catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
+
+            return (result);
         }
 
         /// <summary>
@@ -1648,10 +1834,11 @@ namespace ModComprobantes
 
             return (result);
         }
-            /// <summary>
-            /// Cargar los tipos de comprobantes
-            /// </summary>
-            private void FillTiposComprobantes()
+
+        /// <summary>
+        /// Cargar los tipos de comprobantes
+        /// </summary>
+        private void FillTiposComprobantes()
         {
             string query = "Select TIVOTV, NOMBTV From " + GlobalVar.PrefijoTablaCG + "GLT06 ";
             // query += "where CODITV='1' and STATTV='V' order by TIVOTV";  jl
@@ -2492,6 +2679,8 @@ namespace ModComprobantes
             {
                 this.radGridViewVisorHistorial.DataSource = this.dtVerHistorial;
 
+                this.radGridViewVisorHistorial.Width = this.radGridViewComprobantes.Size.Width;
+
                 /*
                 //Ajustar las columnas
                 this.dgErrores.Columns["Tipo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -2512,11 +2701,42 @@ namespace ModComprobantes
                 this.radGridViewAccionesActuales.Visible = false;
                 this.radGridViewVisorHistorial.Visible = true;
 
+                /*
                 for (int i = 0; i < this.radGridViewVisorHistorial.Columns.Count; i++)
                     this.radGridViewVisorHistorial.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
                 this.radGridViewVisorHistorial.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
                 this.radGridViewVisorHistorial.MasterTemplate.BestFitColumns();
                 this.radGridViewVisorHistorial.Rows[0].IsCurrent = true;
+                */
+                for (int i = 0; i < this.radGridViewVisorHistorial.Columns.Count; i++)
+                {
+                    this.radGridViewVisorHistorial.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
+                    //this.radGridViewInfo.Columns[i].BestFit();
+                    this.radGridViewVisorHistorial.Columns[i].Width = 600;
+                }
+
+                this.radGridViewVisorHistorial.TableElement.GridViewElement.GroupPanelElement.Text = "Arrastre una columna aquí para agrupar - Pulse ctrl+F para activar la búsqueda";
+                this.radGridViewVisorHistorial.AllowSearchRow = true;
+                this.radGridViewVisorHistorial.MasterView.TableSearchRow.IsVisible = false;
+                this.radGridViewVisorHistorial.TableElement.SearchHighlightColor = Color.Aqua;
+                this.radGridViewVisorHistorial.AllowEditRow = false;
+                this.radGridViewVisorHistorial.EnableFiltering = true;
+                //this.radGridViewInfo.MasterView.TableFilteringRow.IsVisible = false;
+
+                //this.radGridViewInfo.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+                //this.radGridViewInfo.MasterTemplate.BestFitColumns();
+                this.radGridViewVisorHistorial.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
+
+                if (this.radGridViewVisorHistorial.Groups.Count == 0) this.radGridViewVisorHistorial.Rows[0].IsCurrent = true;
+                this.radGridViewVisorHistorial.Focus();
+                this.radGridViewVisorHistorial.Select();
+                //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, this.radPanelApp.Size.Height - this.radCollapsiblePanelDataFilter.Size.Height - 3);
+                //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, 609);
+
+                //cargar layout
+                utiles.cargarLayout(this.Name, ref radGridViewVisorHistorial);
+
+                this.radGridViewVisorHistorial.Refresh();
             }
             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
         }
@@ -3281,11 +3501,14 @@ namespace ModComprobantes
         }
         #endregion
 
-        
-        private void radPanelApp_Resize(object sender, EventArgs e)
+        private void radButtonBuscar_Enter(object sender, EventArgs e)
         {
-            //this.radGridViewComprobantes.Size = new Size(this.radPanelApp.Size.Width - 66, this.radPanelApp.Size.Height - 221);
-            this.radGridViewComprobantes.Size = new Size(this.radPanelApp.Size.Width - 66, this.radPanelApp.Size.Height - 221);
+            utiles.ButtonMouseEnter(ref this.radButtonBuscar);
+        }
+
+        private void radButtonBuscar_Leave(object sender, EventArgs e)
+        {
+            utiles.ButtonMouseLeave(ref this.radButtonBuscar);
         }
     }
 }
