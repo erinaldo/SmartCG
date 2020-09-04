@@ -488,6 +488,9 @@ namespace ModComprobantes
                             utiles.ButtonEnabled(ref this.radButtonGrabar, false);
                             utiles.ButtonEnabled(ref this.radButtonRevertir, false);
                             utiles.ButtonEnabled(ref this.radButtonValidar, false);
+                            utiles.ButtonEnabled(ref this.radButtonValidarErrores, false);
+                            utiles.ButtonEnabled(ref this.radButtonGrabarComo, false);
+                            utiles.ButtonEnabled(ref this.radButtonImportar, false);
 
                             this.menuGridButtonAdicionarFila.Enabled = false;
                             this.menuGridButtonBorrar.Enabled = false;
@@ -497,6 +500,7 @@ namespace ModComprobantes
                             this.menuGridButtonSuprimirFila.Enabled = false;
                             this.menuGridButtonReemplazar.Enabled = false;
                             
+
                             /*this.txtMaskAAPP.ReadOnly = true;
                             this.cmbTipo.ReadOnly = true;
                             this.txtNoComprobante.IsReadOnly = true;
@@ -514,7 +518,11 @@ namespace ModComprobantes
                         }
                         else
                         {
-                            this.txtMaskAAPP.Tag = this.comprobanteContableImportar.Cab_anoperiodo;
+                            if (!this.nuevoComprobante)
+                            {
+                                utiles.ButtonEnabled(ref this.radButtonImportar, false);
+                            }
+                                this.txtMaskAAPP.Tag = this.comprobanteContableImportar.Cab_anoperiodo;
                             this.cmbTipo.Tag = this.comprobanteContableImportar.Cab_tipo;
                             this.txtNoComprobante.Tag = this.comprobanteContableImportar.Cab_noComprobante;
                         }
@@ -687,7 +695,7 @@ namespace ModComprobantes
                         preguntar = true;
                     } 
                 } 
-                if (!dNoPreguntar && preguntar == true)
+                if (!dNoPreguntar && preguntar == true && !this.comprobanteSoloConsulta)
                 {
                     string mensaje = "¿Desea guardar los cambios efectuados?";  //Falta traducir
 
@@ -6124,6 +6132,7 @@ namespace ModComprobantes
                     this.dgDetalle.SuprimirFila();
                     this.dgDetalle.AddRowNumber(DataGridViewContentAlignment.MiddleRight);
                     this.dgDetalle.ClearSelection();
+                    this.dgDetalle.Refresh();
 
                     //Recalcular Totales
                     this.gridChange = true;
