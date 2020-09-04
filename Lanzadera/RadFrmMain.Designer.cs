@@ -192,9 +192,9 @@ namespace SmartCG
             // radLblUser
             // 
             this.radLblUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.radLblUser.BackColor = System.Drawing.Color.Transparent;
-            this.radLblUser.Location = new System.Drawing.Point(31, 14);
+            this.radLblUser.Location = new System.Drawing.Point(37, 14);
             this.radLblUser.Name = "radLblUser";
             this.radLblUser.Size = new System.Drawing.Size(29, 19);
             this.radLblUser.TabIndex = 1;

@@ -1451,6 +1451,33 @@ namespace ModComprobantes
         {
             utiles.ButtonMouseLeave(ref this.radButtonBuscar);
         }
+
+        private void radGridViewComprobantes_ViewCellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Font newFont = new Font("Segoe UI", 9f, FontStyle.Bold);
+            if (e.CellElement is GridHeaderCellElement || e.CellElement is GridGroupContentCellElement)
+            {
+                e.CellElement.Font = newFont;
+            }
+        }
+
+        private void radGridViewVisorHistorial_ViewCellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Font newFont = new Font("Segoe UI", 9f, FontStyle.Bold);
+            if (e.CellElement is GridHeaderCellElement || e.CellElement is GridGroupContentCellElement)
+            {
+                e.CellElement.Font = newFont;
+            }
+        }
+
+        private void radGridViewAccionesActuales_ViewCellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Font newFont = new Font("Segoe UI", 9f, FontStyle.Bold);
+            if (e.CellElement is GridHeaderCellElement || e.CellElement is GridGroupContentCellElement)
+            {
+                e.CellElement.Font = newFont;
+            }
+        }
         #endregion
 
         #region Métodos Privados
@@ -1484,7 +1511,8 @@ namespace ModComprobantes
             this.lblEstado.Text = this.LP.GetText("lblEstado", "Estado");
             //this.lblModoTrabajo.Text = this.LP.GetText("lblModoTrabajo", "Modo de trabajo");
             this.lblModoTrabajo.Text = this.LP.GetText("lblSeleccionTipo", "Selección Tipo");
-            this.radButtonBuscar.Text = this.LP.GetText("lblCompContImpDeFinBuscar", "Buscar");
+            //this.radButtonBuscar.Text = this.LP.GetText("lblCompContImpDeFinBuscar", "Buscar");
+            //this.radButtonBuscar.Text = this.LP.GetText("lblCompContImpDeFinBuscar", "Aceptar");
 
             //Traducir los encabezados de las columnas de la Grid de Comprobantes
             if (this.radGridViewComprobantes != null) this.RadGridViewComprobantesHeader();

@@ -71,6 +71,7 @@ namespace ModComprobantes
             this.radButtonEditar = new Telerik.WinControls.UI.RadButton();
             this.radButtonVerAccionesActuales = new Telerik.WinControls.UI.RadButton();
             this.radButtonNuevo = new Telerik.WinControls.UI.RadButton();
+            this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).BeginInit();
             this.radPanelApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGridViewComprobantes)).BeginInit();
@@ -174,6 +175,7 @@ namespace ModComprobantes
             this.radGridViewComprobantes.Size = new System.Drawing.Size(816, 320);
             this.radGridViewComprobantes.TabIndex = 80;
             this.radGridViewComprobantes.Visible = false;
+            this.radGridViewComprobantes.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewComprobantes_ViewCellFormatting);
             this.radGridViewComprobantes.SelectionChanged += new System.EventHandler(this.RadGridViewComprobantes_SelectionChanged);
             this.radGridViewComprobantes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewComprobantes_CellDoubleClick);
             this.radGridViewComprobantes.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewComprobantes_DataBindingComplete);
@@ -196,24 +198,24 @@ namespace ModComprobantes
             this.gbCabecera.Controls.Add(this.lblTipo);
             this.gbCabecera.Controls.Add(this.lblAAPP);
             this.gbCabecera.Controls.Add(this.lblCompania);
-            this.gbCabecera.HeaderText = " Buscador ";
+            this.gbCabecera.HeaderText = "Seleccionar";
             this.gbCabecera.Location = new System.Drawing.Point(11, 23);
             this.gbCabecera.Name = "gbCabecera";
             this.gbCabecera.Size = new System.Drawing.Size(761, 137);
             this.gbCabecera.TabIndex = 10;
             this.gbCabecera.TabStop = false;
-            this.gbCabecera.Text = " Buscador ";
+            this.gbCabecera.Text = "Seleccionar";
             // 
             // radButtonBuscar
             // 
             this.radButtonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
             this.radButtonBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.radButtonBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radButtonBuscar.Location = new System.Drawing.Point(607, 102);
+            this.radButtonBuscar.Location = new System.Drawing.Point(607, 97);
             this.radButtonBuscar.Name = "radButtonBuscar";
-            this.radButtonBuscar.Size = new System.Drawing.Size(102, 27);
+            this.radButtonBuscar.Size = new System.Drawing.Size(102, 32);
             this.radButtonBuscar.TabIndex = 75;
-            this.radButtonBuscar.Text = "Buscar";
+            this.radButtonBuscar.Text = "Aceptar";
             this.radButtonBuscar.Click += new System.EventHandler(this.RadButtonBuscar_Click);
             this.radButtonBuscar.Enter += new System.EventHandler(this.radButtonBuscar_Enter);
             this.radButtonBuscar.Leave += new System.EventHandler(this.radButtonBuscar_Leave);
@@ -469,6 +471,7 @@ namespace ModComprobantes
             this.radGridViewVisorHistorial.Size = new System.Drawing.Size(816, 164);
             this.radGridViewVisorHistorial.TabIndex = 191;
             this.radGridViewVisorHistorial.Visible = false;
+            this.radGridViewVisorHistorial.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewVisorHistorial_ViewCellFormatting);
             this.radGridViewVisorHistorial.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewVisorHistorial_DataBindingComplete);
             this.radGridViewVisorHistorial.Leave += new System.EventHandler(this.radGridViewVisorHistorial_Leave);
             // 
@@ -486,9 +489,10 @@ namespace ModComprobantes
             this.radGridViewAccionesActuales.MasterTemplate.AllowEditRow = false;
             this.radGridViewAccionesActuales.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.radGridViewAccionesActuales.Name = "radGridViewAccionesActuales";
-            this.radGridViewAccionesActuales.Size = new System.Drawing.Size(860, 148);
+            this.radGridViewAccionesActuales.Size = new System.Drawing.Size(992, 148);
             this.radGridViewAccionesActuales.TabIndex = 192;
             this.radGridViewAccionesActuales.Visible = false;
+            this.radGridViewAccionesActuales.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewAccionesActuales_ViewCellFormatting);
             this.radGridViewAccionesActuales.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewAccionesActuales_DataBindingComplete);
             // 
             // radPanelMenuPath
@@ -613,7 +617,7 @@ namespace ModComprobantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1247, 1004);
+            this.ClientSize = new System.Drawing.Size(1295, 1190);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelMenuPath);
             this.Controls.Add(this.radPanelAcciones);
@@ -717,5 +721,6 @@ namespace ModComprobantes
         private Telerik.WinControls.UI.RadGridView radGridViewAccionesActuales;
         //private Control btnSel;
         private System.Windows.Forms.Button btnSel;
+        private Telerik.WinControls.RadThemeManager radThemeManager1;
     }
 }

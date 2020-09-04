@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition5 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition6 = new Telerik.WinControls.UI.TableViewDefinition();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.radPanelApp = new Telerik.WinControls.UI.RadPanel();
             this.gbEdicionLotes = new Telerik.WinControls.UI.RadGroupBox();
@@ -190,7 +190,7 @@
             // 
             // lblFormatoAmpliado
             // 
-            this.lblFormatoAmpliado.Location = new System.Drawing.Point(193, 20);
+            this.lblFormatoAmpliado.Location = new System.Drawing.Point(193, 17);
             this.lblFormatoAmpliado.Name = "lblFormatoAmpliado";
             this.lblFormatoAmpliado.Size = new System.Drawing.Size(107, 19);
             this.lblFormatoAmpliado.TabIndex = 45;
@@ -201,12 +201,14 @@
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAceptar.Location = new System.Drawing.Point(360, 36);
+            this.btnAceptar.Location = new System.Drawing.Point(364, 38);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(80, 21);
+            this.btnAceptar.Size = new System.Drawing.Size(80, 30);
             this.btnAceptar.TabIndex = 55;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
+            this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Enter);
+            this.btnAceptar.Leave += new System.EventHandler(this.btnAceptar_Leave);
             this.btnAceptar.MouseEnter += new System.EventHandler(this.BtnAceptar_MouseEnter);
             this.btnAceptar.MouseLeave += new System.EventHandler(this.BtnAceptar_MouseLeave);
             // 
@@ -535,10 +537,11 @@
             this.radGridViewEditarLotes.MasterTemplate.AllowAddNewRow = false;
             this.radGridViewEditarLotes.MasterTemplate.AllowDeleteRow = false;
             this.radGridViewEditarLotes.MasterTemplate.AllowEditRow = false;
-            this.radGridViewEditarLotes.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridViewEditarLotes.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.radGridViewEditarLotes.Name = "radGridViewEditarLotes";
             this.radGridViewEditarLotes.Size = new System.Drawing.Size(780, 319);
             this.radGridViewEditarLotes.TabIndex = 61;
+            this.radGridViewEditarLotes.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewEditarLotes_ViewCellFormatting);
             this.radGridViewEditarLotes.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewEditarLotes_CellDoubleClick);
             this.radGridViewEditarLotes.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewEditarLotes_DataBindingComplete);
             this.radGridViewEditarLotes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewEditarLotes_KeyPress);
@@ -572,11 +575,12 @@
             this.radGridViewLotesErrores.MasterTemplate.AllowAddNewRow = false;
             this.radGridViewLotesErrores.MasterTemplate.AllowDeleteRow = false;
             this.radGridViewLotesErrores.MasterTemplate.AllowEditRow = false;
-            this.radGridViewLotesErrores.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.radGridViewLotesErrores.MasterTemplate.ViewDefinition = tableViewDefinition5;
             this.radGridViewLotesErrores.Name = "radGridViewLotesErrores";
             this.radGridViewLotesErrores.Size = new System.Drawing.Size(780, 396);
             this.radGridViewLotesErrores.TabIndex = 191;
             this.radGridViewLotesErrores.RowFormatting += new Telerik.WinControls.UI.RowFormattingEventHandler(this.RadGridViewLotesErrores_RowFormatting);
+            this.radGridViewLotesErrores.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewLotesErrores_ViewCellFormatting);
             this.radGridViewLotesErrores.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewLotesErrores_CellClick);
             this.radGridViewLotesErrores.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewLotesErrores_CellDoubleClick);
             this.radGridViewLotesErrores.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewLotesErrores_DataBindingComplete);
@@ -610,11 +614,12 @@
             this.radGridViewCompErrores.MasterTemplate.AllowAddNewRow = false;
             this.radGridViewCompErrores.MasterTemplate.AllowDeleteRow = false;
             this.radGridViewCompErrores.MasterTemplate.AllowEditRow = false;
-            this.radGridViewCompErrores.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.radGridViewCompErrores.MasterTemplate.ViewDefinition = tableViewDefinition6;
             this.radGridViewCompErrores.Name = "radGridViewCompErrores";
             this.radGridViewCompErrores.Size = new System.Drawing.Size(783, 225);
             this.radGridViewCompErrores.TabIndex = 62;
             this.radGridViewCompErrores.Visible = false;
+            this.radGridViewCompErrores.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewCompErrores_ViewCellFormatting);
             this.radGridViewCompErrores.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.RadGridViewCompErrores_CellDoubleClick);
             this.radGridViewCompErrores.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewCompErrores_DataBindingComplete);
             this.radGridViewCompErrores.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radGridViewCompErrores_KeyPress);
@@ -742,7 +747,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1650, 1332);
+            this.ClientSize = new System.Drawing.Size(1666, 1204);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelAcciones);
             this.Controls.Add(this.radPanelMenuPath);

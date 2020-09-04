@@ -513,6 +513,15 @@ namespace ModComprobantes
                 }
             }
         }
+
+        private void radGridViewComprobantes_ViewCellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Font newFont = new Font("Segoe UI", 9f, FontStyle.Bold);
+            if (e.CellElement is GridHeaderCellElement || e.CellElement is GridGroupContentCellElement)
+            {
+                e.CellElement.Font = newFont;
+            }
+        }
         #endregion
 
         #region Métodos Privados
