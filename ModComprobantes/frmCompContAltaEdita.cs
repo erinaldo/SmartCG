@@ -677,7 +677,15 @@ namespace ModComprobantes
             {
                 if (this.nuevoComprobante)
                 {
-                    if (!dNoPreguntar) preguntar = true;
+                    if (this.dgDetalle.SelectedCells.Count > 0)
+                    {
+                        preguntar = true;
+                    }
+                    else
+                    {
+                        preguntar = false;
+                    }
+                    
                 }
                 else
                 {
@@ -7040,7 +7048,7 @@ namespace ModComprobantes
                         change = true;
                     }
                 }
-
+                this.dgDetalle.Refresh();
                 //Recalcular la tabla de totales
                 this.gridChange = true;
                 if (change) this.CalcularTotales();
