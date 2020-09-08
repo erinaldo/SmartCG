@@ -87,6 +87,7 @@
             this.radContextMenuClickDerecho = new Telerik.WinControls.UI.RadContextMenu(this.components);
             this.radPanelMenuPath = new Telerik.WinControls.UI.RadPanel();
             this.radLabelTitulo = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radPanelApp = new Telerik.WinControls.UI.RadPanel();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.menuGridClickDerecho.SuspendLayout();
@@ -132,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanelMenuPath)).BeginInit();
             this.radPanelMenuPath.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelTitulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).BeginInit();
             this.radPanelApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -263,7 +265,7 @@
             this.dgErrores.MultiSelect = false;
             this.dgErrores.Name = "dgErrores";
             this.dgErrores.ReadOnly = true;
-            this.dgErrores.Size = new System.Drawing.Size(1135, 186);
+            this.dgErrores.Size = new System.Drawing.Size(1129, 186);
             this.dgErrores.TabIndex = 135;
             this.dgErrores.Visible = false;
             this.dgErrores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgErrores_CellDoubleClick);
@@ -305,7 +307,7 @@
             this.dgDetalle.NombreTabla = "";
             this.dgDetalle.RowHeaderInitWidth = 41;
             this.dgDetalle.RowNumber = false;
-            this.dgDetalle.Size = new System.Drawing.Size(1135, 398);
+            this.dgDetalle.Size = new System.Drawing.Size(1129, 398);
             this.dgDetalle.TabIndex = 110;
             this.dgDetalle.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDetalle_CellClick);
             this.dgDetalle.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgDetalle_CellEndEdit);
@@ -787,9 +789,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radPanelMenuPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.radPanelMenuPath.Controls.Add(this.radLabelTitulo);
+            this.radPanelMenuPath.Controls.Add(this.radLabel1);
             this.radPanelMenuPath.Location = new System.Drawing.Point(192, 3);
             this.radPanelMenuPath.Name = "radPanelMenuPath";
-            this.radPanelMenuPath.Size = new System.Drawing.Size(2953, 45);
+            this.radPanelMenuPath.Size = new System.Drawing.Size(2947, 45);
             this.radPanelMenuPath.TabIndex = 220;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanelMenuPath.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
@@ -802,6 +805,17 @@
             this.radLabelTitulo.Size = new System.Drawing.Size(223, 29);
             this.radLabelTitulo.TabIndex = 225;
             this.radLabelTitulo.Text = "Comprobante contable / ";
+            this.radLabelTitulo.Click += new System.EventHandler(this.radLabelTitulo_Click);
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.radLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(223)))));
+            this.radLabel1.Location = new System.Drawing.Point(1365, 8);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(223, 29);
+            this.radLabel1.TabIndex = 226;
+            this.radLabel1.Text = "Comprobante contable / ";
             // 
             // radPanelApp
             // 
@@ -818,7 +832,7 @@
             this.radPanelApp.Controls.Add(this.gbTotales);
             this.radPanelApp.Location = new System.Drawing.Point(192, 49);
             this.radPanelApp.Name = "radPanelApp";
-            this.radPanelApp.Size = new System.Drawing.Size(1187, 559);
+            this.radPanelApp.Size = new System.Drawing.Size(1181, 559);
             this.radPanelApp.TabIndex = 5;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanelApp.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
@@ -829,7 +843,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.CancelButton = this.radButtonSalir;
-            this.ClientSize = new System.Drawing.Size(1378, 620);
+            this.ClientSize = new System.Drawing.Size(1372, 620);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelMenuPath);
             this.Controls.Add(this.radPanelAcciones);
@@ -890,6 +904,7 @@
             this.radPanelMenuPath.ResumeLayout(false);
             this.radPanelMenuPath.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelTitulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanelApp)).EndInit();
             this.radPanelApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -957,5 +972,6 @@
         private Telerik.WinControls.CircleShape circleShape1;
         private Telerik.WinControls.UI.RadDropDownList radDropDownListRevertir;
         private Telerik.WinControls.UI.RadLabel radLabelRevertirSgtePrdo;
+        private Telerik.WinControls.UI.RadLabel radLabel1;
     }
 }

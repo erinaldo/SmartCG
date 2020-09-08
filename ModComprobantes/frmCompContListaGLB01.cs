@@ -177,7 +177,9 @@ namespace ModComprobantes
                 // Set cursor as hourglass
                 Cursor.Current = Cursors.WaitCursor;
                 // lista de comprobantes?
-
+                string compania = cmbCompania.Text;
+                string aapp = txtMaskAAPP.Text;
+                string tipo = cmbTipo.Text;
                 frmCompContAltaEdita frmCompCont = new frmCompContAltaEdita
                 {
                     NuevoComprobante = true,
@@ -187,6 +189,9 @@ namespace ModComprobantes
                     TipoMoneda = tpmoneda,
                     nGlm02= true,
                     CmpExtendidos = cmpextendidos,
+                    Cab_Compania = compania,
+                    Cab_AAPP = aapp,
+                    Cab_Tipo=tipo,
                     FrmPadre = this
                 };
                 frmCompCont.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
@@ -1165,6 +1170,7 @@ namespace ModComprobantes
                         this.radGridViewComprobantes.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
 
                         if (this.radGridViewComprobantes.Groups.Count == 0) this.radGridViewComprobantes.Rows[0].IsCurrent = true;
+                        this.radPanelAccionesComp.Visible = true;
                         this.radGridViewComprobantes.Focus();
                         this.radGridViewComprobantes.Select();
                         //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, this.radPanelApp.Size.Height - this.radCollapsiblePanelDataFilter.Size.Height - 3);
@@ -2366,6 +2372,7 @@ namespace ModComprobantes
             //Cerrar el formulario actual ???
             // lista de comprobantes?
             // GridViewRowInfo row = this.radGridViewComprobantes.SelectedRows[0];
+            string estado = determinoestadofila();
             frmCompContAltaEdita frmCompCont = new frmCompContAltaEdita
             {
                 ImportarComprobante = true,
@@ -2377,6 +2384,7 @@ namespace ModComprobantes
                 TipoMoneda = tpmoneda,
                 nGlm02 = true,
                 CmpExtendidos = cmpextendidos,
+                Estado = estado,
                 FrmPadre = this
             };
             frmCompCont.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);

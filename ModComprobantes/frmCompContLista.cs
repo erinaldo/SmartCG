@@ -764,8 +764,7 @@ namespace ModComprobantes
                     BatchLoteError = false,
                     nGlm02=false,
                     CmpExtendidos = cmpextendidos,
-                    Compania = this.radGridViewComprobantes.Rows[rowIndex].Cells["compania"].Value.ToString(),
-
+                    Cab_Compania = this.radGridViewComprobantes.Rows[rowIndex].Cells["compania"].Value.ToString(),
                     FrmPadre = this
                 };
                 frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);
@@ -1575,7 +1574,11 @@ namespace ModComprobantes
         /// Llama al formulario de entrada de un nuevo comprobante
         /// </summary>
         private void Nuevo()
+        
         {
+            int rowIndex = 0;
+            
+            rowIndex = (this.radGridViewComprobantes.Rows.IndexOf(this.radGridViewComprobantes.CurrentRow));
             
             frmCompContAltaEdita frmAltaEdita = new frmCompContAltaEdita
             {
@@ -1586,6 +1589,9 @@ namespace ModComprobantes
                 nGlm02 = false,
                 TipoMoneda = "",
                 CmpExtendidos = cmpextendidos,
+                Cab_Compania = this.radGridViewComprobantes.Rows[rowIndex].Cells["compania"].Value.ToString(),
+                Cab_Tipo = this.radGridViewComprobantes.Rows[rowIndex].Cells["tipo"].Value.ToString(),
+                Cab_AAPP = this.radGridViewComprobantes.Rows[rowIndex].Cells["aapp"].Value.ToString(),
                 FrmPadre = this
             };
             frmAltaEdita.ArgSel += new frmCompContAltaEdita.ActualizaListaComprobantes(ActualizaListaComprobantes_ArgSel);

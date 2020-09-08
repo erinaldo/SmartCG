@@ -38,6 +38,7 @@ namespace ModComprobantes
 
         private bool nuevoComprobante;
         private bool batch;
+        private string estado;
         private string tipomoneda;
         private bool EsNuevo;
         private int row_index;
@@ -51,12 +52,13 @@ namespace ModComprobantes
         private bool nuevoComprobanteGLB01;
         private bool nuevoComprobanteGLB01CabeceraGrabada;  //Se utiliza para indicar si se está trabajando con la opción nuevoComprobanteGLB01 y se ha grabado ya la cabecera
         private string nombreComprobante;
-        private string compania;
         private string archivoComprobante;
         private ComprobanteContable comprobanteContableImportar;
         private string[] cmpextendidos;
 
-
+        private string cab_compania;
+        private string cab_aapp;
+        private string cab_tipo;
         private DataSet ds;
 
         private Telerik.WinControls.UI.RadLabel lblTotalDebe;
@@ -166,6 +168,17 @@ namespace ModComprobantes
             set
             {
                 this.batch = value;
+            }
+        }
+        public string Estado
+        {
+            get
+            {
+                return (this.estado);
+            }
+            set
+            {
+                this.estado = value;
             }
         }
         public string[] CmpExtendidos
@@ -318,15 +331,39 @@ namespace ModComprobantes
             }
         }
 
-        public string Compania
+        public string Cab_Compania
         {
             get
             {
-                return (this.compania);
+                return (this.cab_compania);
             }
             set
             {
-                this.compania = value;
+                this.cab_compania = value;
+            }
+        }
+
+        public string Cab_Tipo
+        {
+            get
+            {
+                return (this.cab_tipo);
+            }
+            set
+            {
+                this.cab_tipo = value;
+            }
+        }
+
+        public string Cab_AAPP
+        {
+            get
+            {
+                return (this.cab_aapp);
+            }
+            set
+            {
+                this.cab_aapp = value;
             }
         }
         public string ArchivoComprobante
@@ -415,6 +452,9 @@ namespace ModComprobantes
 
             //Cargar compañías
             this.FillCompanias();
+            
+            //Cargar Periodo
+            this.FillAAPP();
 
             //Cargar Tipos
             this.FillTiposComprobantes();
@@ -455,7 +495,9 @@ namespace ModComprobantes
 
                 if (this.edicionLote || this.edicionLoteError)
                 {
-                    utiles.ButtonEnabled(ref this.radButtonRevertir, false);
+                    //utiles.ButtonEnabled(ref this.radButtonRevertir, false);
+                    utiles.ButtonEnabled(ref this.radButtonValidarErrores, false);
+                    utiles.ButtonEnabled(ref this.radButtonImportar, false);
 
                     this.radDropDownListRevertir.Enabled = false;
 
@@ -521,6 +563,7 @@ namespace ModComprobantes
                             if (!this.nuevoComprobante)
                             {
                                 utiles.ButtonEnabled(ref this.radButtonImportar, false);
+                                utiles.ButtonEnabled(ref this.radButtonValidarErrores, false);
                             }
                                 this.txtMaskAAPP.Tag = this.comprobanteContableImportar.Cab_anoperiodo;
                             this.cmbTipo.Tag = this.comprobanteContableImportar.Cab_tipo;
@@ -541,10 +584,13 @@ namespace ModComprobantes
                 ActualizaValoresOrigenControles();
 
                 this.ControlesHabilitarDeshabilitar(true);
+                utiles.ButtonEnabled(ref this.radButtonValidarErrores, false);
             }
             else
             {
                 this.CrearTablasDataSetVacias();
+                utiles.ButtonEnabled(ref this.radButtonExportar, false);
+                utiles.ButtonEnabled(ref this.radButtonValidarErrores, false);
                 this.ControlesHabilitarDeshabilitar(false);
             }
 
@@ -710,6 +756,10 @@ namespace ModComprobantes
                     DialogResult result = MessageBox.Show(mensaje, this.LP.GetText("lblConfirm", "Confirmación"), MessageBoxButtons.YesNoCancel);
                     if (result == DialogResult.Yes && dGrabar==false)
                     {
+                        if (this.nuevoComprobante)
+                        {
+                            this.grabar_click();
+                        }
                         this.radButtonGrabar.PerformClick();
                         e.Cancel = false;
                         this.gridCambiada = false;
@@ -730,7 +780,7 @@ namespace ModComprobantes
 
             if (cerrarForm) Log.Info("FIN Alta / Edita comprobantes contables ");
 
-            e.Cancel = false;
+            //e.Cancel = false;
         }
 
         private static int DataGridViewRowIndexCompare(DataGridViewRow x, DataGridViewRow y)
@@ -1846,11 +1896,21 @@ namespace ModComprobantes
                     string biblioteca = "";
                     if (comprobanteContableImportar.Biblioteca != null) biblioteca = comprobanteContableImportar.Biblioteca;
 
-                    if (prefijo != "") this.radLabelTitulo.Text = this.Text.Trim() + " - " + this.LP.GetText("lblPrefijo", "Prefijo") + ": " + prefijo;
+                    //if (prefijo != "") this.radLabelTitulo.Text = this.Text.Trim() + " - " + this.LP.GetText("lblPrefijo", "Prefijo") + ": " + prefijo;
+                    if (prefijo != "") this.radLabelTitulo.Text = this.radLabelTitulo.Text + " - " + this.LP.GetText("lblPrefijo", "Prefijo") + ": " + prefijo;
 
-                    if (biblioteca != "") this.radLabelTitulo.Text = this.Text.Trim() + " - " + this.LP.GetText("lblBiblioteca", "Biblioteca") + ": " + biblioteca;
+                    //if (biblioteca != "") this.radLabelTitulo.Text = this.Text.Trim() + " / " + this.LP.GetText("lblBiblioteca", "Biblioteca") + ": " + biblioteca;
+                    if (biblioteca != "") this.radLabelTitulo.Text = this.radLabelTitulo.Text + "  " + this.LP.GetText("lblBiblioteca", "Biblioteca") + ": " + biblioteca;
                 }
-                else if (this.edicionComprobanteGLB01) this.radLabelTitulo.Text += "Registro tabla de contabilidad";
+                else if (this.edicionComprobanteGLB01)
+
+                {
+                    this.radLabelTitulo.Text += " / Registro tabla de contabilidad";
+                    if (Estado == "A") this.radLabelTitulo.Text += " - Aprobado";
+                    if (Estado == "R") this.radLabelTitulo.Text += " - Rechazado";
+                    if (Estado == "V") this.radLabelTitulo.Text += " - No Aprobado";
+                    if (Estado == "E") this.radLabelTitulo.Text += " - Contabilizado";
+                }
                 
                 //utiles.ButtonEnabled(ref this.radButtonNuevo, true);
             }
@@ -1935,7 +1995,7 @@ namespace ModComprobantes
             { 
                 if (this.cmbCompania.Tag is null && 
                     this.cmbCompania.Text != "" && 
-                    this.cmbCompania.Text.Substring(0, 2) != Compania)
+                    this.cmbCompania.Text.Substring(0, 2) != Cab_Compania)
                 {
                     nGlm02 = true;
                 }
@@ -1943,7 +2003,7 @@ namespace ModComprobantes
                 {
                 if (this.cmbCompania.Tag is null && 
                         this.cmbCompania.Text != "" && 
-                        this.cmbCompania.Text.Substring(0, 2) == Compania)
+                        this.cmbCompania.Text.Substring(0, 2) == Cab_Compania)
                     nGlm02 = false;
                 }
             }
@@ -2510,6 +2570,7 @@ namespace ModComprobantes
         /// </summary>
         private void FillTiposComprobantes()
         {
+            
             string query = "select TIVOTV, NOMBTV  from ";
             query += GlobalVar.PrefijoTablaCG + "GLT06 ";
 
@@ -2536,8 +2597,38 @@ namespace ModComprobantes
             {
                 if (this.edicionComprobanteGLB01 && this.cmbTipo.Items.Count > 0) this.cmbTipo.SelectedIndex = 0;
             }
+
+            if (EsNuevo)
+            {
+                if (Batch)
+                {
+                    if (cmbTipo.Text == "" || cmbTipo.Text is null)
+                    {
+                        result = ValidarTipo(Cab_Tipo);
+
+                        if (result == "")
+                        {
+                            cmbTipo.Text = Cab_Tipo + " - " + this.GLT06_NOMBTV;
+                        }
+                    }
+                }
+                else
+                {
+                    cmbTipo.Text = Cab_Tipo;
+                }
+            }    
         }
 
+        /// <summary>
+        /// Formato para las Periodo
+        /// </summary>
+        private void FillAAPP()
+        {
+            if (EsNuevo)
+            {
+                txtMaskAAPP.Text = Cab_AAPP;
+            }
+        }
         /// <summary>
         /// Formato para las fechas (dado parámetro de CG)
         /// </summary>
@@ -2577,7 +2668,10 @@ namespace ModComprobantes
                             compania_ant = codigo;
                             this.cmbCompania.SelectedValue = codigo;
                         }
-
+                        if (EsNuevo)
+                        {
+                            this.txtMaskAAPP.Text = Cab_AAPP;
+                        }
                         this.txtMaskAAPP.Text = ds.Tables["Cabecera"].Rows[0]["AnoPeriodo"].ToString();
                         aapp_ant = this.txtMaskAAPP.Text;
                         //if (this.cmbTipo.SelectedValue != null)
@@ -4635,7 +4729,7 @@ namespace ModComprobantes
 
             if (Batch && !BatchLote)
             {
-                codigo = compania;
+                codigo = cab_compania;
             }
             else
             {
@@ -6785,6 +6879,140 @@ namespace ModComprobantes
             Cursor.Current = Cursors.Default;
         }
 
+        private void grabar_click()
+        {
+            // Set cursor as hourglass
+            Cursor.Current = Cursors.WaitCursor;
+
+            string gravedad = "";
+            string validarGrabarFormulario = ValidarGrabarFormulario();
+            gravedad = validarGrabarFormulario.Substring(0, 1);
+
+            int length = validarGrabarFormulario.Length - 1;
+            if (length > 0) validarGrabarFormulario = validarGrabarFormulario.Substring(1, length);
+            else validarGrabarFormulario = "";
+            bool grabar = true;
+            if (validarGrabarFormulario != "" && gravedad == "0")
+            {
+                //Hay errores, pedir confirmación para grabar
+                string mensaje = this.LP.GetText("errGrabarErrores", "Se han encontrado los siguientes errores") + ": \n\r" + validarGrabarFormulario + "\n\r" + this.LP.GetText("errGrabarErroresPreg", "¿De todas formas desea grabar el fichero?");
+                DialogResult result = MessageBox.Show(mensaje, this.LP.GetText("lblConfirm", "Confirmación"), MessageBoxButtons.YesNo);
+                if (result == DialogResult.No) grabar = false;
+            }
+            else if (validarGrabarFormulario != "" && gravedad == "1")
+            {
+                //Hay errores, pedir confirmación para grabar
+                string mensaje = this.LP.GetText("errGrabarErroresG", "Se han encontrado los siguientes errores Graves, no se puede continuar con la operación pedida") + ": \n\r" + validarGrabarFormulario + "\n\r" + this.LP.GetText("errGrabarErroresPreg2", "¿Desea Salir sin Grabar?");
+                DialogResult result = MessageBox.Show(mensaje, this.LP.GetText("lblConfirm2", "Confirmación"), MessageBoxButtons.YesNo);
+                grabar = false;
+                if (result == DialogResult.Yes)
+                {
+                    dNoPreguntar = true;
+                    Close();
+                    return;
+                }
+            }
+
+            if (grabar)
+            {
+                // Actualizar valores de tag para que no pregunte por cambios al salir
+                if (!gridCambiada)
+                {
+                    this.cmbCompania.Tag = this.cmbCompania.SelectedValue.ToString();
+                    this.txtMaskAAPP.Tag = this.txtMaskAAPP.Text.ToString();
+                    this.dateTimePickerFecha.Tag = Convert.ToDateTime(this.dateTimePickerFecha.Value);
+                    if (this.cmbTipo.SelectedValue == null) this.cmbTipo.Tag = "";
+                    else this.cmbTipo.Tag = this.cmbTipo.SelectedValue.ToString();
+                    this.txtNoComprobante.Tag = this.txtNoComprobante.Text.ToString();
+                    this.cmbClase.Tag = this.cmbClase.SelectedValue.ToString();
+                    this.txtTasa.Tag = this.txtTasa.Text.ToString();
+                    this.txtDescripcion.Tag = this.txtDescripcion.Text.ToString();
+                    this.gridChange = false;
+                }
+
+                if (this.edicionComprobanteGLB01 && this.comprobanteSoloConsulta)
+                {
+                    //Comprobante en modo consulta. Actualizar los campos que son posibles modificar (fecha, descripcion)
+                    this.ActualizarComprobanteGLB01SoloConsulta();
+                }
+                else
+                {
+                    if (this.nuevoComprobanteGLB01 || this.edicionComprobanteGLB01)
+                    {
+                        //Ocultar el mensaje de Validación correcta en caso de que el comprobante no tenga errores
+                        this.showMsgValidacionOk = false;
+                        //Verificar que el comprobante este correctamente validado (todas sus lineas de detalle)
+                        this.radButtonValidar.PerformClick();
+                        this.showMsgValidacionOk = true;
+
+                        if (this.comp.DSErrores.Tables["Errores"].Rows.Count > 0)
+                        {
+                            //Chequear si es el de comprobante no cuadra, único caso en el que se permite grabar
+                            if (!(this.comp.DSErrores.Tables["Errores"].Rows.Count == 1 &&
+                                this.comp.DSErrores.Tables["Errores"].Rows[0]["Error"].ToString() == this.LP.GetText("lblfrmCompContErrSinCuadrar", "Comprobante sin cuadrar")))
+                            {
+                                //comp.DSErroresAdd(-1, this.LP.GetText("lblfrmCompContErrSinCuadrar", "Comprobante sin cuadrar"), "T", "");
+                                MessageBox.Show(this.LP.GetText("lblCompContConErrores", "Comprobante con errores"), this.LP.GetText("errValTitulo", "Error"));
+                                return;
+                            }
+                        }
+                    }
+
+                    //Actualizar Tabla Cabecera
+                    this.ActualizarTablaCabeceraDesdeForm();
+
+                    //Actualizar Tabla Totales
+                    this.ActualizarTablaTotalesDesdeForm();
+
+                    //Actualizar Tabla Detalles Fechas para grabar
+                    this.ActualizarTablaDetallesFechas(true);
+
+                    if (this.edicionComprobanteGLB01)
+                    {
+                        //Actualiza el comprobante en las tablas (GLI03, GLB01, GLBX1, GLAI3)
+                        this.ActualizarComprobanteTablaGLB01();
+                    }
+                    else
+                    if (this.edicionLote || this.edicionLoteError)
+                    {
+                        //Actualiza el comprobante en las tablas
+                        this.ActualizarComprobanteTablas();
+                        //this.Close(); //jl
+                    }
+                    else
+                        if (this.nuevoComprobante || this.importarComprobante)
+                    {
+                        if (this.nuevoComprobante && this.nuevoComprobanteGLB01)
+                        {
+                            this.GrabarNuevoComprobanteTablaGLB01();
+                        }
+                        else
+                        {
+                            //Graba el comprobante en formato xml
+                            this.GrabarNuevoComprobante(false);
+                        }
+                    }
+                    else
+                    {
+                        this.ActualizarComprobante();
+                    }
+
+                    //Actualizar Tabla Detalles Fechas para edición
+                    this.ActualizarTablaDetallesFechas(false);
+                }
+
+                //Actualizar los atributos TAG de los controles de la cabecera
+                ActualizaValoresOrigenControles();
+                dGrabar = true;
+                DevolverValor(); //jl
+                this.Close(); //jl
+                dGrabar = false;
+            }
+
+            // Set cursor as default arrow
+
+            Cursor.Current = Cursors.Default;
+        }
         private void RadButtonGrabarComo_Click(object sender, EventArgs e)
         {
             // Set cursor as hourglass
@@ -6793,7 +7021,7 @@ namespace ModComprobantes
             string validarGrabarFormulario = ValidarGrabarFormulario();
 
             bool grabar = true;
-            if (validarGrabarFormulario != "")
+            if (validarGrabarFormulario != "" && validarGrabarFormulario !="0")
             {
                 //Hay errores, pedir confirmación para grabar
                 string mensaje = this.LP.GetText("errGrabarErrores", "Se han encontrado los siguientes errores") + ": \n\r" + validarGrabarFormulario + "\n\r" + this.LP.GetText("errGrabarErroresPreg", "¿De todas formas desea grabar el fichero?");
@@ -7108,6 +7336,23 @@ namespace ModComprobantes
         
         private void CmbCompania_SelectedValueChanged(object sender, EventArgs e)
         {
+            if (EsNuevo)
+            {
+                if (Batch)
+                {
+                    if (!nglm01)
+
+                    {
+                        string result1 = QueryGLM01(cab_compania.Trim());
+                        nglm01 = true;
+                    }
+                    this.cmbCompania.Text = cab_compania.Trim() + " - " + GLM01_NCIAMG;
+                }
+                else
+                {
+                    this.cmbCompania.Text = cab_compania.Trim();
+                }
+            }
             if (this.cmbCompania.SelectedValue != null)
             {
                 string codigo = this.cmbCompania.SelectedValue.ToString();
@@ -7573,6 +7818,11 @@ private void RadButtonExportar_Click(object sender, EventArgs e)
         "Cell at row {0}, column {1} value changed",
         e.RowIndex, e.ColumnIndex);
             MessageBox.Show(msg, "Cell Value Changed");
+        }
+
+        private void radLabelTitulo_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion
