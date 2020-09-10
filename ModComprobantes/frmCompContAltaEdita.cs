@@ -4183,7 +4183,7 @@ namespace ModComprobantes
 
             utiles.ButtonEnabled(ref this.radButtonGrabar, valor);
             utiles.ButtonEnabled(ref this.radButtonGrabarComo, valor);
-            utiles.ButtonEnabled(ref this.radButtonRevertir, valor);
+            
             utiles.ButtonEnabled(ref this.radButtonValidar, valor);
 
             if (valor == false && this.dgErrores.Visible)
@@ -5587,7 +5587,7 @@ namespace ModComprobantes
 
                     //noApuntes = this.dgDetalle.dsDatos.Tables["Detalle"].Rows.Count - 1;
                 }
-
+                
                 //Actualizar la tabla de Totales
                 this.dgDetalle.dsDatos.Tables["Totales"].Rows[0]["MonedaLocalDebe"] = monedaLocal_Debe.ToString();
                 this.dgDetalle.dsDatos.Tables["Totales"].Rows[0]["MonedaLocalHaber"] = monedaLocal_Haber.ToString();
@@ -5618,11 +5618,28 @@ namespace ModComprobantes
                 this.lblImporte3_Haber.Text = importe3_Haber.ToString("N2", ci);
 
                 this.lblNoApuntes_Valor.Text = noApuntes.ToString();
+
+                if ((monedaLocal_Debe == 0) &&
+                    (monedaLocal_Haber == 0) &&
+                    (monedaExtranjera_Debe == 0) &&
+                    (monedaExtranjera_Haber == 0) &&
+                    (importe3_Debe == 0) &&
+                    (importe3_Haber == 0))
+                    
+                {
+                    utiles.ButtonEnabled(ref this.radButtonRevertir, false);
+                }
+                else
+                {
+                    utiles.ButtonEnabled(ref this.radButtonRevertir, true);
+                }
             }
             catch(Exception ex)
             {
                 Log.Error(Utiles.CreateExceptionString(ex));
             }
+            
+            
         }
 
         /// <summary>
