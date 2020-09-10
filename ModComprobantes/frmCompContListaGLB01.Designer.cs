@@ -198,13 +198,13 @@ namespace ModComprobantes
             this.gbCabecera.Controls.Add(this.lblTipo);
             this.gbCabecera.Controls.Add(this.lblAAPP);
             this.gbCabecera.Controls.Add(this.lblCompania);
-            this.gbCabecera.HeaderText = "Seleccionar";
-            this.gbCabecera.Location = new System.Drawing.Point(11, 23);
+            this.gbCabecera.HeaderText = " Seleccionar";
+            this.gbCabecera.Location = new System.Drawing.Point(11, 16);
             this.gbCabecera.Name = "gbCabecera";
             this.gbCabecera.Size = new System.Drawing.Size(761, 137);
             this.gbCabecera.TabIndex = 10;
             this.gbCabecera.TabStop = false;
-            this.gbCabecera.Text = "Seleccionar";
+            this.gbCabecera.Text = " Seleccionar";
             // 
             // radButtonBuscar
             // 
@@ -477,10 +477,9 @@ namespace ModComprobantes
             // 
             // radGridViewAccionesActuales
             // 
-            this.radGridViewAccionesActuales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radGridViewAccionesActuales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radGridViewAccionesActuales.AutoScroll = true;
-            this.radGridViewAccionesActuales.Location = new System.Drawing.Point(11, 387);
+            this.radGridViewAccionesActuales.Location = new System.Drawing.Point(11, 371);
             // 
             // 
             // 
@@ -489,11 +488,12 @@ namespace ModComprobantes
             this.radGridViewAccionesActuales.MasterTemplate.AllowEditRow = false;
             this.radGridViewAccionesActuales.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.radGridViewAccionesActuales.Name = "radGridViewAccionesActuales";
-            this.radGridViewAccionesActuales.Size = new System.Drawing.Size(992, 148);
+            this.radGridViewAccionesActuales.Size = new System.Drawing.Size(816, 164);
             this.radGridViewAccionesActuales.TabIndex = 192;
             this.radGridViewAccionesActuales.Visible = false;
             this.radGridViewAccionesActuales.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridViewAccionesActuales_ViewCellFormatting);
             this.radGridViewAccionesActuales.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.RadGridViewAccionesActuales_DataBindingComplete);
+            this.radGridViewAccionesActuales.Leave += new System.EventHandler(this.radGridViewAccionesActuales_Leave);
             // 
             // radPanelMenuPath
             // 
@@ -617,7 +617,7 @@ namespace ModComprobantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 1190);
+            this.ClientSize = new System.Drawing.Size(1335, 1204);
             this.Controls.Add(this.radPanelApp);
             this.Controls.Add(this.radPanelMenuPath);
             this.Controls.Add(this.radPanelAcciones);
