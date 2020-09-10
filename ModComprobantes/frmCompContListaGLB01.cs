@@ -252,6 +252,8 @@ namespace ModComprobantes
             // Set cursor as hourglass
             Cursor.Current = Cursors.WaitCursor;
 
+            this.radGridViewAccionesActuales.Width = this.radGridViewComprobantes.Size.Width;
+
             if (this.radGridViewAccionesActuales.Visible)
             {
                 //Oculta el Grid de Acciones Actuales
@@ -400,9 +402,10 @@ namespace ModComprobantes
 
                             //Cambia el estado del comprobante (lo pasa a Aprobado)
                             this.CambiarEstado(this.radGridViewComprobantes.SelectedRows[i], i, "A", "");
-                            estado = determinoestadofila();
+                            ////estado = determinoestadofila();
                             //Insertar la acción de Aprobar en la Grid de Acciones
                             this.InsertarGridAcciones(this.radGridViewComprobantes.SelectedRows[i], "A", estado);
+                            estado = determinoestadofila();
                         }
                         else
                         {
@@ -526,10 +529,12 @@ namespace ModComprobantes
 
                         //Cambia el estado del comprobante (lo pasa a Aprobado)
                         this.CambiarEstado(this.radGridViewComprobantes.SelectedRows[i], i, "R", "");
-                        estado = determinoestadofila();
+                        /////estado = determinoestadofila();
 
                         //Insertar la acción de Rechazar en la Grid de Acciones
                         this.InsertarGridAcciones(this.radGridViewComprobantes.SelectedRows[i], "R", estado);
+
+                        estado = determinoestadofila();
                     }
                 }
 
@@ -1070,7 +1075,7 @@ namespace ModComprobantes
                         if (cantComp == 0)
                         {
                             this.progressBarEspera.Value = 0;
-                            this.progressBarEspera.Visible = true;
+                            //this.progressBarEspera.Visible = true;
 
                             //Mover la barra de progreso
                             if (this.progressBarEspera.Value + 10 > this.progressBarEspera.Maximum) this.progressBarEspera.Value = this.progressBarEspera.Minimum;
@@ -1178,6 +1183,38 @@ namespace ModComprobantes
 
                         //cargar layout
                         utiles.cargarLayout(this.Name, ref radGridViewComprobantes);
+
+
+                        ////////////radGridViewAccionesActuales
+                        for (int i = 0; i < this.radGridViewAccionesActuales.Columns.Count; i++)
+                        {
+                            this.radGridViewAccionesActuales.Columns[i].HeaderTextAlignment = ContentAlignment.MiddleLeft;
+                            //this.radGridViewInfo.Columns[i].BestFit();
+                            this.radGridViewAccionesActuales.Columns[i].Width = 600;
+                        }
+
+                        this.radGridViewAccionesActuales.TableElement.GridViewElement.GroupPanelElement.Text = "Arrastre una columna aquí para agrupar - Pulse ctrl+F para activar la búsqueda";
+                        this.radGridViewAccionesActuales.AllowSearchRow = true;
+                        this.radGridViewAccionesActuales.MasterView.TableSearchRow.IsVisible = false;
+                        this.radGridViewAccionesActuales.TableElement.SearchHighlightColor = Color.Aqua;
+                        this.radGridViewAccionesActuales.AllowEditRow = false;
+                        this.radGridViewAccionesActuales.EnableFiltering = true;
+                        //this.radGridViewInfo.MasterView.TableFilteringRow.IsVisible = false;
+
+                        //this.radGridViewInfo.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+                        //this.radGridViewInfo.MasterTemplate.BestFitColumns();
+                        this.radGridViewAccionesActuales.MasterTemplate.BestFitColumns(BestFitColumnMode.AllCells);
+
+                        //if (this.radGridViewAccionesActuales.Groups.Count == 0) this.radGridViewAccionesActuales.Rows[0].IsCurrent = true;
+                        //this.radGridViewAccionesActuales.Visible = true;
+                        //this.radGridViewAccionesActuales.Focus();
+                        //this.radGridViewAccionesActuales.Select();
+                        //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, this.radPanelApp.Size.Height - this.radCollapsiblePanelDataFilter.Size.Height - 3);
+                        //this.radGridViewInfo.Size = new Size(this.radGridViewInfo.Size.Width, 609);
+
+                        //cargar layout
+                        utiles.cargarLayout(this.Name, ref radGridViewAccionesActuales);
+                        ////////////
 
                         this.radGridViewComprobantes.Refresh();
 
@@ -1483,6 +1520,10 @@ namespace ModComprobantes
             {
                 e.CellElement.Font = newFont;
             }
+        }
+        private void radGridViewAccionesActuales_Leave(object sender, EventArgs e)
+        {
+            utiles.guardarLayout(this.Name, ref radGridViewAccionesActuales);
         }
         #endregion
 
@@ -2324,7 +2365,7 @@ namespace ModComprobantes
         private void CargarComprobanteSeleccionado(GridViewRowInfo row)
         {
             this.progressBarEspera.Value = 0;
-            this.progressBarEspera.Visible = true;
+            //this.progressBarEspera.Visible = true;
 
             //Mover la barra de progreso
             if (this.progressBarEspera.Value + 10 > this.progressBarEspera.Maximum) this.progressBarEspera.Value = this.progressBarEspera.Minimum;
@@ -2970,7 +3011,7 @@ namespace ModComprobantes
                 DataRow rowAccion = this.dtAccionesActuales.NewRow();
 
                 rowAccion["Fecha"] = DateTime.Now.ToString("dd/MM/yyyy");
-                rowAccion["Hora"] = DateTime.Now.ToString("hh:mm:ss");
+                rowAccion["Hora"] = DateTime.Now.ToString("HH:mm:ss");
                 rowAccion["compania"] = compania;
                 rowAccion["AAPP"] = aappFormat;
                 rowAccion["Tipo"] = tipo;
@@ -2984,7 +3025,7 @@ namespace ModComprobantes
                 rowAccion["Accion"] = accion;
                 rowAccion["CodAccion"] = codAccion;
 
-                this.radGridViewAccionesActuales.Rows.Add(rowAccion);
+                this.radGridViewAccionesActuales.Rows.Add(rowAccion.ItemArray);
 
                 utiles.ButtonEnabled(ref this.radButtonVerAccionesActuales, true);
             }
@@ -3162,7 +3203,7 @@ namespace ModComprobantes
                     if (aa != "") siglo = utiles.SigloDadoAnno(aa, CGParametrosGrles.GLC01_ALSIRC);
                     fecha = siglo + fecha.Replace("/", "");
 
-                    string hora = DateTime.Now.ToString("hh:mm:ss");
+                    string hora = DateTime.Now.ToString("HH:mm:ss");
                     hora = hora.Replace(":", "");
 
                     string userWindowsLogado = System.Environment.UserName.ToUpper();
@@ -3170,7 +3211,7 @@ namespace ModComprobantes
                     //Insertar la acción en la tabla GLL02
                     query = "insert into " + GlobalVar.PrefijoTablaCG + "GLL02 ";
                     query += "(DATEL2, TIMEL2, IDUSL2, IBMUL2, STATL2, CCIAL2, SAPRL2, TICOL2, NUCOL2, CRTDL2) values (";
-                    query += fecha + ", " + hora + ", '" + GlobalVar.UsuarioLogadoCG + "', '" + userWindowsLogado + "', '";
+                    query += fecha + ", " + hora + ", '" + GlobalVar.UsuarioLogadoCG + "', '" + userWindowsLogado.PadRight(10, ' ').Substring(0,10) + "', '";
                     query += STATL2 + "', '" + compania + "', " + aapp + ", " + tipo + ", " + noComp + ", '" + CRTDL2 + "')";
 
                     reg = GlobalVar.ConexionCG.ExecuteNonQuery(query, GlobalVar.ConexionCG.GetConnectionValue);
