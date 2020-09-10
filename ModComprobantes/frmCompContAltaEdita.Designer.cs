@@ -368,6 +368,7 @@
             // 
             // radDropDownListRevertir
             // 
+            this.radDropDownListRevertir.AllowShowFocusCues = true;
             this.radDropDownListRevertir.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.radDropDownListRevertir.Location = new System.Drawing.Point(347, 120);
             this.radDropDownListRevertir.Name = "radDropDownListRevertir";
@@ -377,6 +378,7 @@
             // 
             // cmbCompania
             // 
+            this.cmbCompania.AllowShowFocusCues = true;
             this.cmbCompania.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cmbCompania.Location = new System.Drawing.Point(15, 33);
             this.cmbCompania.MaxLength = 2;
@@ -388,6 +390,7 @@
             // 
             // cmbTipo
             // 
+            this.cmbTipo.AllowShowFocusCues = true;
             this.cmbTipo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cmbTipo.Location = new System.Drawing.Point(438, 34);
             this.cmbTipo.MaxLength = 2;
@@ -468,6 +471,7 @@
             // 
             // cmbClase
             // 
+            this.cmbClase.AllowShowFocusCues = true;
             this.cmbClase.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cmbClase.Location = new System.Drawing.Point(303, 76);
             this.cmbClase.Name = "cmbClase";
@@ -486,6 +490,7 @@
             // 
             // dateTimePickerFecha
             // 
+            this.dateTimePickerFecha.AllowShowFocusCues = true;
             this.dateTimePickerFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFecha.Location = new System.Drawing.Point(15, 76);
             this.dateTimePickerFecha.Name = "dateTimePickerFecha";

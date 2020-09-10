@@ -41,6 +41,7 @@ namespace ModComprobantes
         private string estado;
         private string tipomoneda;
         private bool EsNuevo;
+        private bool sincompania;
         private int row_index;
         private bool importarComprobante;
         private bool edicionLote;
@@ -1546,13 +1547,16 @@ namespace ModComprobantes
 
                     //QUITAR COMENTARIO
                     //if (!(this.edicionLote || this.edicionLoteError))
-                    
+
                     //{
+                    if (cmbCompania.Text != null && cmbCompania.Text.ToString() != "")
+                    {
                         if (cmbCompania.Text.Substring(0, 2) != "" && nuevoComprobante && !nglm01)
                         {
                             string result1 = this.QueryGLM01(cmbCompania.Text.Substring(0, 2));
                             nglm01 = true;
                         }
+                    }
                             string result = UpdateEstadoColumnasDadoCuentaMayor(valor, e.RowIndex);
                     //}
 
@@ -2839,6 +2843,7 @@ namespace ModComprobantes
 
         private void ImportarDatosComprobante()
         {
+            bool errorCia = false;
             bool errorTipo = false;
             try
             {
@@ -2851,13 +2856,15 @@ namespace ModComprobantes
                         this.cmbCompania.SelectedValue = compania;
                         if (this.cmbCompania.SelectedValue == null)
                         {
-                            RadMessageBox.Show("La compañía " + compania + "no es válida. Debe seleccionar una.");
-                        }
+                            RadMessageBox.Show("La compañía " + compania + " no es válida. Debe seleccionar una.");
+                            errorCia = true;
+                            }
                     }
                     catch
                     {
-                        RadMessageBox.Show("La compañía " + compania + "no es válida. Debe seleccionar una.");
-                    }
+                        RadMessageBox.Show("La compañía " + compania + " no es válida. Debe seleccionar una.");
+                        errorCia = true;
+                        }
                 }
                 else RadMessageBox.Show("Debe seleccionar la compañía.");
 
@@ -2989,7 +2996,7 @@ namespace ModComprobantes
             }
             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
 
-            if (errorTipo) this.cmbTipo.Focus();
+            if (errorTipo && !errorCia) this.cmbTipo.Focus();
             else this.cmbCompania.Focus();
         }
 
@@ -7361,10 +7368,19 @@ namespace ModComprobantes
                 
                 this.CrearComboClase();
 
-                if (this.nuevoComprobante)
+                if (this.nuevoComprobante || sincompania)
                 {
                     this.ControlesHabilitarDeshabilitar(true);
+                    
+                    if (sincompania) utiles.ButtonEnabled(ref this.radButtonExportar, true);
                 }
+            }
+            else
+            {
+                this.ControlesHabilitarDeshabilitar(false);
+                this.cmbCompania.Focus();
+                sincompania = true;
+                utiles.ButtonEnabled(ref this.radButtonExportar, false);
             }
 
             /*
