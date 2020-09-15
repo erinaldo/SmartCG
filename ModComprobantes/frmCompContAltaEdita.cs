@@ -41,6 +41,7 @@ namespace ModComprobantes
         private string estado;
         private string tipomoneda;
         private bool EsNuevo;
+        private bool EsNuevo_1v;
         private bool sincompania;
         private int row_index;
         private bool importarComprobante;
@@ -429,7 +430,12 @@ namespace ModComprobantes
             Log.Info("INICIO Alta / Edita comprobantes contables ");
 
             EsNuevo = this.nuevoComprobante; // guardo boot para devolución al programa llamada
-
+            EsNuevo_1v = true;
+            if (Batch)
+            {
+                compania_ant = "";
+                compania_cmb = cab_compania;
+            }
             if (this.nuevoComprobante) this.gridChange = true;
 
             //Necesario para el KeyDown (cerrar el formulario al pulsar la tecla 'ESC')
@@ -2014,7 +2020,7 @@ namespace ModComprobantes
             
 
             if ((this.cmbCompania.Tag != null && this.cmbCompania.Tag != "") &&
-                (this.cmbCompania.Tag != this.cmbCompania.Text.Substring(0, 2))
+                (this.cmbCompania.Tag != this.cmbCompania.Text.PadRight(2,' ').Substring(0, 2))
                 || BatchLote)
             {
                 nGlm02 = false;
@@ -2031,6 +2037,10 @@ namespace ModComprobantes
             {
                 if (this.dtClase.Rows.Count > 0) this.dtClase.Rows.Clear();
 
+                if (this.GLM01_TIPLMG == null || this.GLM01_TIPLMG == "")
+                {
+                    string result = this.QueryGLM01(cab_compania);
+                }
                 if (this.GLM01_TIPLMG != null && this.GLM01_TIPLMG != "")
                 {
                     //Leer el tipo de moneda
@@ -2062,6 +2072,8 @@ namespace ModComprobantes
                             row["desc"] = texto0;
                             dtClase.Rows.Add(row);
 
+                        if (!Batch)
+                        {
                             // añadido por jl el 13/7/20
                             row = dtClase.NewRow();
                             row["valor"] = "1";
@@ -2072,6 +2084,7 @@ namespace ModComprobantes
                             row["valor"] = "2";
                             row["desc"] = texto2;
                             dtClase.Rows.Add(row);
+                        }
 
                             row = dtClase.NewRow();
                             row["valor"] = "3";
@@ -2083,16 +2096,20 @@ namespace ModComprobantes
                         }
                         else
                         {
-                            //Si TIMOMP <> "" la clase de comprobante solo puede ser 1, 2 ó 3.
+                        //Si TIMOMP <> "" la clase de comprobante solo puede ser 1, 2 ó 3.
+                        if (!Batch)
+                        {
                             row = dtClase.NewRow();
                             row["valor"] = "1";
                             row["desc"] = texto1;
                             dtClase.Rows.Add(row);
 
+                        
                             row = dtClase.NewRow();
                             row["valor"] = "2";
                             row["desc"] = texto2;
                             dtClase.Rows.Add(row);
+                        }
 
                             row = dtClase.NewRow();
                             row["valor"] = "3";
@@ -2107,9 +2124,9 @@ namespace ModComprobantes
                         dr.Close();
                     }
                 }
-                    else
+                else
                 {
-                    todos = true;
+                   todos = true;         //jl
                 }
             }
             catch(Exception ex)
@@ -2544,15 +2561,16 @@ namespace ModComprobantes
             try
             {
                 string query = "";
-                if (!this.edicionComprobanteGLB01)
-                {
-                    query = "select CCIAMG, NCIAMG from " + GlobalVar.PrefijoTablaCG + "GLM01 where STATMG='V' order by CCIAMG";
-                }
-                else
-                {
-                    query = "select CCIAMG, NCIAMG from " + GlobalVar.PrefijoTablaCG + "GLM01 where CCIAMG = '" + this.comprobanteContableImportar.Cab_compania + "'";
-                }
-
+                
+                    if (!this.edicionComprobanteGLB01)
+                    {
+                        query = "select CCIAMG, NCIAMG from " + GlobalVar.PrefijoTablaCG + "GLM01 where STATMG='V' order by CCIAMG";
+                    }
+                    else
+                    {
+                        query = "select CCIAMG, NCIAMG from " + GlobalVar.PrefijoTablaCG + "GLM01 where CCIAMG = '" + this.comprobanteContableImportar.Cab_compania + "'";
+                    }
+                
                 string result = this.FillComboBox(query, "CCIAMG", "NCIAMG", ref this.cmbCompania, true, -1, false);
 
                 if (result != "")
@@ -2565,8 +2583,21 @@ namespace ModComprobantes
                 {
                     if (this.edicionComprobanteGLB01 && this.cmbCompania.Items.Count > 0) this.cmbCompania.SelectedIndex = 0;
                 }
+                if (EsNuevo)
+                {
+                    if (cmbCompania.SelectedValue == null)
+                    {
+                        if (cab_compania == "") return;
+                        string cia_cab = cab_compania.PadRight(2, ' ').Substring(0, 2);
+                        string result1 = QueryGLM01(cia_cab);
+                        nglm01 = true;
+                        this.cmbCompania.Text = cia_cab + " - " + GLM01_NCIAMG;
+                        this.cmbCompania.Tag = cia_cab;
+                    }
+                }
             }
             catch (Exception ex) { Log.Error(Utiles.CreateExceptionString(ex)); }
+            
         }
 
         /// <summary>
@@ -5642,10 +5673,10 @@ namespace ModComprobantes
             
         }
 
-        /// <summary>
-        /// Muestra el Grid con los Errores de la Validación
-        /// </summary>
-        private void ViewGridErrores()
+            /// <summary>
+            /// Muestra el Grid con los Errores de la Validación
+            /// </summary>
+            private void ViewGridErrores()
         {
             try
             {
@@ -7364,18 +7395,29 @@ namespace ModComprobantes
             {
                 if (Batch)
                 {
-                    if (!nglm01)
-
+                    if (compania_ant == "")
                     {
-                        string result1 = QueryGLM01(cab_compania.Trim());
-                        nglm01 = true;
+                        compania_ant = cab_compania;
+                        nglm01 = false;
                     }
-                    this.cmbCompania.Text = cab_compania.Trim() + " - " + GLM01_NCIAMG;
+                    else
+                    {
+                        if (compania_ant != cmbCompania.Text.PadRight(2, ' ').Substring(0, 2))
+                        {
+                            compania_ant = cmbCompania.Text.PadRight(2, ' ').Substring(0, 2);
+                            nglm01 = false;
+                        }
+                    }
+                        if (!nglm01)
+
+                        {
+                            string result1 = QueryGLM01(compania_ant.Trim());
+                            nglm01 = true;
+                        }
+                        this.cmbCompania.Text = compania_ant.Trim() + " - " + GLM01_NCIAMG;
+                        this.cmbCompania.SelectedValue = compania_ant;
                 }
-                else
-                {
-                    this.cmbCompania.Text = cab_compania.Trim();
-                }
+                                
             }
             if (this.cmbCompania.SelectedValue != null)
             {
@@ -7400,6 +7442,7 @@ namespace ModComprobantes
                 utiles.ButtonEnabled(ref this.radButtonExportar, false);
             }
 
+
             /*
             string result = ValidarCompania(codigo);
 
@@ -7422,6 +7465,8 @@ namespace ModComprobantes
 
             //this.tgTexBoxSelCompania.Textbox.Select(0, 0);
             */
+            //this.CalcularTotales();           
+
         }
 
         private void CmbClase_SelectedValueChanged(object sender, EventArgs e)
@@ -7445,6 +7490,7 @@ namespace ModComprobantes
                         this.dgDetalle.ColumnEnable("MonedaExt");
                         break;
                 }
+                
             }
         }
 
