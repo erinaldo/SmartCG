@@ -1558,6 +1558,8 @@ namespace ModComprobantes
 
                     rowLotesErrores["NUEV24"] = dtErrores.Rows[i]["NUEV24"].ToString();
 
+                    rowLotesErrores["APRO24Origen"] = dtErrores.Rows[i]["APRO24"].ToString();
+
                     this.dtLotesError.Rows.Add(rowLotesErrores);
                 }
 
