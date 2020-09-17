@@ -1205,16 +1205,16 @@
     <value>Se van a eliminar todos los mensajes de error seleccionados. ¿Desea continuar?</value>
   </data>
   <data name="errTablaCabLoteNoExiste" xml:space="preserve">
-    <value>No existe la tabla cabecera de lotes</value>
+    <value>No existe la tabla cabecera de lotes.</value>
   </data>
   <data name="errTablaDetLoteNoExiste" xml:space="preserve">
-    <value>No existe la tabla detalles de lotes</value>
+    <value> No existe la tabla detalles de lotes.</value>
   </data>
   <data name="errVerificarTablaLote" xml:space="preserve">
-    <value>No existe la tabla de lote</value>
+    <value> No existe la tabla de lote.</value>
   </data>
   <data name="errNoExistenLotes" xml:space="preserve">
-    <value>No existen lotes</value>
+    <value> No existen lotes.</value>
   </data>
   <data name="lblNoExistenCompConErrores" xml:space="preserve">
     <value>No existen comprobantes con errores</value>

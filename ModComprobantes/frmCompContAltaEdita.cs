@@ -41,7 +41,6 @@ namespace ModComprobantes
         private string estado;
         private string tipomoneda;
         private bool EsNuevo;
-        private bool EsNuevo_1v;
         private bool sincompania;
         private int row_index;
         private bool importarComprobante;
@@ -430,7 +429,7 @@ namespace ModComprobantes
             Log.Info("INICIO Alta / Edita comprobantes contables ");
 
             EsNuevo = this.nuevoComprobante; // guardo boot para devolución al programa llamada
-            EsNuevo_1v = true;
+            
             if (Batch)
             {
                 compania_ant = "";
@@ -491,9 +490,9 @@ namespace ModComprobantes
                 aapp_ant = this.txtMaskAAPP.Value.ToString();
                 nocomp_ant = this.comprobanteContableImportar.Cab_noComprobante;
                 DateTime fecha_int = Convert.ToDateTime(this.dateTimePickerFecha.Text);
-                string fecha_Seditar = utiles.FechaToFormatoCG(fecha_int, false, 6).ToString().Trim();
-                fecha_ant = fecha_Seditar.Substring(4, 2) + "/" + fecha_Seditar.Substring(2, 2) +
-                            "/" + fecha_Seditar.Substring(0, 2);
+                string fecha_Seditar = utiles.FechaToFormatoCG(fecha_int, true, 6).ToString().Trim();
+                fecha_ant = fecha_Seditar.Substring(5, 2) + "/" + fecha_Seditar.Substring(3, 2) +
+                            "/" + fecha_Seditar.Substring(1, 2);
                 //Calcular los totales
                 this.CalcularTotales();
 
@@ -1890,17 +1889,19 @@ namespace ModComprobantes
         {
             //Recuperar literales del formulario
             this.Text = this.LP.GetText("lblfrmCompContAltaEditaTitulo", "Comprobante Contable");
-            if (this.nuevoComprobante)
-            {
-                this.radLabelTitulo.Text = this.Text + " / " + this.LP.GetText("lblfrmCompContAltaEditaTituloNuevo", "Nuevo");
+            //if (this.nuevoComprobante)
+            //{
+                //this.radLabelTitulo.Text = this.Text + " / " + this.LP.GetText("lblfrmCompContAltaEditaTituloNuevo", "Nuevo");
                 //utiles.ButtonEnabled(ref this.radButtonNuevo, false);
-            }
-            else
-            {
-                this.radLabelTitulo.Text = this.Text + " / " + this.nombreComprobante;
+            //}
+            //else
+            //{
+                //this.radLabelTitulo.Text = this.Text + " / " + this.nombreComprobante;
+                if (!Batch) this.radLabelTitulo.Text = this.Text + " / Lista de Comprobantes";
 
                 if (this.edicionLote || this.edicionLoteError)
                 {
+                    this.radLabelTitulo.Text = this.Text + " / Gestión de Lotes";
                     string prefijo = "";
                     if (comprobanteContableImportar.Prefijo != null) prefijo = comprobanteContableImportar.Prefijo;
                     string biblioteca = "";
@@ -1912,8 +1913,9 @@ namespace ModComprobantes
                     //if (biblioteca != "") this.radLabelTitulo.Text = this.Text.Trim() + " / " + this.LP.GetText("lblBiblioteca", "Biblioteca") + ": " + biblioteca;
                     if (biblioteca != "") this.radLabelTitulo.Text = this.radLabelTitulo.Text + "  " + this.LP.GetText("lblBiblioteca", "Biblioteca") + ": " + biblioteca;
                 }
-                else if (this.edicionComprobanteGLB01)
-
+                else
+                { 
+                if (this.edicionComprobanteGLB01 && !this.nuevoComprobante)
                 {
                     this.radLabelTitulo.Text += " / Registro tabla de contabilidad";
                     if (Estado == "A") this.radLabelTitulo.Text += " - Aprobado";
@@ -1921,9 +1923,19 @@ namespace ModComprobantes
                     if (Estado == "V") this.radLabelTitulo.Text += " - No Aprobado";
                     if (Estado == "E") this.radLabelTitulo.Text += " - Contabilizado";
                 }
-                
-                //utiles.ButtonEnabled(ref this.radButtonNuevo, true);
+                if (Batch && !BatchLote && !BatchLoteError)
+                    {
+                        this.radLabelTitulo.Text += " Gestión Comprobantes Contables";
+                    }
+                }
+
+            if (this.nuevoComprobante)
+            {
+                this.radLabelTitulo.Text = this.radLabelTitulo.Text + " / " + this.LP.GetText("lblfrmCompContAltaEditaTituloNuevo", "Nuevo");
+                //utiles.ButtonEnabled(ref this.radButtonNuevo, false);
             }
+            //utiles.ButtonEnabled(ref this.radButtonNuevo, true);
+            //}
 
             //Traducir las etiquetas de la Cabecera
             this.gbCabecera.Text = this.LP.GetText("lblCabecera", "Cabecera");
@@ -2172,7 +2184,7 @@ namespace ModComprobantes
             this.cmbClase.DisplayMember = "desc";
             this.cmbClase.Refresh();
 
-            if (this.cmbClase.Items.Count > 0) this.cmbClase.SelectedIndex = 0;
+            //if (this.cmbClase.Items.Count > 0) this.cmbClase.SelectedIndex = 0; //jl
         }
 
         /// <summary>
@@ -4767,7 +4779,8 @@ namespace ModComprobantes
 
             if (Batch && !BatchLote)
             {
-                codigo = cab_compania;
+                //codigo = cab_compania;
+                codigo = cmbCompania.SelectedValue.ToString();
             }
             else
             {

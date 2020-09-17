@@ -1260,15 +1260,16 @@ namespace ModComprobantes
                     if (!this.radToggleSwitchFormatoAmpliado.Value)
                     {
                         //No extendido
-                        if (!utilesCG.ExisteTabla(this.tipoBaseDatosCG, this.bibliotecaTablasLoteAS + prefijo + "W00")) result += this.LP.GetText("errTablaCabLoteNoExiste", "No existe la tabla cabecera de lotes");
-                        if (!utilesCG.ExisteTabla(this.tipoBaseDatosCG, this.bibliotecaTablasLoteAS + prefijo + "W01")) result += this.LP.GetText("errTablaDetLoteNoExiste", "No existe la tabla detalles de lotes");
+                        if (!utilesCG.ExisteTabla(this.tipoBaseDatosCG, this.bibliotecaTablasLoteAS + prefijo + "W00")) result += this.LP.GetText("errTablaCabLoteNoExiste", "No existe la tabla cabecera de lotes." + "\n\r");
+                        if (!utilesCG.ExisteTabla(this.tipoBaseDatosCG, this.bibliotecaTablasLoteAS + prefijo + "W01")) result += this.LP.GetText("errTablaDetLoteNoExiste", " No existe la tabla detalles de lotes" + "\n\r");
                     }
                     else
                     {
                         //Extendido
-                        if (!utilesCG.ExisteTabla(this.tipoBaseDatosCG, this.bibliotecaTablasLoteAS + prefijo + "W10")) result += this.LP.GetText("errTablaCabLoteNoExiste", "No existe la tabla cabecera de lotes");
-                        if (!utilesCG.ExisteTabla(this.tipoBaseDatosCG, this.bibliotecaTablasLoteAS + prefijo + "W11")) result += this.LP.GetText("errTablaDetLoteNoExiste", "No existe la tabla detalles de lotes");
+                        if (!utilesCG.ExisteTabla(this.tipoBaseDatosCG, this.bibliotecaTablasLoteAS + prefijo + "W10")) result += this.LP.GetText("errTablaCabLoteNoExiste", "No existe la tabla cabecera de lotes." + "\n\r");
+                        if (!utilesCG.ExisteTabla(this.tipoBaseDatosCG, this.bibliotecaTablasLoteAS + prefijo + "W11")) result += this.LP.GetText("errTablaDetLoteNoExiste", " No existe la tabla detalles de lotes" + "\n\r");
                     }
+                    
                 }
                 catch (Exception ex)
                 {

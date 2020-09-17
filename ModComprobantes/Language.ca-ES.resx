@@ -1194,16 +1194,16 @@
     <value>Es van a eliminar tots els missatges d'error seleccionats. Voleu continuar?</value>
   </data>
   <data name="errTablaCabLoteNoExiste" xml:space="preserve">
-    <value>No hi ha la taula capçalera de lots</value>
+    <value>No hi ha la taula capçalera de lots.</value>
   </data>
   <data name="errTablaDetLoteNoExiste" xml:space="preserve">
-    <value>No hi ha la taula detalls de lots</value>
+    <value> No hi ha la taula detalls de lots</value>
   </data>
   <data name="errVerificarTablaLote" xml:space="preserve">
-    <value>No hi ha la taula de lot</value>
+    <value> No hi ha la taula de lot</value>
   </data>
   <data name="errNoExistenLotes" xml:space="preserve">
-    <value>No hi ha lots</value>
+    <value> No hi ha lots</value>
   </data>
   <data name="lblNoExistenCompConErrores" xml:space="preserve">
     <value>No existeixen comprovants amb errors</value>
