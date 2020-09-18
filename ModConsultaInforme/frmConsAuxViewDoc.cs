@@ -1509,7 +1509,8 @@ namespace ModConsultaInforme
                     return;
                 }
 
-                int indice = this.radGridViewDoc.CurrentRow.Index;
+                //SMR int indice = this.radGridViewDoc.CurrentRow.Index;
+                int indice = this.radGridViewDoc.Rows.IndexOf(this.radGridViewDoc.CurrentRow);
 
                 bool lineaTotales = false;
                 if (this.radGridViewDoc.Rows.Count > 1 && this.radGridViewDoc.Rows.Count - 1 == indice) lineaTotales = true;
