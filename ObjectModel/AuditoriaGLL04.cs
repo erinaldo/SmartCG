@@ -200,8 +200,8 @@ namespace ObjectModel
                 query += "JBNAL4, FILEL4, OPERL4, JBUSL4, JBNML4, PGMPL4, USERL4, FECIL4, HORIL4, CODIL4, PRM1L4, ";
                 query += "PRM2L4, SEC1L4, KEY1L4, KEY2L4, KEY3L4) values (";
                 if (this.tipoBaseDatosCG == "Oracle") query += "ID_" + nombreTabla + ".nextval, ";
-                query += "'" + this.ordenadorNombre_JBNAL4 + "', '" + this.tabla_FILEL4 + "', '" + this.operacion_OPERL4 + "', '";
-                query += usuarioWin_JBUSL4 + "', '" + this.pid_JBNML4 + "', '" + this.programa_PGMPL4 + "', '";
+                query += "'" + this.ordenadorNombre_JBNAL4.PadRight(10, ' ').Substring(0, 10) + "', '" + this.tabla_FILEL4 + "', '" + this.operacion_OPERL4 + "', '";
+                query += usuarioWin_JBUSL4.PadRight(10, ' ').Substring(0, 10) + "', '" + this.pid_JBNML4 + "', '" + this.programa_PGMPL4 + "', '";
                 query += this.usuarioApp_USERL4 + "', " + this.fecha_FECIL4 + ", " + this.hora_HORIL4 + ", '";
                 query += this.CODIL4 + "', '" + this.valorOld_PRM1L4 + "', '" + this.valorNew_PRM2L4+ "', '" + this.SEC1L4 + "', '";
                 query += this.clave1_KEY1L4 + "', '" + this.clave2_KEY2L4 + "', '" + this.clave3_KEY3L4 + "')";
